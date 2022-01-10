@@ -1,0 +1,148 @@
+const courses = [
+  {
+    title: 'Graduate Algorithms',
+    number: 'CS 6515',
+    link: 'https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Artificial Intelligence',
+    number: 'CS 6601',
+    link: 'https://omscs.gatech.edu/cs-6601-artificial-intelligence',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Human Computer Interaction',
+    number: 'CS 6750',
+    link: 'https://omscs.gatech.edu/cs-6750-human-computer-interaction',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'AI, Ethics, and Society',
+    number: 'CS 6603',
+    link: 'https://omscs.gatech.edu/cs-6603-ai-ethics-and-society',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Database Systems Concepts and Design',
+    number: 'CS 6400',
+    link: 'https://omscs.gatech.edu/cs-6400-database-systems-concepts-and-design',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Health Informatics',
+    number: 'CS 6440',
+    link: 'https://omscs.gatech.edu/cs-6440-intro-health-informatics',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Knowledge-Based Artificial Intelligence - Cognitive Systems',
+    number: 'CS 7637',
+    link: 'https://omscs.gatech.edu/cs-7637-knowledge-based-artificial-intelligence-cognitive-systems',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Machine Learning for Trading',
+    number: 'CS 7646',
+    link: 'https://omscs.gatech.edu/cs-7646-machine-learning-trading',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Artificial Intelligence for Robotics',
+    number: 'CS 7638',
+    link: 'https://omscs.gatech.edu/cs-7638-artificial-intelligence-robotics',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Educational Technology',
+    number: 'CS 6460',
+    link: 'https://omscs.gatech.edu/cs-6460-educational-technology',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Financial Mathematics',
+    number: '3589',
+    link: 'https://math.osu.edu/courses/math-3589',
+    university: 'Ohio State',
+  },
+  {
+    title: 'Theory of Interest',
+    number: '3618',
+    link: 'https://math.osu.edu/courses/3618',
+    university: 'Ohio State',
+  },
+  {
+    title: 'Linear Algebra',
+    number: '2568',
+    link: 'https://math.osu.edu/courses/2568',
+    university: 'Ohio State',
+  },
+  {
+    title: 'Ordinary Differential Equations',
+    number: '6411',
+    link: 'https://math.osu.edu/courses/6411',
+    university: 'Ohio State',
+  },
+  {
+    title: 'Partial Differential Equations',
+    number: '4577',
+    link: 'https://math.osu.edu/courses/4577',
+    university: 'Ohio State',
+  },
+  {
+    title: 'Discrete Mathematics',
+    number: '2366',
+    link: 'https://math.osu.edu/courses/2366',
+    university: 'Ohio State',
+  },
+  {
+    title: 'Foundations of Higher Math',
+    number: '3345',
+    link: 'https://math.osu.edu/courses/3345',
+    university: 'Ohio State',
+  },
+  {
+    title: 'JavaScript',
+    number: 'CIS 89C',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS89C',
+    university: 'De Anza',
+  },
+  {
+    title: 'Project Management',
+    number: 'CIS 95A',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95A',
+    university: 'De Anza',
+  },
+  {
+    title: 'Project Planning and Control',
+    number: 'CIS 95B',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95B',
+    university: 'De Anza',
+  },
+  {
+    title: 'Risk Assessment and Mitigation',
+    number: 'CIS 95C',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95C',
+    university: 'De Anza',
+  },
+  {
+    title: 'Managing Outsourcing',
+    number: 'CIS 95D',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95D',
+    university: 'De Anza',
+  },
+  {
+    title: 'Leadership',
+    number: 'BUS 65',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=BUS65',
+    university: 'De Anza',
+  },
+  {
+    title: 'Principles of Marketing',
+    number: 'BUS 90',
+    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=BUS90',
+    university: 'De Anza',
+  },
+];
+
+export default courses;
