@@ -18,7 +18,12 @@ const skills = [
     category: ['Languages', 'Javascript', 'Blockchain'],
   },
   {
-    title: 'Salesforce',
+    title: 'Salesforce/CRM',
+    competency: 5,
+    category: ['Databases', 'Tools', 'Languages'],
+  },
+  {
+    title: 'Excel',
     competency: 5,
     category: ['Databases', 'Tools', 'Languages'],
   },
