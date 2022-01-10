@@ -14,7 +14,7 @@ const Index = () => (
           <h2 data-testid="heading"><Link to="/">Welcome to my personal website</Link></h2>
           <p>
             <br></br>
-            Thank you for being here, spending time to understand me. <br></br><br></br>
+            Thank you for visiting and taking the time to get to know me. <br></br><br></br>
             My goal is for this page to be an evolving autobiographical diary, of sorts, showcasing my
             career highlights, projects, journey, and passions. <br></br><br></br>
             The technical domains I am currently most interested in are Full-Stack development, 
