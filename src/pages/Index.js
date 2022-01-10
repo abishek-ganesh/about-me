@@ -21,8 +21,8 @@ const Index = () => (
             Artificial Intelligence/Machine Learning, Data Science, and Blockchain technology.<br></br><br></br>
             I have spent most of my life focused on healthcare, education, and climate-related causes (read on to learn more),
             and am always looking for new frontiers to embark on with incredible people.<br></br><br></br>
-            Speaking of which, I am always interested in opportunities to partner with amazing brands and individuals (that's you!) to solve
-            big problems with innovative technology. 
+            Speaking of which, I am always interested in opportunities to partner with amazing brands and individuals (that&#39;s you!) to solve
+            big problems with cutting-edge technology. 
             
           </p>
         </div>
