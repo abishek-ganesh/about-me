@@ -28,9 +28,9 @@ const skills = [
     category: ['Databases', 'Tools', 'Languages'],
   },
   {
-    title: 'C/C++',
+    title: 'Julia',
     competency: 1,
-    category: ['Web/Mobile Dev', 'Languages'],
+    category: ['Web/Mobile Dev', 'Languages', 'Data Science'],
   },
   {
     title: 'Dapps',
