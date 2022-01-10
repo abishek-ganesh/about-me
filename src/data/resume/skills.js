@@ -10,12 +10,22 @@ const skills = [
   {
     title: 'Node.JS',
     competency: 2,
-    category: ['Web/Mobile Dev', 'Javascript'],
+    category: ['Web/Mobile Dev', 'Javascript', 'Blockchain'],
+  },
+  {
+    title: 'Solidity',
+    competency: 3,
+    category: ['Languages', 'Javascript', 'Blockchain'],
   },
   {
     title: 'Salesforce',
     competency: 5,
     category: ['Databases', 'Tools', 'Languages'],
+  },
+  {
+    title: 'Dapps',
+    competency: 2,
+    category: ['Web/Mobile Dev', 'Blockchain'],
   },
   {
     title: 'React',
@@ -30,7 +40,7 @@ const skills = [
   {
     title: 'Amazon Web Services',
     competency: 3,
-    category: ['Web/Mobile Dev', 'Tools'],
+    category: ['Web/Mobile Dev', 'Tools', 'Blockchain'],
   },
   {
     title: 'Heroku',
