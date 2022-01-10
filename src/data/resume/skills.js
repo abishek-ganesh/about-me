@@ -28,6 +28,11 @@ const skills = [
     category: ['Databases', 'Tools', 'Languages'],
   },
   {
+    title: 'C/C++',
+    competency: 1,
+    category: ['Web/Mobile Dev', 'Languages'],
+  },
+  {
     title: 'Dapps',
     competency: 2,
     category: ['Web/Mobile Dev', 'Blockchain'],
@@ -79,7 +84,7 @@ const skills = [
   },
   {
     title: 'Git',
-    competency: 2,
+    competency: 3,
     category: ['Tools'],
   },
   {
