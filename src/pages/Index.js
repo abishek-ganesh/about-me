@@ -30,10 +30,12 @@ const Index = () => (
       <p> 
         <i>Feel free to reach out to me via &nbsp;
           <a href={`mailto:abishekganesh30@gmail.com`}>
-          email
+          email.
           </a>
         </i><br></br><br></br>
-        <i>Webpage created with React and, of course, JavaScript, HTML, CSS</i>
+        <i>Webpage hosted on Heroku and created with React and, of course, JavaScript, HTML, CSS.
+          
+        </i>
       </p>
     </article>
   </Main>
