@@ -32,7 +32,8 @@ const Index = () => (
           <a href={`mailto:abishekganesh30@gmail.com`}>
           email
           </a>
-        </i>
+        </i><br></br><br></br>
+        <i>Webpage created with React and, of course, JavaScript, HTML, CSS</i>
       </p>
     </article>
   </Main>
