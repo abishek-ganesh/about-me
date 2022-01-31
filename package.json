@@ -3,6 +3,9 @@
   "version": "3.0.1",
   "homepage": "https://abishekganesh.com/",
   "license": "MIT",
+  "engines": {
+    "node": "14.6"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/abishek-ganesh/about-me.git"
