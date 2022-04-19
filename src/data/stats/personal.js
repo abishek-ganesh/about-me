@@ -30,20 +30,20 @@ const data = [
     label: 'U.S. States visited',
     value: 24,
     link:
-      'https://www.google.com/maps/d/u/1/embed?mid=1AAscWrtMqstqyYh8_4-nVF-cbpfYu7C9&ehbc=2E312F',
+      'https://www.google.com/maps/d/u/1/edit?mid=1LxU2Vt_3DV1tFsBcOgjS_erGiyFfFJJF&usp=sharing',
   },
   {
     key: 'countries',
     label: 'Countries visited',
     value: 11,
     link:
-      'https://www.google.com/maps/d/u/1/embed?mid=1AAscWrtMqstqyYh8_4-nVF-cbpfYu7C9&ehbc=2E312F',
+      'https://www.google.com/maps/d/u/1/edit?mid=1AAscWrtMqstqyYh8_4-nVF-cbpfYu7C9&usp=sharing',
   },
   {
     key: 'location',
     label: 'Current city',
     value: 'Santa Clara, CA',
-    link: 'https://www.google.com/maps/d/u/1/embed?mid=1SAtwd_RebHmvpqgEZssUgpcLELCX2wyL&ehbc=2E312F',
+    link: 'https://www.google.com/maps/d/u/1/edit?mid=1SAtwd_RebHmvpqgEZssUgpcLELCX2wyL&usp=sharing',
   },
   {
     label: 'Site last updated at',
