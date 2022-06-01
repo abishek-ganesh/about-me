@@ -9,7 +9,7 @@ const Degree = ({ data }) => (
       <p className="details">{data.details}</p>
     </header>
   </article>
-);
+); 
 
 Degree.propTypes = {
   data: PropTypes.shape({

@@ -43,6 +43,6 @@ const SideBar = () => (
       <p className="copyright">&copy; Abishek Ganesh <Link to="/">abishekganesh.com</Link>.</p>
     </section>
   </section>
-);
+); 
 
 export default SideBar;

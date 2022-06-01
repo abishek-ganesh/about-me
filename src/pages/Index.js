@@ -11,7 +11,7 @@ const Index = () => (
     description={"Abishek Ganesh's personal website. California based software engineer, "
     + 'focused on solutions to large-scale problems using cutting-edge technology'}
   >
-    <img src={`${PUBLIC_URL}/images/me4.jpeg`} width='100%' alt="" />
+    <img src={`${PUBLIC_URL}/images/me4.jpg`} width='100%' alt="" />
     <article className="post" id="index">
       
       <header>
@@ -40,7 +40,7 @@ const Index = () => (
           <a href={`http://abishekganesh.crypto/`}>
           abishekganesh.crypto
           </a>
-          </i><br></br><br></br>
+          </i><br></br><br></br> 
         <i>Webpage hosted on Heroku and created with React and, of course, JavaScript, HTML, CSS.
           
         </i>
