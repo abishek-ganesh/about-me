@@ -1,6 +1,3 @@
-// TODO: Add Athletic Skills, Office Skills,
-// Data Engineering, Data Science, ML Engineering, ... ?
-
 const skills = [
   {
     title: 'Javascript',
@@ -20,7 +17,7 @@ const skills = [
   {
     title: 'Salesforce/CRM',
     competency: 5,
-    category: ['Databases', 'Tools', 'Languages'],
+    category: ['Databases', 'Tools', 'Languages', 'Cloud'],
   },
   {
     title: 'Excel',
@@ -49,8 +46,8 @@ const skills = [
   },
   {
     title: 'Amazon Web Services',
-    competency: 3,
-    category: ['Web/Mobile Dev', 'Tools', 'Blockchain'],
+    competency: 4,
+    category: ['Web/Mobile Dev', 'Tools', 'Blockchain', 'Cloud'],
   },
   {
     title: 'Heroku',
@@ -180,7 +177,7 @@ const skills = [
   {
     title: 'Docker',
     competency: 2,
-    category: ['Tools', 'Web/Mobile Dev'],
+    category: ['Tools', 'Web/Mobile Dev', 'Cloud'],
   },
   {
     title: 'Spark',

@@ -7,6 +7,7 @@ import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
 
+
 const Main = (props) => (
   <HelmetProvider>
     <Analytics />
@@ -15,6 +16,7 @@ const Main = (props) => (
       {props.title && <title>{props.title}</title>}
       <meta name="description" content={props.description} />
     </Helmet>
+    
     <div id="wrapper">
       <Navigation />
       <div id="main">
