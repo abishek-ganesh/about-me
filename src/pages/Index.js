@@ -47,6 +47,6 @@ const Index = () => (
       </p>
     </article>
   </Main>
-);
+); 
 
 export default Index;

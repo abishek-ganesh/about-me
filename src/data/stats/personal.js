@@ -44,7 +44,7 @@ const data = [
     label: 'Current city',
     value: 'Santa Clara, CA',
     link: 'https://www.google.com/maps/d/u/1/edit?mid=1SAtwd_RebHmvpqgEZssUgpcLELCX2wyL&usp=sharing', 
-  },
+  }, 
 ];
 
 export default data;

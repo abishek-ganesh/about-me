@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
 
-const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage 
 
 const SideBar = () => (
   <section id="sidebar">
