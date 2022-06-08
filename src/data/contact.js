@@ -19,11 +19,11 @@ const data = [
   //   label: 'Facebook',
   //   icon: faFacebookF,
   // },
-  // {
-  //   link: 'https://www.instagram.com/abishekganesh/',
-  //   label: 'Instagram',
-  //   icon: faInstagram,
-  // },
+  {
+    link: 'https://www.instagram.com/abishekganesh/',
+    label: 'Instagram',
+    icon: faInstagram,
+  },
   {
     link: 'https://www.linkedin.com/in/abishek-ganesh',
     label: 'LinkedIn',

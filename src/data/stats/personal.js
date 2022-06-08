@@ -45,12 +45,6 @@ const data = [
     value: 'Santa Clara, CA',
     link: 'https://www.google.com/maps/d/u/1/edit?mid=1SAtwd_RebHmvpqgEZssUgpcLELCX2wyL&usp=sharing', 
   },
-  {
-    label: 'Site last updated at',
-    key: 'pushed_at',
-    link: 'https://github.com/abishek-ganesh/about-me/commits',
-    format: (x) => dayjs(x).format('MMMM DD, YYYY'),
-  },
 ];
 
 export default data;
