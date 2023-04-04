@@ -28,7 +28,7 @@ const data = [
   {
     key: 'states',
     label: 'U.S. States visited',
-    value: 24,
+    value: 28,
     link:
       'https://www.google.com/maps/d/u/1/edit?mid=1LxU2Vt_3DV1tFsBcOgjS_erGiyFfFJJF&usp=sharing',
   },
