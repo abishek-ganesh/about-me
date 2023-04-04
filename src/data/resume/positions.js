@@ -1,9 +1,16 @@
 const positions = [
   {
+    company: 'Amazon',
+    position: 'Software Development Engineer',
+    link: 'https://aws.amazon.com/chime/chime-sdk/',
+    daterange: '2022 - Current',
+    details: '',
+  },
+  {
     company: 'mpathic',
     position: 'Senior Machine Learning Engineer',
     link: 'https://www.mpathic.ai/',
-    daterange: '2022 - Current',
+    daterange: '2022',
     details: '',
   },
   {
