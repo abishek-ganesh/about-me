@@ -16,7 +16,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "lint": "eslint src",
-    "test": "react-scripts test",
+    "test": "react-scripts test"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
