@@ -11,13 +11,14 @@
     "url": "https://github.com/abishek-ganesh/about-me.git"
   },
   "scripts": {
-    "build": "rimraf ./build && react-scripts build",
-    "predeploy": "npm run build && react-snap",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "lint": "eslint src",
     "test": "react-scripts test --watchAll=false",
-    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js"
+    "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
