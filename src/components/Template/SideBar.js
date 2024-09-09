@@ -20,7 +20,7 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>Hi, I&apos;m Abishek. I hope you have a lovely day today <br></br><br></br>
+      <p>Hi, I&apos;m Abishek. I hope that today is the best, most happiest day of your life <br></br><br></br>
         <a href="https://www.youtube.com/watch?v=LQ488QrqGE4">
           <i>Reach for the stars, so if you fall, you land on a cloud 
           <br></br>- Ye </i>
