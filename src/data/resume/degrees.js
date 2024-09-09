@@ -19,6 +19,7 @@ const degrees = [
     degree: 'A.A. Marketing Management',
     link: 'https://www.deanza.edu/',
     year: '2015-16',
+    gpa: '- 3.9',
     details: '',
   },
 ];

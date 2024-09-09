@@ -6,6 +6,8 @@ import Main from '../layouts/Main';
 import Cell from '../components/Projects/Cell';
 import data from '../data/projects';
 
+const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+
 const Projects = () => (
   <Main
     title="Projects"
@@ -13,6 +15,11 @@ const Projects = () => (
   >
     <article className="post" id="projects">
       <h2 data-testid="heading">Project list coming soon</h2>
+      <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`}></audio>
+      </figure>
+
       {/* <header>
         <div className="title">
           <h2 data-testid="heading"><Link to="/projects">Projects</Link></h2>

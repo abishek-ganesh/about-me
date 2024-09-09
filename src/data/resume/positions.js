@@ -1,9 +1,16 @@
 const positions = [
   {
+    company: 'Limbik',
+    position: 'Senior Lead Data Scientist',
+    link: 'https://www.limbik.com/',
+    daterange: '2023 - Present',
+    details: '',
+  },
+  {
     company: 'Amazon',
     position: 'Software Development Engineer',
     link: 'https://aws.amazon.com/chime/chime-sdk/',
-    daterange: '2022 - Current',
+    daterange: '2022 - 2023',
     details: '',
   },
   {
