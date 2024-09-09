@@ -18,6 +18,7 @@ const Voiceover = () => (
         <br></br><br></br>
         <figcaption>For inquiries, email me at <a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></figcaption>
       </figure>
+      <img src={`${PUBLIC_URL}/images/vo_logo1.jpg`} width='100%' alt="" />
     </article>
   </Main>
 );
