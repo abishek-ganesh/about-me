@@ -9,7 +9,9 @@ var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
-today = mm + '/' + dd + '/' + yyyy;
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+today = today.toLocaleDateString(undefined, options);
+//today = mm + '/' + dd + '/' + yyyy;
 
 const SideBar = () => (
   <section id="sidebar">
@@ -26,7 +28,7 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>Hi, I&apos;m Abishek. I hope that today, {today}, is the best and happiest day of your life <br></br><br></br>
+      <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life <br></br><br></br>
         <a href="https://www.youtube.com/watch?v=LQ488QrqGE4">
           <i>Reach for the stars, so if you fall, you land on a cloud 
           <br></br>- Ye </i>

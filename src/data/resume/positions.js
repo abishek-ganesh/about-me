@@ -41,12 +41,18 @@ const positions = [
     daterange: '2016 - 17',
     details: '',
   },
-  
   {
     company: 'Aruba Networks, a HPE Company',
     position: 'Sales Operations Analyst',
     link: 'https://www.arubanetworks.com/',
     daterange: '2014 - 16',
+    details: '',
+  },
+  {
+    company: 'AMC Theaters',
+    position: 'Projectionist and doing my college HW while getting paid near minimum wage',
+    link: 'https://www.amctheatres.com/movie-theatres/columbus/amc-dublin-village-18',
+    daterange: '2010 - 13',
     details: '',
   },
 ];
