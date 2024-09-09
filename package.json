@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "3.0.1",
-  "homepage": "https://abishekganesh.com/",
+  "homepage": "https://abishekganesh.com/#",
   "license": "MIT",
   "engines": {
     "node": "14.6"
