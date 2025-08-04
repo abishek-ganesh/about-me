@@ -16,8 +16,9 @@ Degree.propTypes = {
     degree: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     school: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired,
-    details: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    gpa: PropTypes.string,
+    details: PropTypes.string,
   }).isRequired,
 };
 

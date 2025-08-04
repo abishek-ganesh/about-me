@@ -5,7 +5,7 @@ const Job = ({ data }) => (
   <article className="degree-container">
     <header>
       <h4>{data.position}</h4>
-      <p className="school"><a href={data.link}>{data.company}</a> - {data.daterange}</p>
+      <p className="school">{data.link ? <a href={data.link}>{data.company}</a> : data.company} - {data.daterange}</p>
       <p className="details">{data.details}</p>
       <br/>
     </header>
@@ -14,11 +14,11 @@ const Job = ({ data }) => (
 
 Job.propTypes = {
   data: PropTypes.shape({
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     company: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
     daterange: PropTypes.string.isRequired,
-    details: PropTypes.string.isRequired,
+    details: PropTypes.string,
     //points: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
