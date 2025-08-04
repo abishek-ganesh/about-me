@@ -4,16 +4,26 @@ import dayjs from 'dayjs';
 
 const Cell = ({ data }) => (
   <div className="cell-container">
-    <article className="mini-post">
+    <article className="project-header">
       <header>
-        <h3><a href={data.link}>{data.title}</a></h3>
-        <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
+        <h3>{data.title}</h3>
+        <h4>{data.subtitle}</h4>
+        <div className="project-meta">
+          <span className="category">{data.category}</span>
+          <time className="published">{dayjs(data.date).format('MMMM YYYY')}</time>
+        </div>
       </header>
-      <a href={data.link} className="image">
-        <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
-      </a>
+      {data.image && (
+        <div className="image-placeholder">
+          {/* Using placeholder until actual images are added */}
+          <div className="placeholder-content">
+            <span>{data.category}</span>
+          </div>
+        </div>
+      )}
       <div className="description">
         <p>{data.desc}</p>
+        {data.client && <p className="client"><strong>Client:</strong> {data.client}</p>}
       </div>
     </article>
   </div>
@@ -22,8 +32,11 @@ const Cell = ({ data }) => (
 Cell.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    category: PropTypes.string,
+    client: PropTypes.string,
     link: PropTypes.string,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
     date: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }).isRequired,

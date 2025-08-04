@@ -1,0 +1,190 @@
+// Utility Classes using Design System
+@import 'design-system';
+
+// Spacing Utilities
+@each $name, $value in $spacing {
+  .m-#{$name} { margin: $value; }
+  .mt-#{$name} { margin-top: $value; }
+  .mr-#{$name} { margin-right: $value; }
+  .mb-#{$name} { margin-bottom: $value; }
+  .ml-#{$name} { margin-left: $value; }
+  .mx-#{$name} { margin-left: $value; margin-right: $value; }
+  .my-#{$name} { margin-top: $value; margin-bottom: $value; }
+  
+  .p-#{$name} { padding: $value; }
+  .pt-#{$name} { padding-top: $value; }
+  .pr-#{$name} { padding-right: $value; }
+  .pb-#{$name} { padding-bottom: $value; }
+  .pl-#{$name} { padding-left: $value; }
+  .px-#{$name} { padding-left: $value; padding-right: $value; }
+  .py-#{$name} { padding-top: $value; padding-bottom: $value; }
+}
+
+// Color Utilities
+.text-primary { color: color(primary, 600); }
+.text-secondary { color: color(neutral, 600); }
+.text-success { color: map-get(map-get($colors, semantic), success); }
+.text-warning { color: map-get(map-get($colors, semantic), warning); }
+.text-error { color: map-get(map-get($colors, semantic), error); }
+
+.bg-primary { background-color: color(primary, 600); }
+.bg-secondary { background-color: color(neutral, 100); }
+.bg-white { background-color: white; }
+.bg-transparent { background-color: transparent; }
+
+// Border Utilities
+.border { border: 1px solid color(neutral, 300); }
+.border-2 { border-width: 2px; }
+.border-0 { border: none; }
+
+@each $name, $value in $radius {
+  .rounded-#{$name} { border-radius: $value; }
+}
+
+// Shadow Utilities
+@each $name, $value in $shadows {
+  @if $name != '2xl' {
+    .shadow-#{$name} { box-shadow: $value; }
+  } @else {
+    .shadow-xxl { box-shadow: $value; }
+  }
+}
+
+// Display Utilities
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+// Flexbox Utilities
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.items-start { align-items: flex-start; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.flex-1 { flex: 1; }
+.flex-auto { flex: auto; }
+.flex-none { flex: none; }
+
+// Grid Utilities
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@each $name, $value in $spacing {
+  .gap-#{$name} { gap: $value; }
+}
+
+// Position Utilities
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.static { position: static; }
+
+// Size Utilities
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.max-w-full { max-width: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+// Overflow Utilities
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-scroll { overflow: scroll; }
+
+// Cursor Utilities
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+// Transition Utilities
+.transition {
+  transition-property: all;
+  transition-duration: map-get($transitions, base);
+  transition-timing-function: ease;
+}
+
+.transition-fast { transition-duration: map-get($transitions, fast); }
+.transition-slow { transition-duration: map-get($transitions, slow); }
+.transition-none { transition: none; }
+
+// Animation Utilities
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in { animation: fade-in map-get($transitions, base) ease; }
+.animate-slide-up { animation: slide-in-up map-get($transitions, base) ease; }
+.animate-slide-down { animation: slide-in-down map-get($transitions, base) ease; }
+.animate-scale-in { animation: scale-in map-get($transitions, base) ease; }
+
+// Responsive Utilities
+@each $breakpoint, $value in $breakpoints {
+  @if $breakpoint != '2xl' {
+    @media (min-width: $value) {
+      .#{$breakpoint}\:block { display: block; }
+      .#{$breakpoint}\:inline-block { display: inline-block; }
+      .#{$breakpoint}\:flex { display: flex; }
+      .#{$breakpoint}\:hidden { display: none; }
+    }
+  } @else {
+    @media (min-width: $value) {
+      .xxl\:block { display: block; }
+      .xxl\:inline-block { display: inline-block; }
+      .xxl\:flex { display: flex; }
+      .xxl\:hidden { display: none; }
+    }
+  }
+}

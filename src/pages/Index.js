@@ -7,15 +7,15 @@ const { PUBLIC_URL } = process.env;
 
 const Index = () => (
   <Main
-    description={"Abishek Ganesh - AI Consultant building custom AI solutions that bridge technology and human creativity"}
+    description={"Abishek Ganesh - Senior AI Engineer & Consultant specializing in ML infrastructure, RAG systems, and AI education"}
   >
     <article className="post" id="index">
       <section className="hero">
         <img src={`${PUBLIC_URL}/images/me_hs2.jpg`} alt="Abishek Ganesh" className="hero-image" />
         <header>
-          <h1 className="hero-title">Building AI Solutions by Day,<br/>Crafting Stories by Night</h1>
+          <h1 className="hero-title">Building AI Solutions That Scale,<br/>Teaching the Next Generation</h1>
           <p className="hero-subtitle">
-            AI Consultant | Georgia Tech MS CS | Voice Actor
+            Senior AI Engineer | AI Consultant | AI Instructor
           </p>
         </header>
       </section>
@@ -24,12 +24,18 @@ const Index = () => (
         <h2>Current Focus</h2>
         <div className="focus-grid">
           <div className="focus-item">
-            <h3><span role="img" aria-label="Brain">🧠</span> AI Consulting</h3>
-            <p>Partnering with companies to design and implement custom AI solutions, from predictive modeling to LLM applications that drive real business value.</p>
+            <h3><span role="img" aria-label="Rocket">🚀</span> AI Engineering & Consulting</h3>
+            <p>
+              Helping companies build production-ready AI systems with 60% faster deployment times. 
+              Specializing in RAG systems, ML infrastructure, and real-time AI applications that serve millions daily.
+            </p>
           </div>
           <div className="focus-item">
-            <h3><span role="img" aria-label="Theater masks">🎭</span> Voice Acting</h3>
-            <p>Professional voice actor bringing characters to life for commercials, animation, and audiobooks. <Link to="/voiceover">Listen to my demo reel →</Link></p>
+            <h3><span role="img" aria-label="Teacher">👨‍🏫</span> AI Education</h3>
+            <p>
+              Lead instructor for intensive AI bootcamp (March-September 2025). Teaching 20+ students 
+              from Python fundamentals to advanced generative AI. <Link to="/about#bootcamp">Learn more →</Link>
+            </p>
           </div>
         </div>
       </section>
@@ -38,24 +44,60 @@ const Index = () => (
         <h2>Career Highlights</h2>
         <div className="highlight-cards">
           <div className="highlight-card">
-            <span className="highlight-metric">4.0 GPA</span>
-            <span className="highlight-label">Georgia Tech MS Computer Science</span>
+            <span className="highlight-metric">8+ Years</span>
+            <span className="highlight-label">Building & Deploying AI/ML Systems</span>
           </div>
           <div className="highlight-card">
-            <span className="highlight-metric">5+ Years</span>
-            <span className="highlight-label">Building ML Systems in Production</span>
+            <span className="highlight-metric">60% MTTR</span>
+            <span className="highlight-label">Reduction in System Recovery Time</span>
+          </div>
+          <div className="highlight-card">
+            <span className="highlight-metric">1M+ Daily</span>
+            <span className="highlight-label">ML Predictions Served</span>
+          </div>
+          <div className="highlight-card">
+            <span className="highlight-metric">4.0 GPA</span>
+            <span className="highlight-label">Georgia Tech MS Computer Science</span>
           </div>
         </div>
       </section>
 
+      <section className="expertise-preview">
+        <h2>Core Expertise</h2>
+        <div className="expertise-grid">
+          <div className="expertise-area">
+            <h4>ML Infrastructure</h4>
+            <p>Building scalable systems with PyTorch, TensorFlow, and cloud platforms</p>
+          </div>
+          <div className="expertise-area">
+            <h4>RAG & LLM Systems</h4>
+            <p>Production-ready implementations with LangChain and HuggingFace</p>
+          </div>
+          <div className="expertise-area">
+            <h4>Real-time AI</h4>
+            <p>Low-latency prediction systems serving millions of requests</p>
+          </div>
+          <div className="expertise-area">
+            <h4>AI Strategy</h4>
+            <p>Helping businesses identify and implement high-impact AI solutions</p>
+          </div>
+        </div>
+        <div className="expertise-cta">
+          <Link to="/projects" className="view-projects-link">
+            View detailed project case studies →
+          </Link>
+        </div>
+      </section>
+
       <section className="cta-section">
-        <h2>Let's Connect</h2>
+        <h2>Let's Build Something Impactful</h2>
         <p>
-          I'm always interested in collaborating on AI/ML projects or voice acting opportunities.
+          Whether you need AI expertise for your next project or want to learn AI/ML, 
+          I'm here to help you succeed.
         </p>
         <div className="cta-buttons">
-          <Link to="/resume" className="button primary">View My Experience</Link>
-          <a href="mailto:abishekganesh30@gmail.com" className="button">Get In Touch</a>
+          <Link to="/contact" className="button primary">Start a Conversation</Link>
+          <Link to="/resume" className="button">View Full Resume</Link>
         </div>
       </section>
     </article>

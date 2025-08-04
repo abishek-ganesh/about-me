@@ -1,0 +1,202 @@
+// Modern Typography using Design System
+@import '../libs/design-system';
+
+// Base Typography
+body {
+  font-family: map-get(map-get($typography, font-family), sans);
+  font-size: font-size(base);
+  font-weight: font-weight(normal);
+  line-height: map-get(map-get($typography, line-height), normal);
+  color: color(neutral, 700);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: map-get(map-get($typography, font-family), display);
+  font-weight: font-weight(semibold);
+  line-height: map-get(map-get($typography, line-height), tight);
+  color: color(neutral, 900);
+  margin-top: 0;
+  margin-bottom: space(4);
+  letter-spacing: map-get(map-get($typography, letter-spacing), tight);
+}
+
+h1 {
+  font-size: font-size(5xl);
+  font-weight: font-weight(bold);
+  
+  @media (max-width: map-get($breakpoints, lg)) {
+    font-size: font-size(4xl);
+  }
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    font-size: font-size(3xl);
+  }
+}
+
+h2 {
+  font-size: font-size(4xl);
+  
+  @media (max-width: map-get($breakpoints, lg)) {
+    font-size: font-size(3xl);
+  }
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    font-size: font-size(2xl);
+  }
+}
+
+h3 {
+  font-size: font-size(3xl);
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    font-size: font-size(2xl);
+  }
+}
+
+h4 {
+  font-size: font-size(2xl);
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    font-size: font-size(xl);
+  }
+}
+
+h5 {
+  font-size: font-size(xl);
+}
+
+h6 {
+  font-size: font-size(lg);
+  font-weight: font-weight(medium);
+}
+
+// Paragraphs
+p {
+  margin-top: 0;
+  margin-bottom: space(4);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Links
+a {
+  color: color(primary, 600);
+  text-decoration: none;
+  transition: color map-get($transitions, fast) ease;
+  
+  &:hover {
+    color: color(primary, 700);
+    text-decoration: underline;
+  }
+  
+  &:active {
+    color: color(primary, 800);
+  }
+  
+  &:focus {
+    outline: 2px solid color(primary, 500);
+    outline-offset: 2px;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-top: 0;
+  margin-bottom: space(4);
+  padding-left: space(6);
+  
+  li {
+    margin-bottom: space(2);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: 0 0 space(4) 0;
+  padding-left: space(6);
+  border-left: 4px solid color(primary, 300);
+  font-style: italic;
+  color: color(neutral, 600);
+  
+  cite {
+    display: block;
+    margin-top: space(2);
+    font-size: font-size(sm);
+    color: color(neutral, 500);
+    font-style: normal;
+    
+    &:before {
+      content: '— ';
+    }
+  }
+}
+
+// Code
+code, pre {
+  font-family: map-get(map-get($typography, font-family), mono);
+}
+
+code {
+  background-color: color(neutral, 100);
+  border-radius: map-get($radius, sm);
+  padding: 0.125em 0.25em;
+  font-size: 0.875em;
+  color: color(neutral, 800);
+}
+
+pre {
+  background-color: color(neutral, 900);
+  color: color(neutral, 100);
+  padding: space(4);
+  border-radius: map-get($radius, lg);
+  overflow-x: auto;
+  margin: 0 0 space(4) 0;
+  
+  code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: font-size(sm);
+  }
+}
+
+// Text utilities
+.text-xs { font-size: font-size(xs); }
+.text-sm { font-size: font-size(sm); }
+.text-base { font-size: font-size(base); }
+.text-lg { font-size: font-size(lg); }
+.text-xl { font-size: font-size(xl); }
+.text-xxl { font-size: map-get(map-get($typography, font-size), 2xl); }
+.text-xxxl { font-size: map-get(map-get($typography, font-size), 3xl); }
+.text-xxxxl { font-size: map-get(map-get($typography, font-size), 4xl); }
+.text-xxxxxl { font-size: map-get(map-get($typography, font-size), 5xl); }
+
+.font-light { font-weight: font-weight(light); }
+.font-normal { font-weight: font-weight(normal); }
+.font-medium { font-weight: font-weight(medium); }
+.font-semibold { font-weight: font-weight(semibold); }
+.font-bold { font-weight: font-weight(bold); }
+
+.leading-tight { line-height: map-get(map-get($typography, line-height), tight); }
+.leading-snug { line-height: map-get(map-get($typography, line-height), snug); }
+.leading-normal { line-height: map-get(map-get($typography, line-height), normal); }
+.leading-relaxed { line-height: map-get(map-get($typography, line-height), relaxed); }
+.leading-loose { line-height: map-get(map-get($typography, line-height), loose); }
+
+.tracking-tight { letter-spacing: map-get(map-get($typography, letter-spacing), tight); }
+.tracking-normal { letter-spacing: map-get(map-get($typography, letter-spacing), normal); }
+.tracking-wide { letter-spacing: map-get(map-get($typography, letter-spacing), wide); }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }

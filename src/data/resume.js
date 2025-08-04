@@ -1,4 +1,4 @@
-// Consolidated resume data file
+// Resume data - Abishek Ganesh
 
 // Education data
 export const degrees = [
@@ -6,100 +6,183 @@ export const degrees = [
     school: 'Georgia Institute of Technology',
     degree: 'M.S. Computer Science',
     link: 'https://www.gatech.edu/',
-    year: '2019-21',
-    gpa: '- 4.0',
-    details: 'Specialization in Interactive (Artificial) Intelligence',
+    year: '2019-2021',
+    gpa: '4.0',
+    details: 'Specialization in Machine Learning and Artificial Intelligence',
   },
   {
     school: 'The Ohio State University',
     degree: 'B.S. Mathematics',
     link: 'https://www.osu.edu/',
-    year: '2009-13',
-    details: 'Specialization in Applied (Financial) Mathematics',
+    year: '2009-2013',
+    details: 'Focus on Applied Mathematics and Computer Science',
   },
   {
     school: 'De Anza College',
     degree: 'A.A. Marketing Management',
     link: 'https://www.deanza.edu/',
-    year: '2015-16',
-    gpa: '- 3.9',
-    details: '',
+    year: '2015-2016',
+    gpa: '3.9',
+    details: 'Business and Project Management focus',
   },
 ];
 
 // Work experience data
 export const positions = [
   {
-    company: 'AI Consulting',
-    position: 'Independent AI Consultant',
+    company: 'AI Consulting Practice',
+    position: 'Senior AI Engineer & Consultant',
     link: '',
     daterange: '2024 - Present',
-    details: '',
+    points: [
+      'Provide expert AI/ML consulting to businesses implementing custom solutions',
+      'Reduced system MTTR by 60% through strategic debugging and architecture improvements',
+      'Specialize in ML infrastructure, scalable data pipelines, and AI architecture design',
+      'Lead CRM management and AI systems integration projects',
+    ],
+  },
+  {
+    company: 'AI Bootcamp',
+    position: 'Lead AI Instructor',
+    link: '',
+    daterange: 'March 2025 - September 2025',
+    points: [
+      'Teaching comprehensive AI curriculum to 20+ students',
+      '3 hours/day, 3 days/week intensive program',
+      'Covering Python fundamentals through advanced generative AI',
+      'All sessions recorded and available on YouTube for student review',
+    ],
   },
   {
     company: 'Limbik',
     position: 'Senior Lead Data Scientist',
     link: 'https://www.limbik.com/',
     daterange: '2023 - 2024',
-    details: '',
+    points: [
+      'Led team of 5-7 engineers on complex AI projects',
+      'Developed expertise in healthcare AI and mental health technology',
+      'Successfully pitched AI products to investors',
+      'Built real-time ML systems with scalable architectures',
+    ],
   },
   {
-    company: 'Amazon',
+    company: 'Amazon Web Services',
     position: 'Software Development Engineer',
     link: 'https://aws.amazon.com/chime/chime-sdk/',
     daterange: '2022 - 2023',
-    details: '',
+    points: [
+      'Worked on AWS Chime SDK development',
+      'Built scalable communication infrastructure',
+      'Implemented real-time video/audio processing features',
+      'Collaborated with cross-functional teams on cloud services',
+    ],
   },
   {
     company: 'mpathic',
     position: 'Senior Machine Learning Engineer',
     link: 'https://www.mpathic.ai/',
     daterange: '2022',
-    details: '',
-  },
-  {
-    company: 'Abishek Ganesh AI Mentorship',
-    position: 'Instructor/Mentor',
-    link: '',
-    daterange: '2021 - Current',
-    details: '',
+    points: [
+      'Developed ML models for healthcare applications',
+      'Implemented RAG systems for medical data analysis',
+      'Built NLP pipelines for clinical text processing',
+      'Optimized model performance for production deployment',
+    ],
   },
   {
     company: 'Big Health',
     position: 'Data Science & Commercial Operations Lead',
     link: 'https://bighealth.com',
-    daterange: '2017 - 21',
-    details: '',
-  },
-  {
-    company: 'Onerent',
-    position: 'Director of Sales Operations',
-    link: 'https://www.poplarhomes.com/',
-    daterange: '2016 - 17',
-    details: '',
-  },
-  {
-    company: 'Aruba Networks, a HPE Company',
-    position: 'Sales Operations Analyst',
-    link: 'https://www.arubanetworks.com/',
-    daterange: '2014 - 16',
-    details: '',
-  },
-  {
-    company: 'AMC Theaters',
-    position: 'Projectionist and doing my college HW while getting paid near minimum wage',
-    link: 'https://www.amctheatres.com/movie-theatres/columbus/amc-dublin-village-18',
-    daterange: '2010 - 13',
-    details: '',
+    daterange: '2017 - 2021',
+    points: [
+      'Led data science initiatives for digital therapeutics platform',
+      'Built predictive models for user engagement and outcomes',
+      'Managed commercial operations and analytics infrastructure',
+      'Scaled data operations from startup to series B funding',
+    ],
   },
 ];
 
-// Courses data
+// Skills data organized by category
+export const skillCategories = {
+  'Languages': [
+    { name: 'Python', level: 5 },
+    { name: 'TypeScript', level: 4 },
+    { name: 'JavaScript', level: 4 },
+    { name: 'SQL', level: 4 },
+    { name: 'HTML/CSS', level: 3 },
+  ],
+  'AI/ML Frameworks': [
+    { name: 'PyTorch', level: 5 },
+    { name: 'TensorFlow', level: 5 },
+    { name: 'HuggingFace', level: 5 },
+    { name: 'LangChain', level: 5 },
+    { name: 'Scikit-Learn', level: 4 },
+  ],
+  'Specializations': [
+    { name: 'RAG Systems', level: 5 },
+    { name: 'OCR', level: 4 },
+    { name: 'Prompt Engineering', level: 5 },
+    { name: 'LLM Evaluation', level: 5 },
+    { name: 'MLOps', level: 4 },
+  ],
+  'Cloud & Infrastructure': [
+    { name: 'AWS', level: 5 },
+    { name: 'Docker', level: 4 },
+    { name: 'Kubernetes', level: 3 },
+    { name: 'FastAPI', level: 4 },
+    { name: 'PostgreSQL', level: 4 },
+  ],
+  'Data Science': [
+    { name: 'Pandas', level: 5 },
+    { name: 'NumPy', level: 5 },
+    { name: 'Jupyter', level: 5 },
+    { name: 'Data Visualization', level: 5 },
+    { name: 'Statistical Analysis', level: 5 },
+  ],
+  'ML Algorithms': [
+    { name: 'Neural Networks', level: 5 },
+    { name: 'CNNs', level: 4 },
+    { name: 'RNNs/LSTMs', level: 4 },
+    { name: 'Transformers', level: 5 },
+    { name: 'K-means Clustering', level: 4 },
+  ],
+};
+
+// Convert to flat array for compatibility
+export const skills = Object.entries(skillCategories).flatMap(([category, skills]) =>
+  skills.map(skill => ({
+    title: skill.name,
+    competency: skill.level,
+    category: [category],
+  }))
+);
+
+// Categories for the skills chart
+export const categories = Object.keys(skillCategories).map((cat, index) => ({
+  name: cat,
+  color: [
+    '#2196f3', // Languages - Blue
+    '#4caf50', // AI/ML - Green
+    '#ff9800', // Specializations - Orange
+    '#9c27b0', // Cloud - Purple
+    '#f44336', // Data Science - Red
+    '#00bcd4', // ML Algorithms - Cyan
+  ][index % 6],
+}));
+
+// Selected courses that demonstrate expertise
 export const courses = [
   {
-    title: 'Graduate Algorithms',
-    number: 'CS 6515',
-    link: 'https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms',
+    title: 'Machine Learning',
+    number: 'CS 7641',
+    link: 'https://omscs.gatech.edu/cs-7641-machine-learning',
+    university: 'Georgia Tech',
+  },
+  {
+    title: 'Deep Learning',
+    number: 'CS 7643',
+    link: 'https://omscs.gatech.edu/cs-7643-deep-learning',
     university: 'Georgia Tech',
   },
   {
@@ -109,31 +192,7 @@ export const courses = [
     university: 'Georgia Tech',
   },
   {
-    title: 'Human Computer Interaction',
-    number: 'CS 6750',
-    link: 'https://omscs.gatech.edu/cs-6750-human-computer-interaction',
-    university: 'Georgia Tech',
-  },
-  {
-    title: 'AI, Ethics, and Society',
-    number: 'CS 6603',
-    link: 'https://omscs.gatech.edu/cs-6603-ai-ethics-and-society',
-    university: 'Georgia Tech',
-  },
-  {
-    title: 'Database Systems Concepts and Design',
-    number: 'CS 6400',
-    link: 'https://omscs.gatech.edu/cs-6400-database-systems-concepts-and-design',
-    university: 'Georgia Tech',
-  },
-  {
-    title: 'Health Informatics',
-    number: 'CS 6440',
-    link: 'https://omscs.gatech.edu/cs-6440-intro-health-informatics',
-    university: 'Georgia Tech',
-  },
-  {
-    title: 'Knowledge-Based Artificial Intelligence - Cognitive Systems',
+    title: 'Knowledge-Based AI',
     number: 'CS 7637',
     link: 'https://omscs.gatech.edu/cs-7637-knowledge-based-artificial-intelligence-cognitive-systems',
     university: 'Georgia Tech',
@@ -145,312 +204,9 @@ export const courses = [
     university: 'Georgia Tech',
   },
   {
-    title: 'Artificial Intelligence for Robotics',
+    title: 'AI for Robotics',
     number: 'CS 7638',
     link: 'https://omscs.gatech.edu/cs-7638-artificial-intelligence-robotics',
     university: 'Georgia Tech',
   },
-  {
-    title: 'Educational Technology',
-    number: 'CS 6460',
-    link: 'https://omscs.gatech.edu/cs-6460-educational-technology',
-    university: 'Georgia Tech',
-  },
-  {
-    title: 'Financial Mathematics',
-    number: '3589',
-    link: 'https://math.osu.edu/courses/math-3589',
-    university: 'Ohio State',
-  },
-  {
-    title: 'Theory of Interest',
-    number: '3618',
-    link: 'https://math.osu.edu/courses/3618',
-    university: 'Ohio State',
-  },
-  {
-    title: 'Linear Algebra',
-    number: '2568',
-    link: 'https://math.osu.edu/courses/2568',
-    university: 'Ohio State',
-  },
-  {
-    title: 'Ordinary Differential Equations',
-    number: '6411',
-    link: 'https://math.osu.edu/courses/6411',
-    university: 'Ohio State',
-  },
-  {
-    title: 'Partial Differential Equations',
-    number: '4577',
-    link: 'https://math.osu.edu/courses/4577',
-    university: 'Ohio State',
-  },
-  {
-    title: 'Discrete Mathematics',
-    number: '2366',
-    link: 'https://math.osu.edu/courses/2366',
-    university: 'Ohio State',
-  },
-  {
-    title: 'Foundations of Higher Math',
-    number: '3345',
-    link: 'https://math.osu.edu/courses/3345',
-    university: 'Ohio State',
-  },
-  {
-    title: 'JavaScript',
-    number: 'CIS 89C',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS89C',
-    university: 'De Anza',
-  },
-  {
-    title: 'Project Management',
-    number: 'CIS 95A',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95A',
-    university: 'De Anza',
-  },
-  {
-    title: 'Project Planning and Control',
-    number: 'CIS 95B',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95B',
-    university: 'De Anza',
-  },
-  {
-    title: 'Risk Assessment and Mitigation',
-    number: 'CIS 95C',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95C',
-    university: 'De Anza',
-  },
-  {
-    title: 'Managing Outsourcing',
-    number: 'CIS 95D',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=CIS95D',
-    university: 'De Anza',
-  },
-  {
-    title: 'Leadership',
-    number: 'BUS 65',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=BUS65',
-    university: 'De Anza',
-  },
-  {
-    title: 'Principles of Marketing',
-    number: 'BUS 90',
-    link: 'https://www.deanza.edu/catalog/courses/outline.html?cid=BUS90',
-    university: 'De Anza',
-  },
 ];
-
-// Skills data
-export const skills = [
-  {
-    title: 'Javascript',
-    competency: 4,
-    category: ['Web/Mobile Dev', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'Node.JS',
-    competency: 2,
-    category: ['Web/Mobile Dev', 'Javascript', 'Blockchain'],
-  },
-  {
-    title: 'Solidity',
-    competency: 3,
-    category: ['Languages', 'Javascript', 'Blockchain'],
-  },
-  {
-    title: 'Salesforce/CRM',
-    competency: 5,
-    category: ['Databases', 'Tools', 'Languages', 'Cloud'],
-  },
-  {
-    title: 'Excel',
-    competency: 5,
-    category: ['Databases', 'Tools', 'Languages'],
-  },
-  {
-    title: 'Julia',
-    competency: 1,
-    category: ['Web/Mobile Dev', 'Languages', 'Data Science'],
-  },
-  {
-    title: 'Dapps',
-    competency: 2,
-    category: ['Web/Mobile Dev', 'Blockchain'],
-  },
-  {
-    title: 'React',
-    competency: 3,
-    category: ['Web/Mobile Dev', 'Javascript'],
-  },
-  {
-    title: 'React Native',
-    competency: 3,
-    category: ['Web/Mobile Dev', 'Javascript'],
-  },
-  {
-    title: 'Amazon Web Services',
-    competency: 4,
-    category: ['Web/Mobile Dev', 'Tools', 'Blockchain', 'Cloud'],
-  },
-  {
-    title: 'Heroku',
-    competency: 4,
-    category: ['Web/Mobile Dev', 'Tools'],
-  },
-  {
-    title: 'NoSQL',
-    competency: 2,
-    category: ['Web/Mobile Dev', 'Databases'],
-  },
-  {
-    title: 'PostgreSQL/SQLite3/SQL',
-    competency: 4,
-    category: ['Web/Mobile Dev', 'Databases', 'Languages'],
-  },
-  {
-    title: 'Data Mining',
-    competency: 3,
-    category: ['Data Science'],
-  },
-  {
-    title: 'Express.JS',
-    competency: 1,
-    category: ['Web/Mobile Dev', 'Javascript'],
-  },
-  {
-    title: 'Flask',
-    competency: 2,
-    category: ['Web/Mobile Dev', 'Python'],
-  },
-  {
-    title: 'Git',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 1,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'Numpy',
-    competency: 5,
-    category: ['Data Science', 'Data Engineering', 'Python'],
-  },
-  {
-    title: 'Tensorflow + Keras',
-    competency: 3,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 3,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'Jupyter',
-    competency: 5,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'Typescript',
-    competency: 1,
-    category: ['Web/Mobile Dev', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'HTML + CSS',
-    competency: 5,
-    category: ['Web/Mobile Dev', 'Languages'],
-  },
-  {
-    title: 'Python',
-    competency: 5,
-    category: ['Languages', 'Python'],
-  },
-  {
-    title: 'C++',
-    competency: 1,
-    category: ['Languages'],
-  },
-  {
-    title: 'MATLAB',
-    competency: 1,
-    category: ['Languages'],
-  },
-  {
-    title: 'R',
-    competency: 1,
-    category: ['Languages'],
-  },
-  {
-    title: 'Data Visualization',
-    competency: 5,
-    category: ['Data Science', 'Javascript'],
-  },
-  {
-    title: 'Tableau',
-    competency: 5,
-    category: ['Data Science', 'Databases', 'Tools'],
-  },
-  {
-    title: 'Pandas',
-    competency: 5,
-    category: ['Data Engineering', 'Data Science', 'Python'],
-  },
-  {
-    title: 'Matplotlib',
-    competency: 4,
-    category: ['Data Engineering', 'Data Science', 'Python'],
-  },
-  {
-    title: 'Scikit-Learn',
-    competency: 4,
-    category: ['Data Engineering', 'Data Science', 'Python'],
-  },
-  {
-    title: 'Hadoop',
-    competency: 2,
-    category: ['Data Engineering', 'Data Science'],
-  },
-  {
-    title: 'Docker',
-    competency: 2,
-    category: ['Tools', 'Web/Mobile Dev', 'Cloud'],
-  },
-  {
-    title: 'Spark',
-    competency: 1,
-    category: ['Data Engineering', 'Data Science'],
-  },
-  {
-    title: 'Pylint',
-    competency: 2,
-    category: ['Data Engineering', 'Python'],
-  },
-].map((skill) => ({ ...skill, category: skill.category.sort() }));
-
-// Skills categories and colors
-const colors = [
-  '#6968b3',
-  '#37b1f5',
-  '#40494e',
-  '#515dd4',
-  '#e47272',
-  '#cc7b94',
-  '#3896e2',
-  '#c3423f',
-  '#d75858',
-  '#747fff',
-  '#64cb7b',
-];
-
-export const categories = [
-  ...new Set(skills.reduce((acc, { category }) => acc.concat(category), [])),
-]
-  .sort()
-  .map((category, index) => ({
-    name: category,
-    color: colors[index],
-  }));

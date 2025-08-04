@@ -1,5 +1,6 @@
 @import-normalize;
 
+@import 'libs/vars-modern';
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
@@ -67,3 +68,6 @@
 	@import 'pages/skills';
 	@import 'pages/stats';
 	@import 'pages/index';
+	@import 'pages/projects';
+	@import 'pages/about';
+	@import 'pages/voiceover';
