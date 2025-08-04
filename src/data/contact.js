@@ -12,11 +12,6 @@ const data = [
     label: 'Github',
     icon: faGithub,
   },
-  // {
-  //   link: 'https://facebook.com/abishekganesh12',
-  //   label: 'Facebook',
-  //   icon: faFacebookF,
-  // },
   {
     link: 'https://www.instagram.com/abishekganesh/',
     label: 'Instagram',
@@ -32,11 +27,6 @@ const data = [
     label: 'Angel List',
     icon: faAngellist,
   },
-  // {
-  //   link: 'https://twitter.com/dangershak',
-  //   label: 'Twitter',
-  //   icon: faTwitter,
-  // },
   {
     link: 'mailto:abishek.ganesh30@gmail.com',
     label: 'Email',

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { DegreeDataType } from '../../../prop-types';
 
 const Degree = ({ data }) => (
   <article className="degree-container">
@@ -12,14 +12,7 @@ const Degree = ({ data }) => (
 );
 
 Degree.propTypes = {
-  data: PropTypes.shape({
-    degree: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    school: PropTypes.string.isRequired,
-    year: PropTypes.string.isRequired,
-    gpa: PropTypes.string,
-    details: PropTypes.string,
-  }).isRequired,
+  data: DegreeDataType.isRequired,
 };
 
 export default Degree;

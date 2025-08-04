@@ -24,11 +24,11 @@ const Index = () => (
         <h2>Current Focus</h2>
         <div className="focus-grid">
           <div className="focus-item">
-            <h3>🧠 AI Consulting</h3>
+            <h3><span role="img" aria-label="Brain">🧠</span> AI Consulting</h3>
             <p>Partnering with companies to design and implement custom AI solutions, from predictive modeling to LLM applications that drive real business value.</p>
           </div>
           <div className="focus-item">
-            <h3>🎭 Voice Acting</h3>
+            <h3><span role="img" aria-label="Theater masks">🎭</span> Voice Acting</h3>
             <p>Professional voice actor bringing characters to life for commercials, animation, and audiobooks. <Link to="/voiceover">Listen to my demo reel →</Link></p>
           </div>
         </div>

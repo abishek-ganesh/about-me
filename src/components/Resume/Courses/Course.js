@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CourseDataType } from '../../../prop-types';
 
 const Course = ({ data, last }) => (
   <li className="course-container">
@@ -12,11 +13,7 @@ const Course = ({ data, last }) => (
 );
 
 Course.propTypes = {
-  data: PropTypes.shape({
-    link: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired,
+  data: CourseDataType.isRequired,
   last: PropTypes.bool,
 };
 

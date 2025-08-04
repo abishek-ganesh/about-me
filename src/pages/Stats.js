@@ -17,7 +17,6 @@ const Stats = () => (
         </div>
       </header>
       <Personal />
-      {/* <Site /> */}
     </article>
   </Main>
 );
