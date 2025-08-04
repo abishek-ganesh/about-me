@@ -7,42 +7,57 @@ const { PUBLIC_URL } = process.env;
 
 const Index = () => (
   <Main
-    description={"Abishek Ganesh's personal website. California based software engineer, "
-    + 'focused on solutions to large-scale problems using cutting-edge technology'}
+    description={"Abishek Ganesh - Senior Data Scientist at Limbik, building AI solutions that bridge technology and human creativity"}
   >
-    <img src={`${PUBLIC_URL}/images/me_hs2.jpg`} width='100%' alt="" />
     <article className="post" id="index">
-      <header>
-        <div className="title">
-          <h2 data-testid="heading"><Link to="/">Welcome to my personal website</Link></h2>
-          <p>
-            <br></br>
-            Thanks for visiting my personal website!<br></br><br></br>
-            My goal is for this page to be an evolving autobiographical diary, of sorts, showcasing my
-            career highlights, projects, journey, and passions. <br></br><br></br>
-            The technical domains I am currently most interested in are
-            Artificial Intelligence/Machine Learning, Blockchain technology, and Full Stack Development.<br></br><br></br>
-            I am also pursuing a career in the arts - specifically Theater, Film, and Voiceover Acting.<br></br><br></br>
-            Speaking of which, I am always interested in opportunities to partner with amazing brands and individuals (that&#39;s you!) to do 
-            big things with great people.
-            
+      <section className="hero">
+        <img src={`${PUBLIC_URL}/images/me_hs2.jpg`} alt="Abishek Ganesh" className="hero-image" />
+        <header>
+          <h1 className="hero-title">Building AI Solutions by Day,<br/>Crafting Stories by Night</h1>
+          <p className="hero-subtitle">
+            Senior Data Scientist at Limbik | Georgia Tech MS CS | Voice Actor
           </p>
+        </header>
+      </section>
+
+      <section className="current-focus">
+        <h2>Current Focus</h2>
+        <div className="focus-grid">
+          <div className="focus-item">
+            <h3>🧠 AI/ML Engineering</h3>
+            <p>Leading data science initiatives at Limbik, specializing in predictive modeling and machine learning systems that scale.</p>
+          </div>
+          <div className="focus-item">
+            <h3>🎭 Voice Acting</h3>
+            <p>Professional voice actor bringing characters to life for commercials, animation, and audiobooks. <Link to="/voiceover">Listen to my demo reel →</Link></p>
+          </div>
         </div>
-      </header>
-      <p> 
-        <i>Feel free to reach out to me via&nbsp;
-          <a href={`mailto:abishekganesh30@gmail.com`}>
-          email.
-          </a>
-          &nbsp;or, if your feeling generous, send me some crypto @
-          <a href={`http://abishekganesh.crypto/`}>
-          abishekganesh.crypto
-          </a>
-        </i><br></br><br></br>
-        <i>Webpage hosted on Github Pages and created with React and, of course, JavaScript, HTML, CSS.
-          
-        </i>
-      </p>
+      </section>
+
+      <section className="highlights">
+        <h2>Career Highlights</h2>
+        <div className="highlight-cards">
+          <div className="highlight-card">
+            <span className="highlight-metric">4.0 GPA</span>
+            <span className="highlight-label">Georgia Tech MS Computer Science</span>
+          </div>
+          <div className="highlight-card">
+            <span className="highlight-metric">5+ Years</span>
+            <span className="highlight-label">Building ML Systems in Production</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <h2>Let's Connect</h2>
+        <p>
+          I'm always interested in collaborating on AI/ML projects or voice acting opportunities.
+        </p>
+        <div className="cta-buttons">
+          <Link to="/resume" className="button primary">View My Experience</Link>
+          <a href="mailto:abishekganesh30@gmail.com" className="button">Get In Touch</a>
+        </div>
+      </section>
     </article>
   </Main>
 );

@@ -1,10 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
-
-import Cell from '../components/Projects/Cell';
-import data from '../data/projects';
 
 const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 

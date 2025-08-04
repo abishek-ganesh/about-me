@@ -16,6 +16,12 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 - `npm run build` - Build the production version (uses --openssl-legacy-provider flag)
 - `npm run deploy` - Build and deploy to GitHub Pages using gh-pages
 
+**Important Deployment Process:**
+1. Always make code changes to the `main` branch (never edit gh-pages directly)
+2. Use `/git-quick` or regular git commands to commit and push to `main`
+3. After pushing changes, run `npm run deploy` to update the live website
+4. The gh-pages branch is automatically managed by the deploy script
+
 ### Code Quality
 - `npm run lint` - Run ESLint on src directory
 - `npm test` - Run tests with react-scripts

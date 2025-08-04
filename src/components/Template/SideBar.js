@@ -6,12 +6,8 @@ import ContactIcons from '../Contact/ContactIcons';
 const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
 var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 today = today.toLocaleDateString(undefined, options);
-//today = mm + '/' + dd + '/' + yyyy;
 
 const SideBar = () => (
   <section id="sidebar">

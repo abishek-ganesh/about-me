@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import dayjs from 'dayjs';
 
 const Age = () => {
   const [age, setAge] = useState();
