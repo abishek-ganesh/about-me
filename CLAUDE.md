@@ -22,6 +22,10 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 3. After pushing changes, run `npm run deploy` to update the live website
 4. The gh-pages branch is automatically managed by the deploy script
 
+**Custom Domain Note:**
+- The CNAME file in the public directory ensures abishekganesh.com is preserved during deployments
+- If the custom domain gets removed, check that public/CNAME exists
+
 ### Code Quality
 - `npm run lint` - Run ESLint on src directory
 - `npm test` - Run tests with react-scripts
