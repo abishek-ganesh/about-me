@@ -7,7 +7,7 @@ const { PUBLIC_URL } = process.env;
 
 const Index = () => (
   <Main
-    description={"Abishek Ganesh - Senior Data Scientist at Limbik, building AI solutions that bridge technology and human creativity"}
+    description={"Abishek Ganesh - AI Consultant building custom AI solutions that bridge technology and human creativity"}
   >
     <article className="post" id="index">
       <section className="hero">
@@ -15,7 +15,7 @@ const Index = () => (
         <header>
           <h1 className="hero-title">Building AI Solutions by Day,<br/>Crafting Stories by Night</h1>
           <p className="hero-subtitle">
-            Senior Data Scientist at Limbik | Georgia Tech MS CS | Voice Actor
+            AI Consultant | Georgia Tech MS CS | Voice Actor
           </p>
         </header>
       </section>
@@ -24,8 +24,8 @@ const Index = () => (
         <h2>Current Focus</h2>
         <div className="focus-grid">
           <div className="focus-item">
-            <h3>🧠 AI/ML Engineering</h3>
-            <p>Leading data science initiatives at Limbik, specializing in predictive modeling and machine learning systems that scale.</p>
+            <h3>🧠 AI Consulting</h3>
+            <p>Partnering with companies to design and implement custom AI solutions, from predictive modeling to LLM applications that drive real business value.</p>
           </div>
           <div className="focus-item">
             <h3>🎭 Voice Acting</h3>

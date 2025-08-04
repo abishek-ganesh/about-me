@@ -1,9 +1,16 @@
 const positions = [
   {
+    company: 'AI Consulting',
+    position: 'Independent AI Consultant',
+    link: '',
+    daterange: '2024 - Present',
+    details: '',
+  },
+  {
     company: 'Limbik',
     position: 'Senior Lead Data Scientist',
     link: 'https://www.limbik.com/',
-    daterange: '2023 - Present',
+    daterange: '2023 - 2024',
     details: '',
   },
   {
