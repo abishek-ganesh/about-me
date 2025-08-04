@@ -26,6 +26,12 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 - The CNAME file in the public directory ensures abishekganesh.com is preserved during deployments
 - If the custom domain gets removed, check that public/CNAME exists
 
+**Clean URLs (No Hash Routing):**
+- Uses BrowserRouter instead of HashRouter for URLs without # symbols
+- 404.html file handles GitHub Pages client-side routing
+- index.html contains redirect script to restore proper routing
+- URLs are clean: /resume instead of /#/resume
+
 ### Code Quality
 - `npm run lint` - Run ESLint on src directory
 - `npm test` - Run tests with react-scripts
