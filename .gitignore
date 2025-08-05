@@ -20,3 +20,30 @@ node_modules/
 
 # Claude configuration
 CLAUDE.md
+.claude/
+
+# Planning and documentation
+WEBSITE_REVAMP_PLAN.md
+ANALYTICS_SETUP.md
+CLARITY_SETUP_GUIDE.md
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Cache files
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
