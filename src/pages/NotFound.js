@@ -14,11 +14,11 @@ const PageNotFound = () => {
         </Helmet>
         <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
           <h1 data-testid="heading" style={{ fontSize: '3rem', marginBottom: '2rem' }}>
-            ERROR 404
+            The People's Page Not Found
           </h1>
           <img 
             src={rockPhoto.path} 
-            alt="The Rock parody - even AI specialists get lost sometimes" 
+            alt="The Rock parody - The People's Champion meets 404 error" 
             style={{ 
               maxWidth: '500px', 
               width: '100%', 
@@ -32,7 +32,7 @@ const PageNotFound = () => {
             Can you smell what this page isn't cooking?
           </h2>
           <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#666' }}>
-            The page has left the building. Even AI specialists take wrong turns!
+            It doesn't matter what URL you typed! This page has checked into the Smackdown Hotel.
           </p>
           <Link 
             to="/" 
