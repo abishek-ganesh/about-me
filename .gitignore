@@ -17,3 +17,6 @@ node_modules/
 .env.production.local
 .env.development.local
 .env.test.local
+
+# Claude configuration
+CLAUDE.md
