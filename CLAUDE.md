@@ -19,8 +19,10 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 **Important Deployment Process:**
 1. Always make code changes to the `main` branch (never edit gh-pages directly)
 2. Use `/git-quick` or regular git commands to commit and push to `main`
-3. After pushing changes, run `npm run deploy` to update the live website
+3. **IMPORTANT**: After using `/git-quick` to push changes, ALWAYS run `npm run deploy` to update the live website
 4. The gh-pages branch is automatically managed by the deploy script
+
+**Remember**: The website won't update until you run `npm run deploy` after pushing to main!
 
 **Custom Domain Note:**
 - The CNAME file in the public directory ensures abishekganesh.com is preserved during deployments
