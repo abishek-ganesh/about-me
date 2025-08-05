@@ -10,3 +10,10 @@ bundle.js
 node_modules/
 
 .idea/
+
+# Environment variables
+.env
+.env.local
+.env.production.local
+.env.development.local
+.env.test.local

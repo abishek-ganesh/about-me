@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-import Analytics from '../components/Template/Analytics';
+// Use GA4 Analytics instead of the old Universal Analytics
+import Analytics from '../components/Template/Analytics-GA4';
 import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';

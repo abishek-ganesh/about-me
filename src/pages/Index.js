@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
+import testimonials, { placeholderTestimonials, socialProof } from '../data/testimonials';
 
 const { PUBLIC_URL } = process.env;
 
@@ -88,6 +90,37 @@ const Index = () => (
           </Link>
         </div>
       </section>
+
+      {/* Social Proof Section */}
+      <section className="social-proof-section">
+        <div className="social-proof-container">
+          <h3>Building Impact Together</h3>
+          <div className="stats-grid">
+            <div className="stat-item">
+              <span className="stat-number">{socialProof.yearsExperience}</span>
+              <span className="stat-label">Years Experience</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">{socialProof.projectsCompleted}</span>
+              <span className="stat-label">Projects Completed</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">{socialProof.studentsTeaching}</span>
+              <span className="stat-label">Students Teaching</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">{socialProof.clientsServed}</span>
+              <span className="stat-label">Clients Served</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials - Using placeholders for now */}
+      <TestimonialsSection 
+        testimonials={testimonials.length > 0 ? testimonials : placeholderTestimonials}
+        showPlaceholder={testimonials.length === 0}
+      />
 
       <section className="cta-section">
         <h2>Let's Build Something Impactful</h2>
