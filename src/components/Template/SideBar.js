@@ -1,26 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
-
-const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+import { getSidebarPhoto } from '../../data/photos';
 
 var today = new Date();
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 today = today.toLocaleDateString(undefined, options);
 
-const SideBar = () => (
-  <section id="sidebar">
-    <section id="intro">
-      <Link to="/" className="logo">
-        <img src={`${PUBLIC_URL}/images/me_hsSquare.jpg`} alt="" />
-      </Link>
-      <header>
-        <h2>Abishek Ganesh</h2>
-        <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
-        <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
-      </header>
-    </section>
+const SideBar = () => {
+  const sidebarPhoto = getSidebarPhoto();
+  const [isFirstLoad, setIsFirstLoad] = useState(false);
+  
+  useEffect(() => {
+    // Check if this is the first page load in this session
+    if (!sessionStorage.getItem('sidebarImageLoaded')) {
+      setIsFirstLoad(true);
+      sessionStorage.setItem('sidebarImageLoaded', 'true');
+    }
+  }, []);
+  
+  return (
+    <section id="sidebar">
+      <section id="intro">
+        <Link to="/" className="logo">
+          <img 
+            src={sidebarPhoto.path} 
+            alt={sidebarPhoto.metadata?.description || "Abishek Ganesh"}
+            className={isFirstLoad ? 'first-load' : ''}
+          />
+        </Link>
+        <header>
+          <h2>Abishek Ganesh</h2>
+          <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
+          <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
+        </header>
+      </section>
 
     <section className="blurb">
       <h2>About</h2>
@@ -43,6 +58,7 @@ const SideBar = () => (
       <p className="copyright">&copy; Abishek Ganesh <Link to="/">abishekganesh.com</Link>.</p>
     </section>
   </section>
-);
+  );
+};
 
 export default SideBar;

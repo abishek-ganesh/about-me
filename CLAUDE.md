@@ -16,13 +16,19 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 - `npm run build` - Build the production version (uses --openssl-legacy-provider flag)
 - `npm run deploy` - Build and deploy to GitHub Pages using gh-pages
 
-**Important Deployment Process:**
+**Important Git & Deployment Process:**
 1. Always make code changes to the `main` branch (never edit gh-pages directly)
-2. Use `/git-quick` or regular git commands to commit and push to `main`
-3. **IMPORTANT**: After using `/git-quick` to push changes, ALWAYS run `npm run deploy` to update the live website
-4. The gh-pages branch is automatically managed by the deploy script
+2. **CRITICAL**: NEVER commit changes without explicit user approval
+   - Always ask "Should I commit these changes?" before running git add/commit
+   - Wait for user confirmation before committing
+   - User should review changes first with `git diff` or by testing locally
+3. Use `/git-quick` or regular git commands to commit and push to `main` (after approval)
+4. **IMPORTANT**: After using `/git-quick` to push changes, ALWAYS run `npm run deploy` to update the live website
+5. The gh-pages branch is automatically managed by the deploy script
 
-**Remember**: The website won't update until you run `npm run deploy` after pushing to main!
+**Remember**: 
+- NEVER auto-commit changes - always get user approval first!
+- The website won't update until you run `npm run deploy` after pushing to main!
 
 **Custom Domain Note:**
 - The CNAME file in the public directory ensures abishekganesh.com is preserved during deployments

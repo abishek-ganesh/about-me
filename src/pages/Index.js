@@ -4,35 +4,45 @@ import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
 import testimonials, { placeholderTestimonials, socialProof } from '../data/testimonials';
+import PhotoCarousel from '../components/common/PhotoCarousel';
+import { getCarouselPhotos } from '../data/photos';
 
-const { PUBLIC_URL } = process.env;
+const Index = () => {
+  const carouselPhotos = getCarouselPhotos();
+  
+  console.log('Carousel photos:', carouselPhotos);
 
-const Index = () => (
-  <Main
-    description={"Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"}
-  >
-    <article className="post page" id="index">
-      <section className="hero u-text-center u-mb-4">
-        <img 
-          src={`${PUBLIC_URL}/images/me_hs2.jpg`} 
-          alt="Abishek Ganesh" 
-          className="hero-image u-mb-3"
-          style={{ 
-            width: '200px', 
-            height: '200px', 
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
-        <header>
-          <h1 className="u-text-3xl u-font-bold u-mb-2">
-            I implement the latest AI breakthroughs<br/>for companies that can't afford to be second
-          </h1>
-          <p className="u-text-xl u-text-primary">
-            State-of-the-Art AI Implementation Specialist | RAG Systems | AI Agents | Always Learning What's Next
-          </p>
-        </header>
-      </section>
+  return (
+    <Main
+      description={"Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"}
+    >
+      <article className="post page" id="index">
+        <section className="hero u-text-center u-mb-4">
+          <header>
+            <h1 className="u-text-3xl u-font-bold u-mb-2">
+              I implement the latest AI breakthroughs<br/>for companies that can't afford to be second
+            </h1>
+            <p className="u-text-xl u-text-primary">
+              State-of-the-Art AI Implementation Specialist | RAG Systems | AI Agents | Always Learning What's Next
+            </p>
+          </header>
+        </section>
+
+        {/* Meet Abishek Carousel Section */}
+        <section className="section-content u-mb-4">
+          <div className="section-header">
+            <h2>Beyond the Code: Meet the Person Behind the AI</h2>
+          </div>
+          <PhotoCarousel
+            photos={carouselPhotos}
+            transitionType="fade"
+            showCaptions={true}
+            autoPlay={true}
+            interval={5000}
+            showThumbnails={true}
+            className="homepage-carousel"
+          />
+        </section>
 
       <section className="section-content">
         <div className="section-header">
@@ -213,6 +223,7 @@ const Index = () => (
       </section>
     </article>
   </Main>
-);
+  );
+};
 
 export default Index;
