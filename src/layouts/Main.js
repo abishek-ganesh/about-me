@@ -40,7 +40,7 @@ Main.defaultProps = {
   children: null,
   fullPage: false,
   title: null,
-  description: "Abishek Ganesh's personal website.",
+  description: "State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment",
 };
 
 export default Main;

@@ -1,0 +1,273 @@
+// Reusable section components
+@import '../libs/vars-modern';
+
+// Page header - used at the top of each page
+.page-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 4rem 0 5rem;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 4rem;
+    padding: 3rem 0 4rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 3rem;
+    padding: 2rem 0 3rem;
+  }
+  
+  h1 {
+    font-family: $font-display;
+    font-size: 4rem;
+    color: $color-neutral-900;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    display: block;
+    
+    @media (max-width: 1024px) {
+      font-size: 3.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .subtitle,
+  .tagline {
+    display: block;
+    font-size: 1.375rem;
+    color: $color-neutral-600;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+    
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1.125rem;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: $color-neutral-500;
+    margin-top: 1rem;
+    display: block;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+    }
+  }
+  
+  
+  
+  // Homepage variant - no decoration bar
+  &.page-header--hero {
+    &::after {
+      display: none;
+    }
+  }
+  
+  // Compact variant for pages with less emphasis
+  &.page-header--compact {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Page title component for consistent structure
+.page-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  h1 {
+    font-family: $font-display;
+    font-size: 3.5rem;
+    color: $color-neutral-900;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    
+    @media (max-width: 768px) {
+      font-size: 2.75rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2.25rem;
+    }
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: $color-neutral-500;
+    display: block;
+    margin: 0;
+  }
+}
+
+// Quick navigation links
+.quick-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    transition: all $transition-base ease;
+    
+    &:hover {
+      background: lighten($color-primary, 45%);
+      border-color: $color-primary;
+    }
+  }
+}
+
+// Section header - for section titles within pages
+.section-header {
+  margin-bottom: 2rem;
+  
+  h2 {
+    font-size: 2rem;
+    color: $color-neutral-900;
+    font-weight: 600;
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+    }
+    
+    // With accent bar
+    &.with-accent {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      justify-content: center;
+      
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 1.5rem;
+        background: $color-primary;
+        border-radius: 2px;
+      }
+    }
+  }
+  
+  .section-description {
+    text-align: center;
+    font-size: 1.125rem;
+    color: $color-neutral-600;
+    max-width: 600px;
+    margin: 1rem auto 0;
+    line-height: 1.6;
+  }
+}
+
+// CTA Section - call to action sections
+.section-cta {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, lighten($color-primary, 47%), white);
+  border-radius: 1rem;
+  margin-top: 4rem;
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: $color-neutral-900;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  p {
+    font-size: 1.125rem;
+    color: $color-neutral-600;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  // Boxed variant
+  &.boxed {
+    background: white;
+    border: 1px solid $color-neutral-200;
+    box-shadow: $shadow-md;
+  }
+}
+
+// Content section - generic content wrapper
+.section-content {
+  @include section-container;
+  
+  &.boxed {
+    @include content-container;
+  }
+  
+  &.centered {
+    @include centered-container;
+  }
+  
+  // Add more vertical spacing between consecutive sections
+  & + & {
+    margin-top: 2rem;
+  }
+}

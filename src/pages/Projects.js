@@ -7,112 +7,115 @@ import data from '../data/projects';
 const Projects = () => (
   <Main
     title="Projects"
-    description="AI projects showcasing real-world implementations and measurable impact"
+    description="State-of-the-Art AI Implementations | RAG Systems, AI Agents, and Cutting-Edge Production Deployments"
   >
-    <article className="post" id="projects">
-      <div className="projects-container">
-        <header className="projects-header">
-          <h1>AI Projects</h1>
-          <p className="subtitle">Real-world implementations with measurable impact</p>
-        </header>
+    <article className="post page" id="projects">
+      <div className="page-title">
+        <h1>Cutting-Edge AI Implementations</h1>
+        <span className="page-subtitle">State-of-the-art RAG systems, AI agents, and whatever breakthrough comes next - in production</span>
+      </div>
 
-        <div className="projects-grid">
+      <section className="section-content">
+        <div className="grid grid--auto grid--gap-lg" style={{ '--grid-min': '600px' }}>
           {data.filter(p => p.featured).map((project) => (
-            <div key={project.title} className="project-card">
-              <div className="project-header">
-                <span className="project-category">{project.category}</span>
-                <h2>{project.title}</h2>
-                <p className="project-subtitle">{project.subtitle}</p>
+          <div key={project.title} className="card card--elevated">
+            <div className="card-header">
+              <span className="tag tag--small tag--primary u-mb-2">{project.category}</span>
+              <h2 className="u-mb-1">{project.title}</h2>
+              <p className="u-text-lg u-text-muted">{project.subtitle}</p>
+            </div>
+            <div className="card-body">
+              <div className="u-mb-3 u-pb-3 u-border-bottom">
+                <p className="u-text-lg u-mb-0">{project.desc}</p>
               </div>
 
-              <div className="project-content">
-                <div className="project-description">
-                  <p>{project.desc}</p>
-                </div>
+              <div className="u-mb-3">
+                <h3 className="u-mb-2">The Challenge</h3>
+                <p className="u-text-muted">{project.challenge}</p>
+              </div>
 
-                <div className="project-section">
-                  <h3>The Challenge</h3>
-                  <p>{project.challenge}</p>
-                </div>
+              <div className="u-mb-3">
+                <h3 className="u-mb-2">Solution Approach</h3>
+                <ul className="list list--arrow">
+                  {project.solution.map((item, index) => (
+                    <li key={index} className="list-item">{item}</li>
+                  ))}
+                </ul>
+              </div>
 
-                <div className="project-section">
-                  <h3>Solution Approach</h3>
-                  <ul className="solution-list">
-                    {project.solution.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
+              <div className="u-mb-3">
+                <h3 className="u-mb-2">Technology Stack</h3>
+                <div className="u-flex u-flex-wrap u-gap-1">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="tag tag--primary">{tech}</span>
+                  ))}
                 </div>
+              </div>
 
-                <div className="tech-section">
-                  <h3>Technology Stack</h3>
-                  <div className="tech-tags">
-                    {project.techStack.map((tech) => (
-                      <span key={tech} className="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="impact-section">
-                  <h3>Measurable Impact</h3>
-                  <div className="impact-grid">
+              <div className="card card--gradient u-mb-3">
+                <div className="card-body">
+                  <h3 className="u-text-center u-mb-3">Measurable Impact</h3>
+                  <div className="grid grid--2 grid--gap-lg u-text-center">
                     {Object.entries(project.impact).map(([metric, value]) => (
-                      <div key={metric} className="impact-item">
-                        <span className="impact-value">{value}</span>
-                        <span className="impact-metric">{metric}</span>
+                      <div key={metric}>
+                        <div className="u-text-2xl u-font-bold u-text-primary">{value}</div>
+                        <div className="u-text-sm u-text-muted u-text-uppercase">{metric}</div>
                       </div>
                     ))}
                   </div>
                 </div>
+              </div>
 
-                <div className="learnings-section">
-                  <h3>Key Learnings</h3>
-                  <ul className="learnings-list">
-                    {project.learnings.map((learning, index) => (
-                      <li key={index}>{learning}</li>
-                    ))}
-                  </ul>
+              <div>
+                <h3 className="u-mb-2">Key Learnings</h3>
+                <ul className="list list--check">
+                  {project.learnings.map((learning, index) => (
+                    <li key={index} className="list-item u-text-sm u-font-italic">{learning}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+        </div>
+      </section>
+
+      <section className="section-content">
+        <div className="section-header">
+          <h2>Additional Projects</h2>
+        </div>
+        <div className="grid grid--3 grid--gap-lg">
+          {data.filter(p => !p.featured).map((project) => (
+            <div key={project.title} className="card">
+              <div className="card-body">
+                <span className="tag tag--small tag--secondary">{project.category}</span>
+                <h3 className="u-mt-2 u-mb-2">{project.title}</h3>
+                <p className="u-text-muted u-mb-3">{project.desc}</p>
+                <div className="u-flex u-flex-wrap u-gap-1">
+                  {project.techStack.slice(0, 3).map((tech) => (
+                    <span key={tech} className="tag tag--small tag--outline">{tech}</span>
+                  ))}
+                  {project.techStack.length > 3 && (
+                    <span className="tag tag--small tag--neutral">+{project.techStack.length - 3}</span>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </section>
 
-        <section className="additional-projects">
-          <h2>Additional Projects</h2>
-          <div className="secondary-projects-grid">
-            {data.filter(p => !p.featured).map((project) => (
-              <div key={project.title} className="secondary-project-card">
-                <span className="project-category">{project.category}</span>
-                <h3>{project.title}</h3>
-                <p>{project.desc}</p>
-                <div className="project-footer">
-                  <div className="tech-tags">
-                    {project.techStack.slice(0, 3).map((tech) => (
-                      <span key={tech} className="tech-tag small">{tech}</span>
-                    ))}
-                    {project.techStack.length > 3 && (
-                      <span className="tech-tag small">+{project.techStack.length - 3}</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="cta-section">
-          <h2>Let's Build Something Together</h2>
-          <p>
-            I'm always interested in tackling complex AI challenges. Whether you need ML infrastructure, 
-            intelligent automation, or custom AI solutions, let's discuss how we can create impact together.
-          </p>
-          <div className="cta-buttons">
-            <Link to="/contact" className="button primary">Start a Conversation</Link>
-            <Link to="/about" className="button">Learn More About Me</Link>
-          </div>
-        </section>
-      </div>
+      <section className="section-cta u-mt-5">
+        <h2>Ready to Implement Tomorrow's AI Today?</h2>
+        <p>
+          I specialize in deploying the absolute latest in AI technology - RAG systems, AI agents, multi-agent architectures, 
+          and whatever breakthrough comes next. Let's leverage cutting-edge tech in smart ways that help your users.
+        </p>
+        <div className="cta-buttons">
+          <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>
+          <Link to="/about" className="btn btn--secondary">Learn About My Approach</Link>
+        </div>
+      </section>
     </article>
   </Main>
 );

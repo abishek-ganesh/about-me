@@ -10,123 +10,148 @@ const Voiceover = () => (
     title="Voiceover"
     description="Professional voice actor bringing characters to life for commercials, animation, and audiobooks."
   >
-    <article className="post" id="voiceover">
-      <div className="voiceover-container">
-        <header className="voiceover-header">
-          <h1>Voice Acting Portfolio</h1>
-          <p className="subtitle">
-            Bringing stories to life through character voices, commercial narration, and audiobook performance
-          </p>
-        </header>
+    <article className="post page" id="voiceover">
+      <div className="page-title">
+        <h1>Voice Acting Portfolio</h1>
+        <span className="page-subtitle">Bringing stories to life through character voices, commercial narration, and audiobook performance</span>
+      </div>
 
-        <section className="demo-reel-section">
-          <h2>Commercial Demo Reel</h2>
-          <div className="reel-intro">
-            <p>
+      <section className="section-content">
+        <div className="card card--elevated">
+          <div className="card-body">
+            <h2 className="u-text-center u-mb-3">Commercial Demo Reel</h2>
+            <p className="u-text-center u-text-lg u-mb-3">
               Listen to my latest commercial voice over demo reel featuring a variety of styles and characters.
             </p>
+            <div className="u-bg-light u-p-3 u-rounded u-text-center">
+              <audio controls src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`} className="u-w-full" style={{ maxWidth: '600px' }}>
+                Your browser does not support the audio element.
+              </audio>
+              <p className="u-mt-3 u-text-sm u-text-muted u-mb-0">
+                For voiceover inquiries, email me at{' '}
+                <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary u-font-medium">
+                  abishek.ganesh30@gmail.com
+                </a>
+              </p>
+            </div>
           </div>
-          <div className="audio-player">
-            <audio controls src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`}>
-              Your browser does not support the audio element.
-            </audio>
-            <p className="player-caption">
-              For voiceover inquiries, email me at{' '}
-              <a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a>
-            </p>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="services-section">
+      <section className="section-content">
+        <div className="section-header">
           <h2>Voice Acting Services</h2>
-          <div className="services-grid">
-            <div className="service-card">
-              <span className="service-icon" role="img" aria-label="Commercial">📺</span>
-              <h3>Commercials</h3>
-              <p>Engaging voice overs for radio, TV, and online advertisements</p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon" role="img" aria-label="Animation">🎬</span>
-              <h3>Animation</h3>
-              <p>Character voices for animated films, series, and video games</p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon" role="img" aria-label="Audiobook">📚</span>
-              <h3>Audiobooks</h3>
-              <p>Narration for fiction and non-fiction audiobook productions</p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon" role="img" aria-label="E-Learning">🎓</span>
-              <h3>E-Learning</h3>
-              <p>Clear, engaging narration for educational and training content</p>
+        </div>
+        <div className="grid grid--4 grid--gap-lg">
+          <div className="card card--hover u-text-center">
+            <div className="card-body">
+              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="Commercial">📺</span>
+              <h3 className="u-mb-2">Commercials</h3>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Engaging voice overs for radio, TV, and online advertisements
+              </p>
             </div>
           </div>
-        </section>
-
-        <section className="voiceover-skills">
-          <h2>Voice Characteristics & Skills</h2>
-          <div className="skills-list">
-            <div className="skill-item">Warm & Friendly</div>
-            <div className="skill-item">Authoritative</div>
-            <div className="skill-item">Character Voices</div>
-            <div className="skill-item">Natural Conversational</div>
-            <div className="skill-item">Multiple Accents</div>
-            <div className="skill-item">Dramatic Reading</div>
-            <div className="skill-item">Comedy Timing</div>
-            <div className="skill-item">Technical Narration</div>
+          <div className="card card--hover u-text-center">
+            <div className="card-body">
+              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="Animation">🎬</span>
+              <h3 className="u-mb-2">Animation</h3>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Character voices for animated films, series, and video games
+              </p>
+            </div>
           </div>
-        </section>
-
-        <section className="background-section">
-          <h2>Why Voice Acting?</h2>
-          <div className="background-content">
-            <p>
-              As both an AI engineer and voice actor, I bring a unique perspective to creative projects. 
-              My technical background helps me understand the precision needed in voice work, while my 
-              artistic side brings characters and stories to life with authentic emotion.
-            </p>
-            <p>
-              Voice acting allows me to explore the human side of communication—something that 
-              complements my work in AI. Understanding how humans convey emotion, meaning, and 
-              nuance through voice helps me build better AI systems and more natural interactions.
-            </p>
-            <p>
-              Whether it's a commercial that needs to connect with audiences or a character that 
-              needs depth and personality, I approach each project with professionalism and creativity.
-            </p>
+          <div className="card card--hover u-text-center">
+            <div className="card-body">
+              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="Audiobook">📚</span>
+              <h3 className="u-mb-2">Audiobooks</h3>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Narration for fiction and non-fiction audiobook productions
+              </p>
+            </div>
           </div>
-        </section>
+          <div className="card card--hover u-text-center">
+            <div className="card-body">
+              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="E-Learning">🎓</span>
+              <h3 className="u-mb-2">E-Learning</h3>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Clear, engaging narration for educational and training content
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section className="logo-section">
-          <img 
-            src={`${PUBLIC_URL}/images/vo_logo1.jpg`} 
-            alt="Abishek Ganesh Voice Acting Logo" 
-            className="logo-image"
-          />
-        </section>
+      <section className="section-content">
+        <div className="card card--gradient">
+          <div className="card-body">
+            <h2 className="u-text-center u-mb-3">Voice Characteristics & Skills</h2>
+            <div className="grid grid--auto-sm grid--gap-sm u-mx-auto" style={{ maxWidth: '800px' }}>
+              <span className="tag tag--large">Warm & Friendly</span>
+              <span className="tag tag--large">Authoritative</span>
+              <span className="tag tag--large">Character Voices</span>
+              <span className="tag tag--large">Natural Conversational</span>
+              <span className="tag tag--large">Multiple Accents</span>
+              <span className="tag tag--large">Dramatic Reading</span>
+              <span className="tag tag--large">Comedy Timing</span>
+              <span className="tag tag--large">Technical Narration</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section className="voiceover-cta">
-          <h2>Let's Create Something Amazing</h2>
-          <p>
-            Looking for a versatile voice actor for your next project? 
-            I'd love to bring your script to life.
+      <section className="section-content">
+        <h2 className="u-mb-3">Why Voice Acting?</h2>
+        <div style={{ maxWidth: '800px' }}>
+          <p className="u-text-lg u-mb-3">
+            As both an AI engineer and voice actor, I bring a unique perspective to creative projects. 
+            My technical background helps me understand the precision needed in voice work, while my 
+            artistic side brings characters and stories to life with authentic emotion.
           </p>
-          <div className="contact-info">
-            <p>
-              <strong>Email:</strong>{' '}
-              <a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a>
-            </p>
-          </div>
-          <div className="cta-buttons">
-            <a href="mailto:abishek.ganesh30@gmail.com" className="button primary">
-              Request a Custom Audition
+          <p className="u-text-lg u-mb-3">
+            Voice acting allows me to explore the human side of communication—something that 
+            complements my work in AI. Understanding how humans convey emotion, meaning, and 
+            nuance through voice helps me build better AI systems and more natural interactions.
+          </p>
+          <p className="u-text-lg u-mb-0">
+            Whether it's a commercial that needs to connect with audiences or a character that 
+            needs depth and personality, I approach each project with professionalism and creativity.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-content u-text-center">
+        <img 
+          src={`${PUBLIC_URL}/images/vo_logo1.jpg`} 
+          alt="Abishek Ganesh Voice Acting Logo" 
+          className="u-rounded-lg u-shadow-lg"
+          style={{ maxWidth: '600px', width: '100%' }}
+        />
+      </section>
+
+      <section className="section-cta u-mt-4">
+        <h2>Let's Create Something Amazing</h2>
+        <p>
+          Looking for a versatile voice actor for your next project? 
+          I'd love to bring your script to life.
+        </p>
+        <div className="u-mb-3">
+          <p className="u-mb-0">
+            <strong>Email:</strong>{' '}
+            <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary">
+              abishek.ganesh30@gmail.com
             </a>
-            <Link to="/contact" className="button">
-              General Contact
-            </Link>
-          </div>
-        </section>
-      </div>
+          </p>
+        </div>
+        <div className="cta-buttons">
+          <a href="mailto:abishek.ganesh30@gmail.com" className="btn btn--primary">
+            Request a Custom Audition
+          </a>
+          <Link to="/contact" className="btn btn--secondary">
+            General Contact
+          </Link>
+        </div>
+      </section>
     </article>
   </Main>
 );

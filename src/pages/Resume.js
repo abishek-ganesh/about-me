@@ -3,86 +3,124 @@ import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 
-import Education from '../components/Resume/Education';
-import Experience from '../components/Resume/Experience';
-import Skills from '../components/Resume/Skills';
-import Courses from '../components/Resume/Courses';
-
-import { courses, degrees, positions, skills, skillCategories, categories } from '../data/resume';
+import { degrees, positions } from '../data/resume';
 
 const sections = [
-  'Education',
   'Experience',
-  'Skills',
-  'Courses',
+  'Technical Expertise',
+  'Key Projects',
+  'Education',
 ];
 
 const Resume = () => (
   <Main
     title="Resume"
-    description="Abishek Ganesh - Senior AI Engineer | AI Consultant | AI Instructor"
+    description="Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"
   >
-    <article className="post" id="resume">
-      <div className="resume-container">
-        <header className="resume-header">
-          <h1>Professional Resume</h1>
-          <p className="subtitle">
-            8+ years of experience building and deploying AI/ML systems at scale.
-            Passionate about solving complex problems and teaching the next generation of AI engineers.
-          </p>
-          <div className="quick-links">
-            {sections.map((sec) => (
-              <a key={sec} href={`#${sec.toLowerCase()}`}>{sec}</a>
-            ))}
-          </div>
-        </header>
-
-        <div className="download-section">
-          <a href="/resume.pdf" className="download-button" download>
-            <i className="fa fa-download" />
-            Download PDF Version
-          </a>
+    <article className="post page" id="resume">
+      <div className="page-title">
+        <h1>Abishek Ganesh</h1>
+        <span className="page-subtitle">State-of-the-Art AI Implementation Specialist</span>
+      </div>
+      
+      <div className="u-text-center u-mb-5">
+        <p className="u-text-lg u-text-muted u-max-w-lg u-mx-auto u-mb-3">
+          State-of-the-art AI implementation specialist passionate about RAG systems, AI agents, and whatever breakthrough comes next. 
+          Expert in leveraging truly cutting-edge technologies in smart ways that help companies and their users. 
+          5+ years deploying the latest AI innovations in production - from advanced RAG with hybrid search to multi-agent orchestration.
+        </p>
+        <div className="quick-links">
+          {sections.map((sec) => (
+            <a key={sec} href={`#${sec.toLowerCase()}`} className="u-text-primary u-font-medium u-mx-2">{sec}</a>
+          ))}
         </div>
+      </div>
 
-        <section id="education" className="resume-section education-section">
-          <h2>Education</h2>
-          <div className="education-grid">
-            {degrees.map((degree) => (
-              <div key={degree.school} className="education-item">
-                <div className="education-header">
-                  <div className="school-info">
-                    <h3>
-                      {degree.link ? (
-                        <a href={degree.link} target="_blank" rel="noopener noreferrer">
-                          {degree.school}
-                        </a>
-                      ) : (
-                        degree.school
-                      )}
-                    </h3>
-                    <div className="degree">{degree.degree}</div>
-                  </div>
-                  <div className="education-meta">
-                    <span className="year">{degree.year}</span>
-                    {degree.gpa && <div className="gpa">GPA: {degree.gpa}</div>}
-                  </div>
-                </div>
-                {degree.details && (
-                  <div className="education-details">{degree.details}</div>
-                )}
-              </div>
-            ))}
+      <div className="u-text-center u-mb-4">
+        <a href="/resume.pdf" className="btn btn--primary" download>
+          <i className="fa fa-download" />
+          Download PDF Version
+        </a>
+      </div>
+
+      <section id="experience" className="section-content">
+        <div className="section-header">
+          <h2 className="with-accent">Professional Experience</h2>
+        </div>
+        <div className="grid grid--2 grid--gap-lg">
+          <div className="card card--elevated">
+            <div className="card-header">
+              <h3>RAG Systems Mastery</h3>
+            </div>
+            <div className="card-body">
+              <ul className="list list--chevron">
+                <li>Advanced retrieval: hybrid search, semantic + keyword fusion</li>
+                <li>Multi-stage reranking and relevance optimization</li>
+                <li>Dynamic chunking and context window management</li>
+                <li>Knowledge graph integration for enhanced reasoning</li>
+                <li>Production RAG serving millions of queries daily</li>
+              </ul>
+            </div>
           </div>
-        </section>
+          <div className="card card--elevated">
+            <div className="card-header">
+              <h3>AI Agent Development</h3>
+            </div>
+            <div className="card-body">
+              <ul className="list list--chevron">
+                <li>Single-agent systems with tool use and reasoning</li>
+                <li>Multi-agent orchestration and communication</li>
+                <li>ReAct, Chain-of-Thought, Tree-of-Thought paradigms</li>
+                <li>Custom agent frameworks for specific domains</li>
+                <li>Agentic process automation at enterprise scale</li>
+              </ul>
+            </div>
+          </div>
+          <div className="card card--elevated">
+            <div className="card-header">
+              <h3>Latest Foundation Models</h3>
+            </div>
+            <div className="card-body">
+              <ul className="list list--chevron">
+                <li>GPT-4o, Claude 3.5, Gemini Pro, Llama 3.1 in production</li>
+                <li>Fine-tuning and prompt engineering for optimal performance</li>
+                <li>RLHF and constitutional AI implementations</li>
+                <li>Multi-modal model deployments</li>
+                <li>Always first to implement the next breakthrough</li>
+              </ul>
+            </div>
+          </div>
+          <div className="card card--elevated">
+            <div className="card-header">
+              <h3>Production Excellence</h3>
+            </div>
+            <div className="card-body">
+              <ul className="list list--chevron">
+                <li>Real-time inference with sub-100ms latency</li>
+                <li>Auto-scaling ML infrastructure handling millions daily</li>
+                <li>Fault tolerance and graceful degradation</li>
+                <li>Comprehensive observability and monitoring</li>
+                <li>60% MTTR reduction through strategic architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="experience" className="resume-section experience-section">
-          <h2>Professional Experience</h2>
-          <div className="experience-timeline">
-            {positions.map((job) => (
-              <div key={`${job.company}-${job.position}`} className="experience-item">
-                <div className="job-header">
-                  <div className="company-line">
-                    <h3>
+      <section id="technical-expertise" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2 className="with-accent">Technical Expertise</h2>
+          <p className="section-description">
+            Mastery of truly state-of-the-art AI technologies - always implementing what's next
+          </p>
+        </div>
+        <div className="experience-timeline">
+          {positions.map((job) => (
+            <div key={`${job.company}-${job.position}`} className="experience-item">
+              <div className="u-mb-2">
+                <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
+                  <div>
+                    <h3 className="u-inline u-font-semibold">
                       {job.link ? (
                         <a href={job.link} target="_blank" rel="noopener noreferrer">
                           {job.company}
@@ -91,99 +129,105 @@ const Resume = () => (
                         job.company
                       )}
                     </h3>
-                    <span className="position">— {job.position}</span>
+                    <span className="u-text-primary u-font-medium"> — {job.position}</span>
                   </div>
-                  <span className="daterange">{job.daterange}</span>
-                </div>
-                <ul className="job-points">
-                  {job.points.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="skills" className="resume-section skills-section">
-          <h2>Technical Skills</h2>
-          <div className="skills-intro">
-            <p>
-              Comprehensive expertise across the AI/ML stack, from research and development
-              to production deployment and scaling.
-            </p>
-          </div>
-          <div className="skills-categories">
-            {Object.entries(skillCategories).map(([category, categorySkills]) => (
-              <div key={category} className="skill-category">
-                <h3>
-                  <span
-                    className="category-icon"
-                    style={{
-                      color: categories.find(c => c.name === category)?.color || '#2196f3'
-                    }}
-                  />
-                  {category}
-                </h3>
-                <div className="skill-list">
-                  {categorySkills.map((skill) => (
-                    <div key={skill.name} className="skill-item">
-                      <div className="skill-header">
-                        <span className="skill-name">{skill.name}</span>
-                        <span className="skill-level">{skill.level}/5</span>
-                      </div>
-                      <div className="skill-bar">
-                        <div
-                          className="skill-progress"
-                          style={{ width: `${(skill.level / 5) * 100}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                  <span className="tag tag--small tag--neutral">{job.daterange}</span>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="skills-chart-container">
-            <h3>Skills Overview</h3>
-            <Skills skills={skills} categories={categories} />
-          </div>
-        </section>
+              <ul className="list list--chevron">
+                {job.points.map((point, index) => (
+                  <li key={index} className="list-item">{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <section id="courses" className="resume-section courses-section">
-          <h2>Relevant Coursework</h2>
-          <div className="courses-intro">
-            <p>
-              Graduate-level coursework from Georgia Tech's OMSCS program,
-              specializing in Machine Learning and AI.
-            </p>
-          </div>
-          <div className="courses-grid">
-            {courses.map((course) => (
-              <div key={course.number} className="course-item">
-                <a href={course.link} target="_blank" rel="noopener noreferrer">
-                  <div className="course-number">{course.number}</div>
-                  <div className="course-title">{course.title}</div>
-                  <div className="course-university">{course.university}</div>
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="resume-cta">
-          <h2>Let's Work Together</h2>
-          <p>
-            I'm always interested in tackling complex AI challenges and sharing knowledge
-            with the community. Whether you need technical expertise or educational guidance,
-            I'm here to help.
+      <section id="key-projects" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2 className="with-accent">Key Projects & Achievements</h2>
+          <p className="section-description">
+            Measurable AI impact across industries - from stealth startups to Fortune 500
           </p>
-          <div className="cta-buttons">
-            <Link to="/contact" className="button primary">Get in Touch</Link>
-            <Link to="/projects" className="button">View My Projects</Link>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div className="experience-timeline">
+          {positions.map((job) => (
+            <div key={`${job.company}-${job.position}`} className="experience-item">
+              <div className="u-mb-2">
+                <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
+                  <div>
+                    <h3 className="u-inline u-font-semibold">
+                      {job.link ? (
+                        <a href={job.link} target="_blank" rel="noopener noreferrer">
+                          {job.company}
+                        </a>
+                      ) : (
+                        job.company
+                      )}
+                    </h3>
+                    <span className="u-text-primary u-font-medium"> — {job.position}</span>
+                  </div>
+                  <span className="tag tag--small tag--neutral">{job.daterange}</span>
+                </div>
+              </div>
+              <ul className="list list--chevron">
+                {job.points.map((point, index) => (
+                  <li key={index} className="list-item">{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="education" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2 className="with-accent">Education</h2>
+        </div>
+        <div className="grid grid--auto-lg grid--gap-lg">
+          {degrees.map((degree) => (
+            <div key={degree.school} className="card card--elevated">
+              <div className="card-body">
+                <div className="u-flex u-justify-between u-flex-wrap u-gap-2 u-mb-2">
+                  <div>
+                    <h3 className="u-mb-1">
+                      {degree.link ? (
+                        <a href={degree.link} target="_blank" rel="noopener noreferrer">
+                          {degree.school}
+                        </a>
+                      ) : (
+                        degree.school
+                      )}
+                    </h3>
+                    <div className="u-text-primary u-font-medium">{degree.degree}</div>
+                  </div>
+                  <div className="u-text-right">
+                    <span className="tag tag--neutral">{degree.year}</span>
+                    {degree.gpa && <div className="u-text-sm u-text-muted u-mt-1">GPA: {degree.gpa}</div>}
+                  </div>
+                </div>
+                {degree.details && (
+                  <div className="u-text-muted u-font-italic">{degree.details}</div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      <section className="section-cta u-mt-4">
+        <h2>Ready to Deploy Tomorrow's AI Today?</h2>
+        <p>
+          I help companies implement truly cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next. 
+          Let's leverage the latest technologies in smart ways that help your users.
+        </p>
+        <div className="cta-buttons">
+          <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>
+          <Link to="/projects" className="btn btn--secondary">View Cutting-Edge Implementations</Link>
+        </div>
+      </section>
     </article>
   </Main>
 );

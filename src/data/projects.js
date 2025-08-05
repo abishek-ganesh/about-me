@@ -1,138 +1,246 @@
 // AI Projects - Real-world implementations with measurable impact
 const data = [
   {
-    title: 'Real-time ML Infrastructure Platform',
-    subtitle: 'Scalable architecture serving millions of predictions daily',
-    category: 'ML Infrastructure',
-    image: '/images/projects/ml-infrastructure.jpg',
+    title: 'Advanced RAG System for Fortune 500',
+    subtitle: 'Hybrid search with semantic + keyword fusion at enterprise scale',
+    category: 'State-of-the-Art RAG',
+    image: '/images/projects/rag-system.jpg',
     date: '2024-01-15',
     featured: true,
-    desc: 'Designed and implemented a real-time ML platform that reduced system MTTR by 60% through strategic debugging and architectural improvements.',
+    desc: 'Implemented cutting-edge RAG system with hybrid search, multi-stage reranking, and dynamic context optimization serving 10M+ queries monthly.',
     
-    challenge: 'Legacy ML systems were experiencing frequent failures with mean time to recovery exceeding 4 hours, impacting business operations and customer experience.',
+    challenge: 'Traditional search systems failed to understand context and nuance, resulting in 40% of queries returning irrelevant results and poor user satisfaction.',
     
     solution: [
-      'Architected microservices-based ML pipeline using Python and TypeScript',
-      'Implemented comprehensive monitoring and alerting with AWS CloudWatch',
-      'Built automated rollback mechanisms for model deployments',
-      'Created standardized debugging workflows and documentation'
+      'Built hybrid search combining semantic embeddings with keyword matching',
+      'Implemented multi-stage reranking with cross-encoders for 95% relevance',
+      'Dynamic context window optimization reducing costs by 40%',
+      'Knowledge graph integration for enhanced reasoning capabilities'
     ],
     
-    techStack: ['Python', 'TypeScript', 'PyTorch', 'AWS', 'Docker', 'Kubernetes', 'Redis'],
+    techStack: ['GPT-4o', 'Claude 3.5', 'Pinecone', 'LangChain', 'HuggingFace', 'Python', 'FastAPI'],
     
     impact: {
-      'MTTR Reduction': '60% improvement',
-      'System Uptime': '99.9% availability',
+      'Query Relevance': '95% accuracy',
       'Response Time': 'Sub-100ms latency',
-      'Scale': '1M+ predictions/day'
+      'Cost Reduction': '40% lower than baseline',
+      'Scale': '10M+ queries/month'
     },
     
     learnings: [
-      'Importance of comprehensive monitoring in ML systems',
-      'Value of automated recovery mechanisms',
-      'Technical debt reduction as a continuous process'
+      'Hybrid search outperforms pure semantic or keyword approaches',
+      'Multi-stage reranking is crucial for production RAG systems',
+      'Dynamic context optimization balances cost and performance'
     ]
   },
   
   {
-    title: 'Healthcare AI Assistant',
-    subtitle: 'Mental health support system using advanced NLP',
-    category: 'Healthcare AI',
-    image: '/images/projects/healthcare-ai.jpg',
+    title: 'Multi-Agent Customer Service Platform',
+    subtitle: 'Orchestrated AI agents with specialized capabilities and tool use',
+    category: 'AI Agents',
+    image: '/images/projects/multi-agent.jpg',
     date: '2023-09-20',
     featured: true,
-    desc: 'Led development of an AI-powered mental health assistant that provides personalized support and connects users with appropriate resources.',
+    desc: 'Built sophisticated multi-agent system with autonomous agents for different tasks, implementing ReAct pattern and achieving 70% reduction in human escalations.',
     
-    challenge: 'Mental health services are often inaccessible or unaffordable, leaving many without proper support. Traditional chatbots lack the nuance needed for sensitive conversations.',
+    challenge: 'Customer service teams overwhelmed with repetitive queries while complex issues required multiple handoffs, resulting in poor customer experience and high operational costs.',
     
     solution: [
-      'Fine-tuned LLMs for empathetic and contextual responses',
-      'Implemented RAG system for evidence-based recommendations',
-      'Built safety mechanisms to detect crisis situations',
-      'Integrated with professional healthcare provider networks'
+      'Orchestrated specialized agents for different query types',
+      'Implemented tool use for real-time data access and actions',
+      'Built ReAct pattern for complex reasoning and decision-making',
+      'Created seamless handoff mechanism between agents and humans'
     ],
     
-    techStack: ['Python', 'LangChain', 'HuggingFace', 'TensorFlow', 'FastAPI', 'PostgreSQL'],
+    techStack: ['Claude 3.5', 'GPT-4o', 'LangChain', 'Agents Framework', 'Python', 'Redis', 'Kubernetes'],
     
     impact: {
-      'User Engagement': '85% satisfaction rate',
-      'Response Accuracy': '92% clinical accuracy',
-      'Availability': '24/7 support coverage',
-      'Reach': '10K+ users supported'
+      'Human Escalations': '70% reduction',
+      'Resolution Time': '5x faster',
+      'Customer Satisfaction': '92% CSAT',
+      'Cost Savings': '$2M annually'
     },
     
     learnings: [
-      'Ethical considerations in healthcare AI development',
-      'Importance of human oversight in sensitive applications',
-      'Balancing automation with professional intervention'
+      'Agent specialization dramatically improves performance',
+      'Tool use is essential for real-world agent deployments',
+      'Human-in-the-loop design ensures safety and quality'
     ]
   },
   
   {
-    title: 'AI-Powered Document Intelligence',
-    subtitle: 'OCR and NLP system for automated document processing',
-    category: 'Document AI',
-    image: '/images/projects/document-ai.jpg',
+    title: 'Enterprise AI Agent Framework',
+    subtitle: 'Custom platform for building and deploying AI agents at scale',
+    category: 'Agent Infrastructure',
+    image: '/images/projects/agent-framework.jpg',
     date: '2023-06-10',
     featured: true,
-    desc: 'Built an intelligent document processing system that extracts, validates, and categorizes information from various document types with high accuracy.',
+    desc: 'Created enterprise-grade agent development platform supporting single and multi-agent workflows with built-in observability, deployed across 5 industries.',
     
-    challenge: 'Manual document processing was consuming 70% of operational staff time, with error rates exceeding 15% on complex documents.',
+    challenge: 'Companies struggled to build reliable AI agents due to lack of standardization, poor debugging tools, and difficulty scaling from prototype to production.',
     
     solution: [
-      'Developed custom OCR pipeline with pre-processing optimizations',
-      'Implemented multi-model ensemble for text extraction and validation',
-      'Created intelligent routing system based on document classification',
-      'Built human-in-the-loop interface for edge cases'
+      'Built modular agent framework with plug-and-play components',
+      'Implemented Chain-of-Thought and Tree-of-Thought reasoning',
+      'Created comprehensive observability and debugging tools',
+      'Developed industry-specific agent templates and patterns'
     ],
     
-    techStack: ['Python', 'PyTorch', 'OpenCV', 'Tesseract', 'AWS Textract', 'LangChain'],
+    techStack: ['Llama 3.1', 'Claude 3.5', 'LangGraph', 'Python', 'FastAPI', 'Temporal', 'Grafana'],
     
     impact: {
-      'Time Savings': '70% reduction in processing',
-      'Accuracy': '98.5% extraction accuracy',
-      'Document Types': '50+ formats supported',
-      'Cost Reduction': '$500K annual savings'
+      'Development Speed': '10x faster deployment',
+      'Industries Served': '5 different sectors',
+      'Agent Reliability': '99.5% success rate',
+      'Cost Efficiency': '80% lower than custom'
     },
     
     learnings: [
-      'Importance of robust pre-processing in OCR systems',
-      'Value of ensemble approaches for accuracy',
-      'Human-in-the-loop design for production systems'
+      'Standardization is key to scaling AI agent deployments',
+      'Observability is crucial for production agent systems',
+      'Industry-specific patterns accelerate adoption'
     ]
   },
   
   {
-    title: 'AI Bootcamp Platform',
-    subtitle: 'Comprehensive educational platform for AI/ML learning',
-    category: 'Education Technology',
-    image: '/images/projects/ai-bootcamp.jpg',
-    date: '2024-03-01',
-    featured: false,
-    desc: 'Created and launched an AI bootcamp platform serving 20+ students with interactive lessons, hands-on projects, and real-world applications.',
+    title: 'Medical Nutrition Therapy App',
+    subtitle: 'Remote healthcare solution developed during COVID-19',
+    category: 'Healthcare Innovation',
+    image: '/images/projects/mnt-app.jpg',
+    date: '2020-11-20',
+    featured: true,
+    desc: 'Developed a comprehensive mHealth application enabling remote Medical Nutrition Therapy during COVID-19, addressing critical healthcare accessibility needs.',
     
-    challenge: 'Traditional AI education lacks practical application and personalized learning paths, leaving students unprepared for real-world implementation.',
+    challenge: 'COVID-19 pandemic created urgent need for remote healthcare delivery, particularly for nutrition therapy patients who could not attend in-person consultations.',
     
     solution: [
-      'Designed comprehensive curriculum covering 7 major AI/ML topics',
-      'Built interactive coding environment with real-time feedback',
-      'Created project-based learning modules with industry relevance',
-      'Implemented progress tracking and personalized recommendations'
+      'Built cross-platform mobile app using React Native',
+      'Implemented secure patient-provider communication with Firebase',
+      'Created comprehensive nutrition tracking and meal planning features',
+      'Developed real-time video consultation capabilities',
+      'Integrated evidence-based dietary recommendations engine'
     ],
     
-    techStack: ['Python', 'Jupyter', 'React', 'Node.js', 'MongoDB', 'Docker'],
+    techStack: ['React Native', 'Firebase', 'Node.js', 'Express', 'PostgreSQL', 'Twilio Video'],
     
     impact: {
-      'Student Success': '90% completion rate',
-      'Skill Development': '7 core competencies',
-      'Project Portfolio': '5+ projects per student',
-      'Career Outcomes': '80% job placement'
+      'User Adoption': '5K+ downloads',
+      'Session Duration': '45 min average',
+      'Health Outcomes': '78% improved metrics',
+      'Provider Efficiency': '3x more patients served'
     },
     
     learnings: [
-      'Importance of hands-on learning in technical education',
-      'Value of recorded sessions for review and accessibility',
-      'Community building as key to student success'
+      'Critical importance of healthcare accessibility during crises',
+      'Privacy and security considerations in health apps',
+      'User experience design for diverse age groups',
+      'Integration of clinical protocols in digital platforms'
+    ]
+  },
+
+  {
+    title: 'Next-Gen Healthcare RAG + Agents',
+    subtitle: 'First-of-its-kind medical knowledge system with agentic reasoning',
+    category: 'Cutting-Edge Healthcare AI',
+    image: '/images/projects/healthcare-rag.jpg',
+    date: '2024-03-15',
+    featured: true,
+    desc: 'Pioneered combination of advanced RAG with AI agents for medical knowledge retrieval, implementing constitutional AI for safety and achieving regulatory compliance.',
+    
+    challenge: 'Healthcare providers needed instant access to vast medical knowledge while ensuring accuracy, safety, and compliance - traditional search systems were inadequate.',
+    
+    solution: [
+      'Built hybrid RAG system with medical knowledge graphs',
+      'Implemented multi-agent verification for critical decisions',
+      'Applied constitutional AI for safety and ethics',
+      'Created audit trail for regulatory compliance',
+      'Integrated with latest medical research databases'
+    ],
+    
+    techStack: ['GPT-4o', 'Med-PaLM 2', 'BioBERT', 'FAISS', 'Neo4j', 'Constitutional AI', 'FHIR'],
+    
+    impact: {
+      'Clinical Accuracy': '97% verified correct',
+      'Decision Speed': '30x faster lookup',
+      'Safety Score': '99.9% safe responses',
+      'Provider Adoption': '500+ daily users'
+    },
+    
+    learnings: [
+      'RAG + Agents is powerful combination for complex domains',
+      'Constitutional AI essential for healthcare applications',
+      'Multi-agent verification improves safety and accuracy',
+      'First-mover advantage in regulated industries'
+    ]
+  },
+
+  {
+    title: 'Sales Team Mobile App',
+    subtitle: 'Conference networking tool for sales professionals',
+    category: 'Business Technology',
+    image: '/images/projects/sales-app.jpg',
+    date: '2017-03-15',
+    featured: false,
+    desc: 'Built a mobile app for sales teams to quickly identify and connect with key contacts at conferences, significantly improving networking efficiency.',
+    
+    challenge: 'Sales teams at conferences struggled to identify and prioritize high-value contacts among thousands of attendees, missing critical opportunities.',
+    
+    solution: [
+      'Developed native mobile app with offline capabilities',
+      'Integrated with CRM for real-time contact scoring',
+      'Built intelligent matching algorithm for prospect prioritization',
+      'Created quick-capture features for lead information',
+      'Implemented follow-up reminder system'
+    ],
+    
+    techStack: ['React Native', 'Salesforce API', 'Node.js', 'MongoDB', 'Redis', 'AWS'],
+    
+    impact: {
+      'Lead Capture': '3x increase',
+      'Follow-up Rate': '85% within 24hrs',
+      'Deal Velocity': '40% faster close',
+      'ROI': '250% conference ROI'
+    },
+    
+    learnings: [
+      'Importance of offline functionality in mobile apps',
+      'Value of CRM integration for sales tools',
+      'User experience design for high-pressure environments',
+      'Data synchronization challenges and solutions'
+    ]
+  },
+
+  {
+    title: 'Real-time Financial AI Agents',
+    subtitle: 'Agentic workflow for trade analysis and compliance',
+    category: 'FinTech AI',
+    image: '/images/projects/fintech-agents.jpg',
+    date: '2024-03-01',
+    featured: false,
+    desc: 'Deployed autonomous AI agents for real-time financial analysis, combining advanced RAG for regulatory compliance with sub-50ms decision making.',
+    
+    challenge: 'Financial institutions needed real-time analysis of market conditions while ensuring strict regulatory compliance, requiring both speed and accuracy.',
+    
+    solution: [
+      'Built agentic workflow for parallel trade analysis',
+      'Implemented RAG system for real-time regulatory checks',
+      'Created multi-agent verification for high-value decisions',
+      'Deployed with sub-50ms latency requirements'
+    ],
+    
+    techStack: ['GPT-4o', 'Gemini Pro', 'Redis', 'Kafka', 'Python', 'Rust'],
+    
+    impact: {
+      'Decision Speed': 'Sub-50ms latency',
+      'Daily Volume': '$2B+ transactions',
+      'Compliance Rate': '100% adherence',
+      'False Positives': '85% reduction'
+    },
+    
+    learnings: [
+      'Speed and accuracy both critical in financial AI',
+      'Agent architectures excel at parallel processing',
+      'RAG essential for dynamic regulatory compliance'
     ]
   }
 ];

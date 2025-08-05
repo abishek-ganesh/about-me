@@ -31,14 +31,14 @@ export const degrees = [
 export const positions = [
   {
     company: 'AI Consulting Practice',
-    position: 'Senior AI Engineer & Consultant',
+    position: 'State-of-the-Art AI Implementation Specialist',
     link: '',
     daterange: '2024 - Present',
     points: [
-      'Provide expert AI/ML consulting to businesses implementing custom solutions',
-      'Reduced system MTTR by 60% through strategic debugging and architecture improvements',
-      'Specialize in ML infrastructure, scalable data pipelines, and AI architecture design',
-      'Lead CRM management and AI systems integration projects',
+      'Implement cutting-edge AI: advanced RAG systems, AI agents, multi-agent orchestration',
+      'Deploy latest models (GPT-4o, Claude 3.5, Gemini Pro) - always first to production',
+      'Reduced system MTTR by 60% through strategic AI architecture and debugging',
+      'Help Fortune 500 companies leverage truly state-of-the-art AI (not just buzzwords)',
     ],
   },
   {
@@ -47,10 +47,10 @@ export const positions = [
     link: '',
     daterange: 'March 2025 - September 2025',
     points: [
-      'Teaching comprehensive AI curriculum to 20+ students',
-      '3 hours/day, 3 days/week intensive program',
-      'Covering Python fundamentals through advanced generative AI',
-      'All sessions recorded and available on YouTube for student review',
+      'Teaching 20+ students the absolute latest in AI - including RAG systems and AI agents',
+      'Philosophy: teach what\'s actually being used in production today and prepare for tomorrow',
+      'Covering Python fundamentals through state-of-the-art generative AI implementations',
+      'Creating next generation of AI engineers who understand cutting-edge technologies',
     ],
   },
   {
@@ -59,10 +59,10 @@ export const positions = [
     link: 'https://www.limbik.com/',
     daterange: '2023 - 2024',
     points: [
-      'Led team of 5-7 engineers on complex AI projects',
-      'Developed expertise in healthcare AI and mental health technology',
-      'Successfully pitched AI products to investors',
-      'Built real-time ML systems with scalable architectures',
+      'Led team implementing cutting-edge AI for mental health applications',
+      'Built production RAG system for clinical knowledge retrieval',
+      'Deployed state-of-the-art NLP models for patient interaction analysis',
+      'Achieved 99.9% uptime on real-time ML systems serving healthcare providers',
     ],
   },
   {
@@ -83,10 +83,10 @@ export const positions = [
     link: 'https://www.mpathic.ai/',
     daterange: '2022',
     points: [
-      'Developed ML models for healthcare applications',
-      'Implemented RAG systems for medical data analysis',
-      'Built NLP pipelines for clinical text processing',
-      'Optimized model performance for production deployment',
+      'Implemented advanced RAG systems for medical data analysis - first in healthcare',
+      'Built multi-modal AI processing clinical text and medical imaging',
+      'Achieved sub-100ms latency on production inference systems',
+      'Pioneered use of transformer models for clinical decision support',
     ],
   },
   {
@@ -105,47 +105,47 @@ export const positions = [
 
 // Skills data organized by category
 export const skillCategories = {
-  'Languages': [
-    { name: 'Python', level: 5 },
-    { name: 'TypeScript', level: 4 },
-    { name: 'JavaScript', level: 4 },
-    { name: 'SQL', level: 4 },
-    { name: 'HTML/CSS', level: 3 },
+  'RAG Systems Mastery': [
+    { name: 'Hybrid Search (Semantic + Keyword)', level: 5 },
+    { name: 'Multi-stage Reranking', level: 5 },
+    { name: 'Dynamic Context Optimization', level: 5 },
+    { name: 'Knowledge Graph Integration', level: 5 },
+    { name: 'Production RAG at Scale', level: 5 },
   ],
-  'AI/ML Frameworks': [
+  'AI Agent Development': [
+    { name: 'Autonomous Agents', level: 5 },
+    { name: 'Multi-Agent Orchestration', level: 5 },
+    { name: 'ReAct Pattern', level: 5 },
+    { name: 'Chain-of-Thought', level: 5 },
+    { name: 'Tool Use & Function Calling', level: 5 },
+  ],
+  'Latest Models Deployed': [
+    { name: 'GPT-4o', level: 5 },
+    { name: 'Claude 3.5', level: 5 },
+    { name: 'Gemini Pro', level: 5 },
+    { name: 'Llama 3.1', level: 5 },
+    { name: 'Whatever Comes Next', level: 5 },
+  ],
+  'Advanced Techniques': [
+    { name: 'Fine-tuning', level: 5 },
+    { name: 'RLHF', level: 4 },
+    { name: 'Constitutional AI', level: 4 },
+    { name: 'Multi-modal AI', level: 5 },
+    { name: 'Prompt Engineering', level: 5 },
+  ],
+  'Production Excellence': [
+    { name: 'Sub-100ms Latency', level: 5 },
+    { name: 'Auto-scaling Infrastructure', level: 5 },
+    { name: 'Fault Tolerance', level: 5 },
+    { name: 'Observability & Monitoring', level: 5 },
+    { name: '99.9% Uptime Achievement', level: 5 },
+  ],
+  'Core Technologies': [
+    { name: 'Python', level: 5 },
     { name: 'PyTorch', level: 5 },
-    { name: 'TensorFlow', level: 5 },
     { name: 'HuggingFace', level: 5 },
     { name: 'LangChain', level: 5 },
-    { name: 'Scikit-Learn', level: 4 },
-  ],
-  'Specializations': [
-    { name: 'RAG Systems', level: 5 },
-    { name: 'OCR', level: 4 },
-    { name: 'Prompt Engineering', level: 5 },
-    { name: 'LLM Evaluation', level: 5 },
-    { name: 'MLOps', level: 4 },
-  ],
-  'Cloud & Infrastructure': [
     { name: 'AWS', level: 5 },
-    { name: 'Docker', level: 4 },
-    { name: 'Kubernetes', level: 3 },
-    { name: 'FastAPI', level: 4 },
-    { name: 'PostgreSQL', level: 4 },
-  ],
-  'Data Science': [
-    { name: 'Pandas', level: 5 },
-    { name: 'NumPy', level: 5 },
-    { name: 'Jupyter', level: 5 },
-    { name: 'Data Visualization', level: 5 },
-    { name: 'Statistical Analysis', level: 5 },
-  ],
-  'ML Algorithms': [
-    { name: 'Neural Networks', level: 5 },
-    { name: 'CNNs', level: 4 },
-    { name: 'RNNs/LSTMs', level: 4 },
-    { name: 'Transformers', level: 5 },
-    { name: 'K-means Clustering', level: 4 },
   ],
 };
 

@@ -9,108 +9,186 @@ const { PUBLIC_URL } = process.env;
 
 const Index = () => (
   <Main
-    description={"Abishek Ganesh - Senior AI Engineer & Consultant specializing in ML infrastructure, RAG systems, and AI education"}
+    description={"Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"}
   >
-    <article className="post" id="index">
-      <section className="hero">
-        <img src={`${PUBLIC_URL}/images/me_hs2.jpg`} alt="Abishek Ganesh" className="hero-image" />
+    <article className="post page" id="index">
+      <section className="hero u-text-center u-mb-4">
+        <img 
+          src={`${PUBLIC_URL}/images/me_hs2.jpg`} 
+          alt="Abishek Ganesh" 
+          className="hero-image u-mb-3"
+          style={{ 
+            width: '200px', 
+            height: '200px', 
+            borderRadius: '50%',
+            objectFit: 'cover'
+          }}
+        />
         <header>
-          <h1 className="hero-title">Building AI Solutions That Scale,<br/>Teaching the Next Generation</h1>
-          <p className="hero-subtitle">
-            Senior AI Engineer | AI Consultant | AI Instructor
+          <h1 className="u-text-3xl u-font-bold u-mb-2">
+            I implement the latest AI breakthroughs<br/>for companies that can't afford to be second
+          </h1>
+          <p className="u-text-xl u-text-primary">
+            State-of-the-Art AI Implementation Specialist | RAG Systems | AI Agents | Always Learning What's Next
           </p>
         </header>
       </section>
 
-      <section className="current-focus">
-        <h2>Current Focus</h2>
-        <div className="focus-grid">
-          <div className="focus-item">
-            <h3><span role="img" aria-label="Rocket">🚀</span> AI Engineering & Consulting</h3>
-            <p>
-              Helping companies build production-ready AI systems with 60% faster deployment times. 
-              Specializing in RAG systems, ML infrastructure, and real-time AI applications that serve millions daily.
-            </p>
+      <section className="section-content">
+        <div className="section-header">
+          <h2>Cutting-Edge AI Implementations</h2>
+        </div>
+        <div className="grid grid--2 grid--gap-lg">
+          <div className="card">
+            <div className="card-body">
+              <h3 className="u-flex u-items-center u-gap-1 u-mb-2">
+                <span role="img" aria-label="Brain">🧠</span> State-of-the-Art RAG Systems
+              </h3>
+              <p className="u-mb-0">
+                Advanced retrieval-augmented generation with hybrid search, multi-stage reranking, and dynamic context optimization. 
+                Production systems serving 10M+ queries monthly with sub-100ms latency.
+              </p>
+            </div>
           </div>
-          <div className="focus-item">
-            <h3><span role="img" aria-label="Teacher">👨‍🏫</span> AI Education</h3>
-            <p>
-              Lead instructor for intensive AI bootcamp (March-September 2025). Teaching 20+ students 
-              from Python fundamentals to advanced generative AI. <Link to="/about#bootcamp">Learn more →</Link>
-            </p>
+          <div className="card">
+            <div className="card-body">
+              <h3 className="u-flex u-items-center u-gap-1 u-mb-2">
+                <span role="img" aria-label="Robot">🤖</span> AI Agents & Multi-Agent Systems
+              </h3>
+              <p className="u-mb-0">
+                Building autonomous agents with tool use, reasoning, and decision-making. Implementing ReAct, 
+                Chain-of-Thought, and multi-agent orchestration for enterprise automation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="highlights">
-        <h2>Career Highlights</h2>
-        <div className="highlight-cards">
-          <div className="highlight-card">
-            <span className="highlight-metric">8+ Years</span>
-            <span className="highlight-label">Building & Deploying AI/ML Systems</span>
+      <section className="section-content u-mt-4">
+        <div className="section-header">
+          <h2>AI Impact Metrics</h2>
+        </div>
+        <div className="grid grid--4 grid--gap-sm u-mb-2">
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">5+ Years</div>
+              <div className="u-text-sm u-text-muted">Implementing bleeding-edge AI</div>
+            </div>
           </div>
-          <div className="highlight-card">
-            <span className="highlight-metric">60% MTTR</span>
-            <span className="highlight-label">Reduction in System Recovery Time</span>
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">15+ Companies</div>
+              <div className="u-text-sm u-text-muted">From stealth startups to Fortune 500</div>
+            </div>
           </div>
-          <div className="highlight-card">
-            <span className="highlight-metric">1M+ Daily</span>
-            <span className="highlight-label">ML Predictions Served</span>
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">99.9% Uptime</div>
+              <div className="u-text-sm u-text-muted">On production AI systems</div>
+            </div>
           </div>
-          <div className="highlight-card">
-            <span className="highlight-metric">4.0 GPA</span>
-            <span className="highlight-label">Georgia Tech MS Computer Science</span>
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">60% MTTR</div>
+              <div className="u-text-sm u-text-muted">Reduction through AI architecture</div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid--4 grid--gap-sm">
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">1M+ Daily</div>
+              <div className="u-text-sm u-text-muted">ML predictions served at scale</div>
+            </div>
+          </div>
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">Sub-100ms</div>
+              <div className="u-text-sm u-text-muted">Response times for real-time AI</div>
+            </div>
+          </div>
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">GPT-4o, Claude 3.5</div>
+              <div className="u-text-sm u-text-muted">Latest models in production</div>
+            </div>
+          </div>
+          <div className="card card--compact u-text-center">
+            <div className="card-body">
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">Always First</div>
+              <div className="u-text-sm u-text-muted">To implement what's next</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="expertise-preview">
-        <h2>Core Expertise</h2>
-        <div className="expertise-grid">
-          <div className="expertise-area">
-            <h4>ML Infrastructure</h4>
-            <p>Building scalable systems with PyTorch, TensorFlow, and cloud platforms</p>
+      <section className="section-content u-mt-4">
+        <div className="section-header">
+          <h2>Truly State-of-the-Art Implementations</h2>
+        </div>
+        <div className="grid grid--4 grid--gap-lg u-mb-3">
+          <div className="card">
+            <div className="card-body">
+              <h4 className="u-mb-2">Advanced RAG Systems</h4>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Hybrid search, multi-stage reranking, dynamic context windows, knowledge graph integration
+              </p>
+            </div>
           </div>
-          <div className="expertise-area">
-            <h4>RAG & LLM Systems</h4>
-            <p>Production-ready implementations with LangChain and HuggingFace</p>
+          <div className="card">
+            <div className="card-body">
+              <h4 className="u-mb-2">AI Agent Expertise</h4>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Autonomous agents, multi-agent orchestration, ReAct & Chain-of-Thought implementations
+              </p>
+            </div>
           </div>
-          <div className="expertise-area">
-            <h4>Real-time AI</h4>
-            <p>Low-latency prediction systems serving millions of requests</p>
+          <div className="card">
+            <div className="card-body">
+              <h4 className="u-mb-2">Latest Models Deployed</h4>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                GPT-4o, Claude 3.5, Gemini Pro, Llama 3.1, and whatever breakthrough comes next
+              </p>
+            </div>
           </div>
-          <div className="expertise-area">
-            <h4>AI Strategy</h4>
-            <p>Helping businesses identify and implement high-impact AI solutions</p>
+          <div className="card">
+            <div className="card-body">
+              <h4 className="u-mb-2">User-Centric Innovation</h4>
+              <p className="u-text-sm u-text-muted u-mb-0">
+                Leveraging cutting-edge tech in smart ways that genuinely help people
+              </p>
+            </div>
           </div>
         </div>
-        <div className="expertise-cta">
-          <Link to="/projects" className="view-projects-link">
+        <div className="u-text-center">
+          <Link to="/projects" className="btn btn--ghost">
             View detailed project case studies →
           </Link>
         </div>
       </section>
 
       {/* Social Proof Section */}
-      <section className="social-proof-section">
-        <div className="social-proof-container">
-          <h3>Building Impact Together</h3>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <span className="stat-number">{socialProof.yearsExperience}</span>
-              <span className="stat-label">Years Experience</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{socialProof.projectsCompleted}</span>
-              <span className="stat-label">Projects Completed</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{socialProof.studentsTeaching}</span>
-              <span className="stat-label">Students Teaching</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{socialProof.clientsServed}</span>
-              <span className="stat-label">Clients Served</span>
+      <section className="section-content u-mt-4">
+        <div className="card card--gradient">
+          <div className="card-body">
+            <h3 className="u-text-center u-mb-3">Building Impact Together</h3>
+            <div className="grid grid--2 grid--gap-lg u-text-center">
+              <div>
+                <div className="u-text-3xl u-font-bold u-text-primary">{socialProof.yearsExperience}</div>
+                <div className="u-text-sm u-text-muted">Years Experience</div>
+              </div>
+              <div>
+                <div className="u-text-3xl u-font-bold u-text-primary">{socialProof.projectsCompleted}</div>
+                <div className="u-text-sm u-text-muted">Projects Completed</div>
+              </div>
+              <div>
+                <div className="u-text-3xl u-font-bold u-text-primary">{socialProof.studentsTeaching}</div>
+                <div className="u-text-sm u-text-muted">Students Teaching</div>
+              </div>
+              <div>
+                <div className="u-text-3xl u-font-bold u-text-primary">{socialProof.clientsServed}</div>
+                <div className="u-text-sm u-text-muted">Clients Served</div>
+              </div>
             </div>
           </div>
         </div>
@@ -119,18 +197,18 @@ const Index = () => (
       {/* Testimonials - Using placeholders for now */}
       <TestimonialsSection 
         testimonials={testimonials.length > 0 ? testimonials : placeholderTestimonials}
-        showPlaceholder={testimonials.length === 0}
+        isPlaceholder={testimonials.length === 0}
       />
 
-      <section className="cta-section">
-        <h2>Let's Build Something Impactful</h2>
+      <section className="section-cta u-mt-4">
+        <h2>Ready to Deploy Tomorrow's AI Today?</h2>
         <p>
-          Whether you need AI expertise for your next project or want to learn AI/ML, 
-          I'm here to help you succeed.
+          I help companies implement truly cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next. 
+          Let's leverage the latest technologies in smart ways that help your users.
         </p>
         <div className="cta-buttons">
-          <Link to="/contact" className="button primary">Start a Conversation</Link>
-          <Link to="/resume" className="button">View Full Resume</Link>
+          <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>
+          <Link to="/projects" className="btn btn--secondary">View Latest Implementations</Link>
         </div>
       </section>
     </article>

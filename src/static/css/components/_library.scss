@@ -1,0 +1,484 @@
+// Component library - reusable components
+@import '../libs/vars-modern';
+
+// Card component
+.card {
+  background: white;
+  border: 1px solid $color-neutral-200;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: all $transition-base ease;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+    border-color: lighten($color-primary, 30%);
+  }
+  
+  // Variants
+  &--elevated {
+    box-shadow: $shadow-md;
+    
+    &:hover {
+      box-shadow: $shadow-xl;
+      transform: translateY(-4px);
+    }
+  }
+  
+  &--bordered {
+    border-width: 2px;
+  }
+  
+  &--compact {
+    padding: 1.5rem;
+    
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+  
+  &--primary {
+    border-color: $color-primary;
+    
+    &:hover {
+      border-color: $color-primary-dark;
+    }
+  }
+  
+  &--gradient {
+    background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+    border: none;
+    color: white;
+    
+    h1, h2, h3, h4, h5, h6,
+    .card-header h3,
+    .card-body,
+    p, span, div, li {
+      color: white !important;
+    }
+    
+    // Make specific text colors more visible
+    .u-text-muted,
+    .u-text-primary,
+    .u-text-secondary,
+    .metric-label,
+    .metric-value {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    // Ensure all text is white
+    * {
+      color: white;
+    }
+    
+    .u-text-white {
+      color: white !important;
+    }
+  }
+  
+  // Card header
+  .card-header {
+    margin-bottom: 1.5rem;
+    
+    h3 {
+      font-size: 1.5rem;
+      color: $color-neutral-900;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    
+    .card-subtitle {
+      font-size: 1rem;
+      color: $color-neutral-600;
+    }
+  }
+  
+  // Card body
+  .card-body {
+    color: $color-neutral-700;
+    line-height: 1.6;
+  }
+  
+  // Card footer
+  .card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $color-neutral-100;
+  }
+}
+
+// Button component
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all $transition-base ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  // Primary button
+  &--primary {
+    background: $color-primary;
+    color: white;
+    
+    &:hover:not(:disabled) {
+      background: $color-primary-dark;
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+      color: white;
+    }
+  }
+  
+  // Secondary button
+  &--secondary {
+    background: white;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    
+    &:hover:not(:disabled) {
+      background: lighten($color-primary, 45%);
+      border-color: $color-primary-dark;
+      color: $color-primary-dark;
+    }
+  }
+  
+  // Ghost button
+  &--ghost {
+    background: transparent;
+    color: $color-primary;
+    border: 2px solid transparent;
+    
+    &:hover:not(:disabled) {
+      background: lighten($color-primary, 45%);
+      border-color: $color-primary;
+    }
+  }
+  
+  // Size variants
+  &--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  &--large {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+  
+  // Full width
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+  
+  // Icon button
+  &--icon {
+    padding: 0.875rem;
+    
+    &.btn--small {
+      padding: 0.5rem;
+    }
+    
+    &.btn--large {
+      padding: 1rem;
+    }
+  }
+}
+
+// Grid system
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+  
+  // Fixed columns
+  &--2 {
+    grid-template-columns: repeat(2, 1fr);
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--4 {
+    grid-template-columns: repeat(4, 1fr);
+    
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  // Auto-fit columns
+  &--auto {
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-min, 250px), 1fr));
+  }
+  
+  &--auto-sm {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  &--auto-lg {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  // Gap variants
+  &--gap-sm {
+    gap: 1rem;
+    
+    @media (max-width: 768px) {
+      gap: 0.75rem;
+    }
+  }
+  
+  &--gap-lg {
+    gap: 3rem;
+    
+    @media (max-width: 768px) {
+      gap: 2rem;
+    }
+  }
+  
+  &--no-gap {
+    gap: 0;
+  }
+}
+
+// Tag/Badge component
+.tag {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all $transition-base ease;
+  
+  // Primary tag
+  &--primary {
+    background: $color-primary;
+    color: white;
+    
+    &:hover {
+      background: $color-primary-dark;
+    }
+  }
+  
+  // Secondary tag
+  &--secondary {
+    background: lighten($color-primary, 40%);
+    color: $color-primary-dark;
+    
+    &:hover {
+      background: lighten($color-primary, 35%);
+    }
+  }
+  
+  // Outline tag
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    
+    &:hover {
+      background: lighten($color-primary, 45%);
+    }
+  }
+  
+  // Neutral tag
+  &--neutral {
+    background: $color-neutral-100;
+    color: $color-neutral-700;
+    
+    &:hover {
+      background: $color-neutral-200;
+    }
+  }
+  
+  // Size variants
+  &--small {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  &--large {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+// List component
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  // List item
+  &-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: $color-neutral-700;
+    line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    // Default bullet
+    &:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+  
+  // Arrow style
+  &--arrow {
+    .list-item:before {
+      content: '→';
+    }
+  }
+  
+  // Check style
+  &--check {
+    .list-item:before {
+      content: '✓';
+    }
+  }
+  
+  // Chevron style
+  &--chevron {
+    .list-item:before {
+      content: '▸';
+    }
+  }
+  
+  // No bullets
+  &--none {
+    .list-item {
+      padding-left: 0;
+      
+      &:before {
+        display: none;
+      }
+    }
+  }
+  
+  // Inline list
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    .list-item {
+      padding-left: 0;
+      margin-bottom: 0;
+      
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+// Divider component
+.divider {
+  height: 1px;
+  background: $color-neutral-200;
+  border: none;
+  margin: 2rem 0;
+  
+  &--thick {
+    height: 2px;
+  }
+  
+  &--dotted {
+    height: 0;
+    border-top: 1px dotted $color-neutral-300;
+    background: none;
+  }
+  
+  &--primary {
+    background: $color-primary;
+  }
+  
+  &--vertical {
+    width: 1px;
+    height: auto;
+    margin: 0 1rem;
+    display: inline-block;
+  }
+}
+
+// Status indicator
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  &--available {
+    background: lighten($color-success, 40%);
+    color: darken($color-success, 10%);
+  }
+  
+  &--busy {
+    background: lighten($color-warning, 40%);
+    color: darken($color-warning, 10%);
+  }
+  
+  &--offline {
+    background: lighten($color-error, 40%);
+    color: darken($color-error, 10%);
+  }
+  
+  &--limited {
+    background: lighten($color-warning, 40%);
+    color: darken($color-warning, 10%);
+  }
+}

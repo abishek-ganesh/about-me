@@ -1,0 +1,208 @@
+// Utility classes for common patterns
+@import '../libs/vars-modern';
+
+// Spacing utilities
+// Margin
+.u-m-0 { margin: 0 !important; }
+.u-m-1 { margin: 1rem !important; }
+.u-m-2 { margin: 2rem !important; }
+.u-m-3 { margin: 3rem !important; }
+.u-m-4 { margin: 4rem !important; }
+.u-m-5 { margin: 5rem !important; }
+.u-m-6 { margin: 6rem !important; }
+
+// Margin bottom
+.u-mb-0 { margin-bottom: 0 !important; }
+.u-mb-1 { margin-bottom: 1rem !important; }
+.u-mb-2 { margin-bottom: 2rem !important; }
+.u-mb-3 { margin-bottom: 3rem !important; }
+.u-mb-4 { margin-bottom: 4rem !important; }
+.u-mb-5 { margin-bottom: 5rem !important; }
+.u-mb-6 { margin-bottom: 6rem !important; }
+
+// Margin top
+.u-mt-0 { margin-top: 0 !important; }
+.u-mt-1 { margin-top: 1rem !important; }
+.u-mt-2 { margin-top: 2rem !important; }
+.u-mt-3 { margin-top: 3rem !important; }
+.u-mt-4 { margin-top: 4rem !important; }
+.u-mt-5 { margin-top: 5rem !important; }
+.u-mt-6 { margin-top: 6rem !important; }
+
+// Margin horizontal
+.u-mx-auto { margin-left: auto !important; margin-right: auto !important; }
+.u-mx-1 { margin-left: 1rem !important; margin-right: 1rem !important; }
+.u-mx-2 { margin-left: 2rem !important; margin-right: 2rem !important; }
+
+// Margin vertical
+.u-my-1 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+.u-my-2 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+.u-my-3 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+.u-my-4 { margin-top: 4rem !important; margin-bottom: 4rem !important; }
+
+// Padding
+.u-p-0 { padding: 0 !important; }
+.u-p-1 { padding: 1rem !important; }
+.u-p-2 { padding: 2rem !important; }
+.u-p-3 { padding: 3rem !important; }
+.u-p-4 { padding: 4rem !important; }
+
+// Padding bottom
+.u-pb-0 { padding-bottom: 0 !important; }
+.u-pb-1 { padding-bottom: 1rem !important; }
+.u-pb-2 { padding-bottom: 2rem !important; }
+.u-pb-3 { padding-bottom: 3rem !important; }
+.u-pb-4 { padding-bottom: 4rem !important; }
+
+// Padding top
+.u-pt-0 { padding-top: 0 !important; }
+.u-pt-1 { padding-top: 1rem !important; }
+.u-pt-2 { padding-top: 2rem !important; }
+.u-pt-3 { padding-top: 3rem !important; }
+.u-pt-4 { padding-top: 4rem !important; }
+
+// Text utilities
+.u-text-center { text-align: center !important; }
+.u-text-left { text-align: left !important; }
+.u-text-right { text-align: right !important; }
+.u-text-justify { text-align: justify !important; }
+
+// Text color utilities
+.u-text-primary { color: $color-primary !important; }
+.u-text-primary-dark { color: $color-primary-dark !important; }
+.u-text-muted { color: $color-neutral-600 !important; }
+.u-text-dark { color: $color-neutral-900 !important; }
+.u-text-light { color: $color-neutral-400 !important; }
+.u-text-white { color: white !important; }
+.u-text-success { color: $color-success !important; }
+.u-text-warning { color: $color-warning !important; }
+.u-text-error { color: $color-error !important; }
+.u-text-yellow-500 { color: #eab308 !important; }
+
+// Gradient text effect
+.u-text-gradient {
+  background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Font utilities
+.u-font-normal { font-weight: 400 !important; }
+.u-font-medium { font-weight: 500 !important; }
+.u-font-semibold { font-weight: 600 !important; }
+.u-font-bold { font-weight: 700 !important; }
+.u-font-italic { font-style: italic !important; }
+.u-line-height-relaxed { line-height: 1.6 !important; }
+
+.u-text-sm { font-size: 0.875rem !important; }
+.u-text-base { font-size: 1rem !important; }
+.u-text-lg { font-size: 1.125rem !important; }
+.u-text-xl { font-size: 1.25rem !important; }
+.u-text-2xl { font-size: 1.5rem !important; }
+.u-text-3xl { font-size: 2rem !important; }
+
+// Display utilities
+.u-block { display: block !important; }
+.u-inline-block { display: inline-block !important; }
+.u-inline { display: inline !important; }
+.u-flex { display: flex !important; }
+.u-inline-flex { display: inline-flex !important; }
+.u-grid { display: grid !important; }
+.u-hidden { display: none !important; }
+
+// Flexbox utilities
+.u-flex-row { flex-direction: row !important; }
+.u-flex-col { flex-direction: column !important; }
+.u-flex-wrap { flex-wrap: wrap !important; }
+.u-flex-nowrap { flex-wrap: nowrap !important; }
+.u-items-start { align-items: flex-start !important; }
+.u-items-center { align-items: center !important; }
+.u-items-end { align-items: flex-end !important; }
+.u-justify-start { justify-content: flex-start !important; }
+.u-justify-center { justify-content: center !important; }
+.u-justify-end { justify-content: flex-end !important; }
+.u-justify-between { justify-content: space-between !important; }
+.u-justify-around { justify-content: space-around !important; }
+.u-gap-1 { gap: 1rem !important; }
+.u-gap-2 { gap: 2rem !important; }
+.u-gap-3 { gap: 3rem !important; }
+
+// Width utilities
+.u-w-full { width: 100% !important; }
+.u-w-auto { width: auto !important; }
+.u-w-12 { width: 3rem !important; }
+.u-max-w-sm { max-width: 400px !important; }
+.u-max-w-md { max-width: 600px !important; }
+.u-max-w-lg { max-width: 800px !important; }
+.u-max-w-xl { max-width: 1000px !important; }
+
+// Height utilities
+.u-h-2 { height: 0.5rem !important; }
+.u-h-12 { height: 3rem !important; }
+
+// Border utilities
+.u-rounded { border-radius: 0.5rem !important; }
+.u-rounded-lg { border-radius: 1rem !important; }
+.u-rounded-full { border-radius: 9999px !important; }
+.u-rounded-none { border-radius: 0 !important; }
+
+.u-border-bottom { border-bottom: 1px solid $color-neutral-200 !important; }
+.u-border-top { border-top: 1px solid $color-neutral-200 !important; }
+.u-border { border: 1px solid $color-neutral-200 !important; }
+.u-border-none { border: none !important; }
+
+// Shadow utilities
+.u-shadow-sm { box-shadow: $shadow-sm !important; }
+.u-shadow { box-shadow: $shadow-md !important; }
+.u-shadow-lg { box-shadow: $shadow-lg !important; }
+.u-shadow-xl { box-shadow: $shadow-xl !important; }
+.u-shadow-none { box-shadow: none !important; }
+
+// Background utilities
+.u-bg-white { background-color: white !important; }
+.u-bg-primary { background-color: $color-primary !important; }
+.u-bg-light { background-color: $color-neutral-50 !important; }
+.u-bg-muted { background-color: $color-neutral-100 !important; }
+.u-bg-transparent { background-color: transparent !important; }
+
+// Object utilities
+.u-object-cover { object-fit: cover !important; }
+.u-overflow-hidden { overflow: hidden !important; }
+
+// Visibility utilities
+.u-visible { visibility: visible !important; }
+.u-invisible { visibility: hidden !important; }
+.u-opacity-0 { opacity: 0 !important; }
+.u-opacity-50 { opacity: 0.5 !important; }
+.u-opacity-75 { opacity: 0.75 !important; }
+.u-opacity-100 { opacity: 1 !important; }
+
+// Position utilities
+.u-relative { position: relative !important; }
+.u-absolute { position: absolute !important; }
+.u-fixed { position: fixed !important; }
+.u-sticky { position: sticky !important; }
+
+// Responsive utilities
+@media (max-width: 768px) {
+  .u-hidden-mobile { display: none !important; }
+  .u-block-mobile { display: block !important; }
+  .u-text-center-mobile { text-align: center !important; }
+}
+
+@media (min-width: 769px) {
+  .u-hidden-desktop { display: none !important; }
+  .u-block-desktop { display: block !important; }
+}
+
+// Transition utilities
+.u-transition-none { transition: none !important; }
+.u-transition-all { transition: all $transition-base ease !important; }
+.u-transition-colors { transition: background-color $transition-base ease, color $transition-base ease !important; }
+.u-transition-transform { transition: transform $transition-base ease !important; }
+
+// Cursor utilities
+.u-cursor-pointer { cursor: pointer !important; }
+.u-cursor-default { cursor: default !important; }
+.u-cursor-not-allowed { cursor: not-allowed !important; }

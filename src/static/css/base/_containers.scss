@@ -1,0 +1,92 @@
+// Container mixins for consistent layout
+@import '../libs/vars-modern';
+
+// Main page container - applied to all page root elements
+@mixin page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  
+  @media (max-width: 1024px) {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+// Section container - for major page sections
+@mixin section-container {
+  margin-bottom: 4rem;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 2rem;
+  }
+}
+
+// Content container - for boxed content areas
+@mixin content-container {
+  background: white;
+  border: 1px solid $color-neutral-200;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: $shadow-md;
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    border-radius: 0.75rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+  }
+}
+
+// Inner content container - for nested content areas
+@mixin inner-container {
+  padding: 2rem;
+  background: $color-neutral-50;
+  border-radius: 0.75rem;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+// Centered container - for centered content blocks
+@mixin centered-container($max-width: 600px) {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Full-width container with internal padding
+@mixin full-width-container {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+  @media (max-width: 768px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

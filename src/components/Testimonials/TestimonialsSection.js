@@ -26,7 +26,7 @@ const TestimonialsSection = ({ testimonials, showPlaceholder = false }) => {
         <h2>What People Say</h2>
         <p className="section-subtitle">
           {showPlaceholder 
-            ? "Here's what testimonials will look like when they're added:"
+            ? "Coming soon"
             : "Feedback from clients, students, and collaborators"
           }
         </p>
@@ -57,8 +57,8 @@ const TestimonialsSection = ({ testimonials, showPlaceholder = false }) => {
       
       {showPlaceholder && (
         <div className="placeholder-notice">
-          <i className="fa fa-info-circle" />
-          <p>These are placeholder testimonials. Real testimonials will be added as they're received.</p>
+          <i className="fa fa-clock-o" />
+          <p>Coming soon</p>
         </div>
       )}
     </section>
