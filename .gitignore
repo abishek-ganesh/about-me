@@ -42,6 +42,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Analytics reports
+analytics-reports/
+
 # Cache files
 .eslintcache
 npm-debug.log*
