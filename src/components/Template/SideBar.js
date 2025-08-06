@@ -23,7 +23,7 @@ const SideBar = () => {
   return (
     <section id="sidebar">
       <section id="intro">
-        <Link to="/" className="logo">
+        <div className="logo">
           <img 
             src={sidebarPhoto.path} 
             alt={sidebarPhoto.metadata?.description || "Abishek Ganesh"}
@@ -34,7 +34,7 @@ const SideBar = () => {
             <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
             <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
           </div>
-        </Link>
+        </div>
       </section>
 
     <section className="blurb">
