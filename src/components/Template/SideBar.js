@@ -29,12 +29,12 @@ const SideBar = () => {
             alt={sidebarPhoto.metadata?.description || "Abishek Ganesh"}
             className={isFirstLoad ? 'first-load' : ''}
           />
+          <div className="logo-overlay">
+            <h2>Abishek Ganesh</h2>
+            <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
+            <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
+          </div>
         </Link>
-        <header>
-          <h2>Abishek Ganesh</h2>
-          <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
-          <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
-        </header>
       </section>
 
     <section className="blurb">
