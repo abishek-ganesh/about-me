@@ -120,15 +120,6 @@ const Voiceover = () => (
         </div>
       </section>
 
-      <section className="section-content u-text-center">
-        <img 
-          src={`${PUBLIC_URL}/images/vo_logo1.jpg`} 
-          alt="Abishek Ganesh Voice Acting Logo" 
-          className="u-rounded-lg u-shadow-lg"
-          style={{ maxWidth: '600px', width: '100%' }}
-        />
-      </section>
-
       <section className="section-cta u-mt-4">
         <h2>Let's Create Something Amazing</h2>
         <p>

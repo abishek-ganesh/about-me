@@ -57,6 +57,8 @@
 	@import 'components/testimonials';
 	@import 'components/library';
 	@import 'components/photo-carousel';
+	@import 'components/photo-gallery';
+	@import 'components/animated-photo';
 
 
 // Layout.
@@ -72,3 +74,5 @@
 	@import 'pages/notFound';
 	@import 'pages/skills';
 	@import 'pages/stats';
+	@import 'pages/about';
+	@import 'pages/contact';

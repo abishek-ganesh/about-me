@@ -1,0 +1,73 @@
+// Contact Page Styles
+
+.contact-intro {
+  margin-bottom: 3rem;
+  
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+  
+  .contact-photo {
+    flex-shrink: 0;
+    
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+  
+  &-text {
+    flex: 1;
+    
+    p {
+      color: var(--color-text);
+      line-height: 1.8;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Enhanced contact cards
+#contact {
+  .card--elevated {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  // Availability section styling
+  .u-bg-light {
+    background: var(--color-bg-light);
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background: var(--color-bg-lighter);
+    }
+  }
+  
+  // Tag styling
+  .tag {
+    &--success {
+      background: #28a745;
+      color: white;
+    }
+    
+    &--warning {
+      background: #ffc107;
+      color: #333;
+    }
+  }
+}

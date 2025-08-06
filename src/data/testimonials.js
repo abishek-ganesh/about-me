@@ -21,38 +21,7 @@ const testimonials = [
 
 // Placeholder testimonials for development/preview
 // Remove these when you have real testimonials
-export const placeholderTestimonials = [
-  {
-    id: 'placeholder-1',
-    name: 'Sarah Chen',
-    role: 'VP of Engineering',
-    company: 'DataTech Solutions',
-    text: 'Working with Abishek on our ML infrastructure was transformative. His expertise in both the technical implementation and strategic planning helped us scale from 10K to 1M+ daily predictions seamlessly.',
-    rating: 5,
-    projectType: 'ai-consulting',
-    featured: true,
-  },
-  {
-    id: 'placeholder-2',
-    name: 'Michael Rodriguez',
-    role: 'Student',
-    company: 'AI Bootcamp 2024',
-    text: 'Abishek\'s teaching style makes complex AI concepts accessible. He doesn\'t just teach the theory - he shows you how to build production-ready systems.',
-    rating: 5,
-    projectType: 'teaching',
-    featured: true,
-  },
-  {
-    id: 'placeholder-3',
-    name: 'Emily Thompson',
-    role: 'Creative Director',
-    company: 'Voice Productions LLC',
-    text: 'Professional, versatile, and always delivers on time. Abishek brought our characters to life with his voice acting skills.',
-    rating: 5,
-    projectType: 'voice-acting',
-    featured: false,
-  },
-];
+export const placeholderTestimonials = [];
 
 // Social proof statistics
 export const socialProof = {

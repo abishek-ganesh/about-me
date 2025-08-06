@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const PhotoCarousel = ({
   photos = [],
   autoPlay = true,
-  interval = 5000,
+  interval = 7000,
   showThumbnails = true,
   showCaptions = true,
   transitionType = 'fade',
@@ -159,7 +161,7 @@ const PhotoCarousel = ({
               aria-label="Previous photo"
               tabIndex={0}
             >
-              <span>‹</span>
+              <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <button
               className="photo-carousel__arrow photo-carousel__arrow--next"
@@ -167,7 +169,7 @@ const PhotoCarousel = ({
               aria-label="Next photo"
               tabIndex={0}
             >
-              <span>›</span>
+              <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </>
         )}
@@ -224,7 +226,7 @@ const PhotoCarousel = ({
           aria-label={isPlaying ? 'Pause carousel' : 'Play carousel'}
           tabIndex={0}
         >
-          {isPlaying ? '❚❚' : '▶'}
+          <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} />
         </button>
       )}
     </div>

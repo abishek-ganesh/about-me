@@ -1,0 +1,64 @@
+// About Page Styles
+
+.about-hero {
+  margin-bottom: 3rem;
+  
+  &-content {
+    // Removed flex layout since we don't have photo anymore
+  }
+  
+  &-text {
+    .intro-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin: 0;
+    }
+  }
+}
+
+.journey-timeline {
+  .timeline-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .timeline-photo {
+    text-align: center;
+    
+    .timeline-content {
+      margin-top: 1rem;
+      
+      h3 {
+        font-size: 1.3rem;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        color: var(--color-text-light);
+        font-size: 0.95rem;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Enhanced metric cards
+.metric-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

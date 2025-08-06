@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
-import testimonials, { placeholderTestimonials, socialProof } from '../data/testimonials';
+import testimonials, { socialProof } from '../data/testimonials';
 import PhotoCarousel from '../components/common/PhotoCarousel';
 import { getCarouselPhotos } from '../data/photos';
 
@@ -38,7 +38,7 @@ const Index = () => {
             transitionType="fade"
             showCaptions={true}
             autoPlay={true}
-            interval={5000}
+            interval={7000}
             showThumbnails={true}
             className="homepage-carousel"
           />
@@ -204,10 +204,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials - Using placeholders for now */}
+      {/* Testimonials - Coming Soon */}
       <TestimonialsSection 
-        testimonials={testimonials.length > 0 ? testimonials : placeholderTestimonials}
-        isPlaceholder={testimonials.length === 0}
+        testimonials={testimonials}
+        showPlaceholder={testimonials.length === 0}
       />
 
       <section className="section-cta u-mt-4">

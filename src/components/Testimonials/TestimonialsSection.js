@@ -55,10 +55,14 @@ const TestimonialsSection = ({ testimonials, showPlaceholder = false }) => {
         ))}
       </div>
       
-      {showPlaceholder && (
+      {showPlaceholder && filteredTestimonials.length === 0 && (
         <div className="placeholder-notice">
           <i className="fa fa-clock-o" />
-          <p>Coming soon</p>
+          <p>Real testimonials coming soon</p>
+          <p className="placeholder-subtitle">
+            Currently working with amazing clients and students. 
+            Their feedback will be featured here soon!
+          </p>
         </div>
       )}
     </section>

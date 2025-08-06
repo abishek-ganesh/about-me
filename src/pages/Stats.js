@@ -33,72 +33,6 @@ const Stats = () => (
       </div>
 
       <section className="section-content">
-        <div className="section-header">
-          <h2>Professional Impact</h2>
-        </div>
-        <div className="grid grid--4 grid--gap-sm u-mb-3">
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">130%</div>
-              <div className="u-text-white u-font-medium">Revenue Growth Led</div>
-              <div className="u-text-sm u-text-white u-opacity-75">$1.3M → $3M in 7 months</div>
-            </div>
-          </div>
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">2,200+</div>
-              <div className="u-text-white u-font-medium">Sales Reps Managed</div>
-              <div className="u-text-sm u-text-white u-opacity-75">During $3B HPE merger</div>
-            </div>
-          </div>
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">1M+</div>
-              <div className="u-text-white u-font-medium">Daily ML Predictions</div>
-              <div className="u-text-sm u-text-white u-opacity-75">Real-time infrastructure</div>
-            </div>
-          </div>
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">60%</div>
-              <div className="u-text-white u-font-medium">MTTR Reduction</div>
-              <div className="u-text-sm u-text-white u-opacity-75">System reliability improvement</div>
-            </div>
-          </div>
-        </div>
-        <div className="grid grid--4 grid--gap-sm">
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">20+</div>
-              <div className="u-text-white u-font-medium">Students Taught</div>
-              <div className="u-text-sm u-text-white u-opacity-75">AI Bootcamp instructor</div>
-            </div>
-          </div>
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">$2M+</div>
-              <div className="u-text-white u-font-medium">Quarterly Programs</div>
-              <div className="u-text-sm u-text-white u-opacity-75">Spiff management</div>
-            </div>
-          </div>
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">1,000+</div>
-              <div className="u-text-white u-font-medium">Event Attendees</div>
-              <div className="u-text-sm u-text-white u-opacity-75">Community organizer</div>
-            </div>
-          </div>
-          <div className="card card--gradient u-text-center">
-            <div className="card-body">
-              <div className="u-text-3xl u-font-bold u-text-white u-mb-1">15</div>
-              <div className="u-text-white u-font-medium">Team Members Led</div>
-              <div className="u-text-sm u-text-white u-opacity-75">Sales Ops Director</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-content">
         <div className="card card--elevated">
           <div className="card-body">
             <h3 className="u-text-center u-mb-3">Personal Stats</h3>
@@ -201,12 +135,6 @@ const Stats = () => (
                 <span className="u-text-2xl" role="img" aria-label="Graduate">🎓</span>
                 <span className="u-text-dark">
                   Completed Georgia Tech MS CS with perfect 4.0 GPA while working full-time
-                </span>
-              </div>
-              <div className="u-flex u-items-center u-gap-2 u-p-2 u-bg-light u-rounded">
-                <span className="u-text-2xl" role="img" aria-label="Coffee">☕</span>
-                <span className="u-text-dark">
-                  Estimated 5,000+ cups of coffee consumed while debugging ML models
                 </span>
               </div>
               <div className="u-flex u-items-center u-gap-2 u-p-2 u-bg-light u-rounded">

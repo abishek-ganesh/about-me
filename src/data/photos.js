@@ -380,3 +380,13 @@ export const getCarouselPhotos = () => {
     return [];
   }
 };
+
+// Generic helper to get photos for any context
+export const getPhotosForContext = (context) => {
+  try {
+    return photoRegistry.getPhotosByContext(context);
+  } catch (error) {
+    console.error(`Error getting photos for context ${context}:`, error);
+    return [];
+  }
+};

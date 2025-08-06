@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import AnimatedPhoto from '../components/common/AnimatedPhoto';
 
-const About = () => (
+const About = () => {
+  return (
   <Main
     title="About"
     description="Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"
@@ -14,8 +16,10 @@ const About = () => (
         <span className="page-subtitle">Helping companies deploy cutting-edge AI models in production - from stealth startups to Fortune 500</span>
       </div>
 
-      <section className="section-content u-mb-4">
-          <p className="intro-text">
+      <section className="about-hero u-mb-4">
+        <div className="about-hero-content">
+          <div className="about-hero-text">
+            <p className="intro-text">
             I specialize in implementing the absolute latest in AI technology - RAG systems, AI agents, multi-agent architectures, 
             and whatever breakthrough comes next. I'm passionate about staying on the cutting edge and leveraging these technologies 
             in smart ways that genuinely help companies and their users. With 5+ years deploying state-of-the-art AI across industries, 
@@ -39,6 +43,8 @@ const About = () => (
               <span className="metric-label">To What's Next</span>
             </div>
           </div>
+          </div>
+        </div>
       </section>
 
       <div className="grid grid--2 grid--gap-lg">
@@ -133,6 +139,56 @@ const About = () => (
         </div>
       </section>
 
+      <section className="journey-timeline u-mt-4">
+        <div className="section-header">
+          <h2>A Visual Journey</h2>
+        </div>
+        <div className="timeline-photos">
+          <div className="timeline-photo">
+            <AnimatedPhoto
+              src="/images/august-2025/website-01.JPG"
+              alt="Leading AI innovation"
+              size="medium"
+              shape="rounded"
+              animation="slideUp"
+              delay={0}
+            />
+            <div className="timeline-content">
+              <h3>Present</h3>
+              <p>Leading AI innovation with state-of-the-art implementations</p>
+            </div>
+          </div>
+          <div className="timeline-photo">
+            <AnimatedPhoto
+              src="/images/august-2025/website-05.jpg"
+              alt="Teaching the next generation"
+              size="medium"
+              shape="rounded"
+              animation="slideUp"
+              delay={200}
+            />
+            <div className="timeline-content">
+              <h3>Teaching</h3>
+              <p>Sharing knowledge with the next generation of AI engineers</p>
+            </div>
+          </div>
+          <div className="timeline-photo">
+            <AnimatedPhoto
+              src="/images/august-2025/website-10.jpg"
+              alt="Staying grounded with family"
+              size="medium"
+              shape="rounded"
+              animation="slideUp"
+              delay={400}
+            />
+            <div className="timeline-content">
+              <h3>Values</h3>
+              <p>Staying grounded with family wisdom and generational perspective</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-content u-mt-4">
         <div className="section-header">
           <h2>Cutting-Edge AI Implementations</h2>
@@ -223,6 +279,7 @@ const About = () => (
       </section>
     </article>
   </Main>
-);
+  );
+};
 
 export default About;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import ContactIcons from '../components/Contact/ContactIcons';
+import AnimatedPhoto from '../components/common/AnimatedPhoto';
 
 const Contact = () => (
   <Main
@@ -14,6 +15,30 @@ const Contact = () => (
         <h1>Let's Implement What's Next</h1>
         <span className="page-subtitle">Ready to deploy cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next</span>
       </div>
+
+      <section className="contact-intro u-mb-4">
+        <div className="contact-intro-content">
+          <AnimatedPhoto
+            src="/images/august-2025/website-05.jpg"
+            alt="Abishek Ganesh - Approachable AI Specialist"
+            size="medium"
+            shape="rounded"
+            animation="fadeInScale"
+            hoverEffect="brightness"
+            className="contact-photo"
+          />
+          <div className="contact-intro-text">
+            <p className="u-text-lg">
+              Hi! I'm Abishek. Whether you're looking to implement cutting-edge AI solutions or need a voice that connects with your audience, 
+              I'd love to hear from you. I believe in making advanced technology accessible and creating genuine connections through every project.
+            </p>
+            <p className="u-text-lg u-mb-0">
+              Let's explore how we can work together to bring your vision to life - whether that's through state-of-the-art RAG systems, 
+              AI agents, or compelling voice work.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="section-content">
         <div className="grid grid--2 grid--gap-lg">
