@@ -118,7 +118,7 @@ const Index = () => {
           </div>
           <div className="card card--compact u-text-center">
             <div className="card-body">
-              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">GPT-4o, Claude 3.5</div>
+              <div className="u-text-2xl u-font-bold u-text-primary u-mb-1">GPT-5, Claude 4.1 Opus</div>
               <div className="u-text-sm u-text-muted">Latest models in production</div>
             </div>
           </div>
@@ -156,7 +156,7 @@ const Index = () => {
             <div className="card-body">
               <h4 className="u-mb-2">Latest Models Deployed</h4>
               <p className="u-text-sm u-text-muted u-mb-0">
-                GPT-4o, Claude 3.5, Gemini Pro, Llama 3.1, and whatever breakthrough comes next
+                GPT-5, Claude 4.1 Opus, Gemini Pro, Llama 3.1, and whatever breakthrough comes next
               </p>
             </div>
           </div>

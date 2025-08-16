@@ -37,6 +37,7 @@
 	@import 'base/sections';
 	@import 'base/utilities';
 	@import 'base/pages';
+	@import 'base/dark-mode';
 
 // Component.
 
@@ -44,6 +45,7 @@
 	@import 'components/blurb';
 	@import 'components/box';
 	@import 'components/button';
+	@import 'components/dark-mode-toggle';
 	@import 'components/form';
 	@import 'components/icon';
 	@import 'components/image';
@@ -51,6 +53,7 @@
 	@import 'components/mini-post';
 	@import 'components/post';
 	@import 'components/section';
+	@import 'components/sidebar-intro';
 	@import 'components/table';
 	@import 'components/hamburger';
 	@import 'components/markdown';

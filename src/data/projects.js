@@ -18,7 +18,7 @@ const data = [
       'Knowledge graph integration for enhanced reasoning capabilities'
     ],
     
-    techStack: ['GPT-4o', 'Claude 3.5', 'Pinecone', 'LangChain', 'HuggingFace', 'Python', 'FastAPI'],
+    techStack: ['GPT-5', 'Claude 4.1 Opus', 'Pinecone', 'LangChain', 'HuggingFace', 'Python', 'FastAPI'],
     
     impact: {
       'Query Relevance': '95% accuracy',
@@ -52,7 +52,7 @@ const data = [
       'Created seamless handoff mechanism between agents and humans'
     ],
     
-    techStack: ['Claude 3.5', 'GPT-4o', 'LangChain', 'Agents Framework', 'Python', 'Redis', 'Kubernetes'],
+    techStack: ['Claude 4.1 Opus', 'GPT-5', 'LangChain', 'Agents Framework', 'Python', 'Redis', 'Kubernetes'],
     
     impact: {
       'Human Escalations': '70% reduction',
@@ -86,7 +86,7 @@ const data = [
       'Developed industry-specific agent templates and patterns'
     ],
     
-    techStack: ['Llama 3.1', 'Claude 3.5', 'LangGraph', 'Python', 'FastAPI', 'Temporal', 'Grafana'],
+    techStack: ['Llama 3.1', 'Claude 4.1 Opus', 'LangGraph', 'Python', 'FastAPI', 'Temporal', 'Grafana'],
     
     impact: {
       'Development Speed': '10x faster deployment',
@@ -157,7 +157,7 @@ const data = [
       'Integrated with latest medical research databases'
     ],
     
-    techStack: ['GPT-4o', 'Med-PaLM 2', 'BioBERT', 'FAISS', 'Neo4j', 'Constitutional AI', 'FHIR'],
+    techStack: ['GPT-5', 'Med-PaLM 2', 'BioBERT', 'FAISS', 'Neo4j', 'Constitutional AI', 'FHIR'],
     
     impact: {
       'Clinical Accuracy': '97% verified correct',
@@ -228,7 +228,7 @@ const data = [
       'Deployed with sub-50ms latency requirements'
     ],
     
-    techStack: ['GPT-4o', 'Gemini Pro', 'Redis', 'Kafka', 'Python', 'Rust'],
+    techStack: ['GPT-5', 'Gemini Pro', 'Redis', 'Kafka', 'Python', 'Rust'],
     
     impact: {
       'Decision Speed': 'Sub-50ms latency',

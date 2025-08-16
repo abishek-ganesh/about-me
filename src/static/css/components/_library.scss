@@ -50,15 +50,15 @@
   }
   
   &--gradient {
-    background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);  // Light blue gradient for light mode
     border: none;
-    color: white;
+    color: #212121;  // Dark text by default
     
     h1, h2, h3, h4, h5, h6,
     .card-header h3,
     .card-body,
     p, span, div, li {
-      color: white !important;
+      color: #212121;  // Dark text for light mode
     }
     
     // Make specific text colors more visible
@@ -67,16 +67,12 @@
     .u-text-secondary,
     .metric-label,
     .metric-value {
-      color: rgba(255, 255, 255, 0.9) !important;
+      color: #212121;  // Dark text for light mode
     }
     
-    // Ensure all text is white
+    // Ensure all text is dark in light mode
     * {
-      color: white;
-    }
-    
-    .u-text-white {
-      color: white !important;
+      color: #212121;
     }
   }
   

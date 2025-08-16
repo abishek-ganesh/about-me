@@ -82,7 +82,7 @@ const Resume = () => (
             </div>
             <div className="card-body">
               <ul className="list list--chevron">
-                <li>GPT-4o, Claude 3.5, Gemini Pro, Llama 3.1 in production</li>
+                <li>GPT-5, Claude 4.1 Opus, Gemini Pro, Llama 3.1 in production</li>
                 <li>Fine-tuning and prompt engineering for optimal performance</li>
                 <li>RLHF and constitutional AI implementations</li>
                 <li>Multi-modal model deployments</li>

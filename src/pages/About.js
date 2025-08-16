@@ -57,7 +57,7 @@ const About = () => {
               <div className="list-item u-mb-2">
                 <h4 className="u-text-primary u-mb-1">State-of-the-Art AI Implementation Specialist</h4>
                 <p>Expert in RAG systems: hybrid search, reranking, dynamic context optimization. AI agent development: 
-                   autonomous agents, multi-agent orchestration, tool use. Deploy latest foundation models (GPT-4o, Claude 3.5, 
+                   autonomous agents, multi-agent orchestration, tool use. Deploy latest foundation models (GPT-5, Claude 4.1 Opus, 
                    Gemini Pro) and whatever comes next. Always first to production with emerging technologies.</p>
               </div>
               <div className="list-item u-mb-2">
@@ -103,8 +103,8 @@ const About = () => {
               <div>
                 <h5 className="u-text-muted u-mb-1">Latest Models Deployed</h5>
                 <div className="u-flex u-flex-wrap u-gap-1">
-                  <span className="tag tag--small tag--secondary">GPT-4o</span>
-                  <span className="tag tag--small tag--secondary">Claude 3.5</span>
+                  <span className="tag tag--small tag--secondary">GPT-5</span>
+                  <span className="tag tag--small tag--secondary">Claude 4.1 Opus</span>
                   <span className="tag tag--small tag--secondary">Gemini Pro</span>
                   <span className="tag tag--small tag--secondary">Llama 3.1</span>
                 </div>
@@ -216,7 +216,7 @@ const About = () => {
             <div className="u-text-3xl u-mb-1">
               <span role="img" aria-label="Rocket">🚀</span>
             </div>
-            <p className="u-mb-0 u-text-sm">First to deploy GPT-4o, Claude 3.5, and what's next</p>
+            <p className="u-mb-0 u-text-sm">First to deploy GPT-5, Claude 4.1 Opus, and what's next</p>
           </div>
         </div>
       </section>

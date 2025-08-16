@@ -8,6 +8,7 @@ import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
 import StructuredData from '../components/Template/StructuredData';
+import DarkModeToggle from '../components/Template/DarkModeToggle';
 
 const Main = (props) => {
   const pageTitle = props.title ? `${props.title} | Abishek Ganesh` : 'Abishek Ganesh - AI Implementation Specialist';
@@ -26,7 +27,7 @@ const Main = (props) => {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={props.description} />
-        <meta name="keywords" content="AI Implementation, RAG Systems, AI Agents, Machine Learning, GPT-4, Claude, LangChain, AI Consulting, Abishek Ganesh" />
+        <meta name="keywords" content="AI Implementation, RAG Systems, AI Agents, Machine Learning, GPT-5, Claude 4.1 Opus, LangChain, AI Consulting, Abishek Ganesh" />
         <meta name="author" content="Abishek Ganesh" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={currentUrl} />
@@ -69,6 +70,7 @@ const Main = (props) => {
         </div>
         {props.fullPage ? null : <SideBar />}
       </div>
+      <DarkModeToggle floating />
     </HelmetProvider>
   );
 };

@@ -13,8 +13,8 @@
 	#header {
 		@include vendor('display', 'flex');
 		@include vendor('justify-content', 'space-between');
-		background-color: _palette(bg);
-		border-bottom: solid 1px _palette(border);
+		background-color: var(--nav-bg);
+		border-bottom: solid 1px var(--border-primary);
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -22,6 +22,8 @@
 		top: 0;
 		width: 100%;
 		z-index: _misc(z-index-base);
+		transition: background-color var(--transition-speed) var(--transition-ease),
+		            border-color var(--transition-speed) var(--transition-ease);
 
 		a {
 			color: inherit;
@@ -52,7 +54,7 @@
 
 		.links {
 			@include vendor('flex', '1');
-			border-left: solid 1px _palette(border);
+			border-left: solid 1px var(--border-primary);
 			height: inherit;
 			line-height: inherit;
 			margin-left: 1.5em;
@@ -61,7 +63,7 @@
 
 			ul {
 				li {
-					border-left: solid 1px _palette(border);
+					border-left: solid 1px var(--border-primary);
 					line-height: 1;
 					margin-left: 1em;
 					padding-left: 1em;
@@ -94,7 +96,7 @@
 				line-height: inherit;
 
 				li {
-					border-left: solid 1px _palette(border);
+					border-left: solid 1px var(--border-primary);
 					height: inherit;
 					line-height: inherit;
 					white-space: nowrap;
@@ -116,7 +118,7 @@
 					> a {
 						@include icon;
 						border-bottom: 0;
-						color: _palette(fg-light);
+						color: var(--text-secondary);
 						overflow: hidden;
 						position: relative;
 						text-indent: 4em;

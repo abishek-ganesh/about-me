@@ -1,0 +1,118 @@
+.dark-mode-toggle {
+  background: transparent;
+  border: 2px solid var(--border-primary);
+  border-radius: 25px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-speed) var(--transition-ease);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  
+  &:hover {
+    background-color: var(--accent-light);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  .toggle-icon {
+    font-size: 1.1rem;
+    color: var(--accent-primary);
+    transition: transform var(--transition-speed) var(--transition-ease);
+  }
+  
+  .toggle-text {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  &:hover .toggle-icon {
+    transform: rotate(20deg);
+  }
+  
+  // Floating button styles
+  &.floating {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    border: 1.5px solid var(--border-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    transition: all 0.2s ease;
+    
+    .toggle-icon {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      opacity: 1;
+      background-color: var(--bg-tertiary);
+      border-color: var(--accent-primary);
+      
+      .toggle-icon {
+        color: var(--accent-primary);
+        transform: rotate(15deg);
+      }
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+    
+    @media (max-width: 736px) {
+      bottom: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      
+      .toggle-icon {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  // Animation for icon switch
+  .toggle-icon {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8) rotate(-20deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+  }
+  
+  // Mobile responsive
+  @media (max-width: 736px) {
+    &:not(.floating) {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      
+      .toggle-icon {
+        font-size: 1rem;
+      }
+    }
+  }
+}

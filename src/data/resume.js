@@ -36,7 +36,7 @@ export const positions = [
     daterange: '2024 - Present',
     points: [
       'Implement cutting-edge AI: advanced RAG systems, AI agents, multi-agent orchestration',
-      'Deploy latest models (GPT-4o, Claude 3.5, Gemini Pro) - always first to production',
+      'Deploy latest models (GPT-5, Claude 4.1 Opus, Gemini Pro) - always first to production',
       'Reduced system MTTR by 60% through strategic AI architecture and debugging',
       'Help Fortune 500 companies leverage truly state-of-the-art AI (not just buzzwords)',
     ],
@@ -120,8 +120,8 @@ export const skillCategories = {
     { name: 'Tool Use & Function Calling', level: 5 },
   ],
   'Latest Models Deployed': [
-    { name: 'GPT-4o', level: 5 },
-    { name: 'Claude 3.5', level: 5 },
+    { name: 'GPT-5', level: 5 },
+    { name: 'Claude 4.1 Opus', level: 5 },
     { name: 'Gemini Pro', level: 5 },
     { name: 'Llama 3.1', level: 5 },
     { name: 'Whatever Comes Next', level: 5 },

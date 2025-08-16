@@ -118,12 +118,6 @@ const Stats = () => (
             <h2 className="u-text-center u-mb-3">Fun Facts</h2>
             <div className="grid grid--1 grid--gap-sm" style={{ maxWidth: '800px', margin: '0 auto' }}>
               <div className="u-flex u-items-center u-gap-2 u-p-2 u-bg-light u-rounded">
-                <span className="u-text-2xl" role="img" aria-label="Brain">🧠</span>
-                <span className="u-text-dark">
-                  I've trained neural networks that have processed over 1 billion data points
-                </span>
-              </div>
-              <div className="u-flex u-items-center u-gap-2 u-p-2 u-bg-light u-rounded">
                 <span className="u-text-2xl" role="img" aria-label="Teacher">👨‍🏫</span>
                 <span className="u-text-dark">
                   Teaching AI bootcamp: 3 hours/day, 3 days/week, 6 months of intensive learning
@@ -139,12 +133,6 @@ const Stats = () => (
                 <span className="u-text-2xl" role="img" aria-label="Graduate">🎓</span>
                 <span className="u-text-dark">
                   Completed Georgia Tech MS CS with perfect 4.0 GPA while working full-time
-                </span>
-              </div>
-              <div className="u-flex u-items-center u-gap-2 u-p-2 u-bg-light u-rounded">
-                <span className="u-text-2xl" role="img" aria-label="Code">💻</span>
-                <span className="u-text-dark">
-                  Comfortable coding in 5+ languages, with Python being my daily driver
                 </span>
               </div>
             </div>

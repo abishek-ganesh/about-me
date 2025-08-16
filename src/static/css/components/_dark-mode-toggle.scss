@@ -1,0 +1,33 @@
+// Dark mode toggle positioning in navigation
+#header {
+  .dark-mode-toggle-wrapper {
+    margin-left: auto;
+    padding-left: 1em;
+    border-left: solid 1px var(--border-primary);
+    
+    .dark-mode-toggle {
+      margin: 0;
+    }
+  }
+  
+  // Mobile responsive
+  @media (max-width: 736px) {
+    .dark-mode-toggle-wrapper {
+      display: none; // Hide in mobile nav, will show in hamburger menu
+    }
+  }
+}
+
+// Add dark mode toggle to hamburger menu for mobile
+.dark-mode-toggle-mobile {
+  padding: 1em 0;
+  border-top: solid 1px var(--border-primary);
+  margin-top: 1em;
+  
+  .dark-mode-toggle {
+    width: 100%;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12px;
+  }
+}

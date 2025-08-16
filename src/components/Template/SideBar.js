@@ -22,36 +22,38 @@ const SideBar = () => {
   
   return (
     <section id="sidebar">
-      <section id="intro">
-        <div className="logo">
-          <img 
-            src={sidebarPhoto.path} 
-            alt={sidebarPhoto.metadata?.description || "Abishek Ganesh"}
-            className={isFirstLoad ? 'first-load' : ''}
-          />
-          <div className="logo-overlay">
-            <h2>Abishek Ganesh</h2>
-            <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
-            <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
+      <div className="sidebar-intro-container">
+        <section id="intro">
+          <div className="logo">
+            <img 
+              src={sidebarPhoto.path} 
+              alt={sidebarPhoto.metadata?.description || "Abishek Ganesh"}
+              className={isFirstLoad ? 'first-load' : ''}
+            />
+            <div className="logo-overlay">
+              <h2>Abishek Ganesh</h2>
+              <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
+              <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    <section className="blurb">
-      <h2>About</h2>
-      <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life <br></br><br></br>
-        <a href="https://youtu.be/LQ488QrqGE4?t=125">
-          <i>Reach for the stars, so if you fall, you land on a cloud 
-          <br></br>- Ye </i>
-        </a>
-        
-      </p>
-      <ul className="actions">
-        <li>
-          {!window.location.pathname.includes('/resume') ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
-        </li>
-      </ul>
-    </section>
+        <section className="blurb">
+          <h2>About</h2>
+          <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life <br></br><br></br>
+            <a href="https://youtu.be/LQ488QrqGE4?t=125">
+              <i>Reach for the stars, so if you fall, you land on a cloud 
+              <br></br>- Ye </i>
+            </a>
+            
+          </p>
+          <ul className="actions">
+            <li>
+              {!window.location.pathname.includes('/resume') ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
+            </li>
+          </ul>
+        </section>
+      </div>
 
     <section id="footer">
       <ContactIcons />
