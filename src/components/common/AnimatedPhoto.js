@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import LazyImage from './LazyImage';
 
 const AnimatedPhoto = ({
   src,
@@ -129,15 +130,27 @@ const AnimatedPhoto = ({
           </div>
         )}
         
-        {/* Main image */}
-        <img
-          ref={imgRef}
-          src={isVisible || !lazyLoad ? src : ''}
-          alt={alt}
-          onLoad={handleImageLoad}
-          className="animated-photo__image"
-          loading={lazyLoad ? 'lazy' : 'eager'}
-        />
+        {/* Main image with WebP support */}
+        {lazyLoad ? (
+          <LazyImage
+            src={src}
+            webpSrc={src.replace(/\.(jpg|jpeg|png)$/i, '.webp')}
+            alt={alt}
+            className="animated-photo__image"
+            onLoad={handleImageLoad}
+            threshold={0.1}
+            rootMargin="50px"
+          />
+        ) : (
+          <img
+            ref={imgRef}
+            src={src}
+            alt={alt}
+            onLoad={handleImageLoad}
+            className="animated-photo__image"
+            loading="eager"
+          />
+        )}
 
         {/* Overlay content */}
         {overlayContent && (

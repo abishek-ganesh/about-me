@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { DarkModeProvider } from './contexts/DarkModeContext';
 import Main from './layouts/Main'; // fallback for lazy pages
+import LoadingSpinner from './components/common/LoadingSpinner';
 import './static/css/main.scss'; // All of our styles
 
 // Every route - we lazy load so that each page can be chunked
@@ -19,7 +20,7 @@ const Stats = lazy(() => import('./pages/Stats'));
 const App = () => (
   <DarkModeProvider>
     <BrowserRouter>
-      <Suspense fallback={<Main />}>
+      <Suspense fallback={<LoadingSpinner fullPage size="large" text="Loading page..." />}>
         <Switch>
           <Route exact path="/" component={Index} />
           <Route path="/about" component={About} />

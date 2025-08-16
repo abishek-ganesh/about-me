@@ -11,14 +11,17 @@
     "url": "https://github.com/abishek-ganesh/about-me.git"
   },
   "scripts": {
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build && react-snap",
-    "build:no-snap": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' react-app-rewired build && react-snap",
+    "build:no-snap": "NODE_OPTIONS='--openssl-legacy-provider' react-app-rewired build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "serve -s build",
-    "dev": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts start",
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' react-app-rewired start",
     "lint": "eslint src",
-    "test": "react-scripts test"
+    "test": "react-app-rewired test",
+    "analyze": "NODE_OPTIONS='--openssl-legacy-provider' source-map-explorer 'build/static/js/*.js'",
+    "build:analyze": "npm run build:no-snap && npm run analyze",
+    "generate:webp": "node scripts/generate-webp.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -43,9 +46,13 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.3",
+    "critters-webpack-plugin": "^3.0.2",
+    "customize-cra": "^1.0.0",
     "gh-pages": "^6.3.0",
     "gulp-sass": "^5.1.0",
+    "react-app-rewired": "^2.2.1",
     "serve": "^14.2.4",
+    "sharp": "^0.34.3",
     "source-map-explorer": "^2.5.2"
   },
   "browserslist": {
@@ -72,7 +79,10 @@
     ],
     "inlineCss": true,
     "headless": true,
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "source": "build",
     "minifyHtml": {
       "collapseWhitespace": false,
