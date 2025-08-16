@@ -24,7 +24,13 @@ const Voiceover = () => (
               Listen to my latest commercial voice over demo reel featuring a variety of styles and characters.
             </p>
             <div className="u-bg-light u-p-3 u-rounded u-text-center">
-              <audio controls src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`} className="u-w-full" style={{ maxWidth: '600px' }}>
+              <audio 
+                controls 
+                preload="none"
+                src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`} 
+                className="u-w-full" 
+                style={{ maxWidth: '600px' }}
+              >
                 Your browser does not support the audio element.
               </audio>
               <p className="u-mt-3 u-text-sm u-text-muted u-mb-0">
