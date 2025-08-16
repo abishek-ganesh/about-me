@@ -64,7 +64,9 @@ const Stats = () => (
                     href="https://www.google.com/maps/d/u/1/edit?mid=1AAscWrtMqstqyYh8_4-nVF-cbpfYu7C9&usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    style={{ color: 'inherit', textDecoration: 'none' }}
+                    className="u-text-primary"
+                    style={{ textDecoration: 'none' }}
+                    title="View travel map"
                   >
                     13
                   </a>
@@ -87,7 +89,9 @@ const Stats = () => (
                     href="https://www.google.com/maps/d/u/1/edit?mid=1LxU2Vt_3DV1tFsBcOgjS_erGiyFfFJJF&usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    style={{ color: 'inherit', textDecoration: 'none' }}
+                    className="u-text-primary"
+                    style={{ textDecoration: 'none' }}
+                    title="View states map"
                   >
                     28
                   </a>

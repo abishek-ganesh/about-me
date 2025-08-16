@@ -7,24 +7,71 @@ import Analytics from '../components/Template/Analytics-GA4';
 import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
+import StructuredData from '../components/Template/StructuredData';
 
-const Main = (props) => (
-  <HelmetProvider>
-    <Analytics />
-    <ScrollToTop />
-    <Helmet titleTemplate="%s | Abishek Ganesh" defaultTitle="Abishek Ganesh" defer={false}>
-      {props.title && <title>{props.title}</title>}
-      <meta name="description" content={props.description} />
-    </Helmet>
-    <div id="wrapper">
-      <Navigation />
-      <div id="main">
-        {props.children}
+const Main = (props) => {
+  const pageTitle = props.title ? `${props.title} | Abishek Ganesh` : 'Abishek Ganesh - AI Implementation Specialist';
+  const siteUrl = 'https://abishekganesh.com';
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : siteUrl;
+  const imageUrl = props.image || `${siteUrl}/images/og-image.jpg`;
+  
+  return (
+    <HelmetProvider>
+      <Analytics />
+      <ScrollToTop />
+      <StructuredData type={props.structuredDataType} customData={props.structuredData} />
+      <Helmet titleTemplate="%s | Abishek Ganesh" defaultTitle="Abishek Ganesh" defer={false}>
+        {props.title && <title>{props.title}</title>}
+        
+        {/* Primary Meta Tags */}
+        <meta name="title" content={pageTitle} />
+        <meta name="description" content={props.description} />
+        <meta name="keywords" content="AI Implementation, RAG Systems, AI Agents, Machine Learning, GPT-4, Claude, LangChain, AI Consulting, Abishek Ganesh" />
+        <meta name="author" content="Abishek Ganesh" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={props.description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:site_name" content="Abishek Ganesh" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={currentUrl} />
+        <meta property="twitter:title" content={pageTitle} />
+        <meta property="twitter:description" content={props.description} />
+        <meta property="twitter:image" content={imageUrl} />
+        <meta property="twitter:creator" content="@abishekganesh" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        
+        {/* PWA & Mobile */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#2196f3" />
+      </Helmet>
+      <div id="wrapper">
+        <Navigation />
+        <div id="main">
+          {props.children}
+        </div>
+        {props.fullPage ? null : <SideBar />}
       </div>
-      {props.fullPage ? null : <SideBar />}
-    </div>
-  </HelmetProvider>
-);
+    </HelmetProvider>
+  );
+};
 
 Main.propTypes = {
   children: PropTypes.oneOfType([
@@ -34,6 +81,9 @@ Main.propTypes = {
   fullPage: PropTypes.bool,
   title: PropTypes.string,
   description: PropTypes.string,
+  image: PropTypes.string,
+  structuredDataType: PropTypes.string,
+  structuredData: PropTypes.object,
 };
 
 Main.defaultProps = {
@@ -41,6 +91,9 @@ Main.defaultProps = {
   fullPage: false,
   title: null,
   description: "State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment",
+  image: null,
+  structuredDataType: 'default',
+  structuredData: null,
 };
 
 export default Main;

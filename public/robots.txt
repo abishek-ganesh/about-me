@@ -1,2 +1,26 @@
+# Robots.txt for https://abishekganesh.com
+
+# Allow all crawlers
 User-agent: *
+Allow: /
 Disallow: /api
+
+# Sitemap location
+Sitemap: https://abishekganesh.com/sitemap.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block aggressive bots if needed
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

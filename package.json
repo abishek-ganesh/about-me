@@ -11,7 +11,8 @@
     "url": "https://github.com/abishek-ganesh/about-me.git"
   },
   "scripts": {
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build && react-snap",
+    "build:no-snap": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "serve -s build",
@@ -58,5 +59,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about",
+      "/resume",
+      "/projects",
+      "/voiceover",
+      "/stats",
+      "/contact"
+    ],
+    "inlineCss": true,
+    "headless": true,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "source": "build",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    },
+    "fixWebpackChunksIssue": false,
+    "puppeteerExecutablePath": false
   }
 }

@@ -1,0 +1,25 @@
+PLACEHOLDER FILE
+================
+
+Please add an Open Graph image for social media sharing:
+- Filename: og-image.jpg
+- Recommended size: 1200x630 pixels
+- Location: /public/images/og-image.jpg
+
+This image will be used when your website is shared on:
+- Facebook
+- Twitter
+- LinkedIn
+- Other social platforms
+
+Suggested content:
+- Your professional photo
+- Text: "Abishek Ganesh - AI Implementation Specialist"
+- Subtitle: "RAG Systems | AI Agents | Cutting-Edge ML"
+- Your website URL
+
+You can create this using tools like:
+- Canva
+- Figma
+- Adobe Creative Suite
+- Or any image editor

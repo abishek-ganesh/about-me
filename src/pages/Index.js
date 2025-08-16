@@ -9,12 +9,11 @@ import { getCarouselPhotos } from '../data/photos';
 
 const Index = () => {
   const carouselPhotos = getCarouselPhotos();
-  
-  console.log('Carousel photos:', carouselPhotos);
 
   return (
     <Main
       description={"Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"}
+      structuredDataType="home"
     >
       <article className="post page" id="index">
         <section className="hero u-text-center u-mb-4">
