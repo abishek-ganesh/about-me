@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Hamburger from './Hamburger';
+import HamburgerMenu from './HamburgerMenu';
 import routes from '../../data/routes';
 
 // Websites Navbar, displays routes defined in 'src/data/routes'
@@ -22,6 +23,7 @@ const Navigation = () => (
       </ul>
     </nav>
     <Hamburger />
+    <HamburgerMenu />
   </header>
 );
 

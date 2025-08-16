@@ -6,6 +6,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Analytics from '../components/Template/Analytics-GA4';
 import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
+import MobileNav from '../components/Template/MobileNav';
 import ScrollToTop from '../components/Template/ScrollToTop';
 import StructuredData from '../components/Template/StructuredData';
 import DarkModeToggle from '../components/Template/DarkModeToggle';
@@ -69,6 +70,7 @@ const Main = (props) => {
           {props.children}
         </div>
         {props.fullPage ? null : <SideBar />}
+        <MobileNav />
       </div>
       <DarkModeToggle floating />
     </HelmetProvider>
