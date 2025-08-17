@@ -72,16 +72,19 @@
       "/",
       "/about",
       "/resume",
-      "/projects",
       "/voiceover",
       "/stats",
-      "/contact"
+      "/contact",
+      "/case-studies",
+      "/insights/when-not-to-use-ai"
     ],
-    "inlineCss": true,
+    "skipThirdPartyRequests": true,
+    "inlineCss": false,
     "headless": true,
     "puppeteerArgs": [
       "--no-sandbox",
-      "--disable-setuid-sandbox"
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage"
     ],
     "source": "build",
     "minifyHtml": {
