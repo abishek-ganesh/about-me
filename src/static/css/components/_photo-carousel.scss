@@ -52,8 +52,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      // Better default positioning for portrait photos showing faces
-      object-position: 50% 25%;
+      // Position faces higher in the frame for better visibility
+      object-position: 50% 35%;
     }
   }
 
