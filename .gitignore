@@ -53,3 +53,6 @@ analytics-reports/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Test artifacts
+tests/playwright/test-results.json
+tests/playwright/screenshots/

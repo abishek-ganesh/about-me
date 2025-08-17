@@ -16,6 +16,20 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 - `npm run build` - Build the production version (uses --openssl-legacy-provider flag)
 - `npm run deploy` - Build and deploy to GitHub Pages using gh-pages
 
+**🚨 CRITICAL Deployment Process - ALWAYS FOLLOW THIS ORDER:**
+1. **Test First**: Run automated tests BEFORE deploying
+   ```bash
+   npm run test:pre-deploy  # Runs lint + local tests
+   ```
+2. **Only Deploy if Tests Pass**: If tests pass, then deploy
+   ```bash
+   npm run deploy          # Build and deploy to production
+   ```
+3. **Verify Production**: After deployment, verify the live site
+   ```bash
+   npm run test:production  # Test the live website
+   ```
+
 **Important Git & Deployment Process:**
 1. Always make code changes to the `main` branch (never edit gh-pages directly)
 2. **CRITICAL**: NEVER commit changes without explicit user approval
@@ -23,11 +37,14 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
    - Wait for user confirmation before committing
    - User should review changes first with `git diff` or by testing locally
 3. Use `/git-quick` or regular git commands to commit and push to `main` (after approval)
-4. **IMPORTANT**: After using `/git-quick` to push changes, ALWAYS run `npm run deploy` to update the live website
+4. **IMPORTANT**: After using `/git-quick` to push changes, ALWAYS run tests before deploying:
+   - Run `npm run test:local` to verify changes work
+   - Then run `npm run deploy` to update the live website
 5. The gh-pages branch is automatically managed by the deploy script
 
 **Remember**: 
 - NEVER auto-commit changes - always get user approval first!
+- ALWAYS run tests before deploying - catch issues before they go live!
 - The website won't update until you run `npm run deploy` after pushing to main!
 
 **Custom Domain Note:**
@@ -40,9 +57,20 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 - index.html contains redirect script to restore proper routing
 - URLs are clean: /resume instead of /#/resume
 
-### Code Quality
+### Code Quality & Testing
 - `npm run lint` - Run ESLint on src directory
 - `npm test` - Run tests with react-scripts
+- `npm run test:local` - Run automated tests on local development server
+- `npm run test:production` - Test the live production website
+- `npm run test:smoke` - Quick smoke tests for critical paths
+- `npm run test:pre-deploy` - Combined lint + tests (run before deploying!)
+
+**Automated Testing Framework:**
+- Tests located in `tests/` directory
+- Uses Playwright MCP for browser automation
+- Tests cover: navigation, dark mode, carousel, service worker, lazy loading, responsive design
+- Returns exit code 0 for success, 1 for failure (CI/CD ready)
+- Generates JSON report in `tests/playwright/test-results.json`
 
 ## Architecture
 
@@ -128,3 +156,16 @@ The app uses HashRouter with lazy-loaded pages. Main routes:
 - Public assets including images and audio files in public/
 - Voiceover demo files in public/voiceover/
 - Analytics reports directory is gitignored to prevent sensitive data exposure
+- Test artifacts (results, screenshots) are gitignored
+
+## Quick Reference - Deployment Checklist
+Before deploying any changes to production:
+1. ✅ `git diff` - Review all changes
+2. ✅ `npm run lint` - Ensure code quality
+3. ✅ `npm run test:local` - Test functionality locally
+4. ✅ `git add -A && git commit` - Commit changes (with user approval)
+5. ✅ `git push origin main` - Push to GitHub
+6. ✅ `npm run deploy` - Deploy to production
+7. ✅ `npm run test:production` - Verify live site
+
+**Pro tip**: Use `npm run test:pre-deploy` to combine steps 2-3 automatically!
