@@ -54,6 +54,11 @@
       object-fit: cover;
       // Position faces higher in the frame for better visibility
       object-position: 50% 35%;
+      
+      // Specific positioning for individual photos that need adjustment
+      &[src*="website-10.jpg"] {
+        object-position: 50% 25% !important;
+      }
     }
   }
 
