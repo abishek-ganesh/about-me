@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
+import LazyImage from '../Common/LazyImage';
 import { getSidebarPhoto } from '../../data/photos';
 
 var today = new Date();
@@ -25,10 +26,13 @@ const SideBar = () => {
       <div className="sidebar-intro-container">
         <section id="intro">
           <div className="logo">
-            <img 
+            <LazyImage 
               src={sidebarPhoto.path} 
               alt={sidebarPhoto.metadata?.description || "Abishek Ganesh"}
               className={isFirstLoad ? 'first-load' : ''}
+              critical={true}
+              loading="eager"
+              showSpinner={false}
             />
             <div className="logo-overlay">
               <h2>Abishek Ganesh</h2>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
+import LazyImage from '../Common/LazyImage';
 
 const PhotoCarousel = ({
   photos = [],
@@ -137,11 +138,13 @@ const PhotoCarousel = ({
               }`}
               aria-hidden={index !== currentIndex}
             >
-              <img
+              <LazyImage
                 src={photo.path}
                 alt={photo.metadata?.description || photo.story?.title || 'Gallery photo'}
                 loading={index === 0 ? 'eager' : 'lazy'}
-                style={photo.style ? { objectPosition: photo.style.objectPosition } : undefined}
+                critical={index === 0}
+                showSpinner={index !== 0}
+                className="photo-carousel__image"
               />
               {showCaptions && photo.story?.caption && (
                 <div className="photo-carousel__caption">
@@ -206,11 +209,13 @@ const PhotoCarousel = ({
                 aria-label={`View ${photo.story?.title || `photo ${index + 1}`}`}
                 tabIndex={0}
               >
-                <img
+                <LazyImage
                   src={photo.path}
                   alt={`Thumbnail ${index + 1}`}
                   loading="lazy"
-                  style={photo.style ? { objectPosition: photo.style.objectPosition } : undefined}
+                  critical={false}
+                  showSpinner={false}
+                  className="photo-carousel__thumbnail-image"
                 />
               </button>
             ))}
