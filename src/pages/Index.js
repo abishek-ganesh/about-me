@@ -34,11 +34,6 @@ const Index = () => {
           </div>
           <PhotoCarousel
             photos={carouselPhotos}
-            transitionType="fade"
-            showCaptions={true}
-            autoPlay={true}
-            interval={7000}
-            showThumbnails={true}
             className="homepage-carousel"
           />
         </section>
