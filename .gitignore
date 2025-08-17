@@ -45,6 +45,9 @@ Thumbs.db
 # Analytics reports
 analytics-reports/
 
+# Playwright test files
+.playwright-mcp/
+
 # Cache files
 .eslintcache
 npm-debug.log*
