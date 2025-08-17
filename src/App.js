@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { DarkModeProvider } from './contexts/DarkModeContext';
-import Main from './layouts/Main'; // fallback for lazy pages
 import LoadingSpinner from './components/common/LoadingSpinner';
 import './static/css/main.scss'; // All of our styles
 
@@ -16,6 +15,8 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Voiceover = lazy(() => import('./pages/Voiceover'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Stats = lazy(() => import('./pages/Stats'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const WhenNotAI = lazy(() => import('./pages/WhenNotAI'));
 
 const App = () => (
   <DarkModeProvider>
@@ -29,6 +30,8 @@ const App = () => (
           <Route path="/stats" component={Stats} />
           <Route path="/contact" component={Contact} />
           <Route path="/resume" component={Resume} />
+          <Route path="/case-studies" component={CaseStudies} />
+          <Route path="/insights/when-not-to-use-ai" component={WhenNotAI} />
           <Route component={NotFound} status={404} />
         </Switch>
       </Suspense>

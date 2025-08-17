@@ -21,6 +21,11 @@ const routes = [
     icon: 'fa-folder',
   },
   {
+    label: 'Case Studies',
+    path: '/case-studies',
+    icon: 'fa-flask',
+  },
+  {
     label: 'Voiceover',
     path: '/voiceover',
     icon: 'fa-microphone',

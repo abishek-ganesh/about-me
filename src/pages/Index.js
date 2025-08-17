@@ -131,6 +131,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* New Featured Content Section */}
+      <section className="section-content u-mt-4">
+        <div className="section-header">
+          <h2>Learn From Real Failures & Successes</h2>
+        </div>
+        <div className="grid grid--2 grid--gap-lg u-mb-3">
+          <div className="card card--elevated">
+            <div className="card-body">
+              <span className="badge badge--accent u-mb-2">NEW CASE STUDY</span>
+              <h3 className="u-mb-2">Building a RAG System That Actually Scales</h3>
+              <p className="u-text-muted u-mb-3">
+                How we went from 5-second response times to 300ms while handling 10x traffic. 
+                Includes our failed attempts, breakthrough moments, and lessons learned.
+              </p>
+              <Link to="/case-studies" className="btn btn--ghost btn--sm">
+                Read the full case study →
+              </Link>
+            </div>
+          </div>
+          <div className="card card--elevated">
+            <div className="card-body">
+              <span className="badge badge--secondary u-mb-2">THOUGHT LEADERSHIP</span>
+              <h3 className="u-mb-2">When NOT to Use AI</h3>
+              <p className="u-text-muted u-mb-3">
+                I talked a client out of a $2M AI project last month. 
+                Here's my framework for knowing when traditional solutions beat AI.
+              </p>
+              <Link to="/insights/when-not-to-use-ai" className="btn btn--ghost btn--sm">
+                Read why restraint matters →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-content u-mt-4">
         <div className="section-header">
           <h2>Truly State-of-the-Art Implementations</h2>
@@ -170,8 +205,11 @@ const Index = () => {
           </div>
         </div>
         <div className="u-text-center">
-          <Link to="/projects" className="btn btn--ghost">
-            View detailed project case studies →
+          <Link to="/case-studies" className="btn btn--primary">
+            Explore detailed case studies →
+          </Link>
+          <Link to="/projects" className="btn btn--ghost u-ml-2">
+            View all projects →
           </Link>
         </div>
       </section>
@@ -209,15 +247,48 @@ const Index = () => {
         showPlaceholder={testimonials.length === 0}
       />
 
+      {/* Philosophy Section */}
+      <section className="section-content u-mt-4">
+        <div className="card card--gradient">
+          <div className="card-body u-text-center">
+            <h3 className="u-mb-3">My Approach: Speed with Substance</h3>
+            <p className="u-text-lg u-mb-3">
+              I implement AI fast, but never recklessly. Every decision is backed by experience, 
+              including knowing when NOT to use AI. I've failed enough to know what works.
+            </p>
+            <div className="grid grid--3 grid--gap-lg">
+              <div>
+                <h4 className="u-text-primary u-mb-1">Honest About Failures</h4>
+                <p className="u-text-sm u-text-muted">
+                  Every case study includes what didn't work and why
+                </p>
+              </div>
+              <div>
+                <h4 className="u-text-primary u-mb-1">Team Collaboration</h4>
+                <p className="u-text-sm u-text-muted">
+                  The best solutions come from diverse perspectives
+                </p>
+              </div>
+              <div>
+                <h4 className="u-text-primary u-mb-1">Long-term Thinking</h4>
+                <p className="u-text-sm u-text-muted">
+                  Building systems that scale and teams that can maintain them
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-cta u-mt-4">
-        <h2>Ready to Deploy Tomorrow's AI Today?</h2>
+        <h2>Ready to Build AI That Actually Works?</h2>
         <p>
-          I help companies implement truly cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next. 
-          Let's leverage the latest technologies in smart ways that help your users.
+          I help companies implement AI that solves real problems, not just uses trendy tech. 
+          Let's discuss your challenges and whether AI is the right solution.
         </p>
         <div className="cta-buttons">
-          <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>
-          <Link to="/projects" className="btn btn--secondary">View Latest Implementations</Link>
+          <Link to="/contact" className="btn btn--primary">Schedule Discovery Session</Link>
+          <Link to="/case-studies" className="btn btn--secondary">Read Case Studies</Link>
         </div>
       </section>
     </article>

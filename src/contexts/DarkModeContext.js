@@ -12,7 +12,7 @@ export const useDarkMode = () => {
 };
 
 export const DarkModeProvider = ({ children }) => {
-  // Initialize theme from localStorage or system preference
+  // Initialize theme from localStorage, default to light mode for new users
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check localStorage first
     const savedTheme = localStorage.getItem('theme');
@@ -20,11 +20,8 @@ export const DarkModeProvider = ({ children }) => {
       return savedTheme === 'dark';
     }
     
-    // Otherwise check system preference
-    if (window.matchMedia) {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    
+    // Default to light mode for new users (better for first impressions)
+    // Users can toggle to dark mode if they prefer
     return false;
   });
 
@@ -43,30 +40,9 @@ export const DarkModeProvider = ({ children }) => {
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
-  // Listen for system theme changes
-  useEffect(() => {
-    if (!window.matchMedia) return;
-
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    const handleChange = (e) => {
-      // Only update if user hasn't manually set a preference
-      const savedTheme = localStorage.getItem('theme');
-      if (!savedTheme) {
-        setIsDarkMode(e.matches);
-      }
-    };
-
-    // Modern browsers
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
-    }
-    
-    // Legacy browsers
-    mediaQuery.addListener(handleChange);
-    return () => mediaQuery.removeListener(handleChange);
-  }, []);
+  // Listen for system theme changes (removed auto-switching to respect user choice)
+  // Users who want dark mode can manually toggle it
+  // This ensures consistent experience and respects explicit user preference
 
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => !prev);
