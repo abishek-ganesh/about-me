@@ -53,6 +53,9 @@ export const photoConfig = {
             title: 'The Teacher',
             description: 'Sharing knowledge and making AI accessible to everyone.',
             caption: 'Making complex technology simple'
+          },
+          style: {
+            objectPosition: '50% 10%' // Raise image significantly to show face
           }
         },
         {
@@ -69,6 +72,9 @@ export const photoConfig = {
             title: 'The Women Who Made Me',
             description: 'My sister and mom - the strongest influences in my life and my constant reminder to stay grounded.',
             caption: 'Family: The foundation of everything'
+          },
+          style: {
+            objectPosition: '50% 10%' // Raise image significantly to show all faces
           }
         },
         {
@@ -85,6 +91,9 @@ export const photoConfig = {
             title: 'Global Tech Perspective',
             description: 'Singapore Marina Bay - taking AI solutions global and learning from tech hubs worldwide.',
             caption: 'Building bridges across continents'
+          },
+          style: {
+            objectPosition: '50% 15%' // Raise image to show face properly
           }
         },
         {
@@ -102,7 +111,7 @@ export const photoConfig = {
             caption: 'Honoring the past while building the future'
           },
           style: {
-            objectPosition: 'center 20%' // Raise the image to show heads higher
+            objectPosition: '50% 15%' // Raise image to show both faces properly
           }
         },
         {
@@ -119,6 +128,9 @@ export const photoConfig = {
             title: 'Life Beyond Code',
             description: 'At a Nickelback concert in Arizona - because even AI specialists need to rock out sometimes.',
             caption: 'Finding balance in life'
+          },
+          style: {
+            objectPosition: '50% 5%' // Raise image very high to show face
           }
         },
         {
@@ -136,7 +148,7 @@ export const photoConfig = {
             caption: 'Building relationships that last'
           },
           style: {
-            objectPosition: 'center 35%' // Slightly raise the image
+            objectPosition: '50% 10%' // Raise image significantly to show faces
           }
         }
       ]
