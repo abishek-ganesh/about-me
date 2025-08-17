@@ -19,6 +19,7 @@ const LazyImage = ({
   srcSet,
   critical = false, // For above-the-fold images like sidebar
   showSpinner = true,
+  style = {}, // Allow custom styles including objectPosition
 }) => {
   // For critical images, load immediately
   const [imageSrc, setImageSrc] = useState(critical ? src : placeholderSrc);
@@ -123,6 +124,7 @@ const LazyImage = ({
           loading={loading}
           width={width}
           height={height}
+          style={style}
           className={`lazy-image ${isLoaded ? 'lazy-image-loaded' : ''}`}
         />
       </picture>
@@ -151,6 +153,7 @@ LazyImage.propTypes = {
   }),
   critical: PropTypes.bool,
   showSpinner: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 export default LazyImage;

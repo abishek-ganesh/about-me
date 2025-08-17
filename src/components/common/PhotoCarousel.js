@@ -145,6 +145,7 @@ const PhotoCarousel = ({
                 critical={index === 0}
                 showSpinner={index !== 0}
                 className="photo-carousel__image"
+                style={photo.style ? { objectPosition: photo.style.objectPosition } : undefined}
               />
               {showCaptions && photo.story?.caption && (
                 <div className="photo-carousel__caption">
@@ -216,6 +217,7 @@ const PhotoCarousel = ({
                   critical={false}
                   showSpinner={false}
                   className="photo-carousel__thumbnail-image"
+                  style={photo.style ? { objectPosition: photo.style.objectPosition } : undefined}
                 />
               </button>
             ))}
