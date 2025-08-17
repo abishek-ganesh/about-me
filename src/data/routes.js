@@ -35,11 +35,11 @@ const routes = [
     path: '/stats',
     icon: 'fa-chart-bar',
   },
-  // {
-  //   label: 'Contact',
-  //   path: '/contact',
-  //   icon: 'fa-envelope',
-  // },
+  {
+    label: 'Contact',
+    path: '/contact',
+    icon: 'fa-envelope',
+  },
 ];
 
 export default routes;

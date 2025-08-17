@@ -39,6 +39,8 @@
   
   // Navigation
   --nav-bg: #{map-get(map-get($colors, background), primary)};
+  --nav-bg-rgb: 255, 255, 255; // RGB values for rgba() usage
+  --bg-primary-rgb: 255, 255, 255; // RGB values for rgba() usage
   --nav-text: #{color(neutral, 700)};
   --nav-hover: #{color(primary, 600)};
   
@@ -85,6 +87,8 @@
   
   // Navigation
   --nav-bg: #161b22;
+  --nav-bg-rgb: 22, 27, 34; // RGB values for rgba() usage in dark mode
+  --bg-primary-rgb: 13, 17, 23; // RGB values for rgba() usage in dark mode
   --nav-text: #c9d1d9;
   --nav-hover: #58a6ff;
 }

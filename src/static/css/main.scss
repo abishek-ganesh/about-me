@@ -56,27 +56,23 @@
 	@import 'components/section';
 	@import 'components/sidebar-intro';
 	@import 'components/table';
-	@import 'components/hamburger';
-	@import 'components/hamburger-menu';
+	@import 'components/navigation-system';
 	@import 'components/markdown';
 	@import 'components/testimonials';
 	@import 'components/library';
 	@import 'components/photo-carousel';
 	@import 'components/photo-gallery';
 	@import 'components/animated-photo';
-	@import 'components/mobile-nav';
 	@import 'components/loading-spinner';
 
 
 // Layout.
 
-	@import 'layout/header';
 	@import 'layout/wrapper';
 	@import 'layout/main';
 	@import 'layout/sidebar';
 	@import 'layout/intro';
 	@import 'layout/footer';
-	@import 'layout/menu';
 
 	@import 'pages/notFound';
 	@import 'pages/skills';

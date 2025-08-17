@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 import ContactIcons from '../components/Contact/ContactIcons';
 import AnimatedPhoto from '../components/common/AnimatedPhoto';
+import { getPhotosForContext } from '../data/photos';
 
-const Contact = () => (
+const Contact = () => {
+  const contactPhotos = getPhotosForContext('contact');
+  const contactPhoto = contactPhotos[0] || { path: '/images/august-2025/website-05.jpg' };
+  
+  return (
   <Main
     title="Contact"
     description="Schedule an AI Strategy Session | State-of-the-Art RAG Systems, AI Agents, and Cutting-Edge Implementations"
@@ -19,8 +24,8 @@ const Contact = () => (
       <section className="contact-intro u-mb-4">
         <div className="contact-intro-content">
           <AnimatedPhoto
-            src="/images/august-2025/website-05.jpg"
-            alt="Abishek Ganesh - Approachable AI Specialist"
+            src={contactPhoto.path}
+            alt={contactPhoto.metadata?.description || "Abishek Ganesh - Approachable AI Specialist"}
             size="medium"
             shape="rounded"
             animation="fadeInScale"
@@ -149,6 +154,7 @@ const Contact = () => (
       </section>
     </article>
   </Main>
-);
+  );
+};
 
 export default Contact;

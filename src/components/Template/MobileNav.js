@@ -1,38 +1,38 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useDarkMode } from '../../contexts/DarkModeContext';
+import useScrollDirection from '../../hooks/useScrollDirection';
 import routes from '../../data/routes';
 
 const MobileNav = () => {
-  const { darkMode, toggleDarkMode } = useDarkMode();
-  
-  // Get main navigation items (limit to 4 for mobile bottom nav)
-  const mainRoutes = routes.slice(0, 4);
+  const { visible } = useScrollDirection();
+  // Get the 6 most important routes for mobile bottom nav
+  const mobileRoutes = [
+    routes.find(r => r.index), // Home
+    routes.find(r => r.path === '/about'),
+    routes.find(r => r.path === '/resume'),
+    routes.find(r => r.path === '/voiceover'),
+    routes.find(r => r.path === '/stats'),
+    routes.find(r => r.path === '/contact'),
+  ].filter(Boolean);
   
   return (
-    <nav className="mobile-nav">
-      <div className="mobile-nav-container">
-        {mainRoutes.map((link) => (
-          <NavLink
-            key={link.label}
-            to={link.path}
-            className="mobile-nav-item"
-            activeClassName="active"
-            exact={link.index}
-          >
-            <i className={`fas ${link.icon || 'fa-file'}`} />
-            <span>{link.label}</span>
-          </NavLink>
+    <nav className={`mobile-nav ${visible ? '' : 'nav-hidden'}`}>
+      <ul className="mobile-nav-list">
+        {mobileRoutes.map((link) => (
+          <li key={link.label} className="mobile-nav-item">
+            <NavLink
+              to={link.path}
+              activeClassName="active"
+              exact={link.index}
+            >
+              <i className={`mobile-nav-icon fas ${link.icon || 'fa-file'}`} />
+              <span className="mobile-nav-label">
+                {link.index ? 'Home' : link.label}
+              </span>
+            </NavLink>
+          </li>
         ))}
-        <button
-          className="mobile-nav-item dark-mode-nav"
-          onClick={toggleDarkMode}
-          aria-label="Toggle dark mode"
-        >
-          <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'}`} />
-          <span>{darkMode ? 'Light' : 'Dark'}</span>
-        </button>
-      </div>
+      </ul>
     </nav>
   );
 };

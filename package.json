@@ -19,7 +19,7 @@
     "dev": "NODE_OPTIONS='--openssl-legacy-provider' react-app-rewired start",
     "lint": "eslint src",
     "test": "react-app-rewired test",
-    "analyze": "NODE_OPTIONS='--openssl-legacy-provider' source-map-explorer 'build/static/js/*.js'",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "build:analyze": "npm run build:no-snap && npm run analyze",
     "generate:webp": "node scripts/generate-webp.js"
   },
@@ -31,18 +31,12 @@
     "@fortawesome/react-fontawesome": "0.1.14",
     "dayjs": "^1.10.4",
     "prop-types": "^15.7.2",
-    "raw.macro": "^0.4.2",
     "react": "^17.0.1",
-    "react-burger-menu": "^3.0.3",
     "react-dom": "^17.0.1",
-    "react-ga": "^3.3.0",
     "react-helmet-async": "^1.0.7",
-    "react-markdown": "^5.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.0.1",
-    "react-snap": "^1.13.1",
-    "rimraf": "^3.0.2",
-    "sass": "^1.69.5"
+    "react-snap": "^1.13.1"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.3",

@@ -41,9 +41,9 @@
   // Floating button styles
   &.floating {
     position: fixed;
-    bottom: 24px;
+    bottom: 85px; // Above mobile nav (65px) + 20px spacing
     right: 24px;
-    z-index: 9999;
+    z-index: 9998; // Below mobile nav (9999)
     width: 40px;
     height: 40px;
     padding: 0;
@@ -52,7 +52,7 @@
     border: 1.5px solid var(--border-primary);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     opacity: 0.9;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease, bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     .toggle-icon {
       font-size: 1rem;
@@ -77,13 +77,22 @@
     }
     
     @media (max-width: 736px) {
-      bottom: 20px;
+      bottom: 80px; // Slightly less spacing on mobile
       right: 20px;
       width: 36px;
       height: 36px;
       
       .toggle-icon {
         font-size: 0.9rem;
+      }
+    }
+    
+    // When nav is hidden (will be toggled via JS)
+    &.nav-hidden {
+      bottom: 20px;
+      
+      @media (max-width: 736px) {
+        bottom: 20px;
       }
     }
   }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // Use GA4 Analytics instead of the old Universal Analytics
-import Analytics from '../components/Template/Analytics-GA4';
+import Analytics from '../components/Template/AnalyticsGA4';
 import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import MobileNav from '../components/Template/MobileNav';
@@ -57,11 +57,8 @@ const Main = (props) => {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         
-        {/* PWA & Mobile */}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        {/* Mobile */}
         <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#2196f3" />
       </Helmet>
       <div id="wrapper">

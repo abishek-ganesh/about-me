@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDarkMode } from '../../contexts/DarkModeContext';
+import useScrollDirection from '../../hooks/useScrollDirection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
@@ -7,10 +8,11 @@ import './DarkModeToggle.scss';
 
 const DarkModeToggle = ({ floating = false }) => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { visible } = useScrollDirection();
 
   return (
     <button
-      className={`dark-mode-toggle ${floating ? 'floating' : ''}`}
+      className={`dark-mode-toggle ${floating ? 'floating' : ''} ${floating && !visible ? 'nav-hidden' : ''}`}
       onClick={toggleDarkMode}
       aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
       title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
