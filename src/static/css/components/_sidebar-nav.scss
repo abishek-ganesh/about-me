@@ -1,0 +1,75 @@
+// Sidebar Navigation (Table of Contents)
+// Inspired by brittanychiang.com - shows section links that highlight on scroll
+
+.sidebar-nav {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--border-primary);
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 0.25em;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0.5em 0;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: var(--text-primary);
+
+        .sidebar-nav__indicator {
+          width: 4em;
+          background-color: var(--text-primary);
+        }
+      }
+    }
+
+    // Active state
+    &.active a {
+      color: var(--text-primary);
+
+      .sidebar-nav__indicator {
+        width: 4em;
+        background-color: var(--text-primary);
+      }
+
+      .sidebar-nav__label {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__indicator {
+    display: inline-block;
+    width: 2em;
+    height: 1px;
+    background-color: var(--border-primary);
+    margin-right: 1em;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    transition: all 0.25s ease;
+  }
+}
+
+// Hide on mobile - the mobile nav handles this
+@media (max-width: 980px) {
+  .sidebar-nav {
+    display: none;
+  }
+}

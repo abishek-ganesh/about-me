@@ -23,19 +23,19 @@ const Voiceover = () => (
             <p className="u-text-center u-text-lg u-mb-3">
               Listen to my latest commercial voice over demo reel featuring a variety of styles and characters.
             </p>
-            <div className="u-bg-light u-p-3 u-rounded u-text-center">
-              <audio 
-                controls 
+            <div className="u-p-3 u-text-center">
+              <audio
+                controls
                 preload="none"
-                src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`} 
-                className="u-w-full" 
+                src={`${PUBLIC_URL}/voiceover/commercial_reel.mp3`}
+                className="u-w-full"
                 style={{ maxWidth: '600px' }}
               >
                 Your browser does not support the audio element.
               </audio>
-              <p className="u-mt-3 u-text-sm u-text-muted u-mb-0">
+              <p className="u-mt-3 u-text-sm u-mb-0">
                 For voiceover inquiries, email me at{' '}
-                <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary u-font-medium">
+                <a href="mailto:abishek.ganesh30@gmail.com" className="u-font-medium">
                   abishek.ganesh30@gmail.com
                 </a>
               </p>
@@ -106,21 +106,21 @@ const Voiceover = () => (
         </div>
       </section>
 
-      <section className="section-content">
+      <section className="section-content u-text-center">
         <h2 className="u-mb-3">Why Voice Acting?</h2>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p className="u-text-lg u-mb-3">
-            As both an AI engineer and voice actor, I bring a unique perspective to creative projects. 
-            My technical background helps me understand the precision needed in voice work, while my 
+            As both an AI engineer and voice actor, I bring a unique perspective to creative projects.
+            My technical background helps me understand the precision needed in voice work, while my
             artistic side brings characters and stories to life with authentic emotion.
           </p>
           <p className="u-text-lg u-mb-3">
-            Voice acting allows me to explore the human side of communication—something that 
-            complements my work in AI. Understanding how humans convey emotion, meaning, and 
+            Voice acting allows me to explore the human side of communication—something that
+            complements my work in AI. Understanding how humans convey emotion, meaning, and
             nuance through voice helps me build better AI systems and more natural interactions.
           </p>
           <p className="u-text-lg u-mb-0">
-            Whether it's a commercial that needs to connect with audiences or a character that 
+            Whether it's a commercial that needs to connect with audiences or a character that
             needs depth and personality, I approach each project with professionalism and creativity.
           </p>
         </div>

@@ -1,0 +1,287 @@
+// Homepage Styles - Unified Vision
+
+// Hero Section
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+  text-align: center;
+
+  .hero-content {
+    z-index: 2;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+    padding: 0 2rem;
+  }
+
+  .hero-title {
+    font-family: $font-display;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    font-weight: 700;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    
+    .line {
+      display: block;
+    }
+  }
+
+  .hero-subtitle {
+    font-family: $font-sans;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+
+    .role {
+      color: var(--text-primary);
+    }
+
+    .separator {
+      margin: 0 1rem;
+      color: var(--accent-primary);
+    }
+  }
+
+  .hero-tagline {
+    font-family: $font-sans;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background: #000; // Fallback
+
+    .noise-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjA1Ii8+PC9zdmc+');
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 2; // Ensure noise is above canvas
+    }
+  }
+}
+
+// Glass Card Component
+.glass-card {
+  // Solid filled light blue - clean and simple
+  background: #dbeafe;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: none;
+  border-radius: $radius-xl;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+  padding: $space-6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  color: #1e3a5f;
+  overflow: hidden;
+  position: relative;
+
+  // Minimal top highlight (just 2px)
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &.hover-effect:hover {
+    transform: translateY(-5px);
+    background: #bae6fd;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+  }
+
+  // Variant for more prominent cards
+  &.card--gradient {
+    background: #bae6fd;
+
+    &:hover {
+      background: #93c5fd;
+    }
+  }
+}
+
+// Bento Grid
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $space-6;
+  padding: $space-8;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--bg-primary);
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+
+  .bento-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    h3 {
+      font-family: $font-display;
+      font-size: $font-size-xxl;
+      margin-bottom: $space-2;
+      color: var(--text-primary);
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: $font-size-base;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: $space-4;
+      padding: $space-2 $space-4;
+      border: 1px solid var(--border-primary);
+      border-radius: $radius-full;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: $font-size-sm;
+      transition: all $transition-base;
+
+      &:hover {
+        background: var(--accent-primary);
+        color: var(--bg-primary);
+        border-color: var(--accent-primary);
+      }
+    }
+  }
+
+  // Specific Card Styles
+  .profile-card {
+    @media (min-width: 1024px) {
+      grid-column: span 2;
+    }
+    // background: linear-gradient(...) - Removed to use default glass style
+  }
+
+  .voice-card {
+    .waveform-visual {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 40px;
+      margin: $space-4 0;
+      
+      .bar {
+        width: 4px;
+        background: var(--accent-primary);
+        border-radius: 2px;
+        animation: wave 1s infinite ease-in-out;
+        
+        @for $i from 1 through 8 {
+          &:nth-child(#{$i}) {
+            height: #{random(30) + 10}px;
+            animation-delay: #{$i * 0.1}s;
+          }
+        }
+      }
+    }
+  }
+
+  .project-card {
+    @media (min-width: 1024px) {
+      grid-column: span 2;
+    }
+    position: relative;
+    
+    .project-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+      z-index: -1;
+      transition: opacity $transition-base;
+    }
+
+    &:hover .project-bg {
+      opacity: 0.4;
+    }
+
+    .tags {
+      display: flex;
+      gap: $space-2;
+      margin-top: $space-2;
+      
+      .tag {
+        font-size: $font-size-xs;
+        background: rgba(255,255,255,0.1);
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .stats-card {
+    .social-links {
+      display: flex;
+      gap: $space-4;
+      margin-top: $space-4;
+      
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+        font-weight: 600;
+        &:hover {
+          color: var(--accent-primary);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.5); }
+}

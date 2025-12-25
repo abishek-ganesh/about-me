@@ -13,7 +13,9 @@ const AnimatedPhoto = ({
   onClick = () => {},
   caption = '',
   overlayContent = null,
-  lazyLoad = true
+  lazyLoad = true,
+  width,
+  height
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -137,6 +139,8 @@ const AnimatedPhoto = ({
           onLoad={handleImageLoad}
           className="animated-photo__image"
           loading={lazyLoad ? 'lazy' : 'eager'}
+          width={width}
+          height={height}
         />
 
         {/* Overlay content */}
@@ -174,7 +178,9 @@ AnimatedPhoto.propTypes = {
   onClick: PropTypes.func,
   caption: PropTypes.string,
   overlayContent: PropTypes.node,
-  lazyLoad: PropTypes.bool
+  lazyLoad: PropTypes.bool,
+  width: PropTypes.number,
+  height: PropTypes.number
 };
 
 export default AnimatedPhoto;

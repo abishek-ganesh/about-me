@@ -10,6 +10,7 @@ import MobileNav from '../components/Template/MobileNav';
 import ScrollToTop from '../components/Template/ScrollToTop';
 import StructuredData from '../components/Template/StructuredData';
 import DarkModeToggle from '../components/Template/DarkModeToggle';
+import CursorGlow from '../components/common/CursorGlow';
 
 const Main = (props) => {
   const pageTitle = props.title ? `${props.title} | Abishek Ganesh` : 'Abishek Ganesh - AI Implementation Specialist';
@@ -62,11 +63,12 @@ const Main = (props) => {
         <meta name="theme-color" content="#2196f3" />
       </Helmet>
       <div id="wrapper">
+        <CursorGlow />
         <Navigation />
         <div id="main">
           {props.children}
         </div>
-        {props.fullPage ? null : <SideBar />}
+        {props.fullPage ? null : <SideBar sections={props.sidebarSections} />}
         <MobileNav />
       </div>
       <DarkModeToggle floating />
@@ -85,6 +87,10 @@ Main.propTypes = {
   image: PropTypes.string,
   structuredDataType: PropTypes.string,
   structuredData: PropTypes.object,
+  sidebarSections: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
 };
 
 Main.defaultProps = {
@@ -95,6 +101,7 @@ Main.defaultProps = {
   image: null,
   structuredDataType: 'default',
   structuredData: null,
+  sidebarSections: [],
 };
 
 export default Main;

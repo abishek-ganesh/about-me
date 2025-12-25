@@ -11,6 +11,27 @@
 		min-width: 22em;
 		width: 22em;
 
+		// Make sidebar sticky for TOC navigation
+		position: sticky;
+		top: 5em; // Account for fixed header
+		align-self: flex-start;
+		max-height: calc(100vh - 6em);
+		overflow-y: auto;
+
+		// Custom scrollbar for sticky sidebar
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: var(--border-primary);
+			border-radius: 4px;
+		}
+
 		> * {
 			border-top: solid 1px _palette(border);
 			margin: _size(section-spacing) 0 0 0;
@@ -22,7 +43,7 @@
 			margin-top: 0;
 			padding-top: 0;
 		}
-		
+
 		// Remove gap between intro and blurb
 		#intro + .blurb {
 			border-top: 0;
@@ -36,5 +57,11 @@
 			min-width: 0;
 			padding: _size(section-spacing) 0 0 0;
 			width: 100%;
+
+			// Reset sticky on mobile
+			position: relative;
+			top: 0;
+			max-height: none;
+			overflow-y: visible;
 		}
 	}

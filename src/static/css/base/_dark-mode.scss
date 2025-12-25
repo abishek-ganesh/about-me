@@ -7,43 +7,46 @@
   --bg-secondary: #{map-get(map-get($colors, background), secondary)};
   --bg-tertiary: #{map-get(map-get($colors, background), tertiary)};
   --bg-card: #{color(neutral, 50)};
-  
+
   --text-primary: #{color(neutral, 900)};
   --text-secondary: #{color(neutral, 700)};
   --text-tertiary: #{color(neutral, 500)};
   --text-light: #{color(neutral, 400)};
   --text-date: #{color(neutral, 900)};  // Dark text for dates in light mode
-  
+
   --border-primary: #{rgba(color(neutral, 400), 0.3)};
   --border-secondary: #{rgba(color(neutral, 400), 0.075)};
   --border-tertiary: #{rgba(color(neutral, 400), 0.65)};
-  
+
   --accent-primary: #{color(primary, 600)};
   --accent-hover: #{color(primary, 700)};
   --accent-light: #{color(primary, 100)};
-  
+
   --link-color: #{color(primary, 600)};
   --link-hover: #{color(primary, 700)};
-  
+
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.16);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19);
-  
+
   --code-bg: #{color(neutral, 100)};
   --code-text: #{color(neutral, 900)};
-  
+
   // Sidebar specific
   --sidebar-bg: #{color(neutral, 100)};
   --sidebar-text: #{color(neutral, 700)};
   --sidebar-border: #{rgba(color(neutral, 400), 0.2)};
-  
+
   // Navigation
   --nav-bg: #{map-get(map-get($colors, background), primary)};
   --nav-bg-rgb: 255, 255, 255; // RGB values for rgba() usage
   --bg-primary-rgb: 255, 255, 255; // RGB values for rgba() usage
   --nav-text: #{color(neutral, 700)};
   --nav-hover: #{color(primary, 600)};
-  
+
+  // Cursor glow effect (more visible blue in light mode)
+  --glow-color: rgba(59, 130, 246, 0.15);
+
   // Transition for smooth theme switching
   --transition-speed: 0.3s;
   --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,42 +58,59 @@
   --bg-secondary: #161b22;
   --bg-tertiary: #1c2128;
   --bg-card: #1c2128;
-  
+
   --text-primary: #c9d1d9;
   --text-secondary: #8b949e;
   --text-tertiary: #6e7681;
   --text-light: #484f58;
   --text-date: #0d1117;  // Dark text for dates in light bubbles
-  
+
   --border-primary: #30363d;
   --border-secondary: rgba(48, 54, 61, 0.5);
   --border-tertiary: #484f58;
-  
+
   --accent-primary: #58a6ff;
   --accent-hover: #79c0ff;
   --accent-light: rgba(88, 166, 255, 0.15);  // Slightly more opaque for date backgrounds
-  
+
   --link-color: #58a6ff;
   --link-hover: #79c0ff;
-  
+
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
-  
+
   --code-bg: #1c2128;
   --code-text: #e6edf3;
-  
+
   // Sidebar specific
   --sidebar-bg: #161b22;
   --sidebar-text: #c9d1d9;
   --sidebar-border: #30363d;
-  
+
   // Navigation
   --nav-bg: #161b22;
   --nav-bg-rgb: 22, 27, 34; // RGB values for rgba() usage in dark mode
   --bg-primary-rgb: 13, 17, 23; // RGB values for rgba() usage in dark mode
   --nav-text: #c9d1d9;
   --nav-hover: #58a6ff;
+
+  // Cursor glow effect (accent blue in dark mode)
+  --glow-color: rgba(88, 166, 255, 0.07);
+}
+
+// Force card headings to stay BLACK in dark mode (cards have light blue backgrounds)
+:root.dark-mode {
+  .card, .card.card--elevated, .card.card--gradient, .box, .panel {
+    h1, h2, h3, h4, h5, h6 {
+      color: #000000 !important;
+    }
+
+    .card-body h1, .card-body h2, .card-body h3,
+    .card-body h4, .card-body h5, .card-body h6 {
+      color: #000000 !important;
+    }
+  }
 }
 
 // Ensure gradient cards work in light mode - use light background with dark text
@@ -1050,16 +1070,19 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
 .card.card--gradient,
 .box,
 .panel {
+
   // Force all text to be dark for readability on light blue backgrounds
   * {
     color: #1e293b !important; // Dark slate
   }
 
-  // Headings - very dark
+  // Headings - very dark (BLACK, not gray)
   h1, h2, h3, h4, h5, h6,
   .card-header h1, .card-header h2, .card-header h3,
-  .card-header h4, .card-header h5, .card-header h6 {
-    color: #0f172a !important; // Almost black
+  .card-header h4, .card-header h5, .card-header h6,
+  .card-body h1, .card-body h2, .card-body h3,
+  .card-body h4, .card-body h5, .card-body h6 {
+    color: #000000 !important; // Pure black for maximum contrast
   }
 
   // Big metric numbers

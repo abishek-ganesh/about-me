@@ -31,6 +31,8 @@ const Contact = () => {
             animation="fadeInScale"
             hoverEffect="brightness"
             className="contact-photo"
+            width={300}
+            height={300}
           />
           <div className="contact-intro-text">
             <p className="u-text-lg">

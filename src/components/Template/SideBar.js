@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import ContactIcons from '../Contact/ContactIcons';
+import SidebarNav from './SidebarNav';
 import { getSidebarPhoto } from '../../data/photos';
 
 var today = new Date();
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 today = today.toLocaleDateString(undefined, options);
 
-const SideBar = () => {
+const SideBar = ({ sections = [] }) => {
   const sidebarPhoto = getSidebarPhoto();
   const [isFirstLoad, setIsFirstLoad] = useState(false);
   
@@ -42,17 +44,17 @@ const SideBar = () => {
           <h2>About</h2>
           <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life <br></br><br></br>
             <a href="https://youtu.be/LQ488QrqGE4?t=125">
-              <i>Reach for the stars, so if you fall, you land on a cloud 
+              <i>Reach for the stars, so if you fall, you land on a cloud
               <br></br>- Ye </i>
             </a>
-            
+
           </p>
-          <ul className="actions">
-            <li>
-              {!window.location.pathname.includes('/resume') ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
-            </li>
-          </ul>
         </section>
+
+        {/* Table of Contents Navigation */}
+        {sections && sections.length > 0 && (
+          <SidebarNav sections={sections} />
+        )}
       </div>
 
     <section id="footer">
@@ -61,6 +63,19 @@ const SideBar = () => {
     </section>
   </section>
   );
+};
+
+SideBar.propTypes = {
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ),
+};
+
+SideBar.defaultProps = {
+  sections: [],
 };
 
 export default SideBar;
