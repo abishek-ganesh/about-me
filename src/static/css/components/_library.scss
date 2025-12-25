@@ -3,102 +3,129 @@
 
 // Card component
 .card {
-  background: white;
-  border: 1px solid $color-neutral-200;
+  // Solid filled light blue - clean and simple
+  background: #dbeafe;
+  border: none;
   border-radius: 0.75rem;
   padding: 2rem;
   transition: all $transition-base ease;
-  
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+
+  // Very subtle highlight at top (10% opacity, only top edge)
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+  }
+
   @media (max-width: 768px) {
     padding: 1.5rem;
   }
-  
+
   &:hover {
-    box-shadow: $shadow-md;
+    box-shadow: 0 8px 28px rgba(59, 130, 246, 0.18);
     transform: translateY(-2px);
-    border-color: lighten($color-primary, 30%);
+    background: #bae6fd;
   }
-  
+
   // Variants
   &--elevated {
-    box-shadow: $shadow-md;
-    
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.15);
+
     &:hover {
-      box-shadow: $shadow-xl;
+      box-shadow: 0 12px 32px rgba(59, 130, 246, 0.22);
       transform: translateY(-4px);
     }
   }
-  
+
   &--bordered {
-    border-width: 2px;
+    border: 2px solid rgba(147, 197, 253, 0.4);
   }
-  
+
   &--compact {
     padding: 1.5rem;
-    
+
     @media (max-width: 768px) {
       padding: 1rem;
     }
   }
-  
+
   &--primary {
-    border-color: $color-primary;
-    
-    &:hover {
-      border-color: $color-primary-dark;
-    }
+    background: #bfdbfe;
   }
-  
+
   &--gradient {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);  // Light blue gradient for light mode
-    border: none;
-    color: #212121;  // Dark text by default
-    
+    // Solid uniform light blue - simple and clean
+    background: #bae6fd !important;
+    color: #1e3a5f;
+
+    // Minimal top highlight
+    &::before {
+      height: 2px;
+      background: rgba(255, 255, 255, 0.3) !important;
+    }
+
     h1, h2, h3, h4, h5, h6,
     .card-header h3,
     .card-body,
     p, span, div, li {
-      color: #212121;  // Dark text for light mode
+      color: #1e3a5f !important;
     }
-    
-    // Make specific text colors more visible
+
     .u-text-muted,
     .u-text-primary,
     .u-text-secondary,
     .metric-label,
     .metric-value {
-      color: #212121;  // Dark text for light mode
+      color: #1e3a5f !important;
     }
-    
-    // Ensure all text is dark in light mode
+
     * {
-      color: #212121;
+      color: #1e3a5f !important;
+    }
+
+    &:hover {
+      background: #93c5fd !important;
     }
   }
   
-  // Card header
+  // Card header - transparent to show card gradient
   .card-header {
     margin-bottom: 1.5rem;
-    
+    background: transparent;
+    position: relative;
+    z-index: 1;
+
     h3 {
       font-size: 1.5rem;
       color: $color-neutral-900;
       margin-bottom: 0.5rem;
       font-weight: 600;
     }
-    
+
     .card-subtitle {
       font-size: 1rem;
       color: $color-neutral-600;
     }
   }
-  
-  // Card body
+
+  // Card body - transparent to show card gradient
   .card-body {
     color: $color-neutral-700;
     line-height: 1.6;
+    background: transparent;
+    position: relative;
+    z-index: 1;
   }
-  
+
   // Card footer
   .card-footer {
     margin-top: 1.5rem;

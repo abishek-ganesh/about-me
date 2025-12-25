@@ -12,6 +12,12 @@ This is a personal portfolio website for Abishek Ganesh built with React. It's a
 - `npm run dev` - Start the development server (uses --openssl-legacy-provider flag)
 - `npm start` - Serve the production build locally
 
+**🔄 Browser Cache - IMPORTANT:**
+After making CSS or JS changes, always do a **hard refresh** in the browser to see updates:
+- **Mac**: `Cmd + Shift + R`
+- **Windows/Linux**: `Ctrl + Shift + R`
+- This clears the browser cache and forces reload of all assets
+
 ### Build & Deploy
 - `npm run build` - Build the production version (uses --openssl-legacy-provider flag)
 - `npm run deploy` - Build and deploy to GitHub Pages using gh-pages
