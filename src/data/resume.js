@@ -36,7 +36,7 @@ export const positions = [
     daterange: '2024 - Present',
     points: [
       'Implement cutting-edge AI: advanced RAG systems, AI agents, multi-agent orchestration',
-      'Deploy latest models (GPT-5, Claude 4.1 Opus, Gemini Pro) - always first to production',
+      'Deploy the latest foundation models to production - always first to ship emerging tech',
       'Reduced system MTTR by 60% through strategic AI architecture and debugging',
       'Help Fortune 500 companies leverage truly state-of-the-art AI (not just buzzwords)',
     ],
@@ -105,33 +105,32 @@ export const positions = [
 
 // Skills data organized by category
 export const skillCategories = {
-  'RAG Systems Mastery': [
-    { name: 'Hybrid Search (Semantic + Keyword)', level: 5 },
-    { name: 'Multi-stage Reranking', level: 5 },
-    { name: 'Dynamic Context Optimization', level: 5 },
-    { name: 'Knowledge Graph Integration', level: 5 },
-    { name: 'Production RAG at Scale', level: 5 },
+  'LLM & NLP': [
+    { name: 'RAG Systems', level: 5 },
+    { name: 'Mixture of Experts', level: 5 },
+    { name: 'KV Cache Optimization', level: 5 },
+    { name: 'Fine-tuning', level: 5 },
+    { name: 'RLHF', level: 4 },
+    { name: 'Prompt Engineering', level: 5 },
+    { name: 'Multi-modal AI', level: 5 },
+    { name: 'Hybrid Search', level: 5 },
   ],
-  'AI Agent Development': [
+  'Deep Learning': [
+    { name: 'CNNs', level: 5 },
+    { name: 'Diffusion Models', level: 5 },
+    { name: 'Autoencoders', level: 5 },
+    { name: 'Transformers', level: 5 },
+    { name: 'Reinforcement Learning', level: 4 },
+    { name: 'Unsupervised Learning', level: 5 },
+    { name: 'GANs', level: 4 },
+  ],
+  'AI Agents & Orchestration': [
     { name: 'Autonomous Agents', level: 5 },
-    { name: 'Multi-Agent Orchestration', level: 5 },
+    { name: 'Multi-Agent Systems', level: 5 },
     { name: 'ReAct Pattern', level: 5 },
     { name: 'Chain-of-Thought', level: 5 },
     { name: 'Tool Use & Function Calling', level: 5 },
-  ],
-  'Latest Models Deployed': [
-    { name: 'GPT-5', level: 5 },
-    { name: 'Claude 4.1 Opus', level: 5 },
-    { name: 'Gemini Pro', level: 5 },
-    { name: 'Llama 3.1', level: 5 },
-    { name: 'Whatever Comes Next', level: 5 },
-  ],
-  'Advanced Techniques': [
-    { name: 'Fine-tuning', level: 5 },
-    { name: 'RLHF', level: 4 },
-    { name: 'Constitutional AI', level: 4 },
-    { name: 'Multi-modal AI', level: 5 },
-    { name: 'Prompt Engineering', level: 5 },
+    { name: 'Knowledge Graphs', level: 5 },
   ],
   'Production Excellence': [
     { name: 'Sub-100ms Latency', level: 5 },

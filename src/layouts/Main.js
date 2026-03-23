@@ -29,7 +29,7 @@ const Main = (props) => {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={props.description} />
-        <meta name="keywords" content="AI Implementation, RAG Systems, AI Agents, Machine Learning, GPT-5, Claude 4.1 Opus, LangChain, AI Consulting, Abishek Ganesh" />
+        <meta name="keywords" content="AI Implementation, RAG Systems, AI Agents, Machine Learning, Deep Learning, LLM, LangChain, AI Consulting, Abishek Ganesh" />
         <meta name="author" content="Abishek Ganesh" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={currentUrl} />

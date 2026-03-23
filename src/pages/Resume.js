@@ -50,43 +50,43 @@ const Resume = () => (
         <div className="grid grid--2 grid--gap-lg">
           <div className="card card--elevated">
             <div className="card-header">
-              <h3>RAG Systems Mastery</h3>
+              <h3>LLM & NLP</h3>
             </div>
             <div className="card-body">
               <ul className="list list--chevron">
-                <li>Advanced retrieval: hybrid search, semantic + keyword fusion</li>
-                <li>Multi-stage reranking and relevance optimization</li>
-                <li>Dynamic chunking and context window management</li>
-                <li>Knowledge graph integration for enhanced reasoning</li>
-                <li>Production RAG serving millions of queries daily</li>
+                <li>RAG systems with hybrid search, semantic + keyword fusion</li>
+                <li>Mixture of Experts architectures and KV cache optimization</li>
+                <li>Fine-tuning, RLHF, and prompt engineering</li>
+                <li>Multi-modal model implementations</li>
+                <li>Production systems serving millions of queries daily</li>
               </ul>
             </div>
           </div>
           <div className="card card--elevated">
             <div className="card-header">
-              <h3>AI Agent Development</h3>
+              <h3>Deep Learning</h3>
             </div>
             <div className="card-body">
               <ul className="list list--chevron">
-                <li>Single-agent systems with tool use and reasoning</li>
+                <li>CNNs for computer vision and image classification</li>
+                <li>Diffusion models and GANs for generative AI</li>
+                <li>Autoencoders and variational autoencoders</li>
+                <li>Reinforcement learning and unsupervised learning</li>
+                <li>Transformer architectures from scratch to production</li>
+              </ul>
+            </div>
+          </div>
+          <div className="card card--elevated">
+            <div className="card-header">
+              <h3>AI Agents & Orchestration</h3>
+            </div>
+            <div className="card-body">
+              <ul className="list list--chevron">
+                <li>Autonomous agents with tool use and reasoning</li>
                 <li>Multi-agent orchestration and communication</li>
                 <li>ReAct, Chain-of-Thought, Tree-of-Thought paradigms</li>
-                <li>Custom agent frameworks for specific domains</li>
+                <li>Knowledge graph integration for enhanced reasoning</li>
                 <li>Agentic process automation at enterprise scale</li>
-              </ul>
-            </div>
-          </div>
-          <div className="card card--elevated">
-            <div className="card-header">
-              <h3>Latest Foundation Models</h3>
-            </div>
-            <div className="card-body">
-              <ul className="list list--chevron">
-                <li>GPT-5, Claude 4.1 Opus, Gemini Pro, Llama 3.1 in production</li>
-                <li>Fine-tuning and prompt engineering for optimal performance</li>
-                <li>RLHF and constitutional AI implementations</li>
-                <li>Multi-modal model deployments</li>
-                <li>Always first to implement the next breakthrough</li>
               </ul>
             </div>
           </div>

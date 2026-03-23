@@ -56,9 +56,9 @@ const About = () => {
             <div className="list list--none u-mb-0">
               <div className="list-item u-mb-2">
                 <h4 className="u-text-primary u-mb-1">State-of-the-Art AI Implementation Specialist</h4>
-                <p>Expert in RAG systems: hybrid search, reranking, dynamic context optimization. AI agent development: 
-                   autonomous agents, multi-agent orchestration, tool use. Deploy latest foundation models (GPT-5, Claude 4.1 Opus, 
-                   Gemini Pro) and whatever comes next. Always first to production with emerging technologies.</p>
+                <p>Expert in RAG systems: hybrid search, reranking, dynamic context optimization. AI agent development:
+                   autonomous agents, multi-agent orchestration, tool use. Deploy the latest foundation models to production
+                   as soon as they drop. Always first to production with emerging technologies.</p>
               </div>
               <div className="list-item u-mb-2">
                 <h4 className="u-text-primary u-mb-1">Enterprise AI Innovation Consultant</h4>
@@ -78,44 +78,44 @@ const About = () => {
 
         <section className="card card--elevated">
           <div className="card-header">
-            <h3>Truly State-of-the-Art Expertise</h3>
+            <h3>AI & Deep Learning Expertise</h3>
           </div>
           <div className="card-body">
             <div className="grid grid--2 grid--gap-sm">
               <div>
-                <h5 className="u-text-muted u-mb-1">RAG Systems Mastery</h5>
+                <h5 className="u-text-muted u-mb-1">LLM & NLP</h5>
                 <div className="u-flex u-flex-wrap u-gap-1">
+                  <span className="tag tag--small tag--secondary">RAG Systems</span>
+                  <span className="tag tag--small tag--secondary">Mixture of Experts</span>
+                  <span className="tag tag--small tag--secondary">KV Cache Optimization</span>
+                  <span className="tag tag--small tag--secondary">Fine-tuning</span>
+                  <span className="tag tag--small tag--secondary">RLHF</span>
+                  <span className="tag tag--small tag--secondary">Prompt Engineering</span>
+                  <span className="tag tag--small tag--secondary">Multi-modal</span>
                   <span className="tag tag--small tag--secondary">Hybrid Search</span>
-                  <span className="tag tag--small tag--secondary">Multi-stage Reranking</span>
-                  <span className="tag tag--small tag--secondary">Dynamic Context</span>
-                  <span className="tag tag--small tag--secondary">Knowledge Graphs</span>
                 </div>
               </div>
               <div>
-                <h5 className="u-text-muted u-mb-1">AI Agent Development</h5>
+                <h5 className="u-text-muted u-mb-1">Deep Learning</h5>
+                <div className="u-flex u-flex-wrap u-gap-1">
+                  <span className="tag tag--small tag--secondary">CNNs</span>
+                  <span className="tag tag--small tag--secondary">Diffusion Models</span>
+                  <span className="tag tag--small tag--secondary">Autoencoders</span>
+                  <span className="tag tag--small tag--secondary">Transformers</span>
+                  <span className="tag tag--small tag--secondary">Reinforcement Learning</span>
+                  <span className="tag tag--small tag--secondary">Unsupervised Learning</span>
+                  <span className="tag tag--small tag--secondary">GANs</span>
+                </div>
+              </div>
+              <div>
+                <h5 className="u-text-muted u-mb-1">AI Agents & Orchestration</h5>
                 <div className="u-flex u-flex-wrap u-gap-1">
                   <span className="tag tag--small tag--secondary">Autonomous Agents</span>
                   <span className="tag tag--small tag--secondary">Multi-Agent Systems</span>
                   <span className="tag tag--small tag--secondary">ReAct</span>
                   <span className="tag tag--small tag--secondary">Chain-of-Thought</span>
-                </div>
-              </div>
-              <div>
-                <h5 className="u-text-muted u-mb-1">Latest Models Deployed</h5>
-                <div className="u-flex u-flex-wrap u-gap-1">
-                  <span className="tag tag--small tag--secondary">GPT-5</span>
-                  <span className="tag tag--small tag--secondary">Claude 4.1 Opus</span>
-                  <span className="tag tag--small tag--secondary">Gemini Pro</span>
-                  <span className="tag tag--small tag--secondary">Llama 3.1</span>
-                </div>
-              </div>
-              <div>
-                <h5 className="u-text-muted u-mb-1">Advanced Techniques</h5>
-                <div className="u-flex u-flex-wrap u-gap-1">
-                  <span className="tag tag--small tag--secondary">Fine-tuning</span>
-                  <span className="tag tag--small tag--secondary">RLHF</span>
-                  <span className="tag tag--small tag--secondary">Constitutional AI</span>
-                  <span className="tag tag--small tag--secondary">Multi-modal</span>
+                  <span className="tag tag--small tag--secondary">Tool Use & Function Calling</span>
+                  <span className="tag tag--small tag--secondary">Knowledge Graphs</span>
                 </div>
               </div>
             </div>
@@ -216,7 +216,7 @@ const About = () => {
             <div className="u-text-3xl u-mb-1">
               <span role="img" aria-label="Rocket">🚀</span>
             </div>
-            <p className="u-mb-0 u-text-sm">First to deploy GPT-5, Claude 4.1 Opus, and what's next</p>
+            <p className="u-mb-0 u-text-sm">First to deploy the latest models to production</p>
           </div>
         </div>
       </section>
