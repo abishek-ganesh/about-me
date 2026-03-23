@@ -1,18 +1,13 @@
 /* eslint-disable no-restricted-globals */
 
-const CACHE_NAME = 'abishek-portfolio-v1';
+// Cache version - bump this on each deploy to clear old caches
+// The build script will auto-update this via timestamp
+const CACHE_VERSION = Date.now();
+const CACHE_NAME = `abishek-portfolio-${CACHE_VERSION}`;
+const IMAGE_CACHE = 'abishek-images-v1';
+
+// Only cache static assets that rarely change
 const urlsToCache = [
-  '/',
-  '/resume',
-  '/voiceover',
-  '/stats',
-  '/about',
-  '/contact',
-  '/static/css/main.8b4fdf55.chunk.css',
-  '/static/js/0.46ba17f1.chunk.js',
-  '/static/js/main.6b26ac56.chunk.js',
-  '/static/js/4.ec4a9877.chunk.js',
-  '/static/js/6.4c3209e6.chunk.js',
   '/manifest.json',
   '/images/image-placeholder.svg',
 ];
@@ -22,37 +17,40 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Opened cache');
+        console.log('Service Worker: Cache opened');
         return cache.addAll(urlsToCache);
       })
   );
+  // Activate immediately, don't wait for old SW to finish
   self.skipWaiting();
 });
 
-// Activate event - clean up old caches
+// Activate event - clean up ALL old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
+          // Delete any cache that isn't the current version or image cache
+          if (cacheName !== CACHE_NAME && cacheName !== IMAGE_CACHE) {
+            console.log('Service Worker: Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
     })
   );
+  // Take control of all pages immediately
   self.clients.claim();
 });
 
-// Fetch event - serve from cache when available
+// Fetch event - network-first for pages/JS/CSS, cache-first for images
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip chrome-extension and non-http(s) requests
-  if (url.protocol === 'chrome-extension:' || !url.protocol.startsWith('http')) {
+  // Skip non-http(s) requests
+  if (!url.protocol.startsWith('http')) {
     return;
   }
 
@@ -61,94 +59,83 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  event.respondWith(
-    caches.match(request)
-      .then((response) => {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-
-        // Clone the request
-        const fetchRequest = request.clone();
-
-        return fetch(fetchRequest).then((response) => {
-          // Check if valid response
-          if (!response || response.status !== 200 || response.type === 'opaque') {
-            return response;
+  // Images: cache-first (they rarely change)
+  if (request.destination === 'image' ||
+      request.url.includes('/images/') ||
+      request.url.match(/\.(webp|jpg|jpeg|png|gif|svg|ico)$/)) {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        if (cached) return cached;
+        return fetch(request).then((response) => {
+          if (response && response.status === 200) {
+            const clone = response.clone();
+            caches.open(IMAGE_CACHE).then((cache) => cache.put(request, clone));
           }
-
-          // Clone the response
-          const responseToCache = response.clone();
-
-          // Cache images and static assets
-          if (request.url.includes('/images/') || 
-              request.url.includes('/static/') ||
-              request.url.includes('.webp') ||
-              request.url.includes('.jpg') ||
-              request.url.includes('.jpeg') ||
-              request.url.includes('.png')) {
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-          }
-
           return response;
         });
+      }).catch(() => caches.match('/images/image-placeholder.svg'))
+    );
+    return;
+  }
+
+  // Everything else (HTML, JS, CSS): network-first
+  // Always try to get fresh content, fall back to cache if offline
+  event.respondWith(
+    fetch(request)
+      .then((response) => {
+        // Got a fresh response - cache it for offline use
+        if (response && response.status === 200) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+        }
+        return response;
       })
       .catch(() => {
-        // Offline fallback for images
-        if (request.destination === 'image') {
-          return caches.match('/images/image-placeholder.svg');
-        }
-        
-        // Offline fallback for pages
-        if (request.headers.get('accept').includes('text/html')) {
-          return caches.match('/').then(response => {
-            if (response) {
-              return response;
-            }
-            // Return a basic offline page
-            return new Response(
-              `<!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Offline - Abishek Ganesh</title>
-                <style>
-                  body {
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100vh;
-                    margin: 0;
-                    background: #f5f5f5;
-                  }
-                  .offline-message {
-                    text-align: center;
-                    padding: 2rem;
-                  }
-                  h1 { color: #333; }
-                  p { color: #666; }
-                </style>
-              </head>
-              <body>
-                <div class="offline-message">
-                  <h1>You're Offline</h1>
-                  <p>Please check your internet connection and try again.</p>
-                  <p>You can still access cached pages.</p>
-                </div>
-              </body>
-              </html>`,
-              {
-                headers: { 'Content-Type': 'text/html' }
-              }
-            );
-          });
-        }
+        // Network failed - try cache
+        return caches.match(request).then((cached) => {
+          if (cached) return cached;
+
+          // Offline fallback for pages
+          if (request.headers.get('accept') && request.headers.get('accept').includes('text/html')) {
+            return caches.match('/').then((response) => {
+              if (response) return response;
+              return new Response(
+                `<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Offline - Abishek Ganesh</title>
+                  <style>
+                    body {
+                      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 100vh;
+                      margin: 0;
+                      background: #f5f5f5;
+                    }
+                    .offline-message {
+                      text-align: center;
+                      padding: 2rem;
+                    }
+                    h1 { color: #333; }
+                    p { color: #666; }
+                  </style>
+                </head>
+                <body>
+                  <div class="offline-message">
+                    <h1>You're Offline</h1>
+                    <p>Please check your internet connection and try again.</p>
+                  </div>
+                </body>
+                </html>`,
+                { headers: { 'Content-Type': 'text/html' } }
+              );
+            });
+          }
+        });
       })
   );
 });

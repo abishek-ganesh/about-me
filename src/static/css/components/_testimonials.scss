@@ -70,58 +70,35 @@
     margin: 2rem auto 0;
     max-width: 600px;
     padding: 3rem 2rem;
-    // Solid filled light blue gradient - not hollow
-    background: linear-gradient(
-      135deg,
-      #e0f2fe 0%,      // Very light sky blue
-      #bae6fd 50%,     // Light blue
-      #93c5fd 100%     // Slightly deeper light blue
-    );
-    border: none;
+    background: #f8fafc;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 1rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 
-    // Subtle lighter highlight at top
     &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 50%;
-      border-radius: inherit;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.4) 0%,
-        transparent 100%
-      );
-      pointer-events: none;
+      display: none;
     }
 
     i {
       font-size: 3rem;
-      color: #1d4ed8;  // Darker blue for contrast
+      color: $color-primary;
       margin-bottom: 1rem;
-      opacity: 0.7;
+      opacity: 0.6;
       display: block;
-      position: relative;
-      z-index: 1;
     }
 
     p {
       margin: 0;
       font-size: 1.25rem;
-      color: #1e3a5f;  // Dark blue-gray for readability
+      color: $color-neutral-900;
       font-weight: 600;
-      position: relative;
-      z-index: 1;
 
       &.placeholder-subtitle {
         font-size: 1rem;
-        color: #334155;  // Slate gray
+        color: $color-neutral-600;
         font-weight: normal;
         margin-top: 0.75rem;
         max-width: 500px;
@@ -134,36 +111,26 @@
 }
 
 .testimonial-card {
-  // Solid filled light blue - clean and simple
-  background: #dbeafe;
-  border: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
   padding: 2rem;
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
   transition: all $transition-base ease;
   position: relative;
   overflow: hidden;
 
-  // Minimal top highlight (just 2px)
   &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    border-radius: inherit;
-    background: rgba(255, 255, 255, 0.3);
-    pointer-events: none;
+    display: none;
   }
 
   &:hover {
-    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-4px);
-    background: #bae6fd;
+    border-color: rgba(0, 0, 0, 0.12);
   }
   
   .testimonial-content {
@@ -236,7 +203,7 @@
 
 // Social Proof Stats
 .social-proof-section {
-  background: linear-gradient(135deg, lighten($color-primary, 47%), white);
+  background: #f8fafc;
   padding: 3rem 0;
   margin: 4rem 0;
   

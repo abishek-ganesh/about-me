@@ -205,7 +205,8 @@
 .section-cta {
   text-align: center;
   padding: 3rem;
-  background: linear-gradient(135deg, lighten($color-primary, 47%), white);
+  background: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
   margin-top: 4rem;
   

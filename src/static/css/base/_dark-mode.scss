@@ -99,29 +99,30 @@
   --glow-color: rgba(88, 166, 255, 0.07);
 }
 
-// Force card headings to stay BLACK in dark mode (cards have light blue backgrounds)
+// Card headings in dark mode - use light text on dark surfaces
 :root.dark-mode {
   .card, .card.card--elevated, .card.card--gradient, .box, .panel {
     h1, h2, h3, h4, h5, h6 {
-      color: #000000 !important;
+      color: var(--text-primary) !important;
     }
 
     .card-body h1, .card-body h2, .card-body h3,
     .card-body h4, .card-body h5, .card-body h6 {
-      color: #000000 !important;
+      color: var(--text-primary) !important;
     }
   }
 }
 
-// Ensure gradient cards work in light mode - use light background with dark text
+// Light mode gradient cards - subtle and clean
 :root:not(.dark-mode) {
   .card--gradient {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb) !important;  // Light blue gradient
-    
+    background: #f8fafc !important;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
     h1, h2, h3, h4, h5, h6,
     p, span, div, li,
     * {
-      color: #212121 !important;  // Dark text for light mode
+      color: #212121 !important;
     }
   }
 }
@@ -419,14 +420,16 @@ table {
   }
 }
 
-// Grid layouts with cards
-.grid {
-  &.grid--2, &.grid--3, &.grid--4 {
-    .card {
-      background-color: var(--bg-card) !important;
-      
-      * {
-        color: var(--text-primary);
+// Grid layouts with cards in dark mode
+:root.dark-mode {
+  .grid {
+    &.grid--2, &.grid--3, &.grid--4 {
+      .card {
+        background-color: var(--bg-card) !important;
+
+        * {
+          color: var(--text-primary);
+        }
       }
     }
   }
@@ -652,126 +655,102 @@ article, .post {
   }
 }
 
-// Cards, boxes and panels - lighter blue for dark mode (better text readability)
-.card, .box, .panel, .feature-card, .skill-card, .content-box {
-  // Lighter blue gradient - easier to read
-  background: linear-gradient(
-    135deg,
-    #3b82f6 0%,      // Medium blue
-    #60a5fa 50%,     // Light blue
-    #93c5fd 100%     // Pale blue
-  ) !important;
-  border: none !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-
-  // Light highlight at top
-  &::before {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      transparent 100%
-    ) !important;
-  }
-
-  &:hover {
-    background: linear-gradient(
-      135deg,
-      #60a5fa 0%,
-      #93c5fd 50%,
-      #bfdbfe 100%
-    ) !important;
-    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3) !important;
-  }
-
-  &.card--elevated {
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4) !important;
-
-    &:hover {
-      box-shadow: 0 16px 48px rgba(59, 130, 246, 0.35) !important;
-    }
-  }
-
-  // In dark mode, gradient cards are brighter blue
-  &.card--gradient {
-    background: linear-gradient(
-      135deg,
-      #2563eb 0%,
-      #3b82f6 50%,
-      #60a5fa 100%
-    ) !important;
+// Cards, boxes and panels in dark mode - clean dark surfaces
+:root.dark-mode {
+  .card, .box, .panel, .feature-card, .skill-card, .content-box {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-primary) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 
     &::before {
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        transparent 100%
-      ) !important;
-    }
-
-    h1, h2, h3, h4, h5, h6,
-    p, span, div, li,
-    .u-text-muted,
-    .u-text-primary,
-    .u-text-secondary,
-    .u-text-3xl,
-    .u-font-bold,
-    .u-text-sm,
-    .metric-label,
-    .metric-value {
-      color: white !important;
-    }
-
-    * {
-      color: white !important;
+      display: none !important;
     }
 
     &:hover {
-      background: linear-gradient(
-        135deg,
-        #3b82f6 0%,
-        #60a5fa 50%,
-        #93c5fd 100%
-      ) !important;
+      background: var(--bg-tertiary) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+      border-color: rgba(88, 166, 255, 0.2) !important;
     }
-  }
 
-  .card-header {
-    background: transparent !important;
+    &.card--elevated {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+
+      &:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+      }
+    }
+
+    &.card--gradient {
+      background: var(--bg-tertiary) !important;
+      border: 1px solid var(--border-primary) !important;
+
+      * {
+        color: var(--text-primary) !important;
+      }
+
+      &:hover {
+        background: #252b33 !important;
+        border-color: rgba(88, 166, 255, 0.2) !important;
+      }
+    }
+
+    .card-header {
+      background: transparent !important;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--text-primary) !important;
+      }
+    }
+
+    .card-body {
+      background: transparent !important;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--text-primary) !important;
+      }
+
+      p, li, span, ul {
+        color: var(--text-secondary) !important;
+      }
+    }
 
     h1, h2, h3, h4, h5, h6 {
-      color: #1e293b !important; // Dark slate for headings
+      color: var(--text-primary) !important;
+    }
+
+    p, li, span {
+      color: var(--text-secondary) !important;
+    }
+
+    .u-text-primary, .u-text-3xl, .u-font-bold, .metric-value {
+      color: var(--text-primary) !important;
+    }
+
+    .u-text-muted, .u-text-secondary, .metric-label, .u-text-sm {
+      color: var(--text-secondary) !important;
     }
   }
 
-  .card-body {
-    background: transparent !important;
+  // Glass cards in dark mode
+  .glass-card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-primary) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    color: var(--text-primary) !important;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: #1e293b !important; // Dark slate for headings
+    &::before {
+      display: none !important;
     }
 
-    p, li, span, ul {
-      color: #334155 !important; // Slate gray for body text
+    &.hover-effect:hover {
+      background: var(--bg-tertiary) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+      border-color: rgba(88, 166, 255, 0.2) !important;
     }
-  }
 
-  // All text inside cards should be dark for readability on light blue background
-  h1, h2, h3, h4, h5, h6 {
-    color: #1e293b !important; // Dark slate
-  }
-
-  p, li, span {
-    color: #334155 !important; // Slate gray
-  }
-
-  // Metric values (the big numbers like "5+ Years")
-  .u-text-primary, .u-text-3xl, .u-font-bold, .metric-value {
-    color: #0f172a !important; // Very dark slate/almost black
-  }
-
-  // Metric labels and descriptions
-  .u-text-muted, .u-text-secondary, .metric-label, .u-text-sm {
-    color: #475569 !important; // Medium slate
+    h3, p, span, div {
+      color: var(--text-primary) !important;
+    }
   }
 }
 
@@ -998,33 +977,25 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
   }
 }
 
-// FIX: Light grey bubbles need dark text in BOTH light and dark modes
-// Since these bubbles stay light grey even in dark mode, they always need dark text
-// BUT exclude the voiceover audio container which needs special handling
-.u-bg-light:not(#voiceover .u-bg-light):not(.voiceover .u-bg-light),
-.bg-light,
-.badge,
-.pill,
-.chip,
-.tag:not(.tag--primary):not(.tag--secondary):not(.tag--success):not(.tag--warning):not(.tag--info),
-.skill-bar,
-.skillbar,
-.skillbar-title,
-.skillbutton:not(.skillbutton-active) {
-  // Light grey background stays the same in both modes
-  background-color: #f5f5f5 !important;
-  
-  // Always use dark text for contrast
-  color: #212121 !important;
-  
-  * {
-    color: #212121 !important;
-  }
-  
-  .u-text-dark,
-  .u-text-muted,
-  span, p, div, li, label {
-    color: #212121 !important;
+// Neutral UI elements in dark mode
+:root.dark-mode {
+  .u-bg-light:not(#voiceover .u-bg-light):not(.voiceover .u-bg-light),
+  .bg-light,
+  .badge,
+  .pill,
+  .chip,
+  .tag:not(.tag--primary):not(.tag--secondary):not(.tag--success):not(.tag--warning):not(.tag--info),
+  .skill-bar,
+  .skillbar,
+  .skillbar-title,
+  .skillbutton:not(.skillbutton-active) {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-primary);
+    color: var(--text-primary) !important;
+
+    * {
+      color: var(--text-primary) !important;
+    }
   }
 }
 
@@ -1062,48 +1033,44 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
 }
 
 // ===================
-// HIGH SPECIFICITY: Force dark text in cards (light blue backgrounds need dark text)
+// Card text colors - adapt to theme
 // ===================
-.card,
-.card.card--compact,
-.card.card--elevated,
-.card.card--gradient,
-.box,
-.panel {
+:root:not(.dark-mode) {
+  .card,
+  .card.card--compact,
+  .card.card--elevated,
+  .card.card--gradient,
+  .box,
+  .panel {
+    * {
+      color: #1e293b;
+    }
 
-  // Force all text to be dark for readability on light blue backgrounds
-  * {
-    color: #1e293b !important; // Dark slate
-  }
+    h1, h2, h3, h4, h5, h6,
+    .card-header h1, .card-header h2, .card-header h3,
+    .card-header h4, .card-header h5, .card-header h6,
+    .card-body h1, .card-body h2, .card-body h3,
+    .card-body h4, .card-body h5, .card-body h6 {
+      color: #0f172a !important;
+    }
 
-  // Headings - very dark (BLACK, not gray)
-  h1, h2, h3, h4, h5, h6,
-  .card-header h1, .card-header h2, .card-header h3,
-  .card-header h4, .card-header h5, .card-header h6,
-  .card-body h1, .card-body h2, .card-body h3,
-  .card-body h4, .card-body h5, .card-body h6 {
-    color: #000000 !important; // Pure black for maximum contrast
-  }
+    .u-text-2xl, .u-text-3xl, .u-text-xl,
+    .u-font-bold,
+    .u-text-primary {
+      color: #0f172a !important;
+    }
 
-  // Big metric numbers
-  .u-text-2xl, .u-text-3xl, .u-text-xl,
-  .u-font-bold,
-  .u-text-primary {
-    color: #0f172a !important; // Almost black
-  }
+    p, li, span, div,
+    .u-text-sm, .u-text-muted, .u-text-secondary {
+      color: #475569 !important;
+    }
 
-  // Body text, descriptions
-  p, li, span, div,
-  .u-text-sm, .u-text-muted, .u-text-secondary {
-    color: #334155 !important; // Slate gray
-  }
+    a:not(.btn) {
+      color: #2563eb !important;
 
-  // Links should still be blue but darker
-  a:not(.btn) {
-    color: #1d4ed8 !important; // Dark blue
-
-    &:hover {
-      color: #1e40af !important;
+      &:hover {
+        color: #1d4ed8 !important;
+      }
     }
   }
 }
