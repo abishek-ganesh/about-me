@@ -118,19 +118,16 @@ const Stats = () => (
             <h2 className="u-text-center u-mb-3">Fun Facts</h2>
             <div className="grid grid--1 grid--gap-sm" style={{ maxWidth: '800px', margin: '0 auto' }}>
               <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span className="u-text-2xl" role="img" aria-label="Teacher">👨‍🏫</span>
                 <span>
                   Teaching AI bootcamp: 3 hours/day, 3 days/week, 6 months of intensive learning
                 </span>
               </div>
               <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span className="u-text-2xl" role="img" aria-label="Voice">🎙️</span>
                 <span>
                   Professional voice actor with commercial demos and character work
                 </span>
               </div>
               <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span className="u-text-2xl" role="img" aria-label="Graduate">🎓</span>
                 <span>
                   Completed Georgia Tech MS CS with perfect 4.0 GPA while working full-time
                 </span>

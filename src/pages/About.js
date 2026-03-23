@@ -20,7 +20,7 @@ const About = () => {
         <div className="about-hero-content">
           <div className="about-hero-text">
             <p className="intro-text">
-            I've been deploying AI in production since 2019 - from classical machine learning and deep learning, through the
+            I've been deploying AI in production across every major paradigm shift - from classical machine learning and deep learning, through the
             transformer revolution, to today's large language models and agentic systems. I don't specialize in just one paradigm.
             I deploy whatever the right tool is for the problem: traditional ML, computer vision, NLP, RAG, multi-agent orchestration,
             or whatever breakthrough comes next. Across startups, Fortune 500s, nonprofits, and local government, I bridge the gap
@@ -58,7 +58,7 @@ const About = () => {
               <div className="list-item u-mb-2">
                 <h4 className="u-text-primary u-mb-1">Full-Spectrum AI Implementation</h4>
                 <p>From classical ML and deep learning to RAG systems and multi-agent orchestration - I deploy
-                   whatever AI paradigm fits the problem. I've shipped every generation of this technology since 2019
+                   whatever AI paradigm fits the problem. I've shipped every generation of this technology
                    and I'm always first to production with what's next.</p>
               </div>
               <div className="list-item u-mb-2">
@@ -263,7 +263,7 @@ const About = () => {
         <h2>Let's Implement What's Next</h2>
         <p>
           Whether you need classical ML, a production RAG system, an agentic workflow, or whatever breakthrough comes next -
-          I've been deploying it all since 2019 and I'm here to help you ship AI that actually works.
+          I'm here to help you ship AI that actually works.
         </p>
         <div className="cta-buttons">
           <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>

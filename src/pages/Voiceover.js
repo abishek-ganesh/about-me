@@ -51,7 +51,6 @@ const Voiceover = () => (
         <div className="grid grid--4 grid--gap-lg">
           <div className="card card--hover u-text-center">
             <div className="card-body">
-              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="Commercial">📺</span>
               <h3 className="u-mb-2">Commercials</h3>
               <p className="u-text-sm u-text-muted u-mb-0">
                 Engaging voice overs for radio, TV, and online advertisements
@@ -60,7 +59,6 @@ const Voiceover = () => (
           </div>
           <div className="card card--hover u-text-center">
             <div className="card-body">
-              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="Animation">🎬</span>
               <h3 className="u-mb-2">Animation</h3>
               <p className="u-text-sm u-text-muted u-mb-0">
                 Character voices for animated films, series, and video games
@@ -69,7 +67,6 @@ const Voiceover = () => (
           </div>
           <div className="card card--hover u-text-center">
             <div className="card-body">
-              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="Audiobook">📚</span>
               <h3 className="u-mb-2">Audiobooks</h3>
               <p className="u-text-sm u-text-muted u-mb-0">
                 Narration for fiction and non-fiction audiobook productions
@@ -78,7 +75,6 @@ const Voiceover = () => (
           </div>
           <div className="card card--hover u-text-center">
             <div className="card-body">
-              <span className="u-text-3xl u-block u-mb-2" role="img" aria-label="E-Learning">🎓</span>
               <h3 className="u-mb-2">E-Learning</h3>
               <p className="u-text-sm u-text-muted u-mb-0">
                 Clear, engaging narration for educational and training content
