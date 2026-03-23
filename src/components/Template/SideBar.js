@@ -35,7 +35,6 @@ const SideBar = ({ sections = [] }) => {
             <div className="logo-overlay">
               <h2>Abishek Ganesh</h2>
               <p><a href="mailto:abishek.ganesh30@gmail.com">abishek.ganesh30@gmail.com</a></p>
-              <p><a href="http://www.abishekganesh.com/">abishekganesh.com</a></p>
             </div>
           </div>
         </section>
