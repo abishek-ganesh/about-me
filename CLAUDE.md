@@ -48,7 +48,8 @@ After making CSS or JS changes, always do a **hard refresh** in the browser to s
    - Then run `npm run deploy` to update the live website
 5. The gh-pages branch is automatically managed by the deploy script
 
-**Remember**: 
+**Remember**:
+- NEVER add "Co-Authored-By" lines to commit messages
 - NEVER auto-commit changes - always get user approval first!
 - ALWAYS run tests before deploying - catch issues before they go live!
 - The website won't update until you run `npm run deploy` after pushing to main!
