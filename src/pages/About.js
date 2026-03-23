@@ -8,35 +8,36 @@ const About = () => {
   return (
   <Main
     title="About"
-    description="Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"
+    description="Abishek Ganesh - AI Implementation Specialist | ML, Deep Learning, LLMs, RAG, and Agentic Systems in Production Since 2019"
   >
     <article className="post page" id="about">
       <div className="page-title">
-        <h1>State-of-the-Art AI Implementation Specialist</h1>
-        <span className="page-subtitle">Helping companies deploy cutting-edge AI models in production - from stealth startups to Fortune 500</span>
+        <h1>AI Implementation Specialist</h1>
+        <span className="page-subtitle">Deploying production AI since 2019 - from classical ML to agentic systems, across startups, Fortune 500s, nonprofits, and government</span>
       </div>
 
       <section className="about-hero u-mb-4">
         <div className="about-hero-content">
           <div className="about-hero-text">
             <p className="intro-text">
-            I specialize in implementing the absolute latest in AI technology - RAG systems, AI agents, multi-agent architectures, 
-            and whatever breakthrough comes next. I'm passionate about staying on the cutting edge and leveraging these technologies 
-            in smart ways that genuinely help companies and their users. With 5+ years deploying state-of-the-art AI across industries, 
-            I bridge the gap between research papers and production systems that actually work.
+            I've been deploying AI in production since 2019 - from classical machine learning and deep learning, through the
+            transformer revolution, to today's large language models and agentic systems. I don't specialize in just one paradigm.
+            I deploy whatever the right tool is for the problem: traditional ML, computer vision, NLP, RAG, multi-agent orchestration,
+            or whatever breakthrough comes next. Across startups, Fortune 500s, nonprofits, and local government, I bridge the gap
+            between research papers and production systems that actually work.
           </p>
           <div className="grid grid--4 u-mt-3">
             <div className="card card--compact u-text-center">
-              <span className="metric-value">5+ Years</span>
-              <span className="metric-label">Bleeding-Edge AI</span>
+              <span className="metric-value">Since 2019</span>
+              <span className="metric-label">In Production AI</span>
             </div>
             <div className="card card--compact u-text-center">
-              <span className="metric-value">RAG & Agents</span>
-              <span className="metric-label">Core Expertise</span>
+              <span className="metric-value">ML to Agents</span>
+              <span className="metric-label">Full AI Spectrum</span>
             </div>
             <div className="card card--compact u-text-center">
-              <span className="metric-value">15+ Companies</span>
-              <span className="metric-label">AI Implementations</span>
+              <span className="metric-value">15+ Orgs</span>
+              <span className="metric-label">Across the World</span>
             </div>
             <div className="card card--compact u-text-center">
               <span className="metric-value">Always First</span>
@@ -55,22 +56,22 @@ const About = () => {
           <div className="card-body">
             <div className="list list--none u-mb-0">
               <div className="list-item u-mb-2">
-                <h4 className="u-text-primary u-mb-1">State-of-the-Art AI Implementation Specialist</h4>
-                <p>Expert in RAG systems: hybrid search, reranking, dynamic context optimization. AI agent development:
-                   autonomous agents, multi-agent orchestration, tool use. Deploy the latest foundation models to production
-                   as soon as they drop. Always first to production with emerging technologies.</p>
+                <h4 className="u-text-primary u-mb-1">Full-Spectrum AI Implementation</h4>
+                <p>From classical ML and deep learning to RAG systems and multi-agent orchestration - I deploy
+                   whatever AI paradigm fits the problem. I've shipped every generation of this technology since 2019
+                   and I'm always first to production with what's next.</p>
               </div>
               <div className="list-item u-mb-2">
-                <h4 className="u-text-primary u-mb-1">Enterprise AI Innovation Consultant</h4>
-                <p>Help Fortune 500 companies leverage truly cutting-edge AI (not just buzzwords). Strategic guidance on 
-                   RAG, agents, and emerging AI paradigms. Risk mitigation for implementing tomorrow's tech today. 
-                   Focus on user-centric solutions that actually help people.</p>
+                <h4 className="u-text-primary u-mb-1">Cross-Sector AI Consulting</h4>
+                <p>Strategic AI guidance for organizations of every kind - Fortune 500 enterprises, healthcare startups,
+                   nonprofits, and local government. I focus on solutions that genuinely help people, not just
+                   buzzword implementations.</p>
               </div>
               <div className="list-item u-mb-2">
-                <h4 className="u-text-primary u-mb-1">AI Thought Leader & Continuous Learner</h4>
-                <p>Passionate about keeping up with the state-of-the-art. Teaching teams about RAG, agents, and the next 
-                   big thing. Speaking at conferences on real-world lessons from cutting-edge implementations. 
-                   Philosophy: "If it's not helping users, it's not worth implementing"</p>
+                <h4 className="u-text-primary u-mb-1">Teaching & Knowledge Sharing</h4>
+                <p>Leading an AI bootcamp teaching the next generation of engineers. Passionate about making complex
+                   AI concepts accessible and preparing students for what's actually used in production today
+                   and what's coming tomorrow.</p>
               </div>
             </div>
           </div>
@@ -146,8 +147,8 @@ const About = () => {
         <div className="timeline-photos">
           <div className="timeline-photo">
             <AnimatedPhoto
-              src="/images/august-2025/website-01.JPG"
-              alt="Leading AI innovation"
+              src="/images/venice.JPG"
+              alt="Abishek in Venice, Italy"
               size="medium"
               shape="rounded"
               animation="slideUp"
@@ -155,7 +156,7 @@ const About = () => {
             />
             <div className="timeline-content">
               <h3>Present</h3>
-              <p>Leading AI innovation with state-of-the-art implementations</p>
+              <p>Deploying AI across industries and around the world</p>
             </div>
           </div>
           <div className="timeline-photo">
@@ -195,28 +196,20 @@ const About = () => {
         </div>
         <div className="grid grid--4 grid--gap-sm">
           <div className="card card--compact u-text-center">
-            <div className="u-text-3xl u-mb-1">
-              <span role="img" aria-label="Brain">🧠</span>
-            </div>
-            <p className="u-mb-0 u-text-sm">Production RAG systems serving 10M+ queries monthly</p>
+            <span className="metric-value">10M+</span>
+            <p className="u-mb-0 u-text-sm">Queries served monthly by production RAG systems</p>
           </div>
           <div className="card card--compact u-text-center">
-            <div className="u-text-3xl u-mb-1">
-              <span role="img" aria-label="Robot">🤖</span>
-            </div>
-            <p className="u-mb-0 u-text-sm">Multi-agent systems reducing human escalations by 70%</p>
+            <span className="metric-value">70%</span>
+            <p className="u-mb-0 u-text-sm">Reduction in human escalations via multi-agent systems</p>
           </div>
           <div className="card card--compact u-text-center">
-            <div className="u-text-3xl u-mb-1">
-              <span role="img" aria-label="Lightning">⚡</span>
-            </div>
-            <p className="u-mb-0 u-text-sm">Sub-100ms latency on real-time AI inference systems</p>
+            <span className="metric-value">&lt;100ms</span>
+            <p className="u-mb-0 u-text-sm">Latency on real-time AI inference pipelines</p>
           </div>
           <div className="card card--compact u-text-center">
-            <div className="u-text-3xl u-mb-1">
-              <span role="img" aria-label="Rocket">🚀</span>
-            </div>
-            <p className="u-mb-0 u-text-sm">First to deploy the latest models to production</p>
+            <span className="metric-value">Day 1</span>
+            <p className="u-mb-0 u-text-sm">Deploying new models and paradigms as they emerge</p>
           </div>
         </div>
       </section>
@@ -228,9 +221,9 @@ const About = () => {
         <div className="card card--elevated">
           <div className="card-body">
             <p className="u-text-lg u-mb-3">
-              Leading an intensive AI Bootcamp where I teach 20+ students everything from Python fundamentals to the absolute latest in AI - 
-              including RAG systems, AI agents, and emerging paradigms. My philosophy: teach what's actually being used in production today 
-              and prepare students for what's coming tomorrow.
+              Leading an intensive AI Bootcamp where I teach 20+ students everything from Python fundamentals to production AI -
+              spanning machine learning, deep learning, LLMs, RAG, and agentic systems. My philosophy: teach what's actually
+              being used in production today and prepare students for what's coming tomorrow.
             </p>
             <div className="grid grid--3 u-text-center">
               <div>
@@ -269,8 +262,8 @@ const About = () => {
       <section className="section-cta u-mt-4">
         <h2>Let's Implement What's Next</h2>
         <p>
-          Whether you need to deploy cutting-edge RAG systems, build AI agents, or implement whatever breakthrough comes next, 
-          I'm here to help you be first to market with technology that actually works.
+          Whether you need classical ML, a production RAG system, an agentic workflow, or whatever breakthrough comes next -
+          I've been deploying it all since 2019 and I'm here to help you ship AI that actually works.
         </p>
         <div className="cta-buttons">
           <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>

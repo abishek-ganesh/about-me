@@ -12,13 +12,13 @@ export const homepageSections = [
 export const aboutContent = {
   intro: "I turn AI breakthroughs into business advantages.",
   bio: [
-    "I'm a state-of-the-art AI implementation specialist with 8+ years deploying cutting-edge AI systems in production. I don't just follow AI trends—I'm usually implementing them months before they become mainstream.",
-    "My expertise spans advanced RAG systems with hybrid search, multi-agent orchestration, and always being first to deploy what's next. From Fortune 500 companies to healthcare startups, I've helped organizations leverage truly state-of-the-art AI.",
+    "I've been deploying AI in production since 2019 - from classical machine learning and deep learning, through the transformer revolution, to today's LLMs and agentic systems. I don't specialize in just one paradigm; I deploy whatever fits the problem.",
+    "Across Fortune 500 enterprises, healthcare startups, nonprofits, and local government, I've helped 15+ organizations ship AI that actually works. I'm always first to production with emerging technologies.",
     "When I'm not building AI systems, I'm teaching the next generation of AI engineers or lending my voice to creative projects.",
   ],
   highlights: [
-    { value: '8+', label: 'Years Experience' },
-    { value: '15+', label: 'Companies Served' },
+    { value: 'Since 2019', label: 'In Production AI' },
+    { value: '15+', label: 'Organizations Served' },
     { value: '99.9%', label: 'Uptime Achieved' },
     { value: '20+', label: 'Students Teaching' },
   ],
@@ -28,15 +28,15 @@ export const aboutContent = {
 export const featuredExperience = [
   {
     company: 'AI Consulting Practice',
-    position: 'State-of-the-Art AI Implementation Specialist',
+    position: 'AI Implementation Specialist',
     daterange: '2024 - Present',
-    description: 'Implementing cutting-edge AI: advanced RAG systems, AI agents, multi-agent orchestration. Deploying latest models first to production.',
+    description: 'Full-spectrum AI deployment: ML, deep learning, RAG, and agentic systems. Serving startups, enterprises, nonprofits, and government.',
   },
   {
     company: 'AI Bootcamp',
     position: 'Lead AI Instructor',
     daterange: 'March 2025 - Sept 2025',
-    description: 'Teaching 20+ students the absolute latest in AI including RAG systems and AI agents.',
+    description: 'Teaching 20+ students production AI spanning ML, deep learning, LLMs, RAG, and agentic systems.',
   },
   {
     company: 'Limbik',
