@@ -36,12 +36,6 @@ const Resume = () => (
         </div>
       </div>
 
-      <div className="u-text-center u-mb-4">
-        <a href="/resume.pdf" className="btn btn--primary" download>
-          <i className="fa fa-download" />
-          Download PDF Version
-        </a>
-      </div>
 
       <section id="experience" className="section-content">
         <div className="section-header">
@@ -187,28 +181,22 @@ const Resume = () => (
         </div>
         <div className="grid grid--auto-lg grid--gap-lg">
           {degrees.map((degree) => (
-            <div key={degree.school} className="card card--elevated">
+            <div key={degree.school} className="card card--elevated u-text-center">
               <div className="card-body">
-                <div className="u-flex u-justify-between u-flex-wrap u-gap-2 u-mb-2">
-                  <div>
-                    <h3 className="u-mb-1">
-                      {degree.link ? (
-                        <a href={degree.link} target="_blank" rel="noopener noreferrer">
-                          {degree.school}
-                        </a>
-                      ) : (
-                        degree.school
-                      )}
-                    </h3>
-                    <div className="u-text-primary u-font-medium">{degree.degree}</div>
-                  </div>
-                  <div className="u-text-right">
-                    <span className="tag tag--neutral">{degree.year}</span>
-                    {degree.gpa && <div className="u-text-sm u-text-muted u-mt-1">GPA: {degree.gpa}</div>}
-                  </div>
-                </div>
+                <h3 className="u-mb-1">
+                  {degree.link ? (
+                    <a href={degree.link} target="_blank" rel="noopener noreferrer">
+                      {degree.school}
+                    </a>
+                  ) : (
+                    degree.school
+                  )}
+                </h3>
+                <div className="u-text-primary u-font-medium u-mb-2">{degree.degree}</div>
+                <span className="tag tag--neutral">{degree.year}</span>
+                {degree.gpa && <div className="u-text-sm u-text-muted u-mt-1">GPA: {degree.gpa}</div>}
                 {degree.details && (
-                  <div className="u-text-muted u-font-italic">{degree.details}</div>
+                  <div className="u-text-muted u-font-italic u-mt-2">{degree.details}</div>
                 )}
               </div>
             </div>
