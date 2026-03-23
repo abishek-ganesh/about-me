@@ -1,27 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import personalData from '../data/stats/personal';
 
-const Age = () => {
-  const [age, setAge] = useState();
+const getPersonalStat = (key) => personalData.find((d) => d.key === key);
 
-  const tick = () => {
-    const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('1991-09-22T16:00:00');
-    setAge(((Date.now() - birthTime) / divisor).toFixed(11));
-  };
+const Stats = () => {
+  const countries = getPersonalStat('countries');
+  const states = getPersonalStat('states');
+  const location = getPersonalStat('location');
 
-  useEffect(() => {
-    const timer = setInterval(() => tick(), 25);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-  return <>{age}</>;
-};
-
-const Stats = () => (
+  return (
   <Main
     title="Stats"
     description="Interesting statistics and facts about Abishek Ganesh"
@@ -40,15 +30,15 @@ const Stats = () => (
               <div className="u-text-center">
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Current Age</div>
                 <div className="u-text-2xl u-font-bold u-text-primary" style={{ fontFamily: "'Courier New', monospace" }}>
-                  <Age />
+                  {getPersonalStat('age').value}
                 </div>
               </div>
               <div className="u-text-center u-relative">
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Current Location</div>
-                <div className="u-text-2xl u-font-bold u-text-primary">Santa Clara</div>
-                <a 
-                  href="https://www.google.com/maps/place/Santa+Clara,+CA" 
-                  target="_blank" 
+                <div className="u-text-2xl u-font-bold u-text-primary">{location.value.replace(', CA', '')}</div>
+                <a
+                  href={location.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="u-absolute"
                   style={{ top: '0', right: '0' }}
@@ -60,20 +50,20 @@ const Stats = () => (
               <div className="u-text-center u-relative">
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Countries Visited</div>
                 <div className="u-text-2xl u-font-bold u-text-primary">
-                  <a 
-                    href="https://www.google.com/maps/d/u/1/edit?mid=1AAscWrtMqstqyYh8_4-nVF-cbpfYu7C9&usp=sharing" 
-                    target="_blank" 
+                  <a
+                    href={countries.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="u-text-primary"
                     style={{ textDecoration: 'none' }}
                     title="View travel map"
                   >
-                    15
+                    {countries.value}
                   </a>
                 </div>
-                <a 
-                  href="https://www.google.com/maps/d/u/1/edit?mid=1AAscWrtMqstqyYh8_4-nVF-cbpfYu7C9&usp=sharing" 
-                  target="_blank" 
+                <a
+                  href={countries.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="u-absolute"
                   style={{ top: '0', right: '0' }}
@@ -85,20 +75,20 @@ const Stats = () => (
               <div className="u-text-center u-relative">
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">US States Visited</div>
                 <div className="u-text-2xl u-font-bold u-text-primary">
-                  <a 
-                    href="https://www.google.com/maps/d/u/1/edit?mid=1LxU2Vt_3DV1tFsBcOgjS_erGiyFfFJJF&usp=sharing" 
-                    target="_blank" 
+                  <a
+                    href={states.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="u-text-primary"
                     style={{ textDecoration: 'none' }}
                     title="View states map"
                   >
-                    31
+                    {states.value}
                   </a>
                 </div>
-                <a 
-                  href="https://www.google.com/maps/d/u/1/edit?mid=1LxU2Vt_3DV1tFsBcOgjS_erGiyFfFJJF&usp=sharing" 
-                  target="_blank" 
+                <a
+                  href={states.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="u-absolute"
                   style={{ top: '0', right: '0' }}
@@ -150,6 +140,7 @@ const Stats = () => (
       </section>
     </article>
   </Main>
-);
+  );
+};
 
 export default Stats;
