@@ -16,21 +16,7 @@
 		top: 5em; // Account for fixed header
 		align-self: flex-start;
 		max-height: calc(100vh - 6em);
-		overflow-y: auto;
-
-		// Custom scrollbar for sticky sidebar
-		&::-webkit-scrollbar {
-			width: 4px;
-		}
-
-		&::-webkit-scrollbar-track {
-			background: transparent;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			background: var(--border-primary);
-			border-radius: 4px;
-		}
+		overflow-y: hidden;
 
 		> * {
 			border-top: solid 1px _palette(border);
