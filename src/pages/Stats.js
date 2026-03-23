@@ -93,7 +93,7 @@ const Stats = () => (
                     style={{ textDecoration: 'none' }}
                     title="View states map"
                   >
-                    30
+                    31
                   </a>
                 </div>
                 <a 
