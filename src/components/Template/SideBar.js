@@ -40,7 +40,6 @@ const SideBar = ({ sections = [] }) => {
         </section>
 
         <section className="blurb">
-          <h2>About</h2>
           <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life <br></br><br></br>
             <a href="https://youtu.be/LQ488QrqGE4?t=125">
               <i>Reach for the stars, so if you fall, you land on a cloud
