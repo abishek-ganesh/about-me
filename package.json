@@ -4,7 +4,7 @@
   "homepage": "https://abishekganesh.com",
   "license": "MIT",
   "engines": {
-    "node": ">=14.6"
+    "node": "20.x"
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "gh-pages": "^6.3.0",
     "gulp-sass": "^5.1.0",
     "react-app-rewired": "^2.2.1",
+    "sass": "^1.86.3",
     "serve": "^14.2.4",
     "sharp": "^0.34.3",
     "source-map-explorer": "^2.5.2"
