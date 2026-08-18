@@ -122,6 +122,12 @@ const Stats = () => {
                   Completed Georgia Tech MS CS with perfect 4.0 GPA while working full-time
                 </span>
               </div>
+              <div className="u-flex u-items-center u-gap-2 u-p-2">
+                <span>
+                  Chasing a dream of becoming the vegan Anthony Bourdain: {countries.value} countries
+                  down, telling their stories one plant-based plate at a time
+                </span>
+              </div>
             </div>
           </div>
         </div>
