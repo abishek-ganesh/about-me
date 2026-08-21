@@ -30,22 +30,31 @@ export const degrees = [
 // Work experience data
 export const positions = [
   {
-    company: 'AI Consulting Practice',
-    position: 'State-of-the-Art AI Implementation Specialist',
+    company: 'Appa Health',
+    position: 'VP of Technology & AI',
     link: '',
     daterange: '2024 - Present',
     points: [
-      'Implement cutting-edge AI: advanced RAG systems, AI agents, multi-agent orchestration',
-      'Deploy the latest foundation models to production - always first to ship emerging tech',
-      'Reduced system MTTR by 60% through strategic AI architecture and debugging',
-      'Help Fortune 500 companies leverage truly state-of-the-art AI (not just buzzwords)',
+      'Lead technology and AI for a mentorship platform serving hundreds of students',
+      'Build and scale the product systems supporting dozens of mentors',
+    ],
+  },
+  {
+    company: 'AI Consulting Practice',
+    position: 'AI Implementation Specialist',
+    link: '',
+    daterange: '2024 - Present',
+    points: [
+      'Implement RAG systems, AI agents, and multi-agent orchestration in production',
+      'Deploy current foundation models to production for client teams',
+      'Reduced system MTTR by 60% through AI architecture and debugging',
     ],
   },
   {
     company: 'AI Bootcamp',
     position: 'Lead AI Instructor',
     link: '',
-    daterange: 'March 2025 - September 2025',
+    daterange: 'March 2025 - Present',
     points: [
       'Teaching 20+ students the absolute latest in AI - including RAG systems and AI agents',
       'Philosophy: teach what\'s actually being used in production today and prepare for tomorrow',

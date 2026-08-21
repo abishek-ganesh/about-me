@@ -127,10 +127,13 @@ if [ -f "tests/playwright/test-results.json" ]; then
   echo ""
   echo -e "${BLUE}📊 Test Results Summary:${NC}"
   
-  # Parse JSON results (basic parsing)
-  PASSED=$(grep -c '"passed"' tests/playwright/test-results.json || true)
-  FAILED=$(grep -c '"failed"' tests/playwright/test-results.json || true)
-  
+  # Count array lengths, not key occurrences - grep -c '"failed"' matches the
+  # key itself and so always returned 1, failing the gate even on a clean run.
+  PASSED=$(node -e "const r=require('./tests/playwright/test-results.json');process.stdout.write(String((r.passed||[]).length))")
+  FAILED=$(node -e "const r=require('./tests/playwright/test-results.json');process.stdout.write(String((r.failed||[]).length))")
+
+  echo -e "Passed: ${PASSED}, Failed: ${FAILED}"
+
   if [ "$FAILED" -eq 0 ]; then
     echo -e "${GREEN}✅ All tests passed!${NC}"
     exit 0

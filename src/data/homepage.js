@@ -4,7 +4,7 @@
 export const homepageSections = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
+  { id: 'teaching', label: 'Teaching' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -27,6 +27,12 @@ export const aboutContent = {
 // Featured experience (select positions for homepage)
 export const featuredExperience = [
   {
+    company: 'Appa Health',
+    position: 'VP of Technology & AI',
+    daterange: '2024 - Present',
+    description: 'Leading technology and AI for a mentorship platform supporting dozens of mentors and hundreds of students.',
+  },
+  {
     company: 'AI Consulting Practice',
     position: 'AI Implementation Specialist',
     daterange: '2024 - Present',
@@ -35,7 +41,7 @@ export const featuredExperience = [
   {
     company: 'AI Bootcamp',
     position: 'Lead AI Instructor',
-    daterange: 'March 2025 - Sept 2025',
+    daterange: 'March 2025 - Present',
     description: 'Teaching 20+ students production AI spanning ML, deep learning, LLMs, RAG, and agentic systems.',
   },
   {
@@ -50,11 +56,4 @@ export const featuredExperience = [
     daterange: '2022 - 2023',
     description: 'Worked on AWS Chime SDK development. Built scalable communication infrastructure.',
   },
-];
-
-// Featured projects for homepage (subset of full projects)
-export const featuredProjectIds = [
-  'Advanced RAG System for Fortune 500',
-  'Multi-Agent Customer Service Platform',
-  'Next-Gen Healthcare RAG + Agents',
 ];

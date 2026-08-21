@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import Quote from '../components/common/Quote';
 import personalData from '../data/stats/personal';
 
 const getPersonalStat = (key) => personalData.find((d) => d.key === key);
@@ -21,6 +22,8 @@ const Stats = () => {
         <h1>Stats & Facts</h1>
         <span className="page-subtitle">Numbers, achievements, and fun facts about my journey in AI and beyond</span>
       </div>
+
+      <Quote id="stats" />
 
       <section className="section-content">
         <div className="card card--elevated">
@@ -140,7 +143,6 @@ const Stats = () => {
           generation of engineers, I'm always excited about new challenges.
         </p>
         <div className="cta-buttons">
-          <Link to="/projects" className="btn btn--primary">View My Projects</Link>
           <Link to="/contact" className="btn btn--secondary">Get in Touch</Link>
         </div>
       </section>

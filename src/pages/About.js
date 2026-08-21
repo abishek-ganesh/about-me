@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import AnimatedPhoto from '../components/common/AnimatedPhoto';
@@ -259,17 +258,6 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-cta u-mt-4">
-        <h2>Let's Implement What's Next</h2>
-        <p>
-          Whether you need classical ML, a production RAG system, an agentic workflow, or whatever breakthrough comes next -
-          I'm here to help you ship AI that actually works.
-        </p>
-        <div className="cta-buttons">
-          <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>
-          <Link to="/projects" className="btn btn--secondary">View Cutting-Edge Implementations</Link>
-        </div>
-      </section>
     </article>
   </Main>
   );

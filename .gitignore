@@ -56,3 +56,6 @@ yarn-error.log*
 # Test artifacts
 tests/playwright/test-results.json
 tests/playwright/screenshots/
+
+# Raw survey response data - contains student PII, never commit
+*.xlsx

@@ -1,16 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import Quote from '../components/common/Quote';
 
 import { degrees, positions } from '../data/resume';
 
 const sections = [
   'Experience',
   'Technical Expertise',
-  'Key Projects',
   'Education',
 ];
+
+// Anchor ids are kebab-cased, so multi-word section names need slugging
+const slug = (name) => name.toLowerCase().replace(/\s+/g, '-');
 
 const Resume = () => (
   <Main
@@ -31,7 +33,7 @@ const Resume = () => (
         </p>
         <div className="quick-links">
           {sections.map((sec) => (
-            <a key={sec} href={`#${sec.toLowerCase()}`} className="u-text-primary u-font-medium u-mx-2">{sec}</a>
+            <a key={sec} href={`#${slug(sec)}`} className="u-text-primary u-font-medium u-mx-2">{sec}</a>
           ))}
         </div>
       </div>
@@ -40,6 +42,40 @@ const Resume = () => (
       <section id="experience" className="section-content">
         <div className="section-header">
           <h2 className="with-accent">Professional Experience</h2>
+        </div>
+        <div className="experience-timeline">
+          {positions.map((job) => (
+            <div key={`${job.company}-${job.position}`} className="experience-item">
+              <div className="u-mb-2">
+                <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
+                  <div>
+                    <h3 className="u-inline u-font-semibold">
+                      {job.link ? (
+                        <a href={job.link} target="_blank" rel="noopener noreferrer">
+                          {job.company}
+                        </a>
+                      ) : (
+                        job.company
+                      )}
+                    </h3>
+                    <span className="u-text-primary u-font-medium"> — {job.position}</span>
+                  </div>
+                  <span className="tag tag--small tag--neutral">{job.daterange}</span>
+                </div>
+              </div>
+              <ul className="list list--chevron">
+                {job.points.map((point, index) => (
+                  <li key={index} className="list-item">{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="technical-expertise" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2 className="with-accent">Technical Expertise</h2>
         </div>
         <div className="grid grid--2 grid--gap-lg">
           <div className="card card--elevated">
@@ -101,83 +137,10 @@ const Resume = () => (
         </div>
       </section>
 
-      <section id="technical-expertise" className="section-content u-mt-4">
-        <div className="section-header">
-          <h2 className="with-accent">Technical Expertise</h2>
-          <p className="section-description">
-            Mastery of truly state-of-the-art AI technologies - always implementing what's next
-          </p>
-        </div>
-        <div className="experience-timeline">
-          {positions.map((job) => (
-            <div key={`${job.company}-${job.position}`} className="experience-item">
-              <div className="u-mb-2">
-                <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
-                  <div>
-                    <h3 className="u-inline u-font-semibold">
-                      {job.link ? (
-                        <a href={job.link} target="_blank" rel="noopener noreferrer">
-                          {job.company}
-                        </a>
-                      ) : (
-                        job.company
-                      )}
-                    </h3>
-                    <span className="u-text-primary u-font-medium"> — {job.position}</span>
-                  </div>
-                  <span className="tag tag--small tag--neutral">{job.daterange}</span>
-                </div>
-              </div>
-              <ul className="list list--chevron">
-                {job.points.map((point, index) => (
-                  <li key={index} className="list-item">{point}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="key-projects" className="section-content u-mt-4">
-        <div className="section-header">
-          <h2 className="with-accent">Key Projects & Achievements</h2>
-          <p className="section-description">
-            Measurable AI impact across industries - from stealth startups to Fortune 500
-          </p>
-        </div>
-        <div className="experience-timeline">
-          {positions.map((job) => (
-            <div key={`${job.company}-${job.position}`} className="experience-item">
-              <div className="u-mb-2">
-                <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
-                  <div>
-                    <h3 className="u-inline u-font-semibold">
-                      {job.link ? (
-                        <a href={job.link} target="_blank" rel="noopener noreferrer">
-                          {job.company}
-                        </a>
-                      ) : (
-                        job.company
-                      )}
-                    </h3>
-                    <span className="u-text-primary u-font-medium"> — {job.position}</span>
-                  </div>
-                  <span className="tag tag--small tag--neutral">{job.daterange}</span>
-                </div>
-              </div>
-              <ul className="list list--chevron">
-                {job.points.map((point, index) => (
-                  <li key={index} className="list-item">{point}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="education" className="section-content u-mt-4">
         <div className="section-header">
           <h2 className="with-accent">Education</h2>
+          <Quote id="education" className="section-description" />
         </div>
         <div className="grid grid--auto-lg grid--gap-lg">
           {degrees.map((degree) => (
@@ -205,17 +168,6 @@ const Resume = () => (
       </section>
 
 
-      <section className="section-cta u-mt-4">
-        <h2>Ready to Deploy Tomorrow's AI Today?</h2>
-        <p>
-          I help companies implement truly cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next. 
-          Let's leverage the latest technologies in smart ways that help your users.
-        </p>
-        <div className="cta-buttons">
-          <Link to="/contact" className="btn btn--primary">Schedule AI Strategy Session</Link>
-          <Link to="/projects" className="btn btn--secondary">View Cutting-Edge Implementations</Link>
-        </div>
-      </section>
     </article>
   </Main>
 );

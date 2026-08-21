@@ -16,14 +16,9 @@ const routes = [
     icon: 'fa-file-alt',
   },
   {
-    label: 'Projects',
-    path: '/projects',
-    icon: 'fa-folder',
-  },
-  {
-    label: 'Case Studies',
-    path: '/case-studies',
-    icon: 'fa-flask',
+    label: 'Teaching',
+    path: '/teaching',
+    icon: 'fa-chalkboard-teacher',
   },
   {
     label: 'Voiceover',

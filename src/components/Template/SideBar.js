@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import ContactIcons from '../Contact/ContactIcons';
 import SidebarNav from './SidebarNav';
+import Quote from '../common/Quote';
 import { getSidebarPhoto } from '../../data/photos';
 
 var today = new Date();
@@ -40,13 +41,8 @@ const SideBar = ({ sections = [] }) => {
         </section>
 
         <section className="blurb">
-          <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life <br></br><br></br>
-            <a href="https://youtu.be/LQ488QrqGE4?t=125">
-              <i>Reach for the stars, so if you fall, you land on a cloud
-              <br></br>- Ye </i>
-            </a>
-
-          </p>
+          <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life</p>
+          <Quote id="sidebar" variant="inline" />
         </section>
 
         {/* Table of Contents Navigation */}

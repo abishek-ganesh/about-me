@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import ContactIcons from '../components/Contact/ContactIcons';
@@ -13,12 +12,12 @@ const Contact = () => {
   return (
   <Main
     title="Contact"
-    description="Schedule an AI Strategy Session | State-of-the-Art RAG Systems, AI Agents, and Cutting-Edge Implementations"
+    description="Get in touch with Abishek Ganesh"
   >
     <article className="post page" id="contact">
       <div className="page-title">
-        <h1>Let's Implement What's Next</h1>
-        <span className="page-subtitle">Ready to deploy cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next</span>
+        <h1>Get in Touch</h1>
+        <span className="page-subtitle">I read everything. Say hello.</span>
       </div>
 
       <section className="contact-intro u-mb-4">
@@ -52,9 +51,9 @@ const Contact = () => {
           <div className="card card--elevated u-text-center">
             <div className="card-body">
               <i className="fa fa-envelope u-text-3xl u-text-primary u-block u-mb-3" />
-              <h2 className="u-mb-2">Schedule AI Strategy Session</h2>
+              <h2 className="u-mb-2">Email</h2>
               <div className="u-text-xl u-mb-2">
-                <a href="mailto:abishek.ganesh30@gmail.com?subject=AI Strategy Session Request" className="u-text-primary u-font-medium">
+                <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary u-font-medium">
                   abishek.ganesh30@gmail.com
                 </a>
               </div>
@@ -139,21 +138,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="section-cta u-mt-4">
-        <h2>Ready to Deploy Tomorrow's AI Today?</h2>
-        <p>
-          I help companies implement truly cutting-edge AI - RAG systems, AI agents, and whatever breakthrough comes next. 
-          Let's leverage the latest technologies in smart ways that help your users.
-        </p>
-        <div className="cta-buttons">
-          <a href="mailto:abishek.ganesh30@gmail.com?subject=AI Strategy Session Request" className="btn btn--primary">
-            <i className="fa fa-envelope" /> Schedule AI Strategy Session
-          </a>
-          <Link to="/projects" className="btn btn--secondary">
-            View Cutting-Edge Implementations
-          </Link>
-        </div>
-      </section>
     </article>
   </Main>
   );

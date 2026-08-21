@@ -1,0 +1,70 @@
+/* Kanye lyric easter eggs */
+
+.kanye-quote {
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  // Page-level epigraph, sits under a page title
+  &--epigraph {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.65;
+    margin: 0 auto 2.5rem;
+    max-width: 600px;
+    transition: opacity var(--transition-speed, 0.3s) ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Sidebar blurb treatment, inherits .blurb p sizing
+  &--inline {
+    margin: 1.25em 0 0 0;
+  }
+}
+
+/* Theme toggle lyric, shown briefly after switching modes */
+.dark-mode-toggle {
+  position: relative;
+
+  .toggle-lyric {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    white-space: nowrap;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-transform: none; // song titles, not button text
+    letter-spacing: 0.3px;
+    color: var(--text-primary);
+    opacity: 0.75;
+    pointer-events: none;
+    animation: toggleLyricIn 0.3s ease-out;
+  }
+
+  &.floating .toggle-lyric {
+    right: 0;
+    bottom: calc(100% + 10px);
+  }
+}
+
+@keyframes toggleLyricIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dark-mode-toggle .toggle-lyric {
+    animation: none;
+  }
+}

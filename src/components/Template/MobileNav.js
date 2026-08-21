@@ -10,8 +10,8 @@ const MobileNav = () => {
     routes.find(r => r.index), // Home
     routes.find(r => r.path === '/about'),
     routes.find(r => r.path === '/resume'),
+    routes.find(r => r.path === '/teaching'),
     routes.find(r => r.path === '/voiceover'),
-    routes.find(r => r.path === '/stats'),
     routes.find(r => r.path === '/contact'),
   ].filter(Boolean);
   

@@ -54,6 +54,9 @@
     "sharp": "^0.34.3",
     "source-map-explorer": "^2.5.2"
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -73,9 +76,8 @@
       "/resume",
       "/voiceover",
       "/stats",
-      "/contact",
-      "/case-studies",
-      "/insights/when-not-to-use-ai"
+      "/teaching",
+      "/contact"
     ],
     "skipThirdPartyRequests": true,
     "inlineCss": false,

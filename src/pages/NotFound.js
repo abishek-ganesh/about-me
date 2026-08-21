@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { get404Photo } from '../data/photos';
+import Quote from '../components/common/Quote';
 
 const PageNotFound = () => {
   const rockPhoto = get404Photo();
@@ -34,7 +35,8 @@ const PageNotFound = () => {
           <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#666' }}>
             It doesn't matter what URL you typed! This page has checked into the Smackdown Hotel.
           </p>
-          <Link 
+          <Quote id="notFound" />
+          <Link
             to="/" 
             className="btn btn--primary"
             style={{ 
