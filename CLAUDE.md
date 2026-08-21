@@ -20,48 +20,61 @@ After making CSS or JS changes, always do a **hard refresh** in the browser to s
 
 ### Build & Deploy
 - `npm run build` - Build the production version (uses --openssl-legacy-provider flag)
-- `npm run deploy` - Build and deploy to GitHub Pages using gh-pages
+
+**Production is hosted on Vercel, which auto-builds from `main`.**
+Pushing to `main` IS the deploy. There is no separate deploy command.
+
+GitHub Pages and the `gh-pages` branch were retired in August 2026. The site had
+already moved to Vercel, so `npm run deploy` was force-pushing build output to a
+branch nothing served. The script, the `gh-pages` dependency, and the branch are
+all gone. Do not reintroduce them.
 
 **🚨 CRITICAL Deployment Process - ALWAYS FOLLOW THIS ORDER:**
-1. **Test First**: Run automated tests BEFORE deploying
+1. **Test First**: Run automated tests BEFORE pushing
    ```bash
-   npm run test:pre-deploy  # Runs lint + local tests
+   npm run test:pre-deploy  # Runs lint + local tests (needs `npm run dev` running)
    ```
-2. **Only Deploy if Tests Pass**: If tests pass, then deploy
+2. **Only Push if Tests Pass**: pushing to main triggers the Vercel build
    ```bash
-   npm run deploy          # Build and deploy to production
+   git push origin main
    ```
-3. **Verify Production**: After deployment, verify the live site
+3. **Verify Production**: after Vercel finishes, verify the live site
    ```bash
    npm run test:production  # Test the live website
    ```
 
 **Important Git & Deployment Process:**
-1. Always make code changes to the `main` branch (never edit gh-pages directly)
+1. Always make code changes to the `main` branch
 2. **CRITICAL**: NEVER commit changes without explicit user approval
    - Always ask "Should I commit these changes?" before running git add/commit
    - Wait for user confirmation before committing
    - User should review changes first with `git diff` or by testing locally
 3. Use `/git-quick` or regular git commands to commit and push to `main` (after approval)
-4. **IMPORTANT**: After using `/git-quick` to push changes, ALWAYS run tests before deploying:
-   - Run `npm run test:local` to verify changes work
-   - Then run `npm run deploy` to update the live website
-5. The gh-pages branch is automatically managed by the deploy script
+4. Vercel picks up the push automatically. Give it a minute before running
+   `npm run test:production`, or the tests will hit the previous build.
 
 **Remember**:
 - NEVER add "Co-Authored-By" lines to commit messages
 - NEVER auto-commit changes - always get user approval first!
-- ALWAYS run tests before deploying - catch issues before they go live!
-- The website won't update until you run `npm run deploy` after pushing to main!
+- ALWAYS run tests before pushing - catch issues before they go live!
+- Pushing to `main` updates the live website. There is no second deploy step.
 
 **Custom Domain Note:**
-- The CNAME file in the public directory ensures abishekganesh.com is preserved during deployments
-- If the custom domain gets removed, check that public/CNAME exists
+- DNS points at Vercel. The apex 307-redirects to `www.abishekganesh.com`, which
+  is the canonical URL (note `package.json` `homepage` still lists the apex).
+- `public/CNAME` is a leftover from GitHub Pages and no longer affects hosting.
+
+**Prerendering Caveat:**
+- The build runs `react-snap`, but Vercel serves the SPA shell rather than the
+  prerendered HTML. `curl https://www.abishekganesh.com/resume` returns a ~6KB
+  shell with no content; it renders correctly in a browser. Keep this in mind
+  when verifying deploys: check with a real browser, not curl + grep.
+- `react-snap` is also flaky locally and intermittently fails to launch Chromium
+  ("Navigation failed because browser has disconnected"). The code compiles fine
+  in those runs. Just retry the build.
 
 **Clean URLs (No Hash Routing):**
 - Uses BrowserRouter instead of HashRouter for URLs without # symbols
-- 404.html file handles GitHub Pages client-side routing
-- index.html contains redirect script to restore proper routing
 - URLs are clean: /resume instead of /#/resume
 
 ### Code Quality & Testing
@@ -171,8 +184,12 @@ Before deploying any changes to production:
 2. ✅ `npm run lint` - Ensure code quality
 3. ✅ `npm run test:local` - Test functionality locally
 4. ✅ `git add -A && git commit` - Commit changes (with user approval)
-5. ✅ `git push origin main` - Push to GitHub
-6. ✅ `npm run deploy` - Deploy to production
-7. ✅ `npm run test:production` - Verify live site
+5. ✅ `git push origin main` - This deploys; Vercel builds from `main`
+6. ✅ `npm run test:production` - Verify live site once Vercel finishes
 
 **Pro tip**: Use `npm run test:pre-deploy` to combine steps 2-3 automatically!
+
+**Never commit `*.xlsx`.** Raw survey exports contain student PII and this repo
+is public. `.gitignore` covers them; keep it that way. Only aggregate numbers
+derived from surveys belong in the repo (see the header comment in
+`src/data/testimonials.js` for the sharing-permission rules).
