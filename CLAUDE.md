@@ -43,6 +43,25 @@ all gone. Do not reintroduce them.
    npm run test:production  # Test the live website
    ```
 
+**Pre-push Hook (enforcement):**
+`.githooks/pre-push` gates pushes to `main`, since those deploy to production.
+It runs `npm run lint` and `npm run build:no-snap` and blocks the push if either
+fails. Pushes to other branches skip it entirely.
+
+Hooks live in `.githooks/` (versioned) rather than `.git/hooks/` (not versioned,
+lost on clone). Git only uses them after a **one-time setup per clone**:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+If a push to main completes without printing "pre-push: pushing to main...",
+that config is missing and the gate is silently off. Re-run the command above.
+
+It deliberately does NOT run `npm run test:local`, which requires `npm run dev`
+already listening on :3000. Run `npm run test:pre-deploy` by hand before a
+significant deploy. Override a blocked push with `git push --no-verify`.
+
 **Important Git & Deployment Process:**
 1. Always make code changes to the `main` branch
 2. **CRITICAL**: NEVER commit changes without explicit user approval

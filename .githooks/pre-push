@@ -1,0 +1,43 @@
+#!/bin/sh
+#
+# Pushing to main IS the production deploy (Vercel auto-builds from main), so
+# this gate runs there and only there. Pushes to other branches are untouched.
+#
+# Runs lint + a compile-only build. Deliberately NOT the full test suite:
+# `npm run test:local` needs a dev server already listening on :3000, and a gate
+# with a hidden prerequisite is a gate that gets bypassed. Run
+# `npm run test:pre-deploy` by hand before a significant deploy.
+#
+# Uses build:no-snap because react-snap intermittently fails to launch Chromium
+# and would make this flaky. Compile errors are what we actually need to catch.
+#
+# Bypass with `git push --no-verify` when you genuinely need to.
+
+remote_main=0
+while read -r _local_ref _local_sha remote_ref _remote_sha; do
+  case "$remote_ref" in
+    refs/heads/main) remote_main=1 ;;
+  esac
+done
+
+[ "$remote_main" -eq 1 ] || exit 0
+
+echo "pre-push: pushing to main deploys to production, running checks..."
+
+if ! npm run lint; then
+  echo ""
+  echo "BLOCKED: lint failed. Fix it, or push with --no-verify to override."
+  exit 1
+fi
+
+if ! npm run build:no-snap >/tmp/prepush-build.log 2>&1; then
+  echo ""
+  echo "BLOCKED: build failed. Last 30 lines (full log: /tmp/prepush-build.log):"
+  tail -30 /tmp/prepush-build.log
+  echo ""
+  echo "Fix it, or push with --no-verify to override."
+  exit 1
+fi
+
+echo "pre-push: lint and build clean, deploying to production."
+exit 0
