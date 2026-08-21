@@ -13,14 +13,14 @@ export const aboutContent = {
   intro: "I turn AI breakthroughs into business advantages.",
   bio: [
     "I've been deploying AI in production since 2019 - from classical machine learning and deep learning, through the transformer revolution, to today's LLMs and agentic systems. I don't specialize in just one paradigm; I deploy whatever fits the problem.",
-    "Across Fortune 500 enterprises, healthcare startups, nonprofits, and local government, I've helped 15+ organizations ship AI that actually works. I'm always first to production with emerging technologies.",
+    "Across Fortune 500 enterprises, healthcare startups, nonprofits, and local government, I've helped organizations ship AI that actually works. I'm always first to production with emerging technologies.",
     "When I'm not building AI systems, I'm teaching the next generation of AI engineers, lending my voice to creative projects, or chasing a dream of becoming the vegan Anthony Bourdain.",
   ],
   highlights: [
     { value: 'Since 2019', label: 'In Production AI' },
-    { value: '15+', label: 'Organizations Served' },
-    { value: '99.9%', label: 'Uptime Achieved' },
-    { value: '20+', label: 'Students Teaching' },
+    { value: 'ML to Agents', label: 'Full AI Spectrum' },
+    { value: '20+', label: 'Students Per Cohort' },
+    { value: 'Always First', label: "To What's Next" },
   ],
 };
 
@@ -48,7 +48,7 @@ export const featuredExperience = [
     company: 'Limbik',
     position: 'Senior Lead Data Scientist',
     daterange: '2023 - 2024',
-    description: 'Led team implementing cutting-edge AI for mental health applications. Built production RAG system with 99.9% uptime.',
+    description: 'Led team implementing cutting-edge AI for mental health applications. Built and shipped a production RAG system.',
   },
   {
     company: 'Amazon Web Services',

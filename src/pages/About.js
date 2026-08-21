@@ -2,6 +2,7 @@ import React from 'react';
 
 import Main from '../layouts/Main';
 import AnimatedPhoto from '../components/common/AnimatedPhoto';
+import Quote from '../components/common/Quote';
 
 const About = () => {
   return (
@@ -15,6 +16,8 @@ const About = () => {
         <span className="page-subtitle">Deploying production AI since 2019 - from classical ML to agentic systems, across startups, Fortune 500s, nonprofits, and government</span>
       </div>
 
+      <Quote id="about" />
+
       <section className="about-hero u-mb-4">
         <div className="about-hero-content">
           <div className="about-hero-text">
@@ -25,7 +28,7 @@ const About = () => {
             or whatever breakthrough comes next. Across startups, Fortune 500s, nonprofits, and local government, I bridge the gap
             between research papers and production systems that actually work.
           </p>
-          <div className="grid grid--4 u-mt-3">
+          <div className="grid grid--3 u-mt-3">
             <div className="card card--compact u-text-center">
               <span className="metric-value">Since 2019</span>
               <span className="metric-label">In Production AI</span>
@@ -33,10 +36,6 @@ const About = () => {
             <div className="card card--compact u-text-center">
               <span className="metric-value">ML to Agents</span>
               <span className="metric-label">Full AI Spectrum</span>
-            </div>
-            <div className="card card--compact u-text-center">
-              <span className="metric-value">15+ Orgs</span>
-              <span className="metric-label">Across the World</span>
             </div>
             <div className="card card--compact u-text-center">
               <span className="metric-value">Always First</span>
@@ -185,30 +184,6 @@ const About = () => {
               <h3>Values</h3>
               <p>Staying grounded with family wisdom and generational perspective</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-content u-mt-4">
-        <div className="section-header">
-          <h2>Cutting-Edge AI Implementations</h2>
-        </div>
-        <div className="grid grid--4 grid--gap-sm">
-          <div className="card card--compact u-text-center">
-            <span className="metric-value">10M+</span>
-            <p className="u-mb-0 u-text-sm">Queries served monthly by production RAG systems</p>
-          </div>
-          <div className="card card--compact u-text-center">
-            <span className="metric-value">70%</span>
-            <p className="u-mb-0 u-text-sm">Reduction in human escalations via multi-agent systems</p>
-          </div>
-          <div className="card card--compact u-text-center">
-            <span className="metric-value">&lt;100ms</span>
-            <p className="u-mb-0 u-text-sm">Latency on real-time AI inference pipelines</p>
-          </div>
-          <div className="card card--compact u-text-center">
-            <span className="metric-value">Day 1</span>
-            <p className="u-mb-0 u-text-sm">Deploying new models and paradigms as they emerge</p>
           </div>
         </div>
       </section>

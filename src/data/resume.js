@@ -47,7 +47,7 @@ export const positions = [
     points: [
       'Implement RAG systems, AI agents, and multi-agent orchestration in production',
       'Deploy current foundation models to production for client teams',
-      'Reduced system MTTR by 60% through AI architecture and debugging',
+      'Reduced system MTTR through AI-assisted architecture and debugging',
     ],
   },
   {
@@ -71,7 +71,7 @@ export const positions = [
       'Led team implementing cutting-edge AI for mental health applications',
       'Built production RAG system for clinical knowledge retrieval',
       'Deployed state-of-the-art NLP models for patient interaction analysis',
-      'Achieved 99.9% uptime on real-time ML systems serving healthcare providers',
+      'Built and operated real-time ML systems serving healthcare providers',
     ],
   },
   {
@@ -94,7 +94,7 @@ export const positions = [
     points: [
       'Implemented advanced RAG systems for medical data analysis - first in healthcare',
       'Built multi-modal AI processing clinical text and medical imaging',
-      'Achieved sub-100ms latency on production inference systems',
+      'Optimized latency on production inference systems',
       'Pioneered use of transformer models for clinical decision support',
     ],
   },
@@ -142,11 +142,11 @@ export const skillCategories = {
     { name: 'Knowledge Graphs', level: 5 },
   ],
   'Production Excellence': [
-    { name: 'Sub-100ms Latency', level: 5 },
+    { name: 'Low-Latency Inference', level: 5 },
     { name: 'Auto-scaling Infrastructure', level: 5 },
     { name: 'Fault Tolerance', level: 5 },
     { name: 'Observability & Monitoring', level: 5 },
-    { name: '99.9% Uptime Achievement', level: 5 },
+    { name: 'High Availability', level: 5 },
   ],
   'Core Technologies': [
     { name: 'Python', level: 5 },

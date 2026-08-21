@@ -16,7 +16,7 @@ const quotes = {
     album: 'My Beautiful Dark Twisted Fantasy',
     url: 'https://www.youtube.com/watch?v=Bm5iA4Zupek',
   },
-  projects: {
+  about: {
     text: "Name one genius that ain't crazy",
     song: 'Feedback',
     album: 'The Life of Pablo',

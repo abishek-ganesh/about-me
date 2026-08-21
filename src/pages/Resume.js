@@ -88,7 +88,7 @@ const Resume = () => (
                 <li>Mixture of Experts architectures and KV cache optimization</li>
                 <li>Fine-tuning, RLHF, and prompt engineering</li>
                 <li>Multi-modal model implementations</li>
-                <li>Production systems serving millions of queries daily</li>
+                <li>Production systems serving live user traffic</li>
               </ul>
             </div>
           </div>
@@ -126,11 +126,11 @@ const Resume = () => (
             </div>
             <div className="card-body">
               <ul className="list list--chevron">
-                <li>Real-time inference with sub-100ms latency</li>
-                <li>Auto-scaling ML infrastructure handling millions daily</li>
+                <li>Real-time, low-latency inference systems</li>
+                <li>Auto-scaling ML infrastructure</li>
                 <li>Fault tolerance and graceful degradation</li>
                 <li>Comprehensive observability and monitoring</li>
-                <li>60% MTTR reduction through strategic architecture</li>
+                <li>MTTR reduction through strategic architecture</li>
               </ul>
             </div>
           </div>
