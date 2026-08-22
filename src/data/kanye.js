@@ -1,7 +1,6 @@
 // Kanye lyric easter eggs, keyed by placement.
-// `url` and `attribution` are optional - entries without a url render unlinked,
-// and entries with attribution: false skip the "- Ye" line (used for wordplay,
-// not actual lyrics).
+// Only the sidebar entry links out; the rest are plain text by design.
+// `attribution: false` skips the "- Ye" suffix (used for wordplay, not lyrics).
 
 const quotes = {
   sidebar: {
@@ -14,25 +13,21 @@ const quotes = {
     text: 'Run away as fast as you can',
     song: 'Runaway',
     album: 'My Beautiful Dark Twisted Fantasy',
-    url: 'https://www.youtube.com/watch?v=Bm5iA4Zupek',
   },
   about: {
     text: "Name one genius that ain't crazy",
     song: 'Feedback',
     album: 'The Life of Pablo',
-    url: 'https://www.youtube.com/watch?v=tHi4_VKiE9M',
   },
   stats: {
     text: "That that don't kill me can only make me stronger",
     song: 'Stronger',
     album: 'Graduation',
-    url: 'https://www.youtube.com/watch?v=bix4bzjr2k0',
   },
   education: {
     text: 'Late Registration',
     song: 'Late Registration',
     album: 'Late Registration',
-    url: 'https://music.youtube.com/playlist?list=OLAK5uy_k27VU0k4lJb4oI67PLZTwYQGL5fkArahU',
     attribution: false,
   },
   console: {

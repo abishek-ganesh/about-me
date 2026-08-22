@@ -35,7 +35,6 @@ const PageNotFound = () => {
           <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#666' }}>
             It doesn't matter what URL you typed! This page has checked into the Smackdown Hotel.
           </p>
-          <Quote id="notFound" />
           <Link
             to="/" 
             className="btn btn--primary"
@@ -48,6 +47,7 @@ const PageNotFound = () => {
           >
             ← Back to Home
           </Link>
+          <Quote id="notFound" />
         </div>
       </div>
     </HelmetProvider>

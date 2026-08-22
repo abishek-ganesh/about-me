@@ -1,23 +1,18 @@
 /* Kanye lyric easter eggs */
 
 .kanye-quote {
-  a {
-    text-decoration: none;
-    border-bottom: none;
-  }
-
-  // Page-level epigraph, sits under a page title
-  &--epigraph {
+  // Closes out a page: one quiet line, no link styling
+  &--footer {
     text-align: center;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    opacity: 0.65;
-    margin: 0 auto 2.5rem;
-    max-width: 600px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-secondary, #666);
+    opacity: 0.6;
+    margin: 3rem 0 0 0;
     transition: opacity var(--transition-speed, 0.3s) ease;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.85;
     }
   }
 

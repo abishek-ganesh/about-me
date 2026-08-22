@@ -16,8 +16,6 @@ const About = () => {
         <span className="page-subtitle">Deploying production AI since 2019 - from classical ML to agentic systems, across startups, Fortune 500s, nonprofits, and government</span>
       </div>
 
-      <Quote id="about" />
-
       <section className="about-hero u-mb-4">
         <div className="about-hero-content">
           <div className="about-hero-text">
@@ -232,6 +230,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Quote id="about" />
 
     </article>
   </Main>

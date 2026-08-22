@@ -140,7 +140,7 @@ const Resume = () => (
       <section id="education" className="section-content u-mt-4">
         <div className="section-header">
           <h2 className="with-accent">Education</h2>
-          <Quote id="education" className="section-description" />
+          <Quote id="education" variant="section" className="section-description" />
         </div>
         <div className="grid grid--auto-lg grid--gap-lg">
           {degrees.map((degree) => (

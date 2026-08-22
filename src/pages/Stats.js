@@ -23,8 +23,6 @@ const Stats = () => {
         <span className="page-subtitle">Numbers, achievements, and fun facts about my journey in AI and beyond</span>
       </div>
 
-      <Quote id="stats" />
-
       <section className="section-content">
         <div className="card card--elevated">
           <div className="card-body">
@@ -146,6 +144,8 @@ const Stats = () => {
           <Link to="/contact" className="btn btn--secondary">Get in Touch</Link>
         </div>
       </section>
+
+      <Quote id="stats" />
     </article>
   </Main>
   );
