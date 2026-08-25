@@ -10,7 +10,7 @@ export const homepageSections = [
 
 // About section content
 export const aboutContent = {
-  intro: "I turn AI breakthroughs into business advantages.",
+  intro: "Technology should help people. So should the people who build it.",
   bio: [
     "I've been deploying AI in production since 2019 - from classical machine learning and deep learning, through the transformer revolution, to today's LLMs and agentic systems. I don't specialize in just one paradigm; I deploy whatever fits the problem.",
     "Across Fortune 500 enterprises, healthcare startups, nonprofits, and local government, I've helped organizations ship AI that actually works. I'm always first to production with emerging technologies.",

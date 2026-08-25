@@ -22,14 +22,14 @@ const Index = () => {
           <h1 className="hero-name">Abishek Ganesh</h1>
           <h2 className="hero-tagline">{aboutContent.intro}</h2>
           <p className="hero-description">
-            Production-grade RAG systems, AI agents, and multi-agent orchestration—deployed
-            before your competition knows they exist.
+            VP of Technology &amp; AI at Appa Health, lead AI instructor, consultant. I ship AI
+            that solves real problems and teach others to do the same.
           </p>
           <div className="hero-specialties">
-            <span className="specialty">RAG Systems</span>
-            <span className="specialty">AI Agents</span>
-            <span className="specialty">Multi-Agent Orchestration</span>
-            <span className="specialty">Production ML</span>
+            <span className="specialty">Production AI</span>
+            <span className="specialty">Teaching</span>
+            <span className="specialty">RAG &amp; Agents</span>
+            <span className="specialty">Voice</span>
           </div>
         </section>
 
