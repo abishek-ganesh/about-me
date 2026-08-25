@@ -7,7 +7,7 @@ import './static/css/main.scss'; // All of our styles
 
 // Easter egg for anyone who opens devtools. Module scope so it fires once per load.
 console.log(
-  `%c"${quotes.console.text}"%c\n- Ye, ${quotes.console.song}`,
+  `%c"${quotes.console.text}"%c\n${quotes.console.song}`,
   'font-style: italic; font-size: 13px;',
   'font-size: 11px; opacity: 0.7;'
 );

@@ -3,28 +3,14 @@ import PropTypes from 'prop-types';
 
 import quotes from '../../data/kanye';
 
-// Renders a Kanye lyric easter egg on a single line. `footer` closes out a page,
-// `inline` is the sidebar blurb treatment. Only entries with a url render as a link.
+// Renders a Kanye lyric easter egg. No attribution by design - the quote speaks
+// for itself. `footer` closes out a page, `inline` is the sidebar blurb,
+// `section` defers to whatever the surrounding section styles supply.
 const Quote = ({ id, variant = 'footer', className = '' }) => {
   const quote = quotes[id];
   if (!quote) return null;
 
-  const attributed = quote.attribution !== false;
-
-  // The sidebar keeps its original two-line form; page footers stay on one line.
-  const body =
-    variant === 'inline' ? (
-      <i>
-        {quote.text}
-        {attributed && (
-          <>
-            <br />- Ye
-          </>
-        )}
-      </i>
-    ) : (
-      <i>{attributed ? `${quote.text} - Ye` : quote.text}</i>
-    );
+  const body = <i>{quote.text}</i>;
 
   return (
     <p className={`kanye-quote kanye-quote--${variant} ${className}`.trim()}>

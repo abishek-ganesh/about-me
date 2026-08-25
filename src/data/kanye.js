@@ -1,6 +1,6 @@
 // Kanye lyric easter eggs, keyed by placement.
 // Only the sidebar entry links out; the rest are plain text by design.
-// `attribution: false` skips the "- Ye" suffix (used for wordplay, not lyrics).
+// Quotes render unattributed - song and album are kept for the link title only.
 
 const quotes = {
   sidebar: {
@@ -28,7 +28,6 @@ const quotes = {
     text: 'Late Registration',
     song: 'Late Registration',
     album: 'Late Registration',
-    attribution: false,
   },
   console: {
     text: "I'm doing pretty good as far as geniuses go",
