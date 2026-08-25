@@ -1,30 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import AnimatedPhoto from '../components/common/AnimatedPhoto';
 import Quote from '../components/common/Quote';
+import { teachingStats } from '../data/teaching';
 
 const About = () => {
   return (
   <Main
     title="About"
-    description="Abishek Ganesh - AI Implementation Specialist | ML, Deep Learning, LLMs, RAG, and Agentic Systems in Production Since 2019"
+    description="Abishek Ganesh - AI in production since 2019, VP of Technology & AI at Appa Health, lead AI instructor, and voice actor."
   >
     <article className="post page" id="about">
       <div className="page-title">
-        <h1>AI Implementation Specialist</h1>
-        <span className="page-subtitle">Deploying production AI since 2019 - from classical ML to agentic systems, across startups, Fortune 500s, nonprofits, and government</span>
+        <h1>The Long Way Around</h1>
+        <span className="page-subtitle">Mathematics, a marketing detour, a master&apos;s in CS, and production AI since 2019 - plus teaching, voice work, and a running list of countries</span>
       </div>
 
       <section className="about-hero u-mb-4">
         <div className="about-hero-content">
           <div className="about-hero-text">
             <p className="intro-text">
-            I've been deploying AI in production across every major paradigm shift - from classical machine learning and deep learning, through the
-            transformer revolution, to today's large language models and agentic systems. I don't specialize in just one paradigm.
-            I deploy whatever the right tool is for the problem: traditional ML, computer vision, NLP, RAG, multi-agent orchestration,
-            or whatever breakthrough comes next. Across startups, Fortune 500s, nonprofits, and local government, I bridge the gap
-            between research papers and production systems that actually work.
+            I started in mathematics, detoured through a marketing degree, and finished with a master&apos;s in computer
+            science. None of that was a plan. It turned out to be good preparation for a field that reinvents itself
+            every eighteen months. I&apos;ve been deploying AI in production since 2019, across every major paradigm
+            shift: classical machine learning, deep learning, the transformer revolution, and today&apos;s large language
+            models and agentic systems. I don&apos;t specialize in one paradigm. I deploy whatever the problem actually
+            calls for. What the mathematics left me with is the thing I keep coming back to - underneath the hype it is
+            all just math, and anything built out of math can be explained to anyone willing to sit with it.
           </p>
           <div className="grid grid--3 u-mt-3">
             <div className="card card--compact u-text-center">
@@ -52,22 +56,20 @@ const About = () => {
           <div className="card-body">
             <div className="list list--none u-mb-0">
               <div className="list-item u-mb-2">
-                <h4 className="u-text-primary u-mb-1">Full-Spectrum AI Implementation</h4>
-                <p>From classical ML and deep learning to RAG systems and multi-agent orchestration - I deploy
-                   whatever AI paradigm fits the problem. I've shipped every generation of this technology
-                   and I'm always first to production with what's next.</p>
+                <h4 className="u-text-primary u-mb-1">Building at Appa Health</h4>
+                <p>VP of Technology &amp; AI, leading the platform that connects students with mentors who change
+                   their trajectory. The technology is only interesting because of what it is for.</p>
               </div>
               <div className="list-item u-mb-2">
-                <h4 className="u-text-primary u-mb-1">Cross-Sector AI Consulting</h4>
-                <p>Strategic AI guidance for organizations of every kind - Fortune 500 enterprises, healthcare startups,
-                   nonprofits, and local government. I focus on solutions that genuinely help people, not just
-                   buzzword implementations.</p>
+                <h4 className="u-text-primary u-mb-1">Consulting Across Sectors</h4>
+                <p>Fortune 500 enterprises, healthcare startups, nonprofits, and local government. Classical ML,
+                   deep learning, RAG, multi-agent orchestration - whichever one the problem actually needs,
+                   including the times the answer is that it needs none of them.</p>
               </div>
               <div className="list-item u-mb-2">
-                <h4 className="u-text-primary u-mb-1">Teaching & Knowledge Sharing</h4>
-                <p>Leading an AI bootcamp teaching the next generation of engineers. Passionate about making complex
-                   AI concepts accessible and preparing students for what's actually used in production today
-                   and what's coming tomorrow.</p>
+                <h4 className="u-text-primary u-mb-1">Teaching</h4>
+                <p>Six months taking a cohort from Python fundamentals to agentic systems. Making complex ideas
+                   accessible is most of the job, and it is the part I care about most.</p>
               </div>
             </div>
           </div>
@@ -122,15 +124,16 @@ const About = () => {
 
       <section className="section-content u-mt-4">
         <div className="section-header">
-          <h2>Journey to AI Leadership</h2>
+          <h2>How I Got Here</h2>
         </div>
         <div className="card card--gradient">
           <div className="card-body">
             <p className="u-text-lg">
-              My path to AI leadership began with a mathematics foundation from Ohio State, advanced through a 4.0 GPA MS in Computer Science 
-              from Georgia Tech, and was refined through leadership roles managing technical teams and complex systems. This unique combination 
-              of technical depth, leadership experience, and business acumen enables me to implement cutting-edge AI solutions that actually 
-              work in production.
+              Mathematics at Ohio State taught me to sit with a problem until it gives in. A marketing degree taught me
+              that an elegant solution nobody understands is worth nothing. A 4.0 in computer science at Georgia Tech
+              handed me the tools. Leading technical teams taught me the hardest part was never the model. Put together,
+              that is why I usually end up as the translator in the room - between the people building the technology
+              and the people who have to live with it.
             </p>
           </div>
         </div>
@@ -188,29 +191,24 @@ const About = () => {
 
       <section className="section-content u-mt-4">
         <div className="section-header">
-          <h2>Teaching the Next Generation of AI Engineers</h2>
+          <h2>The Part I Am Proudest Of</h2>
         </div>
         <div className="card card--elevated">
           <div className="card-body">
             <p className="u-text-lg u-mb-3">
-              Leading an intensive AI Bootcamp where I teach 20+ students everything from Python fundamentals to production AI -
-              spanning machine learning, deep learning, LLMs, RAG, and agentic systems. My philosophy: teach what's actually
-              being used in production today and prepare students for what's coming tomorrow.
+              I lead an intensive AI bootcamp: six months, three hours a day, Python fundamentals through agentic
+              systems. My philosophy is simple. Teach what is actually used in production, and make sure nobody is ever
+              embarrassed to ask a basic question. My students put it better than I can.
             </p>
-            <div className="grid grid--3 u-text-center">
-              <div>
-                <div className="u-text-2xl u-text-primary u-font-bold">20+</div>
-                <div className="u-text-sm u-text-muted">Students</div>
-              </div>
-              <div>
-                <div className="u-text-2xl u-text-primary u-font-bold">State-of-the-Art</div>
-                <div className="u-text-sm u-text-muted">Curriculum</div>
-              </div>
-              <div>
-                <div className="u-text-2xl u-text-primary u-font-bold">Production-Ready</div>
-                <div className="u-text-sm u-text-muted">Skills</div>
-              </div>
+            <div className="grid grid--3 u-text-center u-mb-3">
+              {teachingStats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="u-text-2xl u-text-primary u-font-bold">{stat.value}</div>
+                  <div className="u-text-sm u-text-muted">{stat.label}</div>
+                </div>
+              ))}
             </div>
+            <Link to="/teaching" className="btn btn--secondary">Read What They Said</Link>
           </div>
         </div>
       </section>
@@ -222,10 +220,10 @@ const About = () => {
         <div className="card card--gradient">
           <div className="card-body">
             <p className="u-text-lg">
-              My commitment to user-centric innovation extends beyond technology. Through organizing community events for 1,000+ attendees 
-              and volunteering to improve public systems, I've learned that the best solutions are those that genuinely help people. 
-              This philosophy drives my approach to AI: implementing cutting-edge technology not because it's cool, but because it 
-              solves real problems for real users.
+              This is not an abstract commitment. Organizing community events for over a thousand attendees and
+              volunteering to improve public systems both taught me the same lesson: the solution that helps somebody
+              beats the solution with the better architecture diagram. That is how I choose what to build. Cutting-edge
+              when cutting-edge is the honest answer, and boring and reliable when it is not.
             </p>
           </div>
         </div>
