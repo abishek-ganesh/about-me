@@ -3,7 +3,15 @@ import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import Quote from '../components/common/Quote';
-import { veganSections, lifeDecisions } from '../data/vegan';
+import AnimatedPhoto from '../components/common/AnimatedPhoto';
+import {
+  veganSections,
+  lifeDecisions,
+  pisaSequence,
+  foodPhoto,
+  decisionPhotos,
+  dreamPhotos,
+} from '../data/vegan';
 
 const Vegan = () => (
   <Main
@@ -13,9 +21,9 @@ const Vegan = () => (
   >
     <article className="post page" id="vegan">
       <div className="page-title">
-        <h1>Vegan</h1>
+        <h1>Vegan for Over a Decade</h1>
         <span className="page-subtitle">
-          People always ask me how I have so much energy. This is the answer.
+          How does he get his protein?
         </span>
       </div>
 
@@ -42,12 +50,45 @@ const Vegan = () => (
             </p>
           </div>
         </div>
+
+        <div className="pisa-sequence u-mt-4">
+          {pisaSequence.map((photo, i) => (
+            <AnimatedPhoto
+              key={photo.src}
+              src={photo.src}
+              alt={photo.alt}
+              size="full"
+              shape="rounded"
+              animation="slideUp"
+              delay={i * 150}
+            />
+          ))}
+        </div>
+        <p className="u-text-sm u-text-muted u-text-center u-mt-2">
+          Pisa, Italy. My sister keeps the tower up; I supply the Bruce Lee energy.
+        </p>
+
+        <div className="journey-timeline">
+          <div className="timeline-photos">
+            <div className="timeline-photo">
+              <AnimatedPhoto
+                src={foodPhoto.src}
+                alt={foodPhoto.alt}
+                size="medium"
+                shape="rounded"
+                animation="slideUp"
+              />
+              <div className="timeline-content">
+                <p>{foodPhoto.caption}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="decisions" className="section-content u-mt-4">
         <div className="section-header">
           <h2>The Three Biggest Decisions of My Life</h2>
-          <p className="u-text-muted">In order. The first one made the other two sustainable.</p>
         </div>
         <div className="grid grid--3 grid--gap-lg">
           {lifeDecisions.map((decision) => (
@@ -64,6 +105,30 @@ const Vegan = () => (
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="journey-timeline">
+          <div className="timeline-photos timeline-photos--stacked">
+            {decisionPhotos.map((photo, i) => (
+              <div
+                key={photo.src}
+                className={`timeline-photo${photo.wide ? ' timeline-photo--wide' : ''}`}
+              >
+                <AnimatedPhoto
+                  src={photo.src}
+                  alt={photo.alt}
+                  size="medium"
+                  shape="rounded"
+                  animation="slideUp"
+                  delay={i * 200}
+                />
+                <div className="timeline-content">
+                  <h3>{photo.title}</h3>
+                  <p>{photo.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -104,6 +169,30 @@ const Vegan = () => (
               have to share it. But now you know where the energy comes from, and what I hope it
               is for.
             </p>
+          </div>
+        </div>
+
+        <div className="journey-timeline">
+          <div className="timeline-photos">
+            {dreamPhotos.map((photo, i) => (
+              <div
+                key={photo.src}
+                className={`timeline-photo${photo.wide ? ' timeline-photo--wide' : ''}`}
+              >
+                <AnimatedPhoto
+                  src={photo.src}
+                  alt={photo.alt}
+                  size="medium"
+                  shape="rounded"
+                  animation="slideUp"
+                  delay={i * 200}
+                />
+                <div className="timeline-content">
+                  <h3>{photo.title}</h3>
+                  <p>{photo.body}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

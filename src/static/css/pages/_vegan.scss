@@ -1,0 +1,48 @@
+// Vegan Page Styles
+
+// Four portrait frames side by side, reading like a flip-book of one kick.
+// 2x2 on phones so each frame stays big enough to see the pose.
+.pisa-sequence {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Narrower column floor than the shared timeline grid so the three
+// sanctuary photos sit in one row on desktop instead of wrapping 2+1.
+#vegan .journey-timeline .timeline-photos {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+// The shared component crops everything to a 300px square, which beheads
+// portrait shots and hides half of landscape ones. Here photos keep their
+// natural aspect ratio and just cap their width.
+#vegan .journey-timeline {
+  .animated-photo--medium {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+
+    .animated-photo__image {
+      height: auto;
+    }
+  }
+
+  // Landscape shots: span the full row, wider cap, centered.
+  .timeline-photo--wide {
+    grid-column: 1 / -1;
+
+    .animated-photo--medium {
+      max-width: 640px;
+    }
+  }
+
+  // One centered column - used where mixed orientations share a section.
+  .timeline-photos--stacked {
+    grid-template-columns: 1fr;
+  }
+}
