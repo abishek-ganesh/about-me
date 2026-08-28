@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { featuredTestimonials } from '../../data/testimonials';
-import { teachingStats } from '../../data/teaching';
+import { teachingStats, teaserQuote } from '../../data/teaching';
 
 /**
- * TeachingSection - Featured student feedback from the AI bootcamp
+ * TeachingSection - Homepage teaser. The full survey data, capstone breakdown,
+ * and student quote wall live on /teaching.
  */
 const TeachingSection = () => {
   return (
@@ -12,8 +12,10 @@ const TeachingSection = () => {
       <h2 className="section-heading">Teaching</h2>
 
       <p className="about-paragraph">
-        I lead an intensive AI bootcamp, taking students from Python fundamentals to agentic
-        systems over six months. It is the work I am proudest of.
+        I lead an intensive AI bootcamp. Most of my students arrive as beginners who have never
+        written code beyond typing into ChatGPT. Six months later they are building
+        state-of-the-art models and shipping them inside real applications. It is the work I am
+        proudest of.
       </p>
 
       <div className="about-highlights">
@@ -25,18 +27,10 @@ const TeachingSection = () => {
         ))}
       </div>
 
-      <div className="grid grid--3 grid--gap-lg u-mt-3">
-        {featuredTestimonials.map((testimonial) => (
-          <div key={testimonial.id} className="card card--elevated">
-            <div className="card-body">
-              <p className="u-font-italic u-mb-2">&ldquo;{testimonial.text}&rdquo;</p>
-              <div className="u-text-sm u-font-semibold u-mb-0">
-                - {testimonial.name}, {testimonial.company} graduate
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <blockquote className="u-font-italic u-mt-3 u-mb-2">
+        &ldquo;{teaserQuote.text}&rdquo;
+        <footer className="u-text-sm u-font-semibold u-mt-1">- {teaserQuote.name}</footer>
+      </blockquote>
 
       <div className="section-cta">
         <Link to="/teaching" className="link-with-arrow">
