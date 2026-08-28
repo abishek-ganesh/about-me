@@ -19,7 +19,7 @@ const Quote = ({ id, variant = 'footer', className = '' }) => {
           href={quote.url}
           target="_blank"
           rel="noopener noreferrer"
-          title={`${quote.song} - ${quote.album}`}
+          title={quote.title || `${quote.song} - ${quote.album}`}
         >
           {body}
         </a>

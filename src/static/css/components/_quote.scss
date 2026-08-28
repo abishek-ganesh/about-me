@@ -1,7 +1,8 @@
 /* Kanye lyric easter eggs */
 
 .kanye-quote {
-  // Closes out a page: one quiet line, no link styling
+  // Closes out a page: one quiet line. When it links out it stays quiet -
+  // inheriting the accent link color would turn the egg into a call to action.
   &--footer {
     text-align: center;
     font-size: 0.8rem;
@@ -13,6 +14,21 @@
 
     &:hover {
       opacity: 0.85;
+    }
+
+    // Quiet at rest, affordance only on hover. Both resets fight the legacy
+    // base/_typography rules: a dotted border-bottom on every link, and an
+    // accent hover color set with !important.
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: none;
+
+      &:hover {
+        color: inherit !important;
+        text-decoration: underline;
+        border-bottom: none;
+      }
     }
   }
 

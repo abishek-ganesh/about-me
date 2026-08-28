@@ -7,9 +7,10 @@ import './static/css/main.scss'; // All of our styles
 
 // Easter egg for anyone who opens devtools. Module scope so it fires once per load.
 console.log(
-  `%c"${quotes.console.text}"%c\n${quotes.console.song}`,
+  `%c"${quotes.console.text}"%c\n${quotes.console.song}%c\n${quotes.console.url}`,
   'font-style: italic; font-size: 13px;',
-  'font-size: 11px; opacity: 0.7;'
+  'font-size: 11px; opacity: 0.7;',
+  'font-size: 11px;'
 );
 
 // Every route - we lazy load so that each page can be chunked

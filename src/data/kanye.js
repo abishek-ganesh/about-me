@@ -1,18 +1,29 @@
 // Kanye lyric easter eggs, keyed by placement.
-// Only the sidebar entry links out; the rest are plain text by design.
-// Quotes render unattributed - song and album are kept for the link title only.
+// Only sidebar, notFound, and console link out; the rest stay plain text by
+// design - a clickable lyric only reads as a discovery while most aren't.
+// Quotes render unattributed - song and album back the hover title unless a
+// quote sets its own.
+
+// The one outbound destination for the eggs: a Kanye song ranker I built.
+export const RANKER_URL = 'https://kanyeranker.com';
+
+// Named so the hover reveals where the click goes before it happens.
+const RANKER_TITLE = "Rank Kanye's songs at kanyeranker.com";
 
 const quotes = {
   sidebar: {
     text: 'Reach for the stars, so if you fall, you land on a cloud',
     song: 'Homecoming',
     album: 'Graduation',
-    url: 'https://youtu.be/LQ488QrqGE4?t=125',
+    url: RANKER_URL,
+    title: RANKER_TITLE,
   },
   notFound: {
     text: 'Run away as fast as you can',
     song: 'Runaway',
     album: 'My Beautiful Dark Twisted Fantasy',
+    url: RANKER_URL,
+    title: RANKER_TITLE,
   },
   about: {
     text: "Name one genius that ain't crazy",
@@ -38,6 +49,7 @@ const quotes = {
     text: "I'm doing pretty good as far as geniuses go",
     song: 'POWER',
     album: 'My Beautiful Dark Twisted Fantasy',
+    url: RANKER_URL,
   },
 };
 
