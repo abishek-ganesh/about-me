@@ -7,7 +7,6 @@ import { degrees, positions } from '../data/resume';
 
 const resumeSections = [
   { id: 'experience', label: 'Experience' },
-  { id: 'technical-expertise', label: 'Technical Expertise' },
   { id: 'education', label: 'Education' },
 ];
 
@@ -56,70 +55,6 @@ const Resume = () => (
         </div>
       </section>
 
-      <section id="technical-expertise" className="section-content u-mt-4">
-        <div className="section-header">
-          <h2 className="with-accent">Technical Expertise</h2>
-        </div>
-        <div className="grid grid--2 grid--gap-lg">
-          <div className="card card--elevated">
-            <div className="card-header">
-              <h3>LLM & NLP</h3>
-            </div>
-            <div className="card-body">
-              <ul className="list list--chevron">
-                <li>RAG systems with hybrid search, semantic + keyword fusion</li>
-                <li>Mixture of Experts architectures and KV cache optimization</li>
-                <li>Fine-tuning, RLHF, and prompt engineering</li>
-                <li>Multi-modal model implementations</li>
-                <li>Production systems serving live user traffic</li>
-              </ul>
-            </div>
-          </div>
-          <div className="card card--elevated">
-            <div className="card-header">
-              <h3>Deep Learning</h3>
-            </div>
-            <div className="card-body">
-              <ul className="list list--chevron">
-                <li>CNNs for computer vision and image classification</li>
-                <li>Diffusion models and GANs for generative AI</li>
-                <li>Autoencoders and variational autoencoders</li>
-                <li>Reinforcement learning and unsupervised learning</li>
-                <li>Transformer architectures from scratch to production</li>
-              </ul>
-            </div>
-          </div>
-          <div className="card card--elevated">
-            <div className="card-header">
-              <h3>AI Agents & Orchestration</h3>
-            </div>
-            <div className="card-body">
-              <ul className="list list--chevron">
-                <li>Autonomous agents with tool use and reasoning</li>
-                <li>Multi-agent orchestration and communication</li>
-                <li>ReAct, Chain-of-Thought, Tree-of-Thought paradigms</li>
-                <li>Knowledge graph integration for enhanced reasoning</li>
-                <li>Agentic process automation at enterprise scale</li>
-              </ul>
-            </div>
-          </div>
-          <div className="card card--elevated">
-            <div className="card-header">
-              <h3>Production Excellence</h3>
-            </div>
-            <div className="card-body">
-              <ul className="list list--chevron">
-                <li>Real-time, low-latency inference systems</li>
-                <li>Auto-scaling ML infrastructure</li>
-                <li>Fault tolerance and graceful degradation</li>
-                <li>Comprehensive observability and monitoring</li>
-                <li>MTTR reduction through strategic architecture</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="education" className="section-content u-mt-4">
         <div className="section-header">
           <h2 className="with-accent">Education</h2>
@@ -139,8 +74,10 @@ const Resume = () => (
                   )}
                 </h3>
                 <div className="u-text-primary u-font-medium u-mb-2">{degree.degree}</div>
-                <span className="tag tag--neutral">{degree.year}</span>
-                {degree.gpa && <div className="u-text-sm u-text-muted u-mt-1">GPA: {degree.gpa}</div>}
+                <div className="u-flex u-flex-wrap u-justify-center u-gap-1">
+                  <span className="tag tag--neutral">{degree.year}</span>
+                  {degree.gpa && <span className="tag tag--neutral">GPA: {degree.gpa}</span>}
+                </div>
                 {degree.details && (
                   <div className="u-text-muted u-font-italic u-mt-2">{degree.details}</div>
                 )}

@@ -40,13 +40,15 @@ body {
     text-decoration: none;
   }
 
+  // Brand link sits on the right; nav links lead from the left.
+  // margin-left keeps it right-aligned at widths where .links is hidden.
   h1 {
     height: inherit;
     display: flex;
     align-items: center;
-    padding: 0 0 0 2em;
+    padding: 0 2em 0 0;
     white-space: nowrap;
-    margin: 0;
+    margin: 0 0 0 auto;
 
     a {
       font-size: 0.85em;
@@ -64,12 +66,12 @@ body {
   // Desktop Navigation Links - Modern & Sleek
   .links {
     @include vendor('flex', '1');
-    border-left: solid 1px var(--border-primary);
+    border-right: solid 1px var(--border-primary);
     height: inherit;
     line-height: inherit;
-    margin: 0 0 0 1.5em;
+    margin: 0 1.5em 0 0;
     overflow: visible;
-    padding-left: 1.5em;
+    padding-left: 2em;
     padding-right: 1.5em;
 
     ul {
@@ -495,7 +497,7 @@ body {
     }
     
     .links {
-      border-left-color: var(--border-primary);
+      border-right-color: var(--border-primary);
       
       ul li a {
         color: var(--text-secondary);
@@ -750,7 +752,7 @@ body {
     line-height: 44px;
 
     h1 {
-      padding-left: 1em;
+      padding-right: 1em;
       a {
         font-size: 1em;
       }

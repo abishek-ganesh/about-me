@@ -116,6 +116,14 @@
   }
 }
 
+.about-highlights--3 {
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .highlight-item {
   text-align: center;
 }
@@ -362,15 +370,15 @@
 // Teaching teaser quote - one student quote and the link to the full wall,
 // deliberately in the same card so the quote is the thing you click through from.
 .teaching-quote-card {
-  margin: 2rem 0 0;
-  padding: 2rem;
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 2rem;
   background: var(--bg-card);
   border: 1px solid var(--border-primary);
   border-left: 3px solid var(--accent-primary);
   border-radius: 8px;
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
   }
 }
 
@@ -378,9 +386,9 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--text-primary);
 
   &::before {
@@ -397,9 +405,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
+  gap: 0.75rem;
+  margin-top: 0.875rem;
+  padding-top: 0.875rem;
   border-top: 1px solid var(--border-primary);
 }
 

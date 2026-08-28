@@ -28,6 +28,8 @@ export const teachingStats = [
   {
     value: '9.6/10',
     label: 'Instructor Effectiveness',
+    // Homepage strip keeps every label on one line
+    shortLabel: 'Effectiveness',
     note: 'Anonymous end-of-course survey',
   },
   {

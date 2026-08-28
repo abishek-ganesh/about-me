@@ -52,8 +52,14 @@
   max-width: 420px;
   text-align: center;
 
+  // Height auto so the shared square crop does not cut off the photo
   .animated-photo {
     margin: 0 auto;
+    height: auto;
+  }
+
+  .animated-photo__image {
+    height: auto;
   }
 
   figcaption {

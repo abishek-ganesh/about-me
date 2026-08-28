@@ -9,16 +9,11 @@ const Navigation = () => {
   
   return (
   <header id="header" className={visible ? '' : 'nav-hidden'}>
-    <h1 className="index-link">
-      {routes.filter((l) => l.index).map((l) => (
-        <Link key={l.label} to={l.path}>{l.label}</Link>
-      ))}
-    </h1>
     <nav className="links">
       <ul>
         {routes.filter((l) => !l.index).map((l) => (
           <li key={l.label}>
-            <NavLink 
+            <NavLink
               to={l.path}
               activeClassName="active"
               exact={l.path === '/'}
@@ -29,6 +24,11 @@ const Navigation = () => {
         ))}
       </ul>
     </nav>
+    <h1 className="index-link">
+      {routes.filter((l) => l.index).map((l) => (
+        <Link key={l.label} to={l.path}>{l.label}</Link>
+      ))}
+    </h1>
   </header>
   );
 };

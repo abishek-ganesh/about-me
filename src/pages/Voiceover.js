@@ -20,8 +20,8 @@ const Voiceover = () => (
   >
     <article className="post page" id="voiceover">
       <div className="page-title">
-        <h1>Voice Acting Portfolio</h1>
-        <span className="page-subtitle">Bringing stories to life through character voices, commercial narration, and audiobook performance</span>
+        <h1>Voice Acting</h1>
+        <span className="page-subtitle">Bringing life to characters, stories, and more - all without AI</span>
       </div>
 
       <section id="demo" className="section-content">
@@ -138,9 +138,6 @@ const Voiceover = () => (
           shape="rounded"
           animation="slideUp"
         />
-        <figcaption>
-          Three generations of wisdom. The first voice I ever tried to sound like.
-        </figcaption>
       </figure>
     </article>
   </Main>

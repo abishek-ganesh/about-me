@@ -21,7 +21,7 @@ const Vegan = () => (
   >
     <article className="post page" id="vegan">
       <div className="page-title">
-        <h1>Vegan for Over a Decade</h1>
+        <h1>Plant-Based for Life</h1>
         <span className="page-subtitle">
           How does he get his protein?
         </span>
@@ -95,18 +95,17 @@ const Vegan = () => (
         </div>
         <div className="grid grid--3 grid--gap-lg">
           {lifeDecisions.map((decision) => (
-            <div key={decision.rank} className="card card--elevated">
+            <Link
+              key={decision.rank}
+              to={decision.to}
+              className="card card--elevated card--link"
+            >
               <div className="card-body">
                 <span className="metric-value">{decision.rank}</span>
                 <h4 className="u-text-primary u-mb-2">{decision.title}</h4>
-                <p className="u-text-sm u-mb-2">{decision.body}</p>
-                {decision.link && (
-                  <Link to={decision.link.to} className="u-text-sm">
-                    {decision.link.label}
-                  </Link>
-                )}
+                <p className="u-text-sm u-mb-0">{decision.body}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -163,7 +162,7 @@ const Vegan = () => (
               I believe the butchering of animals can join that list. Why can&apos;t we live in a
               world where that thought is unthinkable?
             </p>
-            <p className="u-text-xl u-text-primary u-font-bold">
+            <p className="u-text-xl u-text-primary u-font-bold u-text-center u-my-2">
               If we can&apos;t hurt a chicken, how can we hurt a human?
             </p>
             <p className="u-text-lg u-mb-0">

@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { teachingStats, teaserQuote } from '../../data/teaching';
 
+// Course length is already in the paragraph above the strip
+const homeStats = teachingStats.filter((s) => s.label !== 'Python to Agentic AI');
+
 /**
  * TeachingSection - Homepage teaser. The full survey data, capstone breakdown,
  * and student quote wall live on /teaching.
@@ -18,11 +21,11 @@ const TeachingSection = () => {
         work I am proudest of.
       </p>
 
-      <div className="about-highlights">
-        {teachingStats.map((stat) => (
+      <div className="about-highlights about-highlights--3">
+        {homeStats.map((stat) => (
           <div key={stat.label} className="highlight-item">
             <span className="highlight-value">{stat.value}</span>
-            <span className="highlight-label">{stat.label}</span>
+            <span className="highlight-label">{stat.shortLabel || stat.label}</span>
           </div>
         ))}
       </div>

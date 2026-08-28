@@ -18,19 +18,12 @@ const Index = () => {
       <article className="post page homepage" id="index">
         {/* Hero Section */}
         <section id="hero" className="homepage-hero">
-          <h1 className="hero-name">Abishek Ganesh</h1>
-          <h2 className="hero-tagline">{aboutContent.intro}</h2>
+          <h1 className="hero-tagline">{aboutContent.intro}</h1>
           <p className="hero-description">
             VP of Technology &amp; AI at Appa Health and lead AI instructor. I build AI
             that solves real problems and uses the technology as a force for good, and I teach
             others to do the same.
           </p>
-          <div className="hero-specialties">
-            <span className="specialty">Production AI</span>
-            <span className="specialty">Teaching</span>
-            <span className="specialty">RAG &amp; Agents</span>
-            <span className="specialty">Voice</span>
-          </div>
         </section>
 
         {/* About Section */}

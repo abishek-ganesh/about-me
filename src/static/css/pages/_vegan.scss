@@ -1,5 +1,18 @@
 // Vegan Page Styles
 
+// Whole decision card is the link, so the anchor inherits card styling
+.card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 // Four portrait frames side by side, reading like a flip-book of one kick.
 // 2x2 on phones so each frame stays big enough to see the pose.
 .pisa-sequence {
