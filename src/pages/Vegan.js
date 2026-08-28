@@ -8,7 +8,7 @@ import {
   veganSections,
   lifeDecisions,
   pisaSequence,
-  foodPhoto,
+  energyPhotos,
   decisionPhotos,
   dreamPhotos,
 } from '../data/vegan';
@@ -69,19 +69,22 @@ const Vegan = () => (
         </p>
 
         <div className="journey-timeline">
-          <div className="timeline-photos">
-            <div className="timeline-photo">
-              <AnimatedPhoto
-                src={foodPhoto.src}
-                alt={foodPhoto.alt}
-                size="medium"
-                shape="rounded"
-                animation="slideUp"
-              />
-              <div className="timeline-content">
-                <p>{foodPhoto.caption}</p>
+          <div className="timeline-photos timeline-photos--pair">
+            {energyPhotos.map((photo, i) => (
+              <div key={photo.src} className="timeline-photo">
+                <AnimatedPhoto
+                  src={photo.src}
+                  alt={photo.alt}
+                  size="medium"
+                  shape="rounded"
+                  animation="slideUp"
+                  delay={i * 200}
+                />
+                <div className="timeline-content">
+                  <p>{photo.body}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -173,7 +176,7 @@ const Vegan = () => (
         </div>
 
         <div className="journey-timeline">
-          <div className="timeline-photos">
+          <div className="timeline-photos timeline-photos--stacked">
             {dreamPhotos.map((photo, i) => (
               <div
                 key={photo.src}

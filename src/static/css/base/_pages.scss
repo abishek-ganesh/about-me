@@ -56,44 +56,38 @@
 
 // Resume page - Timeline and skill bars
 #resume {
-  // Timeline styles for experience section
+  // Timeline styles for experience section. Each item owns its rule so it can
+  // light up on hover, the same accent behaviour the homepage list had.
   .experience-timeline {
     position: relative;
-    
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: $color-neutral-200;
-      
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-    
+
     .experience-item {
       position: relative;
       padding-left: 3rem;
       margin-bottom: 3rem;
-      
+      border-left: 2px solid $color-neutral-200;
+      transition: border-color $transition-base ease;
+
+      &:hover {
+        border-left-color: $color-primary;
+      }
+
       @media (max-width: 768px) {
         padding-left: 0;
+        border-left: none;
       }
-      
+
       &:before {
         content: '';
         position: absolute;
-        left: -6px;
+        left: -8px;
         top: 0.5rem;
         width: 14px;
         height: 14px;
         background: white;
         border: 3px solid $color-primary;
         border-radius: 50%;
-        
+
         @media (max-width: 768px) {
           display: none;
         }

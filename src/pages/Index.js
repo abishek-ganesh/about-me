@@ -5,7 +5,6 @@ import { homepageSections, aboutContent } from '../data/homepage';
 
 // Section components
 import AboutSection from '../components/home/AboutSection';
-import ExperienceSection from '../components/home/ExperienceSection';
 import TeachingSection from '../components/home/TeachingSection';
 import ContactSection from '../components/home/ContactSection';
 
@@ -37,11 +36,6 @@ const Index = () => {
         {/* About Section */}
         <section id="about" className="homepage-section">
           <AboutSection />
-        </section>
-
-        {/* Experience Section */}
-        <section id="experience" className="homepage-section">
-          <ExperienceSection />
         </section>
 
         {/* Teaching Section */}

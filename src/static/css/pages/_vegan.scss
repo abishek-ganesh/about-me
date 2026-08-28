@@ -41,8 +41,27 @@
     }
   }
 
+  // Exactly two photos: fix the column count so auto-fit does not leave a
+  // dead third column and push the pair off-center.
+  .timeline-photos--pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 780px;
+    margin-inline: auto;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
   // One centered column - used where mixed orientations share a section.
   .timeline-photos--stacked {
     grid-template-columns: 1fr;
+    justify-items: center;
+
+    .timeline-photo {
+      max-width: 640px;
+      width: 100%;
+    }
   }
 }

@@ -42,8 +42,51 @@
 }
 
 // About Section
-.about-bio {
+// Bio and photo share a row on desktop; the photo drops below the text on
+// narrow screens rather than shrinking into a thumbnail.
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 2.5rem;
+  align-items: start;
   margin-bottom: 3rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.about-bio {
+  margin-bottom: 0;
+}
+
+// Portrait shot - height auto so the shared component's square crop
+// does not behead it. Sticks alongside the bio on tall viewports.
+.about-photo {
+  margin: 0;
+  position: sticky;
+  top: 2rem;
+
+  .animated-photo--full {
+    height: auto;
+
+    .animated-photo__image {
+      height: auto;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-muted, var(--text-secondary));
+  }
+
+  @media (max-width: 900px) {
+    position: static;
+    max-width: 360px;
+  }
 }
 
 .about-paragraph {

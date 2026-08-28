@@ -15,11 +15,19 @@ export const pisaSequence = [
   { src: '/images/vegan/pisa-kick-4.jpg', alt: 'Abishek pointing at the Leaning Tower of Pisa, frame 4' },
 ];
 
-export const foodPhoto = {
-  src: '/images/vegan/food-chips-guac-salsa.jpg',
-  alt: 'Abishek with a plate of chips, guacamole, and salsa',
-  caption: "I didn't cook this one, but chips, guac, and salsa are a forever favorite.",
-};
+// What the energy actually buys - a good plate, and the room to do nothing.
+export const energyPhotos = [
+  {
+    src: '/images/vegan/food-chips-guac-salsa.jpg',
+    alt: 'Abishek with a plate of chips, guacamole, and salsa',
+    body: "I didn't cook this one, but chips, guac, and salsa are a forever favorite.",
+  },
+  {
+    src: '/images/vegan/kona-kai-lounging.jpg',
+    alt: 'Abishek reclining in an oversized deck chair at Kona Kai Resort, boats and blue sky behind him',
+    body: 'The energy is also for doing nothing well. Kona Kai, San Diego.',
+  },
+];
 
 export const decisionPhotos = [
   {
@@ -39,16 +47,16 @@ export const decisionPhotos = [
 
 export const dreamPhotos = [
   {
-    src: '/images/vegan/sanctuary-monkey-1.jpg',
-    alt: 'A capuchin monkey sitting on Abishek’s head at the Akumal Animal Sanctuary',
-    title: 'New Friend',
-    body: 'Akumal Animal Sanctuary, Mexico. He found the good seat.',
-  },
-  {
     src: '/images/vegan/sanctuary-monkey-2.jpg',
     alt: 'A capuchin monkey hugging Abishek’s head at the Akumal Animal Sanctuary',
     title: 'Practiced Compassion',
     body: 'This is the world I am talking about.',
+  },
+  {
+    src: '/images/vegan/sanctuary-monkey-1.jpg',
+    alt: 'A capuchin monkey sitting on Abishek’s head at the Akumal Animal Sanctuary',
+    title: 'New Friend',
+    body: 'Akumal Animal Sanctuary, Mexico. He found the good seat.',
   },
   {
     src: '/images/vegan/sanctuary-boa.jpg',
@@ -56,6 +64,13 @@ export const dreamPhotos = [
     title: 'All of Them',
     body: 'Even the ones that are harder to hug.',
     wide: true,
+  },
+  {
+    src: '/images/vegan/adiyogi-coimbatore.jpg',
+    alt: 'Abishek standing below the Adiyogi Shiva bust in Coimbatore, India',
+    title: 'Where Some of It Comes From',
+    body:
+      'Adiyogi, Coimbatore. I am not here to hand you a religion - but ahimsa, the idea that you do no harm to anything that can feel it, was in my family long before it was on my plate.',
   },
 ];
 
