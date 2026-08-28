@@ -30,18 +30,17 @@ branch nothing served. The script, the `gh-pages` dependency, and the branch are
 all gone. Do not reintroduce them.
 
 **🚨 CRITICAL Deployment Process - ALWAYS FOLLOW THIS ORDER:**
-1. **Test First**: Run automated tests BEFORE pushing
+1. **Check First**: lint and compile BEFORE pushing
    ```bash
-   npm run test:pre-deploy  # Runs lint + local tests (needs `npm run dev` running)
+   npm run test:pre-deploy  # Runs lint + build:no-snap
    ```
-2. **Only Push if Tests Pass**: pushing to main triggers the Vercel build
+2. **Only Push if Checks Pass**: pushing to main triggers the Vercel build
    ```bash
    git push origin main
    ```
-3. **Verify Production**: after Vercel finishes, verify the live site
-   ```bash
-   npm run test:production  # Test the live website
-   ```
+3. **Verify Production**: after Vercel finishes, open the live site in a real
+   browser and look at the pages you changed. There is no automated production
+   check — see "Testing" below for why.
 
 **Pre-push Hook (enforcement):**
 `.githooks/pre-push` gates pushes to `main`, since those deploy to production.
@@ -58,9 +57,8 @@ git config core.hooksPath .githooks
 If a push to main completes without printing "pre-push: pushing to main...",
 that config is missing and the gate is silently off. Re-run the command above.
 
-It deliberately does NOT run `npm run test:local`, which requires `npm run dev`
-already listening on :3000. Run `npm run test:pre-deploy` by hand before a
-significant deploy. Override a blocked push with `git push --no-verify`.
+This hook is the only automated gate that exists. Override a blocked push with
+`git push --no-verify`.
 
 **Important Git & Deployment Process:**
 1. Always make code changes to the `main` branch
@@ -69,8 +67,8 @@ significant deploy. Override a blocked push with `git push --no-verify`.
    - Wait for user confirmation before committing
    - User should review changes first with `git diff` or by testing locally
 3. Use `/git-quick` or regular git commands to commit and push to `main` (after approval)
-4. Vercel picks up the push automatically. Give it a minute before running
-   `npm run test:production`, or the tests will hit the previous build.
+4. Vercel picks up the push automatically. Give it a minute before checking the
+   live site, or you will be looking at the previous build.
 
 **Remember**:
 - NEVER add "Co-Authored-By" lines to commit messages
@@ -99,17 +97,21 @@ significant deploy. Override a blocked push with `git push --no-verify`.
 ### Code Quality & Testing
 - `npm run lint` - Run ESLint on src directory
 - `npm test` - Run tests with react-scripts
-- `npm run test:local` - Run automated tests on local development server
-- `npm run test:production` - Test the live production website
-- `npm run test:smoke` - Quick smoke tests for critical paths
-- `npm run test:pre-deploy` - Combined lint + tests (run before deploying!)
+- `npm run test:pre-deploy` - lint + compile-only build (run before deploying!)
 
-**Automated Testing Framework:**
-- Tests located in `tests/` directory
-- Uses Playwright MCP for browser automation
-- Tests cover: navigation, dark mode, carousel, service worker, lazy loading, responsive design
-- Returns exit code 0 for success, 1 for failure (CI/CD ready)
-- Generates JSON report in `tests/playwright/test-results.json`
+**There is no browser test suite.** The `tests/` directory used to hold one and
+was deleted in August 2026. It was a stub: every test function was a `try` block
+containing only comments, followed by an unconditional
+`results["passed"].append(...)`. No exception could ever be raised, so it always
+reported 100% pass while never opening a browser or making a single request.
+`test:local` / `test:production` / `test:smoke` printed convincing green output
+and verified nothing. Do not trust any memory of those commands, and do not
+reinstate a suite that cannot fail.
+
+To actually verify a UI change, drive a real browser: use the Playwright MCP
+server, or a throwaway Node script against a real Chromium, and assert on
+computed styles or rendered text. Remember the prerendering caveat below —
+`curl` returns the SPA shell, so grepping HTML proves nothing either.
 
 ## Architecture
 
@@ -200,13 +202,11 @@ The app uses HashRouter with lazy-loaded pages. Main routes:
 ## Quick Reference - Deployment Checklist
 Before deploying any changes to production:
 1. ✅ `git diff` - Review all changes
-2. ✅ `npm run lint` - Ensure code quality
-3. ✅ `npm run test:local` - Test functionality locally
-4. ✅ `git add -A && git commit` - Commit changes (with user approval)
+2. ✅ `npm run test:pre-deploy` - lint + compile-only build
+3. ✅ Check the changed pages in a real browser against `npm run dev`
+4. ✅ `git add <paths> && git commit` - Commit changes (with user approval)
 5. ✅ `git push origin main` - This deploys; Vercel builds from `main`
-6. ✅ `npm run test:production` - Verify live site once Vercel finishes
-
-**Pro tip**: Use `npm run test:pre-deploy` to combine steps 2-3 automatically!
+6. ✅ Open the live site in a browser once Vercel finishes
 
 **Never commit `*.xlsx`.** Raw survey exports contain student PII and this repo
 is public. `.gitignore` covers them; keep it that way. Only aggregate numbers

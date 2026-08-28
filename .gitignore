@@ -53,9 +53,10 @@ analytics-reports/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-# Test artifacts
-tests/playwright/test-results.json
-tests/playwright/screenshots/
+# Test artifacts (not tests/ itself - a real suite would need to be committed)
+**/test-results.json
+**/playwright-report/
+**/screenshots/
 
 # Raw survey response data - contains student PII, never commit
 *.xlsx
