@@ -37,8 +37,8 @@ const Vegan = () => (
               When people see everything I juggle - the consulting, the teaching, the projects,
               this website - the question is always the same: how do you have the energy? And in
               my head I always go back to a version of me that could not do this much. The
-              difference between him and me is not discipline or genetics or some productivity
-              system. It is that I switched to a whole-food plant-based vegan diet.
+              difference between him and me is not discipline, genetics, or NZT. It is that I
+              switched to a whole-food plant-based vegan diet.
             </p>
             <p className="u-text-lg u-mb-0">
               I want to be honest about the part people skip: it was not an overnight

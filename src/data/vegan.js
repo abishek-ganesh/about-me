@@ -7,12 +7,12 @@ export const veganSections = [
   { id: 'dream', label: 'The Dream' },
 ];
 
-// The Pisa kick, frame by frame - reads like a flip-book of one kick.
+// The Pisa kick, frame by frame. Opens on the point, then the kick sequence.
 export const pisaSequence = [
+  { src: '/images/vegan/pisa-kick-4.jpg', alt: 'Abishek pointing at the Leaning Tower of Pisa' },
   { src: '/images/vegan/pisa-kick-1.jpg', alt: 'Abishek mid-kick at the Leaning Tower of Pisa, frame 1' },
   { src: '/images/vegan/pisa-kick-2.jpg', alt: 'Abishek mid-kick at the Leaning Tower of Pisa, frame 2' },
   { src: '/images/vegan/pisa-kick-3.jpg', alt: 'Abishek mid-kick at the Leaning Tower of Pisa, frame 3' },
-  { src: '/images/vegan/pisa-kick-4.jpg', alt: 'Abishek pointing at the Leaning Tower of Pisa, frame 4' },
 ];
 
 // What the energy actually buys - a good plate, and the room to do nothing.
@@ -40,7 +40,7 @@ export const decisionPhotos = [
     src: '/images/vegan/family-italy.jpg',
     alt: 'Abishek laughing with his mom and sister in Italy',
     title: 'The People in Every Chapter',
-    body: 'Italy with Mom and my sister - no decision on this list happened without them.',
+    body: 'Italy with Mom and my sister.',
     wide: true,
   },
 ];
@@ -49,14 +49,14 @@ export const dreamPhotos = [
   {
     src: '/images/vegan/sanctuary-monkey-2.jpg',
     alt: 'A capuchin monkey hugging Abishek’s head at the Akumal Animal Sanctuary',
-    title: 'Practiced Compassion',
-    body: 'This is the world I am talking about.',
+    title: 'New Friend',
+    body: 'Akumal Animal Sanctuary, Mexico. He found the good seat.',
   },
   {
     src: '/images/vegan/sanctuary-monkey-1.jpg',
     alt: 'A capuchin monkey sitting on Abishek’s head at the Akumal Animal Sanctuary',
-    title: 'New Friend',
-    body: 'Akumal Animal Sanctuary, Mexico. He found the good seat.',
+    title: 'Practiced Compassion',
+    body: 'This is the world I am talking about.',
   },
   {
     src: '/images/vegan/sanctuary-boa.jpg',

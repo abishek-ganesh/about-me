@@ -46,6 +46,24 @@
   }
 }
 
+// Single photo that closes out a page, sitting above the quote
+.page-closing-photo {
+  margin: 0 auto;
+  max-width: 420px;
+  text-align: center;
+
+  .animated-photo {
+    margin: 0 auto;
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text-light, var(--text-secondary));
+  }
+}
+
 // Enhanced metric cards
 .metric-value {
   display: block;

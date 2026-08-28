@@ -33,7 +33,7 @@ export const teachingStats = [
   {
     value: '100%',
     label: 'Would Recommend Me',
-    note: 'Nearly all of them chose "Absolutely"',
+    note: 'All of them said yes',
   },
   {
     value: '9.4/10',

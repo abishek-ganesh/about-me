@@ -9,19 +9,28 @@ import { teachingStats } from '../data/teaching';
 // The course length is already spelled out in the paragraph above these stats
 const aboutTeachingStats = teachingStats.filter((s) => s.label !== 'Python to Agentic AI');
 
+const aboutSections = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'focus', label: 'Current Focus' },
+  { id: 'journey', label: 'How I Got Here' },
+  { id: 'teaching', label: 'Teaching' },
+  { id: 'philosophy', label: 'Philosophy' },
+];
+
 const About = () => {
   return (
   <Main
     title="About"
     description="Abishek Ganesh - years of AI in production, VP of Technology & AI at Appa Health, lead AI instructor, and voice actor."
+    sidebarSections={aboutSections}
   >
     <article className="post page" id="about">
       <div className="page-title">
         <h1>The Long Way Around</h1>
-        <span className="page-subtitle">Mathematics, a stack of business and marketing classes taken on purpose, a master&apos;s in CS, and years of production AI - plus teaching, voice work, and a running list of countries</span>
+        <span className="page-subtitle">Mathematics, business and marketing classes, a master&apos;s in CS, and years of production AI - plus teaching, voice work, and a running list of countries</span>
       </div>
 
-      <section className="about-hero u-mb-4">
+      <section id="overview" className="about-hero u-mb-4">
         <div className="about-hero-content">
           <div className="about-hero-text">
             <p className="intro-text">
@@ -40,7 +49,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="card card--elevated">
+      <section id="focus" className="card card--elevated">
         <div className="card-header">
           <h3>Current Focus</h3>
         </div>
@@ -66,7 +75,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-content u-mt-4">
+      <section id="journey" className="section-content u-mt-4">
         <div className="section-header">
           <h2>How I Got Here</h2>
         </div>
@@ -74,9 +83,8 @@ const About = () => {
           <div className="card-body">
             <p className="u-text-lg">
               Mathematics is the language of the universe. Studying it at Ohio State taught me to sit with a problem
-              until it gives in. The marketing and business
-              classes I signed up for on my own time taught me that an elegant solution nobody understands is worth
-              nothing. A 4.0 in computer science at Georgia Tech
+              until it gives in. The marketing and business classes taught me that an elegant solution nobody
+              understands is worth nothing. A 4.0 in computer science at Georgia Tech
               handed me the tools. Leading technical teams taught me the hardest part was never the model. Put together,
               that is why I usually end up as the translator in the room - between the people building the technology
               and the people who have to live with it.
@@ -85,57 +93,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="journey-timeline u-mt-4">
-        <div className="section-header">
-          <h2>A Visual Journey</h2>
-        </div>
-        <div className="timeline-photos">
-          <div className="timeline-photo">
-            <AnimatedPhoto
-              src="/images/venice.JPG"
-              alt="Abishek in Venice, Italy"
-              size="medium"
-              shape="rounded"
-              animation="slideUp"
-              delay={0}
-            />
-            <div className="timeline-content">
-              <h3>Present</h3>
-              <p>Deploying AI across industries and around the world</p>
-            </div>
-          </div>
-          <div className="timeline-photo">
-            <AnimatedPhoto
-              src="/images/august-2025/website-05.jpg"
-              alt="Teaching the next generation"
-              size="medium"
-              shape="rounded"
-              animation="slideUp"
-              delay={200}
-            />
-            <div className="timeline-content">
-              <h3>Teaching</h3>
-              <p>Sharing knowledge with the next generation of AI engineers</p>
-            </div>
-          </div>
-          <div className="timeline-photo">
-            <AnimatedPhoto
-              src="/images/august-2025/website-10.jpg"
-              alt="Staying grounded with family"
-              size="medium"
-              shape="rounded"
-              animation="slideUp"
-              delay={400}
-            />
-            <div className="timeline-content">
-              <h3>Values</h3>
-              <p>Staying grounded with family wisdom and generational perspective</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-content u-mt-4">
+      <section id="teaching" className="section-content u-mt-4">
         <div className="section-header">
           <h2>The Part I Am Proudest Of</h2>
         </div>
@@ -159,7 +117,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section-content u-mt-4">
+      <section id="philosophy" className="section-content u-mt-4">
         <div className="section-header">
           <h2>Philosophy: Technology Should Help People</h2>
         </div>
@@ -174,6 +132,17 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <figure className="page-closing-photo u-mt-4">
+        <AnimatedPhoto
+          src="/images/venice.JPG"
+          alt="Abishek in Venice, Italy"
+          size="medium"
+          shape="rounded"
+          animation="slideUp"
+        />
+        <figcaption>Venice. Deploying AI across industries and around the world.</figcaption>
+      </figure>
 
       <Quote id="about" />
 

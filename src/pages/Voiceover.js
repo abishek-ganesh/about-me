@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
+import AnimatedPhoto from '../components/common/AnimatedPhoto';
 
 const { PUBLIC_URL } = process.env;
+
+const voiceoverSections = [
+  { id: 'demo', label: 'Demo Reel' },
+  { id: 'services', label: 'Services' },
+  { id: 'voice', label: 'Voice & Skills' },
+  { id: 'why', label: 'Why Voice Acting' },
+];
 
 const Voiceover = () => (
   <Main
     title="Voiceover"
     description="Professional voice actor bringing characters to life for commercials, animation, and audiobooks."
+    sidebarSections={voiceoverSections}
   >
     <article className="post page" id="voiceover">
       <div className="page-title">
@@ -16,7 +24,7 @@ const Voiceover = () => (
         <span className="page-subtitle">Bringing stories to life through character voices, commercial narration, and audiobook performance</span>
       </div>
 
-      <section className="section-content">
+      <section id="demo" className="section-content">
         <div className="card card--elevated">
           <div className="card-body">
             <h2 className="u-text-center u-mb-3">Commercial Demo Reel</h2>
@@ -44,7 +52,7 @@ const Voiceover = () => (
         </div>
       </section>
 
-      <section className="section-content">
+      <section id="services" className="section-content">
         <div className="section-header">
           <h2>Voice Acting Services</h2>
         </div>
@@ -84,7 +92,7 @@ const Voiceover = () => (
         </div>
       </section>
 
-      <section className="section-content">
+      <section id="voice" className="section-content">
         <div className="card card--gradient">
           <div className="card-body">
             <h2 className="u-text-center u-mb-3">Voice Characteristics & Skills</h2>
@@ -102,7 +110,7 @@ const Voiceover = () => (
         </div>
       </section>
 
-      <section className="section-content u-text-center">
+      <section id="why" className="section-content u-text-center">
         <h2 className="u-mb-3">Why Voice Acting?</h2>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <p className="u-text-lg u-mb-3">
@@ -122,29 +130,18 @@ const Voiceover = () => (
         </div>
       </section>
 
-      <section className="section-cta u-mt-4">
-        <h2>Let's Create Something Amazing</h2>
-        <p>
-          Looking for a versatile voice actor for your next project? 
-          I'd love to bring your script to life.
-        </p>
-        <div className="u-mb-3">
-          <p className="u-mb-0">
-            <strong>Email:</strong>{' '}
-            <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary">
-              abishek.ganesh30@gmail.com
-            </a>
-          </p>
-        </div>
-        <div className="cta-buttons">
-          <a href="mailto:abishek.ganesh30@gmail.com" className="btn btn--primary">
-            Request a Custom Audition
-          </a>
-          <Link to="/contact" className="btn btn--secondary">
-            General Contact
-          </Link>
-        </div>
-      </section>
+      <figure className="page-closing-photo u-mt-4">
+        <AnimatedPhoto
+          src="/images/august-2025/website-10.jpg"
+          alt="Abishek with his grandfather, both wearing sunglasses"
+          size="medium"
+          shape="rounded"
+          animation="slideUp"
+        />
+        <figcaption>
+          Three generations of wisdom. The first voice I ever tried to sound like.
+        </figcaption>
+      </figure>
     </article>
   </Main>
 );

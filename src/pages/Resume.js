@@ -5,34 +5,22 @@ import Quote from '../components/common/Quote';
 
 import { degrees, positions } from '../data/resume';
 
-const sections = [
-  'Experience',
-  'Technical Expertise',
-  'Education',
+const resumeSections = [
+  { id: 'experience', label: 'Experience' },
+  { id: 'technical-expertise', label: 'Technical Expertise' },
+  { id: 'education', label: 'Education' },
 ];
-
-// Anchor ids are kebab-cased, so multi-word section names need slugging
-const slug = (name) => name.toLowerCase().replace(/\s+/g, '-');
 
 const Resume = () => (
   <Main
     title="Resume"
     description="Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"
+    sidebarSections={resumeSections}
   >
     <article className="post page" id="resume">
       <div className="page-title">
-        <h1>Abishek Ganesh</h1>
-        <span className="page-subtitle">State-of-the-Art AI Implementation Specialist</span>
+        <h1>I Build Cool AI Products</h1>
       </div>
-      
-      <div className="u-text-center u-mb-5">
-        <div className="quick-links">
-          {sections.map((sec) => (
-            <a key={sec} href={`#${slug(sec)}`} className="u-text-primary u-font-medium u-mx-2">{sec}</a>
-          ))}
-        </div>
-      </div>
-
 
       <section id="experience" className="section-content">
         <div className="section-header">
