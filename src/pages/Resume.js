@@ -26,11 +26,6 @@ const Resume = () => (
       </div>
       
       <div className="u-text-center u-mb-5">
-        <p className="u-text-lg u-text-muted u-max-w-lg u-mx-auto u-mb-3">
-          State-of-the-art AI implementation specialist passionate about RAG systems, AI agents, and whatever breakthrough comes next. 
-          Expert in leveraging truly cutting-edge technologies in smart ways that help companies and their users. 
-          5+ years deploying the latest AI innovations in production - from advanced RAG with hybrid search to multi-agent orchestration.
-        </p>
         <div className="quick-links">
           {sections.map((sec) => (
             <a key={sec} href={`#${slug(sec)}`} className="u-text-primary u-font-medium u-mx-2">{sec}</a>

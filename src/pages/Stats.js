@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import Quote from '../components/common/Quote';
@@ -11,6 +10,7 @@ const Stats = () => {
   const countries = getPersonalStat('countries');
   const states = getPersonalStat('states');
   const location = getPersonalStat('location');
+  const hometowns = getPersonalStat('hometowns');
 
   return (
   <Main
@@ -20,7 +20,7 @@ const Stats = () => {
     <article className="post page" id="stats">
       <div className="page-title">
         <h1>Stats & Facts</h1>
-        <span className="page-subtitle">Numbers, achievements, and fun facts about my journey in AI and beyond</span>
+        <span className="page-subtitle">A few numbers from my journey in AI and beyond</span>
       </div>
 
       <section className="section-content">
@@ -35,8 +35,10 @@ const Stats = () => {
                 </div>
               </div>
               <div className="u-text-center u-relative">
-                <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Current Location</div>
-                <div className="u-text-2xl u-font-bold u-text-primary">{location.value.replace(', CA', '')}</div>
+                <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Hometowns</div>
+                {hometowns.value.map((city) => (
+                  <div key={city} className="u-font-bold u-text-primary">{city}</div>
+                ))}
                 <a
                   href={location.link}
                   target="_blank"
@@ -100,48 +102,6 @@ const Stats = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="section-content">
-        <div className="card">
-          <div className="card-body">
-            <h2 className="u-text-center u-mb-3">Fun Facts</h2>
-            <div className="grid grid--1 grid--gap-sm" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span>
-                  Teaching AI bootcamp: 3 hours/day, 3 days/week, 6 months of intensive learning
-                </span>
-              </div>
-              <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span>
-                  Professional voice actor with commercial demos and character work
-                </span>
-              </div>
-              <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span>
-                  Completed Georgia Tech MS CS with perfect 4.0 GPA while working full-time
-                </span>
-              </div>
-              <div className="u-flex u-items-center u-gap-2 u-p-2">
-                <span>
-                  Chasing a dream of becoming the vegan Anthony Bourdain: {countries.value} countries
-                  down, telling their stories one plant-based plate at a time
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-cta u-mt-4">
-        <h2>Let's Add to These Numbers</h2>
-        <p>
-          Whether it's building AI solutions that impact millions or teaching the next 
-          generation of engineers, I'm always excited about new challenges.
-        </p>
-        <div className="cta-buttons">
-          <Link to="/contact" className="btn btn--secondary">Get in Touch</Link>
         </div>
       </section>
 

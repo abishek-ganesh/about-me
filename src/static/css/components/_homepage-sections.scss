@@ -359,6 +359,58 @@
   margin-top: 2rem;
 }
 
+// Teaching teaser quote - one student quote and the link to the full wall,
+// deliberately in the same card so the quote is the thing you click through from.
+.teaching-quote-card {
+  margin: 2rem 0 0;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.teaching-quote-text {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-primary);
+
+  &::before {
+    content: '\201C';
+  }
+
+  &::after {
+    content: '\201D';
+  }
+}
+
+.teaching-quote-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-primary);
+}
+
+.teaching-quote-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
 .link-with-arrow {
   display: inline-flex;
   align-items: center;

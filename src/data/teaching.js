@@ -14,12 +14,12 @@
 
 export const teachingSections = [
   { id: 'overview', label: 'Overview' },
+  { id: 'voices', label: 'Student Voices' },
   { id: 'outcomes', label: 'Where They Landed' },
   { id: 'craft', label: 'Inside a Lesson' },
   { id: 'capstone', label: 'The Final Build' },
   { id: 'readiness', label: 'What They Can Do' },
   { id: 'beyond', label: 'Careers & Ethics' },
-  { id: 'voices', label: 'Student Voices' },
   { id: 'approach', label: 'How I Teach' },
 ];
 
@@ -28,12 +28,12 @@ export const teachingStats = [
   {
     value: '9.6/10',
     label: 'Instructor Effectiveness',
-    note: 'Anonymous end-of-course survey, 25 responses',
+    note: 'Anonymous end-of-course survey',
   },
   {
-    value: '27 of 27',
+    value: '100%',
     label: 'Would Recommend Me',
-    note: '26 of them chose "Absolutely"',
+    note: 'Nearly all of them chose "Absolutely"',
   },
   {
     value: '9.4/10',
@@ -56,10 +56,10 @@ export const teaserQuote = {
 
 // Where students start. Most have never written code outside a ChatGPT prompt.
 export const startingPoint = {
-  headline: '9 in 12',
+  headline: '75%',
   sublabel: 'arrive as self-described beginners',
   body:
-    'Almost nobody walks in with an AI background. Most have never written code beyond typing into ChatGPT. They arrive as delivery drivers, forklift operators, analysts, product designers, electrical engineers, and career software engineers who have never touched Python. Six months later they are building state-of-the-art machine learning and AI models and shipping them inside real applications that anyone in the world can use. That is the whole point. These skills are big enough to upskill someone in the role they already have, move them into a new one, or let them go build their own thing.',
+    'Almost nobody walks in with an AI background. Most have never written a line of code, and their experience with AI does not go much past using ChatGPT. They arrive as delivery drivers, forklift operators, analysts, product designers, electrical engineers, and career software engineers who have never touched Python. Six months later they are building state-of-the-art machine learning and AI models and shipping them inside real applications that anyone in the world can use. That is the whole point. These skills are big enough to upskill someone in the role they already have, move them into a new one, or let them go build their own thing.',
 };
 
 // Career changes students described in their own words
@@ -114,17 +114,12 @@ export const transformationStories = [
   },
 ];
 
-// How the lessons themselves are built. Sourced from the course repo:
-// 51 hand-built Reveal.js decks, a 25-entry reusable analogy library, and
-// breakout discussion prompts in 46 of them.
+// How the lessons themselves are built. Every deck is hand-built from scratch;
+// the counts behind that (deck totals, analogy library size) are deliberately
+// not surfaced - they are inside-baseball for a public page.
 export const craft = {
   intro:
     'I build every lesson from scratch. No vendor slides, no reading off someone else’s deck. The rule I hold myself to is that nothing gets hand-waved: if I put a symbol on a screen, I can derive it, and so can the room by the end of the hour.',
-  stats: [
-    { value: '51', label: 'Custom-built slide decks' },
-    { value: '25', label: 'Analogies in the library' },
-    { value: '46', label: 'Decks with breakout prompts' },
-  ],
   pillars: [
     {
       title: 'An analogy before the notation',
@@ -142,11 +137,6 @@ export const craft = {
         'To show how next-token prediction actually works, I built a decoder-only transformer and ran it entirely by hand in NumPy: "the tall crane flew ___" all the way to the prediction "south". Token embeddings, positional encoding, two layers of masked multi-head attention, causal masking, residuals and layer norm, the feed-forward network, unembedding, and softmax, every matrix printed with real numbers. The whole model is 416 parameters, shown next to GPT-3\'s 175 billion so the scale lands. It ends on temperature, top-k, and top-p, so the creativity dials stop being magic.',
     },
     {
-      title: 'Ambiguity you can watch resolve',
-      body:
-        'That sentence is rigged on purpose. A tall crane is either a bird or a machine, and the vocabulary deliberately contains both "bird" and "tower" to keep the question open. The four embedding dimensions are labeled in plain language rather than left as anonymous floats, so a token is readable: crane carries animacy and motion, and you can watch its animacy get boosted layer by layer as attention mixes it with "flew" until the model commits to the bird. There is a one-page companion reference card with the weight tables, the attention formula, and the three operations everything reduces to: matrix addition for residuals, dot products for attention scores, matrix multiplication for every projection. That is the moment the math stops being notation and starts being a decision you can point at.',
-    },
-    {
       title: 'Rooms that talk back',
       body:
         'Nearly every deck has structured breakout prompts written into it, and they are open questions rather than recall drills: walk through a forward pass in your own words, or what would happen without activation functions. Everyone comes back owing the room one insight. Three hours is a long time to be lectured at, so I try not to.',
@@ -158,6 +148,7 @@ export const craft = {
 export const capstone = {
   intro:
     'I do not end the course with a quiz. I end it with seven weeks of real client work. Teams of four stop being students and become AI consulting firms, each hired to solve a defined business problem against a real dataset and a hard deadline. Building AI is almost never a solo sport, so the last thing I teach is how to deliver it alongside other people.',
+  briefsNote: 'Two examples from a recent cohort',
   briefs: [
     {
       title: 'Healthcare Analytics Platform',
@@ -169,13 +160,6 @@ export const capstone = {
       body:
         'A city government hires the team to build an urban operations dashboard: predict traffic accident severity from real accident data, detect potholes from road imagery, and classify citizen complaints with NLP.',
     },
-  ],
-  models: [
-    'Traditional machine learning',
-    'Deep neural network',
-    'Convolutional neural network',
-    'NLP classification',
-    'An innovation model of their own choosing',
   ],
   requirements: [
     {
@@ -252,24 +236,6 @@ export const beyond = {
       title: 'Why it matters at all',
       body:
         'We ground it in things that have actually happened: loans denied by biased credit scoring, resumes filtered out by hiring models trained on skewed data, misdiagnoses from a hallucinating chatbot, false arrests from facial recognition. All real, all preventable. Most people will only ever use AI and wonder how it works, or be afraid of it. My students build it, and that puts them in a very small group who get to shape what it becomes. I want them to feel the weight of that, not just the opportunity.',
-    },
-  ],
-};
-
-// The honest version. Students self-select in, so they should know the cost.
-export const difficulty = {
-  intro:
-    'I would rather you know what this actually takes. The scores above are high, and they were earned by people who put in real hours.',
-  facts: [
-    {
-      value: '5-15 hrs',
-      label: 'Per week, outside class',
-      note: '20 of 25 students, on top of nine hours in class',
-    },
-    {
-      value: '3.8/5',
-      label: 'Final capstone difficulty',
-      note: 'Rated by the students who completed it',
     },
   ],
 };

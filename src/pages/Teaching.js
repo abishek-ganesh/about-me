@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
 import TestimonialCard from '../components/Testimonials/TestimonialCard';
@@ -13,7 +12,6 @@ import {
   capstone,
   readiness,
   beyond,
-  difficulty,
   teachingPrinciples,
 } from '../data/teaching';
 
@@ -67,6 +65,21 @@ const Teaching = () => (
         </div>
       </section>
 
+      <section id="voices" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2>Student Voices</h2>
+          <p className="section-description">
+            From the end-of-course survey. Shared with each student&apos;s permission, first names
+            only.
+          </p>
+        </div>
+        <div className="grid grid--2 grid--gap-lg">
+          {teachingTestimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </div>
+      </section>
+
       <section id="outcomes" className="section-content u-mt-4">
         <div className="section-header">
           <h2>Where They Landed</h2>
@@ -91,16 +104,7 @@ const Teaching = () => (
           <p className="section-description">{craft.intro}</p>
         </div>
 
-        <div className="grid grid--3 grid--gap-lg">
-          {craft.stats.map((stat) => (
-            <div key={stat.label} className="card card--compact u-text-center">
-              <span className="metric-value">{stat.value}</span>
-              <span className="metric-label">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid--2 grid--gap-lg u-mt-4">
+        <div className="grid grid--2 grid--gap-lg">
           {craft.pillars.map((pillar) => (
             <div key={pillar.title} className="card card--elevated">
               <div className="card-body">
@@ -118,6 +122,7 @@ const Teaching = () => (
           <p className="section-description">{capstone.intro}</p>
         </div>
 
+        <p className="u-text-sm u-text-muted u-mb-2">{capstone.briefsNote}</p>
         <div className="grid grid--2 grid--gap-lg">
           {capstone.briefs.map((brief) => (
             <div key={brief.title} className="card card--elevated">
@@ -127,17 +132,6 @@ const Teaching = () => (
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="card card--gradient u-mt-4">
-          <div className="card-body">
-            <h4 className="u-mb-2">Five models, one product</h4>
-            <ul className="u-mb-0">
-              {capstone.models.map((model) => (
-                <li key={model}>{model}</li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="grid grid--2 grid--gap-lg u-mt-4">
@@ -161,29 +155,13 @@ const Teaching = () => (
         </div>
 
         <div className="card card--elevated">
-          <div className="card-body">
+          <div className="card-body u-text-center">
             {readiness.items.map((item) => (
               <div key={item.label} className="u-mb-2">
                 <span className="u-font-semibold u-text-primary">{item.value}%</span>{' '}
                 {item.label}
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="card card--elevated u-mt-4">
-          <div className="card-body">
-            <h4 className="u-text-primary u-mb-2">It is not easy, and it should not be</h4>
-            <p>{difficulty.intro}</p>
-            <div className="grid grid--2 grid--gap-lg">
-              {difficulty.facts.map((fact) => (
-                <div key={fact.label} className="u-text-center">
-                  <span className="metric-value">{fact.value}</span>
-                  <span className="metric-label">{fact.label}</span>
-                  <p className="u-text-sm u-text-muted u-mt-1 u-mb-0">{fact.note}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -205,21 +183,6 @@ const Teaching = () => (
         </div>
       </section>
 
-      <section id="voices" className="section-content u-mt-4">
-        <div className="section-header">
-          <h2>Student Voices</h2>
-          <p className="section-description">
-            From the end-of-course survey. Shared with each student&apos;s permission, first names
-            only.
-          </p>
-        </div>
-        <div className="grid grid--2 grid--gap-lg">
-          {teachingTestimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
-        </div>
-      </section>
-
       <section id="approach" className="section-content u-mt-4">
         <div className="section-header">
           <h2>How I Teach</h2>
@@ -233,18 +196,6 @@ const Teaching = () => (
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="section-cta u-mt-4">
-        <h2>Teaching Your Team</h2>
-        <p>
-          I run the same curriculum for engineering teams that need to go from using AI to
-          understanding and building it. If that is your team, let&apos;s talk.
-        </p>
-        <div className="cta-buttons">
-          <Link to="/contact" className="btn btn--primary">Get in Touch</Link>
-          <Link to="/about" className="btn btn--secondary">More About Me</Link>
         </div>
       </section>
     </article>

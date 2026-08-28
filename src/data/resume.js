@@ -15,7 +15,7 @@ export const degrees = [
     degree: 'B.S. Mathematics',
     link: 'https://www.osu.edu/',
     year: '2009-2013',
-    details: 'Focus on Applied Mathematics and Computer Science',
+    details: 'Focus on Financial Mathematics',
   },
   {
     school: 'De Anza College',
