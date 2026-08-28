@@ -191,7 +191,10 @@
     }
   }
   
-  .section-description {
+  // Any subtitle under a section title follows the same centered treatment,
+  // whether or not it remembered the .section-description class.
+  .section-description,
+  > p {
     text-align: center;
     font-size: 1.125rem;
     color: $color-neutral-600;

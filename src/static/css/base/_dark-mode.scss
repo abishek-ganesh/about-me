@@ -958,6 +958,20 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
   }
 }
 
+.testimonial-quote-card {
+  .testimonial-quote-text {
+    color: var(--text-primary) !important;
+  }
+
+  .testimonial-quote-author {
+    border-top-color: var(--border-primary) !important;
+
+    .author-name {
+      color: var(--text-primary) !important;
+    }
+  }
+}
+
 // Special handling for voiceover audio player - needs dark background in dark mode
 #voiceover .u-bg-light,
 .voiceover .u-bg-light {

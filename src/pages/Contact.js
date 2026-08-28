@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Main from '../layouts/Main';
-import ContactIcons from '../components/Contact/ContactIcons';
 import AnimatedPhoto from '../components/common/AnimatedPhoto';
 import { getPhotosForContext } from '../data/photos';
 
@@ -17,7 +16,6 @@ const Contact = () => {
     <article className="post page" id="contact">
       <div className="page-title">
         <h1>Get in Touch</h1>
-        <span className="page-subtitle">I read everything. Say hello.</span>
       </div>
 
       <section className="contact-intro u-mb-4">
@@ -46,38 +44,13 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="section-content">
-        <div className="grid grid--2 grid--gap-lg">
-          <div className="card card--elevated u-text-center">
-            <div className="card-body">
-              <i className="fa fa-envelope u-text-3xl u-text-primary u-block u-mb-3" />
-              <h2 className="u-mb-2">Email</h2>
-              <div className="u-text-xl u-mb-2">
-                <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary u-font-medium">
-                  abishek.ganesh30@gmail.com
-                </a>
-              </div>
-              <p className="u-text-muted u-mb-0">
-                For cutting-edge AI implementations, RAG systems, and agent development
-              </p>
-            </div>
-          </div>
-
-          <div className="card card--elevated u-text-center">
-            <div className="card-body">
-              <i className="fa fa-microphone u-text-3xl u-text-primary u-block u-mb-3" />
-              <h2 className="u-mb-2">Voice Acting Inquiries</h2>
-              <div className="u-text-xl u-mb-2">
-                <a href="mailto:abishek.ganesh30@gmail.com?subject=Voice Acting Inquiry" className="u-text-primary u-font-medium">
-                  Book a Voice Session
-                </a>
-              </div>
-              <p className="u-text-muted u-mb-0">
-                For commercial voiceovers, character work, and audio production
-              </p>
-            </div>
-          </div>
-        </div>
+      <section className="section-content u-text-center">
+        <p className="u-text-xl u-mb-0">
+          Reach out on email:{' '}
+          <a href="mailto:abishek.ganesh30@gmail.com" className="u-text-primary u-font-medium">
+            abishek.ganesh30@gmail.com
+          </a>
+        </p>
       </section>
 
       <section className="section-content">
@@ -87,53 +60,17 @@ const Contact = () => {
             <div className="grid grid--3 grid--gap-lg u-text-center" style={{ maxWidth: '600px', margin: '0 auto' }}>
               <div>
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Location</div>
-                <div className="u-text-lg u-font-medium">Santa Clara, CA</div>
+                <div className="u-text-lg u-font-medium">New York City, NY</div>
               </div>
               <div>
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Time Zone</div>
-                <div className="u-text-lg u-font-medium">Pacific (PST/PDT)</div>
+                <div className="u-text-lg u-font-medium">Eastern (EST/EDT)</div>
               </div>
               <div>
                 <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Response Time</div>
                 <div className="u-text-lg u-font-medium">Within 24-48 hours</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-content u-text-center">
-        <h2 className="u-mb-2">Connect on Social Media</h2>
-        <p className="u-text-lg u-text-muted u-mb-3">
-          Follow my journey, insights, and updates across professional networks
-        </p>
-        <ContactIcons />
-      </section>
-
-      <section className="section-content">
-        <div className="card card--elevated">
-          <div className="card-body">
-            <h2 className="u-text-center u-mb-3">Current Availability</h2>
-            <div className="grid grid--3 grid--gap-lg">
-              <div className="u-text-center u-p-3 u-bg-light u-rounded">
-                <h3 className="u-mb-1">State-of-the-Art AI Implementation</h3>
-                <p className="u-text-sm u-text-muted u-mb-2">RAG, Agents, and emerging tech</p>
-                <span className="tag tag--success">Available</span>
-              </div>
-              <div className="u-text-center u-p-3 u-bg-light u-rounded">
-                <h3 className="u-mb-1">Cutting-Edge AI Training</h3>
-                <p className="u-text-sm u-text-muted u-mb-2">Teaching the latest in AI/ML</p>
-                <span className="tag tag--warning">Limited</span>
-              </div>
-              <div className="u-text-center u-p-3 u-bg-light u-rounded">
-                <h3 className="u-mb-1">Technical Speaking</h3>
-                <p className="u-text-sm u-text-muted u-mb-2">RAG, Agents, and AI Innovation</p>
-                <span className="tag tag--success">Available</span>
-              </div>
-            </div>
-            <p className="u-text-center u-text-sm u-text-muted u-font-italic u-mt-3 u-mb-0">
-              * All times are in Pacific Time (PST/PDT). International collaborations welcome!
-            </p>
           </div>
         </div>
       </section>

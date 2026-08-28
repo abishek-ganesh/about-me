@@ -22,8 +22,9 @@ const Index = () => {
           <h1 className="hero-name">Abishek Ganesh</h1>
           <h2 className="hero-tagline">{aboutContent.intro}</h2>
           <p className="hero-description">
-            VP of Technology &amp; AI at Appa Health, lead AI instructor, consultant. I ship AI
-            that solves real problems and teach others to do the same.
+            VP of Technology &amp; AI at Appa Health and lead AI instructor. I build AI
+            that solves real problems and uses the technology as a force for good, and I teach
+            others to do the same.
           </p>
           <div className="hero-specialties">
             <span className="specialty">Production AI</span>

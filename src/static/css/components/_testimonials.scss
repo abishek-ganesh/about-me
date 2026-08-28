@@ -110,6 +110,71 @@
   }
 }
 
+// Quote card used in the Student Voices grid. The quote flexes so the
+// attribution pins to the bottom and every card in a row shares one baseline.
+.testimonial-quote-card {
+  height: 100%;
+  display: flex;
+
+  .card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-quote-icon {
+    display: block;
+    font-size: 1.25rem;
+    color: $color-primary;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-quote-text {
+    flex: 1;
+    font-size: 1.0625rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: $color-neutral-700;
+    margin: 0 0 1.5rem;
+  }
+
+  .testimonial-quote-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid $color-neutral-100;
+
+    .author-image {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .author-name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: $color-neutral-900;
+    }
+  }
+
+  .testimonial-quote-rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+
+    i {
+      color: $color-warning;
+      font-size: 0.875rem;
+    }
+  }
+}
+
 .testimonial-card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);

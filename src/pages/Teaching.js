@@ -23,8 +23,8 @@ const Teaching = () => (
       <div className="page-title">
         <h1>Teaching AI</h1>
         <span className="page-subtitle">
-          Six months, three hours a day, taking students from Python fundamentals to agentic
-          systems - and the work I am proudest of
+          Zero to hero in six months - give me everything you&apos;ve got and I&apos;ll give you
+          everything I&apos;ve got
         </span>
       </div>
 
@@ -60,10 +60,10 @@ const Teaching = () => (
           {transformationStories.map((story) => (
             <div key={story.id} className="card card--elevated">
               <div className="card-body">
-                <div className="u-text-sm u-text-muted u-mb-1">{story.before}</div>
                 <h4 className="u-text-primary u-mb-2">{story.after}</h4>
                 <p className="u-text-sm u-font-italic u-mb-2">&ldquo;{story.quote}&rdquo;</p>
-                <div className="u-text-sm u-font-semibold u-mb-0">- {story.name}</div>
+                <div className="u-text-sm u-font-semibold">- {story.name}</div>
+                <div className="u-text-sm u-text-muted u-mb-0">{story.before}</div>
               </div>
             </div>
           ))}
@@ -73,7 +73,7 @@ const Teaching = () => (
       <section id="voices" className="section-content u-mt-4">
         <div className="section-header">
           <h2>Student Voices</h2>
-          <p className="u-text-muted">
+          <p className="section-description">
             From the end-of-cohort survey. Shared with each student&apos;s permission, first names
             only.
           </p>

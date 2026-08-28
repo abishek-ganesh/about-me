@@ -78,6 +78,6 @@ export const teachingPrinciples = [
   {
     title: 'Meet people where they are',
     body:
-      'This cohort included a forklift driver, a 25-year software engineer, and an electrical engineer. Same material, different on-ramps for each of them.',
+      'This cohort included a teacher, a salesperson, someone recently retired, and so many other backgrounds. Same material, different on-ramps for each of them.',
   },
 ];
