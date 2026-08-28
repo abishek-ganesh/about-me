@@ -21,6 +21,11 @@ const routes = [
     icon: 'fa-chalkboard-teacher',
   },
   {
+    label: 'Vegan',
+    path: '/vegan',
+    icon: 'fa-leaf',
+  },
+  {
     label: 'Voiceover',
     path: '/voiceover',
     icon: 'fa-microphone',

@@ -5,12 +5,13 @@ import routes from '../../data/routes';
 
 const MobileNav = () => {
   const { visible } = useScrollDirection();
-  // Get the 6 most important routes for mobile bottom nav
+  // Get the 7 most important routes for mobile bottom nav
   const mobileRoutes = [
     routes.find(r => r.index), // Home
     routes.find(r => r.path === '/about'),
     routes.find(r => r.path === '/resume'),
     routes.find(r => r.path === '/teaching'),
+    routes.find(r => r.path === '/vegan'),
     routes.find(r => r.path === '/voiceover'),
     routes.find(r => r.path === '/contact'),
   ].filter(Boolean);

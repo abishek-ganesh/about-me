@@ -29,6 +29,11 @@ const quotes = {
     song: 'Late Registration',
     album: 'Late Registration',
   },
+  vegan: {
+    text: 'This is a God dream',
+    song: 'Ultralight Beam',
+    album: 'The Life of Pablo',
+  },
   console: {
     text: "I'm doing pretty good as far as geniuses go",
     song: 'POWER',

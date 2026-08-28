@@ -22,7 +22,7 @@ class WebsiteTests {
    */
   async testNavigation() {
     console.log('🧪 Testing Navigation...');
-    const pages = ['/', '/about', '/resume', '/voiceover', '/stats', '/contact'];
+    const pages = ['/', '/about', '/resume', '/teaching', '/vegan', '/voiceover', '/stats', '/contact'];
     
     for (const page of pages) {
       try {
@@ -222,7 +222,7 @@ class WebsiteTests {
    */
   async testConsoleErrors() {
     console.log('🚨 Checking for Console Errors...');
-    const pages = ['/', '/about', '/resume', '/voiceover', '/stats', '/contact'];
+    const pages = ['/', '/about', '/resume', '/teaching', '/vegan', '/voiceover', '/stats', '/contact'];
     
     for (const page of pages) {
       try {

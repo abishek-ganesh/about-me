@@ -73,7 +73,7 @@ run_smoke_tests() {
   curl -s -o /dev/null -w "  Homepage: %{http_code}\n" "$BASE_URL/"
   
   echo "Testing navigation pages..."
-  for page in about resume voiceover stats contact; do
+  for page in about resume teaching vegan voiceover stats contact; do
     curl -s -o /dev/null -w "  /$page: %{http_code}\n" "$BASE_URL/$page"
   done
   

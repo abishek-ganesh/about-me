@@ -32,7 +32,7 @@ class WebsiteTestRunner:
     def test_navigation(self) -> None:
         """Test navigation to all pages"""
         print("🧪 Testing Navigation...")
-        pages = ["/", "/about", "/resume", "/voiceover", "/stats", "/contact"]
+        pages = ["/", "/about", "/resume", "/teaching", "/vegan", "/voiceover", "/stats", "/contact"]
         
         for page in pages:
             try:
@@ -105,7 +105,7 @@ class WebsiteTestRunner:
     def test_console_errors(self) -> None:
         """Check for console errors on all pages"""
         print("🚨 Checking for Console Errors...")
-        pages = ["/", "/about", "/resume", "/voiceover", "/stats", "/contact"]
+        pages = ["/", "/about", "/resume", "/teaching", "/vegan", "/voiceover", "/stats", "/contact"]
         
         for page in pages:
             try:

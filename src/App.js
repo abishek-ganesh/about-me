@@ -23,6 +23,7 @@ const Voiceover = lazy(() => import('./pages/Voiceover'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Stats = lazy(() => import('./pages/Stats'));
 const Teaching = lazy(() => import('./pages/Teaching'));
+const Vegan = lazy(() => import('./pages/Vegan'));
 
 const App = () => (
   <DarkModeProvider>
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/voiceover" component={Voiceover} />
           <Route path="/stats" component={Stats} />
           <Route path="/teaching" component={Teaching} />
+          <Route path="/vegan" component={Vegan} />
           <Route path="/contact" component={Contact} />
           <Route path="/resume" component={Resume} />
           <Route component={NotFound} status={404} />
