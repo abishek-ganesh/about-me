@@ -31,8 +31,10 @@ const routes = [
     icon: 'fa-microphone',
   },
   {
-    label: 'Endnotes',
-    path: '/notes',
+    label: 'Postscript',
+    // Full label overflows the fixed-width mobile nav item; MobileNav uses this
+    shortLabel: 'P.S.',
+    path: '/postscript',
     icon: 'fa-envelope',
   },
 ];

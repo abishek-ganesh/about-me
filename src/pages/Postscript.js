@@ -7,42 +7,43 @@ import ContactIcons from '../components/Contact/ContactIcons';
 import Quote from '../components/common/Quote';
 import { getPhotosForContext } from '../data/photos';
 
-const notesSections = [
-  // Not `intro` - SideBar renders its own <section id="intro"> on every page
-  { id: 'endnotes', label: 'Endnotes' },
+const postscriptSections = [
+  // Not `intro` (SideBar renders one on every page) and not `postscript`,
+  // which is the article id and is on the page-container allowlist
+  { id: 'closing', label: 'Postscript' },
   { id: 'numbers', label: 'The Numbers' },
   { id: 'reach', label: 'Reach Me' },
 ];
 
-const Notes = () => {
-  const [notesPhoto] = getPhotosForContext('contact');
+const Postscript = () => {
+  const [postscriptPhoto] = getPhotosForContext('contact');
 
   return (
   <Main
-    title="Endnotes"
+    title="Postscript"
     description="The last page: a few numbers Abishek Ganesh keeps track of, and how to get in touch."
-    sidebarSections={notesSections}
+    sidebarSections={postscriptSections}
   >
-    <article className="post page" id="notes">
+    <article className="post page" id="postscript">
       <div className="page-title">
-        <h1>Endnotes</h1>
+        <h1>Postscript</h1>
         <span className="page-subtitle">The last page, a few numbers, and how to reach me</span>
       </div>
 
-      <section id="endnotes" className="notes-intro u-mb-4">
-        <div className="notes-intro-content">
+      <section id="closing" className="postscript-intro u-mb-4">
+        <div className="postscript-intro-content">
           <AnimatedPhoto
-            src={notesPhoto.path}
-            alt={notesPhoto.metadata?.description || 'Abishek Ganesh teaching'}
+            src={postscriptPhoto.path}
+            alt={postscriptPhoto.metadata?.description || 'Abishek Ganesh teaching'}
             size="medium"
             shape="rounded"
             animation="fadeInScale"
             hoverEffect="brightness"
-            className="notes-photo"
+            className="postscript-photo"
             width={300}
             height={300}
           />
-          <div className="notes-intro-text">
+          <div className="postscript-intro-text">
             <p className="u-text-lg">
               You have reached the end of the site, so here is the part that does not belong on any of the
               other pages. A few numbers I actually keep track of, and the fastest way to reach me. The age
@@ -73,7 +74,7 @@ const Notes = () => {
             abishek.ganesh30@gmail.com
           </a>
         </p>
-        <div className="notes-social">
+        <div className="postscript-social">
           <ContactIcons />
         </div>
       </section>
@@ -84,4 +85,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default Postscript;

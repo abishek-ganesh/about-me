@@ -123,10 +123,10 @@ The app uses BrowserRouter (clean URLs, no `#`) with lazy-loaded pages. Routes:
 - `/teaching` - Teaching page
 - `/vegan` - Vegan page
 - `/voiceover` - Voiceover portfolio
-- `/notes` - Endnotes: closing note, personal stats, and contact info
+- `/postscript` - Closing note, personal stats, and contact info
 
 `/stats` and `/contact` were separate pages until September 2026. They were
-merged into `/notes` and now `<Redirect>` there, so old inbound links, the
+merged into `/postscript` and now `<Redirect>` there, so old inbound links, the
 resume PDF, and email signatures keep working. Do not re-add them as pages.
 
 Navigation is driven by `src/data/routes.js`. `MobileNav.js` picks its bottom-bar
@@ -134,11 +134,11 @@ items out of that list **by hardcoded path string** and ends in `.filter(Boolean
 so renaming a path silently drops it from mobile nav with no error. Update both.
 
 ### Component Organization
-- **src/pages/** - Page components (Index, About, Resume, Teaching, Vegan, Voiceover, Notes)
+- **src/pages/** - Page components (Index, About, Resume, Teaching, Vegan, Voiceover, Postscript)
 - **src/components/** - Reusable components organized by feature:
   - Template/ - Layout components (Navigation, SideBar, MobileNav, Analytics)
   - Resume/ - Resume-specific components (Education, Experience, Skills)
-  - Stats/ - Statistics display components (PersonalStats, used by Notes)
+  - Stats/ - Statistics display components (PersonalStats, used by Postscript)
   - Testimonials/ - Student testimonial components
   - Contact/ - Contact information components (ContactIcons)
   - home/ - Homepage section components

@@ -4,7 +4,7 @@ import ContactIcons from '../Contact/ContactIcons';
 
 /**
  * ContactSection - Homepage teaser. The closing note and the running personal
- * stats live on /notes.
+ * stats live on /postscript.
  */
 const ContactSection = () => {
   return (
@@ -20,8 +20,8 @@ const ContactSection = () => {
       </div>
 
       <div className="section-cta">
-        <Link to="/notes" className="link-with-arrow">
-          Read the endnotes
+        <Link to="/postscript" className="link-with-arrow">
+          Read the postscript
           <span className="arrow">→</span>
         </Link>
       </div>

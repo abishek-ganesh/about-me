@@ -13,7 +13,7 @@ const MobileNav = () => {
     routes.find(r => r.path === '/teaching'),
     routes.find(r => r.path === '/vegan'),
     routes.find(r => r.path === '/voiceover'),
-    routes.find(r => r.path === '/notes'),
+    routes.find(r => r.path === '/postscript'),
   ].filter(Boolean);
   
   return (
@@ -28,7 +28,7 @@ const MobileNav = () => {
             >
               <i className={`mobile-nav-icon fas ${link.icon || 'fa-file'}`} />
               <span className="mobile-nav-label">
-                {link.index ? 'Home' : link.label}
+                {link.index ? 'Home' : (link.shortLabel || link.label)}
               </span>
             </NavLink>
           </li>

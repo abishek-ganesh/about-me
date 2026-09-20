@@ -3,6 +3,11 @@
 @import 'containers';
 
 // Apply page container to all main page elements
+// NOTE: these are bare id selectors, so they match ANY element with the id, not
+// just page root articles. #contact and #teaching also hit the homepage's
+// <section> elements, which currently rely on the padding they pick up here.
+// Do not prune entries that look dead without checking the homepage first.
+// A new page gets no gutter at all until its article id is added below.
 #index,
 #about,
 #resume,
@@ -12,6 +17,7 @@
 #contact,
 #teaching,
 #vegan,
+#postscript,
 #case-studies,
 #when-not-ai {
   @include page-container;

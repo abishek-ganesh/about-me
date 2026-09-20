@@ -19,7 +19,7 @@ console.log(
 const About = lazy(() => import('./pages/About'));
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-const Notes = lazy(() => import('./pages/Notes'));
+const Postscript = lazy(() => import('./pages/Postscript'));
 const Voiceover = lazy(() => import('./pages/Voiceover'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Teaching = lazy(() => import('./pages/Teaching'));
@@ -35,12 +35,13 @@ const App = () => (
           <Route path="/voiceover" component={Voiceover} />
           <Route path="/teaching" component={Teaching} />
           <Route path="/vegan" component={Vegan} />
-          <Route path="/notes" component={Notes} />
+          <Route path="/postscript" component={Postscript} />
           <Route path="/resume" component={Resume} />
-          {/* /stats and /contact merged into /notes. Kept as redirects so old
+          {/* /stats and /contact merged into /postscript. Kept as redirects so old
               links, the resume PDF, and email signatures still land. */}
-          <Redirect from="/stats" to="/notes" />
-          <Redirect from="/contact" to="/notes" />
+          <Redirect from="/stats" to="/postscript" />
+          <Redirect from="/contact" to="/postscript" />
+          <Redirect from="/notes" to="/postscript" />
           <Route component={NotFound} status={404} />
         </Switch>
       </Suspense>

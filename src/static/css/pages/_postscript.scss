@@ -1,11 +1,11 @@
-// Endnotes Page Styles
+// Postscript Page Styles
 //
 // Layout carried over from the old contact page. Renamed off `.contact-intro`
 // on purpose: that class is also defined in components/_homepage-sections.scss
 // for the homepage contact paragraph, and this file imports later, so the page
 // rules were silently overriding the homepage ones.
 
-.notes-intro {
+.postscript-intro {
   margin-bottom: 3rem;
 
   &-content {
@@ -20,7 +20,7 @@
     }
   }
 
-  .notes-photo {
+  .postscript-photo {
     flex-shrink: 0;
 
     @media (max-width: 768px) {
@@ -44,6 +44,6 @@
 
 // `.icons` lays its items out inline-block, so the section's text-align
 // centering is what actually positions them. This is only spacing.
-.notes-social {
+.postscript-social {
   margin-top: 1.5rem;
 }
