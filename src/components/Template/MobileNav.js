@@ -13,7 +13,7 @@ const MobileNav = () => {
     routes.find(r => r.path === '/teaching'),
     routes.find(r => r.path === '/vegan'),
     routes.find(r => r.path === '/voiceover'),
-    routes.find(r => r.path === '/contact'),
+    routes.find(r => r.path === '/notes'),
   ].filter(Boolean);
   
   return (

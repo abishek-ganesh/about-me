@@ -1,0 +1,49 @@
+// Endnotes Page Styles
+//
+// Layout carried over from the old contact page. Renamed off `.contact-intro`
+// on purpose: that class is also defined in components/_homepage-sections.scss
+// for the homepage contact paragraph, and this file imports later, so the page
+// rules were silently overriding the homepage ones.
+
+.notes-intro {
+  margin-bottom: 3rem;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+
+  .notes-photo {
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+
+  &-text {
+    flex: 1;
+
+    p {
+      color: var(--color-text);
+      line-height: 1.8;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// `.icons` lays its items out inline-block, so the section's text-align
+// centering is what actually positions them. This is only spacing.
+.notes-social {
+  margin-top: 1.5rem;
+}

@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ContactIcons from '../Contact/ContactIcons';
 
 /**
- * ContactSection - CTA and social links
+ * ContactSection - Homepage teaser. The closing note and the running personal
+ * stats live on /notes.
  */
 const ContactSection = () => {
   return (
@@ -15,6 +17,13 @@ const ContactSection = () => {
 
       <div className="contact-social">
         <ContactIcons />
+      </div>
+
+      <div className="section-cta">
+        <Link to="/notes" className="link-with-arrow">
+          Read the endnotes
+          <span className="arrow">→</span>
+        </Link>
       </div>
     </div>
   );

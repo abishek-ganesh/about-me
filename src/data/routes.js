@@ -31,13 +31,8 @@ const routes = [
     icon: 'fa-microphone',
   },
   {
-    label: 'Stats',
-    path: '/stats',
-    icon: 'fa-chart-bar',
-  },
-  {
-    label: 'Contact',
-    path: '/contact',
+    label: 'Endnotes',
+    path: '/notes',
     icon: 'fa-envelope',
   },
 ];

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { DarkModeProvider } from './contexts/DarkModeContext';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import quotes from './data/kanye';
@@ -17,12 +17,11 @@ console.log(
 // NOTE that some of these chunks are very small. We should optimize
 // which pages are lazy loaded in the future.
 const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Notes = lazy(() => import('./pages/Notes'));
 const Voiceover = lazy(() => import('./pages/Voiceover'));
 const Resume = lazy(() => import('./pages/Resume'));
-const Stats = lazy(() => import('./pages/Stats'));
 const Teaching = lazy(() => import('./pages/Teaching'));
 const Vegan = lazy(() => import('./pages/Vegan'));
 
@@ -34,11 +33,14 @@ const App = () => (
           <Route exact path="/" component={Index} />
           <Route path="/about" component={About} />
           <Route path="/voiceover" component={Voiceover} />
-          <Route path="/stats" component={Stats} />
           <Route path="/teaching" component={Teaching} />
           <Route path="/vegan" component={Vegan} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/notes" component={Notes} />
           <Route path="/resume" component={Resume} />
+          {/* /stats and /contact merged into /notes. Kept as redirects so old
+              links, the resume PDF, and email signatures still land. */}
+          <Redirect from="/stats" to="/notes" />
+          <Redirect from="/contact" to="/notes" />
           <Route component={NotFound} status={404} />
         </Switch>
       </Suspense>

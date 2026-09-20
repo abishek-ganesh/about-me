@@ -116,21 +116,33 @@ computed styles or rendered text. Remember the prerendering caveat below —
 ## Architecture
 
 ### Routing Structure
-The app uses HashRouter with lazy-loaded pages. Main routes:
+The app uses BrowserRouter (clean URLs, no `#`) with lazy-loaded pages. Routes:
 - `/` - Index/Home page
+- `/about` - About page
 - `/resume` - Resume page
+- `/teaching` - Teaching page
+- `/vegan` - Vegan page
 - `/voiceover` - Voiceover portfolio
-- `/stats` - Personal and site statistics
-- `/about`, `/projects`, `/contact` - Currently commented out in routes.js
+- `/notes` - Endnotes: closing note, personal stats, and contact info
+
+`/stats` and `/contact` were separate pages until September 2026. They were
+merged into `/notes` and now `<Redirect>` there, so old inbound links, the
+resume PDF, and email signatures keep working. Do not re-add them as pages.
+
+Navigation is driven by `src/data/routes.js`. `MobileNav.js` picks its bottom-bar
+items out of that list **by hardcoded path string** and ends in `.filter(Boolean)`,
+so renaming a path silently drops it from mobile nav with no error. Update both.
 
 ### Component Organization
-- **src/pages/** - Page components (Index, Resume, Voiceover, Stats, etc.)
+- **src/pages/** - Page components (Index, About, Resume, Teaching, Vegan, Voiceover, Notes)
 - **src/components/** - Reusable components organized by feature:
-  - Template/ - Layout components (Navigation, SideBar, Analytics)
+  - Template/ - Layout components (Navigation, SideBar, MobileNav, Analytics)
   - Resume/ - Resume-specific components (Education, Experience, Skills)
-  - Stats/ - Statistics display components
-  - Projects/ - Project showcase components
-  - Contact/ - Contact information components
+  - Stats/ - Statistics display components (PersonalStats, used by Notes)
+  - Testimonials/ - Student testimonial components
+  - Contact/ - Contact information components (ContactIcons)
+  - home/ - Homepage section components
+  - common/ - Shared UI (AnimatedPhoto, Quote, LoadingSpinner, CursorGlow)
 - **src/layouts/** - Main layout wrapper component
 - **src/data/** - Static data and content:
   - resume/ - Resume data (courses, degrees, positions, skills)
@@ -192,8 +204,8 @@ The app uses HashRouter with lazy-loaded pages. Main routes:
 - Combines GA4 and Clarity data for comprehensive insights
 
 ## Notes
-- Some routes are commented out in routes.js (About, Projects, Contact)
-- Uses HashRouter for GitHub Pages compatibility
+- `SideBar.js` renders its own `<section id="intro">` on every page. Page section
+  ids must avoid `intro` or the TOC anchor scrolls to the sidebar instead.
 - Public assets including images and audio files in public/
 - Voiceover demo files in public/voiceover/
 - Analytics reports directory is gitignored to prevent sensitive data exposure
