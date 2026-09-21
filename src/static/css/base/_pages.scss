@@ -2,30 +2,14 @@
 @import '../libs/vars-modern';
 @import 'containers';
 
-// Apply page container to all main page elements
-// NOTE: these are bare id selectors, so they match ANY element with the id, not
-// just page root articles. #contact and #teaching also hit the homepage's
-// <section> elements, which currently rely on the padding they pick up here.
-// Do not prune entries that look dead without checking the homepage first.
-// A new page gets no gutter at all until its article id is added below.
-#index,
-#about,
-#resume,
-#projects,
-#stats,
-#voiceover,
-#contact,
-#teaching,
-#vegan,
-#postscript,
-#case-studies,
-#when-not-ai {
-  @include page-container;
-}
-
-// Base page class for consistent spacing
+// Every page root carries `.page`, so the container follows the markup instead
+// of a list someone has to remember to edit. This used to be twelve bare id
+// selectors (#index, #about, #contact, ...). Bare ids match any element and
+// outrank class rules 100-to-10, so #contact and #teaching were also hitting
+// <section> elements on the homepage and the About page, overriding the padding
+// those sections declared for themselves. Keep this keyed off the class.
 .page {
-  // Add any page-level spacing or layout adjustments here
+  @include page-container;
   min-height: calc(100vh - 200px); // Account for header/footer
 }
 
