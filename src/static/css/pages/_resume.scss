@@ -1,0 +1,60 @@
+// Resume Page Styles
+
+// Coursework, grouped by school. Rows are links to each course's catalog page,
+// so the whole row is the target rather than just the title.
+.course-group {
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+.course-school {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary, #666);
+  margin-bottom: 0.75rem;
+}
+
+.course-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.course-item {
+  padding: 0;
+  margin: 0;
+}
+
+.course-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border-bottom: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: var(--bg-card, rgba(0, 0, 0, 0.03));
+    transform: translateX(2px);
+  }
+}
+
+.course-number {
+  flex-shrink: 0;
+  min-width: 4.5rem;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.8125rem;
+  color: var(--accent-primary, #2196f3);
+}
+
+.course-title {
+  color: var(--text-primary);
+}

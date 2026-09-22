@@ -1,10 +1,37 @@
 // Homepage data - Sections for TOC navigation and content
+import { teaserQuote } from './teaching';
 
 // Section configuration for sidebar TOC
 export const homepageSections = [
   { id: 'about', label: 'About' },
-  { id: 'teaching', label: 'Teaching' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'signposts', label: 'Around the Site' },
+];
+
+// The homepage's index into the rest of the site. Each card quotes the page it
+// points at: Francisco is a real student, the other three are each page's own
+// strongest line, so nothing here has to be kept in sync with invented copy.
+export const signposts = [
+  {
+    quote: teaserQuote.text,
+    name: teaserQuote.name,
+    cta: 'Read more student feedback',
+    to: '/teaching',
+  },
+  {
+    quote: 'How does he get his protein?',
+    cta: 'Read why I went plant-based',
+    to: '/vegan',
+  },
+  {
+    quote: 'Bringing life to characters, stories, and more, all without AI.',
+    cta: 'Hear the demo reel',
+    to: '/voiceover',
+  },
+  {
+    quote: 'A 4.0 in computer science at Georgia Tech handed me the tools.',
+    cta: 'See the full resume',
+    to: '/resume',
+  },
 ];
 
 // Sits beside the bio - the Bourdain line in the last paragraph, as a photo.

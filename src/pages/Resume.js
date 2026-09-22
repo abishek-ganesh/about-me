@@ -3,12 +3,19 @@ import React from 'react';
 import Main from '../layouts/Main';
 import Quote from '../components/common/Quote';
 
-import { degrees, positions } from '../data/resume';
+import { degrees, positions, courses } from '../data/resume';
 
 const resumeSections = [
   { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
+  { id: 'courses', label: 'Coursework' },
 ];
+
+// Grouped in the order the schools happened, not alphabetically
+const SCHOOL_ORDER = ['Georgia Tech', 'Ohio State', 'De Anza'];
+const coursesBySchool = SCHOOL_ORDER
+  .map((school) => ({ school, list: courses.filter((c) => c.university === school) }))
+  .filter((g) => g.list.length > 0);
 
 const Resume = () => (
   <Main
@@ -85,6 +92,35 @@ const Resume = () => (
             </div>
           ))}
         </div>
+      </section>
+
+      <section id="courses" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2 className="with-accent">Coursework</h2>
+          <p className="section-description">
+            Every course links through to its catalog page.
+          </p>
+        </div>
+        {coursesBySchool.map((group) => (
+          <div key={group.school} className="course-group u-mb-3">
+            <h3 className="course-school">{group.school}</h3>
+            <ul className="course-list">
+              {group.list.map((course) => (
+                <li key={course.number} className="course-item">
+                  <a
+                    href={course.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="course-link"
+                  >
+                    <span className="course-number">{course.number}</span>
+                    <span className="course-title">{course.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
 

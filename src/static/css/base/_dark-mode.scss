@@ -1088,3 +1088,26 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
     }
   }
 }
+// ===================
+// Teaser cards and coursework
+// ===================
+// The "global fallback for any missed text" block above sets
+// `#main p, li, span, label, div` and `#main h1-h6` to --text-primary. At
+// specificity 101 that outranks the plain class rules these elements carry, so
+// the attribution line and the course numbers lose their accent and read as
+// body text. Scoping under #main takes it back without !important.
+#main {
+  .teaser-name {
+    color: var(--text-secondary);
+  }
+
+  // The heading fallback above is !important, so matching it is the only way
+  // to keep this group label from reading as a full-strength heading.
+  .course-school {
+    color: var(--text-secondary) !important;
+  }
+
+  .course-number {
+    color: var(--accent-primary);
+  }
+}

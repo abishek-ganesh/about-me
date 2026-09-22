@@ -1,9 +1,9 @@
 // Postscript Page Styles
 //
-// Layout carried over from the old contact page. Renamed off `.contact-intro`
-// on purpose: that class is also defined in components/_homepage-sections.scss
-// for the homepage contact paragraph, and this file imports later, so the page
-// rules were silently overriding the homepage ones.
+// Layout carried over from the old contact page, under a page-specific name.
+// The old `.contact-intro` collided with a same-named rule in
+// components/_homepage-sections.scss; both that rule and the homepage contact
+// section it styled are gone now.
 
 .postscript-intro {
   margin-bottom: 3rem;

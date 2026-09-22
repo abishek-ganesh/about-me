@@ -298,31 +298,6 @@
   letter-spacing: 0.025em;
 }
 
-// Contact Section
-.contact-section-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-intro {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-
-.contact-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
-}
-
 .btn {
   display: inline-block;
   padding: 0.875rem 2rem;
@@ -356,21 +331,21 @@
   }
 }
 
-.contact-social {
-  .contact-icons {
-    justify-content: center;
-  }
-}
-
 // Section CTA link
 .section-cta {
   margin-top: 2rem;
 }
 
-// Teaching teaser quote - one student quote and the link to the full wall,
-// deliberately in the same card so the quote is the thing you click through from.
-.teaching-quote-card {
-  margin: 1.5rem 0 0;
+// Teaser card - a pull quote from a page, with the link through to it.
+// Shared by every card in the homepage signpost list.
+.signpost-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.teaser-card {
+  margin: 0;
   padding: 1.25rem 2rem;
   background: var(--bg-card);
   border: 1px solid var(--border-primary);
@@ -382,7 +357,7 @@
   }
 }
 
-.teaching-quote-text {
+.teaser-quote {
   margin: 0;
   padding: 0;
   border: 0;
@@ -400,7 +375,7 @@
   }
 }
 
-.teaching-quote-footer {
+.teaser-footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -411,7 +386,7 @@
   border-top: 1px solid var(--border-primary);
 }
 
-.teaching-quote-name {
+.teaser-name {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.05em;

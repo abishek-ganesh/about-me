@@ -5,8 +5,7 @@ import { homepageSections, aboutContent } from '../data/homepage';
 
 // Section components
 import AboutSection from '../components/home/AboutSection';
-import TeachingSection from '../components/home/TeachingSection';
-import ContactSection from '../components/home/ContactSection';
+import SignpostSection from '../components/home/SignpostSection';
 
 const Index = () => {
   return (
@@ -31,14 +30,9 @@ const Index = () => {
           <AboutSection />
         </section>
 
-        {/* Teaching Section */}
-        <section id="teaching" className="homepage-section">
-          <TeachingSection />
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="homepage-section">
-          <ContactSection />
+        {/* Signposts into the rest of the site */}
+        <section id="signposts" className="homepage-section">
+          <SignpostSection />
         </section>
       </article>
     </Main>
