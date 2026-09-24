@@ -40,7 +40,7 @@ all gone. Do not reintroduce them.
    ```
 3. **Verify Production**: after Vercel finishes, open the live site in a real
    browser and look at the pages you changed. There is no automated production
-   check — see "Testing" below for why.
+   check. See "Testing" below for why.
 
 **Pre-push Hook (enforcement):**
 `.githooks/pre-push` gates pushes to `main`, since those deploy to production.
@@ -110,7 +110,7 @@ reinstate a suite that cannot fail.
 
 To actually verify a UI change, drive a real browser: use the Playwright MCP
 server, or a throwaway Node script against a real Chromium, and assert on
-computed styles or rendered text. Remember the prerendering caveat below —
+computed styles or rendered text. Remember the prerendering caveat below:
 `curl` returns the SPA shell, so grepping HTML proves nothing either.
 
 ## Architecture

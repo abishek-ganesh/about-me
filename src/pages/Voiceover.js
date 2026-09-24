@@ -119,7 +119,7 @@ const Voiceover = () => (
             artistic side brings characters and stories to life with authentic emotion.
           </p>
           <p className="u-text-lg u-mb-3">
-            Voice acting allows me to explore the human side of communication—something that
+            Voice acting allows me to explore the human side of communication, something that
             complements my work in AI. Understanding how humans convey emotion, meaning, and
             nuance through voice helps me build better AI systems and more natural interactions.
           </p>

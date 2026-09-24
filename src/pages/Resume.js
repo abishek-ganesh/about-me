@@ -47,7 +47,7 @@ const Resume = () => (
                         job.company
                       )}
                     </h3>
-                    <span className="u-text-primary u-font-medium"> — {job.position}</span>
+                    <span className="u-text-primary u-font-medium"> - {job.position}</span>
                   </div>
                   <span className="tag tag--small tag--neutral">{job.daterange}</span>
                 </div>
