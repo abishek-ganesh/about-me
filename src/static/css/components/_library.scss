@@ -2,7 +2,9 @@
 @import '../libs/vars-modern';
 
 // Card component
+// Card text is centered site-wide, matching the testimonial cards.
 .card {
+  text-align: center;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 0.75rem;

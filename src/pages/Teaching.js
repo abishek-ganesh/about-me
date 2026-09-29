@@ -147,7 +147,11 @@ const Teaching = () => (
           ))}
         </div>
 
-        <p className="u-text-lg u-mt-4 u-mb-0">{capstone.closing}</p>
+        <div className="card card--gradient u-mt-4">
+          <div className="card-body">
+            <p className="u-text-lg u-mb-0">{capstone.closing}</p>
+          </div>
+        </div>
       </section>
 
       <section id="readiness" className="section-content u-mt-4">

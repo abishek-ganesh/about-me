@@ -11,7 +11,7 @@ const AboutSection = () => {
       <h2 className="section-heading">About</h2>
 
       <div className="about-layout">
-        <div className="about-bio">
+        <div className="about-bio card card--gradient">
           {aboutContent.bio.map((paragraph, index) => (
             <p key={index} className="about-paragraph">
               {paragraph}

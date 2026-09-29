@@ -41,7 +41,7 @@ const Postscript = () => {
             width={300}
             height={300}
           />
-          <div className="postscript-intro-text">
+          <div className="postscript-intro-text card card--gradient">
             <p className="u-text-lg">
               You have reached the end of the site, so here is the part that does not belong on any of the
               other pages: a few numbers I actually keep track of. The age below is live, counting up while

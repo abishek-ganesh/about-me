@@ -32,7 +32,7 @@ const About = () => {
 
       <section id="overview" className="about-hero u-mb-4">
         <div className="about-hero-content">
-          <div className="about-hero-text">
+          <div className="about-hero-text card card--gradient">
             <p className="intro-text">
             I started in mathematics and finished with a master&apos;s in computer science. In between, after moving to
             California, I kept taking classes while working full-time: marketing, business administration, project
