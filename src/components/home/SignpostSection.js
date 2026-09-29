@@ -16,7 +16,6 @@ const SignpostSection = () => {
           <TeaserCard
             key={s.to}
             quote={s.quote}
-            name={s.name}
             cta={s.cta}
             to={s.to}
           />

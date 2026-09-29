@@ -8,12 +8,11 @@ export const homepageSections = [
 ];
 
 // The homepage's index into the rest of the site. Each card quotes the page it
-// points at: Francisco is a real student, the other three are each page's own
-// strongest line, so nothing here has to be kept in sync with invented copy.
+// points at (a real student for Teaching, the page's own strongest line for the
+// rest), so nothing here has to be kept in sync with invented copy.
 export const signposts = [
   {
     quote: teaserQuote.text,
-    name: teaserQuote.name,
     cta: 'Read more student feedback',
     to: '/teaching',
   },
