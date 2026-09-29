@@ -163,6 +163,7 @@ export const capstone = {
         'A city government hires the team to build an urban operations dashboard: predict traffic accident severity from real accident data, detect potholes from road imagery, and classify citizen complaints with NLP.',
     },
   ],
+  requirementsHeading: 'What every team has to deliver',
   requirements: [
     {
       title: 'A deployed product, not a notebook',

@@ -948,6 +948,22 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
   }
 }
 
+// Secondary button as an accent outline in both themes. The white fill it
+// had glowed on dark cards and vanished on light ones. Scoped under #main to
+// beat the `.card *` color fallback and the later `.btn { border: none }`.
+#main .btn--secondary {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--accent-light);
+    // A global `a:hover` pins every link to the light-theme blue with !important
+    color: var(--accent-hover) !important;
+    border-color: var(--accent-hover);
+  }
+}
+
 // Neutral UI elements in dark mode
 :root.dark-mode {
   .u-bg-light,

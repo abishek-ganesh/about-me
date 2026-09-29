@@ -71,6 +71,12 @@ const Resume = () => (
           {degrees.map((degree) => (
             <div key={degree.school} className="card card--elevated u-text-center">
               <div className="card-body">
+                {degree.logo && (
+                  <div className="school-logo">
+                    {/* Decorative: the school name is right below it */}
+                    <img src={degree.logo} alt="" />
+                  </div>
+                )}
                 <h3 className="u-mb-1">
                   {degree.link ? (
                     <a href={degree.link} target="_blank" rel="noopener noreferrer">

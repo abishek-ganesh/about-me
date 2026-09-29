@@ -8,6 +8,29 @@
   }
 }
 
+// A white tile keeps each school's real brand colors legible in both themes;
+// Georgia Tech's navy would vanish straight onto the dark card.
+.school-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  min-width: 72px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.625rem;
+  background: #fff;
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+
+  img {
+    height: 100%;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+  }
+}
+
 .course-school {
   font-size: 0.875rem;
   font-weight: 700;

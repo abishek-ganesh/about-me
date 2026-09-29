@@ -112,7 +112,9 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <Link to="/teaching" className="btn btn--secondary">Read What They Said</Link>
+            <div className="u-text-center">
+              <Link to="/teaching" className="btn btn--secondary">Read What They Said</Link>
+            </div>
           </div>
         </div>
       </section>

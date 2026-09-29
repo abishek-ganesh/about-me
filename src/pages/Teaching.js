@@ -27,8 +27,7 @@ const Teaching = () => (
       <div className="page-title">
         <h1>Teaching AI</h1>
         <span className="page-subtitle">
-          Zero to hero in six months - give me everything you&apos;ve got and I&apos;ll give you
-          everything I&apos;ve got
+          Six months, three hours a day, and nobody gets left behind
         </span>
       </div>
 
@@ -122,19 +121,22 @@ const Teaching = () => (
           <p className="section-description">{capstone.intro}</p>
         </div>
 
-        <p className="u-text-sm u-text-muted u-mb-2">{capstone.briefsNote}</p>
-        <div className="grid grid--2 grid--gap-lg">
-          {capstone.briefs.map((brief) => (
-            <div key={brief.title} className="card card--elevated">
-              <div className="card-body">
-                <h4 className="u-text-primary u-mb-1">{brief.title}</h4>
-                <p className="u-mb-0">{brief.body}</p>
+        <div className="capstone-examples">
+          <p className="capstone-label">{capstone.briefsNote}</p>
+          <div className="grid grid--2 grid--gap-lg">
+            {capstone.briefs.map((brief) => (
+              <div key={brief.title} className="card card--elevated">
+                <div className="card-body">
+                  <h4 className="u-text-primary u-mb-1">{brief.title}</h4>
+                  <p className="u-mb-0">{brief.body}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid--2 grid--gap-lg u-mt-4">
+        <h3 className="capstone-subheading">{capstone.requirementsHeading}</h3>
+        <div className="grid grid--2 grid--gap-lg">
           {capstone.requirements.map((req) => (
             <div key={req.title} className="card card--elevated">
               <div className="card-body">

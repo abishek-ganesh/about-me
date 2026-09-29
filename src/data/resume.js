@@ -4,6 +4,7 @@
 export const degrees = [
   {
     school: 'Georgia Institute of Technology',
+    logo: '/images/schools/gatech.svg',
     degree: 'M.S. Computer Science',
     link: 'https://www.gatech.edu/',
     year: '2019-2021',
@@ -12,6 +13,7 @@ export const degrees = [
   },
   {
     school: 'The Ohio State University',
+    logo: '/images/schools/osu.svg',
     degree: 'B.S. Mathematics',
     link: 'https://www.osu.edu/',
     year: '2009-2013',
@@ -19,6 +21,7 @@ export const degrees = [
   },
   {
     school: 'De Anza College',
+    logo: '/images/schools/deanza.svg',
     degree: 'A.A. Marketing Management',
     link: 'https://www.deanza.edu/',
     year: '2015-2016',
