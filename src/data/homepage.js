@@ -22,7 +22,7 @@ export const signposts = [
     to: '/vegan',
   },
   {
-    quote: 'I usually end up as the translator in the room.',
+    quote: 'None of that was a detour.',
     cta: 'Read the long way around',
     to: '/about',
   },
@@ -42,7 +42,7 @@ export const aboutPhoto = {
 
 // About section content
 export const aboutContent = {
-  intro: "Technology should help people. So should the people who build it.",
+  intro: "Technology should help people.",
   bio: [
     "Growing up, I had a hard time connecting with people, so I held onto the two things that didn't need translating. Mathematics is the language of the universe, and it reads the same whatever language you speak. Basketball was the other one, because a swish is a swish anywhere in the world. Both grew up with me: mathematics turned into AI, and basketball turned into a lifelong thing for fitness.",
     "Today I'm VP of Technology & AI at Appa Health, where the whole point of the technology is connecting students with mentors who change their trajectory. Along the way I worked in Silicon Valley and shipped AI for Fortune 500 enterprises, healthcare startups, nonprofits, and local government, across every paradigm shift from classical machine learning through the transformer revolution to today's LLMs and agentic systems.",

@@ -19,9 +19,8 @@ const Index = () => {
         <section id="hero" className="homepage-hero">
           <h1 className="hero-tagline">{aboutContent.intro}</h1>
           <p className="hero-description">
-            VP of Technology &amp; AI at Appa Health and lead AI instructor. I build AI
-            that solves real problems and uses the technology as a force for good, and I teach
-            others to do the same.
+            So I build AI that does, as VP of Technology &amp; AI at Appa Health, and I teach
+            anyone willing to learn how to build it too.
           </p>
         </section>
 
