@@ -122,7 +122,6 @@ The app uses BrowserRouter (clean URLs, no `#`) with lazy-loaded pages. Routes:
 - `/resume` - Resume page
 - `/teaching` - Teaching page
 - `/vegan` - Vegan page
-- `/voiceover` - Voiceover portfolio
 - `/postscript` - Closing note, personal stats, and contact info
 
 `/stats` and `/contact` were separate pages until September 2026. They were
@@ -134,7 +133,7 @@ items out of that list **by hardcoded path string** and ends in `.filter(Boolean
 so renaming a path silently drops it from mobile nav with no error. Update both.
 
 ### Component Organization
-- **src/pages/** - Page components (Index, About, Resume, Teaching, Vegan, Voiceover, Postscript)
+- **src/pages/** - Page components (Index, About, Resume, Teaching, Vegan, Postscript)
 - **src/components/** - Reusable components organized by feature:
   - Template/ - Layout components (Navigation, SideBar, MobileNav, Analytics)
   - Resume/ - Resume-specific components (Education, Experience, Skills)
@@ -207,7 +206,6 @@ so renaming a path silently drops it from mobile nav with no error. Update both.
 - `SideBar.js` renders its own `<section id="intro">` on every page. Page section
   ids must avoid `intro` or the TOC anchor scrolls to the sidebar instead.
 - Public assets including images and audio files in public/
-- Voiceover demo files in public/voiceover/
 - Analytics reports directory is gitignored to prevent sensitive data exposure
 - Test artifacts (results, screenshots) are gitignored
 

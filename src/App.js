@@ -20,7 +20,6 @@ const About = lazy(() => import('./pages/About'));
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Postscript = lazy(() => import('./pages/Postscript'));
-const Voiceover = lazy(() => import('./pages/Voiceover'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Teaching = lazy(() => import('./pages/Teaching'));
 const Vegan = lazy(() => import('./pages/Vegan'));
@@ -32,7 +31,6 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Index} />
           <Route path="/about" component={About} />
-          <Route path="/voiceover" component={Voiceover} />
           <Route path="/teaching" component={Teaching} />
           <Route path="/vegan" component={Vegan} />
           <Route path="/postscript" component={Postscript} />
@@ -42,6 +40,7 @@ const App = () => (
           <Redirect from="/stats" to="/postscript" />
           <Redirect from="/contact" to="/postscript" />
           <Redirect from="/notes" to="/postscript" />
+          <Redirect from="/voiceover" to="/" />
           <Route component={NotFound} status={404} />
         </Switch>
       </Suspense>

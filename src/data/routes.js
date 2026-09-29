@@ -26,11 +26,6 @@ const routes = [
     icon: 'fa-leaf',
   },
   {
-    label: 'Voiceover',
-    path: '/voiceover',
-    icon: 'fa-microphone',
-  },
-  {
     label: 'Postscript',
     // Full label overflows the fixed-width mobile nav item; MobileNav uses this
     shortLabel: 'P.S.',

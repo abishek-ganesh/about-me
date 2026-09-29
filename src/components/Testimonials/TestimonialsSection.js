@@ -9,7 +9,6 @@ const TestimonialsSection = ({ testimonials, showPlaceholder = false }) => {
     { value: 'all', label: 'All' },
     { value: 'ai-consulting', label: 'AI Consulting' },
     { value: 'teaching', label: 'Teaching' },
-    { value: 'voice-acting', label: 'Voice Acting' },
   ];
   
   const filteredTestimonials = testimonials.filter(t => 

@@ -528,30 +528,6 @@ table {
   }
 }
 
-// Voiceover page
-.voiceover, #voiceover {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary) !important;
-  }
-  
-  p, li, span:not(.u-text-dark) {
-    color: var(--text-primary);
-  }
-  
-  .demo-section {
-    background-color: var(--bg-card);
-    border-color: var(--border-primary);
-    
-    h3, h4 {
-      color: var(--text-primary) !important;
-    }
-  }
-  
-  audio {
-    background-color: var(--bg-secondary);
-  }
-}
-
 // Projects page
 .projects {
   h1, h2, h3, h4, h5, h6 {
@@ -972,28 +948,9 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
   }
 }
 
-// Special handling for voiceover audio player - needs dark background in dark mode
-#voiceover .u-bg-light,
-.voiceover .u-bg-light {
-  background-color: var(--bg-card) !important;
-  border: 1px solid var(--border-primary) !important;
-  
-  p, span {
-    color: var(--text-primary) !important;
-  }
-  
-  .u-text-muted {
-    color: var(--text-secondary) !important;
-  }
-  
-  a {
-    color: var(--accent-primary) !important;
-  }
-}
-
 // Neutral UI elements in dark mode
 :root.dark-mode {
-  .u-bg-light:not(#voiceover .u-bg-light):not(.voiceover .u-bg-light),
+  .u-bg-light,
   .bg-light,
   .badge,
   .pill,

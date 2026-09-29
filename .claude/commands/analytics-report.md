@@ -41,7 +41,7 @@ Report period: $ARGUMENTS (defaults to 'daily' if not specified)
 
 4. **User Behavior & Content Analysis (Priority #2)**
    - **Page Performance (from GA4)**
-     - Most visited pages (/, /resume, /voiceover, /stats)
+     - Most visited pages (/, /resume, /teaching, /postscript)
      - Page views and unique page views
      - Average time on page
      - Exit rates by page
@@ -53,7 +53,6 @@ Report period: $ARGUMENTS (defaults to 'daily' if not specified)
      - Rage clicks and dead clicks (UX issues)
    - **Resume & Portfolio Interaction**
      - Resume page engagement metrics
-     - Voiceover demo plays and completion rates
      - Download/print actions on resume
      - External link clicks (LinkedIn, GitHub, etc.)
 

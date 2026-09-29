@@ -21,13 +21,13 @@ const About = () => {
   return (
   <Main
     title="About"
-    description="Abishek Ganesh - years of AI in production, VP of Technology & AI at Appa Health, lead AI instructor, and voice actor."
+    description="Abishek Ganesh - years of AI in production, VP of Technology & AI at Appa Health, and lead AI instructor."
     sidebarSections={aboutSections}
   >
     <article className="post page" id="about">
       <div className="page-title">
         <h1>The Long Way Around</h1>
-        <span className="page-subtitle">Mathematics, business and marketing classes, a master&apos;s in CS, and years of production AI - plus teaching, voice work, and a running list of countries</span>
+        <span className="page-subtitle">Mathematics, business and marketing classes, a master&apos;s in CS, and years of production AI - plus teaching and a running list of countries</span>
       </div>
 
       <section id="overview" className="about-hero u-mb-4">

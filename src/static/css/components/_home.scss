@@ -188,30 +188,6 @@
     // background: linear-gradient(...) - Removed to use default glass style
   }
 
-  .voice-card {
-    .waveform-visual {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      height: 40px;
-      margin: $space-4 0;
-      
-      .bar {
-        width: 4px;
-        background: var(--accent-primary);
-        border-radius: 2px;
-        animation: wave 1s infinite ease-in-out;
-        
-        @for $i from 1 through 8 {
-          &:nth-child(#{$i}) {
-            height: #{random(30) + 10}px;
-            animation-delay: #{$i * 0.1}s;
-          }
-        }
-      }
-    }
-  }
-
   .project-card {
     @media (min-width: 1024px) {
       grid-column: span 2;
