@@ -113,6 +113,30 @@ export const positions = [
       'Scaled data operations from startup to series B funding',
     ],
   },
+  {
+    company: 'Onerent',
+    position: 'Director of Commercial / Revenue Operations',
+    link: '',
+    daterange: '2016 - 2017',
+    points: [
+      'First sales ops hire; built the department from scratch',
+      'Led a team of 15 that grew bookings from $1.3M to $3M in 7 months',
+      'Rolled out and administered the CRM, designing the workflows every team ran on',
+      'Owned quotas, forecasts, and comp plans',
+    ],
+  },
+  {
+    company: 'Aruba Networks (an HPE company)',
+    position: 'Commercial / Revenue Operations Analyst',
+    link: '',
+    daterange: '2014 - 2016',
+    points: [
+      'First job out of school: bookings reporting and analytics for a global sales org',
+      'Ran sales letters, quota attainment, and SPIFF payouts',
+      'Supported 1,200 Aruba and 1,000 HPE reps through the HPE acquisition',
+      'Kept data flowing across CRM, BI, and database systems',
+    ],
+  },
 ];
 
 // Skills data organized by category
