@@ -37,12 +37,21 @@
 			padding-top: 0;
 		}
 
+		// Laptop widths: keep the column, just slimmer
 		@include breakpoint(large) {
+			margin-right: _size(section-spacing-small);
+			min-width: 18em;
+			width: 18em;
+		}
+
+		@include breakpoint(medium) {
 			border-top: solid 1px _palette(border);
 			margin: _size(section-spacing) 0 0 0;
 			min-width: 0;
 			padding: _size(section-spacing) 0 0 0;
 			width: 100%;
+
+			text-align: center;
 
 			// Reset sticky on mobile
 			position: relative;

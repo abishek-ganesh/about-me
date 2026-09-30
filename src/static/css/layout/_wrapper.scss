@@ -25,7 +25,15 @@
 		}
 
 		@include breakpoint(large) {
+			padding: _size(section-spacing-small);
+		}
+
+		// Stack sidebar under content only once there is no room for both.
+		// Stacking at `large` hid the TOC at the bottom of the page on laptops.
+		@include breakpoint(medium) {
 			display: block;
+			// Back to full padding: stacked .post bleeds out by exactly this much
+			padding: _size(section-spacing);
 		}
 
 		@include breakpoint(small) {

@@ -227,6 +227,11 @@
   // Fixed columns
   &--2 {
     grid-template-columns: repeat(2, 1fr);
+
+    // Sidebar beside content leaves under ~650px here
+    @media (min-width: 981px) and (max-width: 1080px) {
+      grid-template-columns: 1fr;
+    }
     
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -236,7 +241,7 @@
   &--3 {
     grid-template-columns: repeat(3, 1fr);
     
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
     }
     
@@ -248,11 +253,8 @@
   &--4 {
     grid-template-columns: repeat(4, 1fr);
     
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    
-    @media (max-width: 992px) {
+    // Straight to 2x2: three columns left a lone fourth card
+    @media (max-width: 1280px) {
       grid-template-columns: repeat(2, 1fr);
     }
     

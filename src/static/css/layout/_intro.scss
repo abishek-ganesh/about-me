@@ -122,8 +122,20 @@
 		}
 
 		@include breakpoint(large) {
+			.logo .logo-overlay p {
+				font-size: 0.7em;
+			}
+		}
+
+		@include breakpoint(medium) {
 			margin: 0 0 _size(section-spacing) 0;
 			text-align: center;
+
+			// Stacked under the page the photo would otherwise span the full
+			// content width, 1000px+ tall on a tablet. Cap it to a profile card.
+			.logo {
+				max-width: 280px;
+			}
 			
 			.logo .logo-overlay {
 				h2 {
