@@ -7,6 +7,7 @@ import Analytics from '../components/Template/AnalyticsGA4';
 import Navigation from '../components/Template/Navigation';
 import SideBar from '../components/Template/SideBar';
 import MobileNav from '../components/Template/MobileNav';
+import SectionMenu from '../components/Template/SectionMenu';
 import ScrollToTop from '../components/Template/ScrollToTop';
 import StructuredData from '../components/Template/StructuredData';
 import DarkModeToggle from '../components/Template/DarkModeToggle';
@@ -72,6 +73,9 @@ const Main = (props) => {
         <MobileNav />
       </div>
       <DarkModeToggle floating />
+      {!props.fullPage && props.sidebarSections.length > 0 && (
+        <SectionMenu sections={props.sidebarSections} />
+      )}
     </HelmetProvider>
   );
 };

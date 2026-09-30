@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import useActiveSection from '../../hooks/useActiveSection';
+import scrollToSection from '../../utils/scrollToSection';
 
 /**
  * SidebarNav - Table of contents navigation for the sidebar
@@ -12,18 +13,9 @@ const SidebarNav = ({ sections }) => {
   const sectionIds = sections.map((s) => s.id);
   const activeSection = useActiveSection(sectionIds);
 
-  // Smooth scroll to section
   const handleClick = useCallback((e, sectionId) => {
     e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-      // Update URL hash without jumping
-      window.history.pushState(null, '', `#${sectionId}`);
-    }
+    scrollToSection(sectionId);
   }, []);
 
   if (!sections.length) return null;
