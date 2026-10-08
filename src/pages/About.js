@@ -84,10 +84,19 @@ const About = () => {
             <p className="u-text-lg">
               Mathematics is the language of the universe. Studying it at Ohio State taught me to sit with a problem
               until it gives in. The marketing and business classes taught me that an elegant solution nobody
-              understands is worth nothing. A 4.0 in computer science at Georgia Tech
-              handed me the tools. Leading technical teams taught me the hardest part was never the model. Put together,
-              that is why I usually end up as the translator in the room - between the people building the technology
-              and the people who have to live with it.
+              understands is worth nothing.
+            </p>
+            <p className="u-text-lg">
+              In 2018 I became convinced that AI was going to reshape society, and I wanted to be close enough to the
+              front to help shape it into something good for people. So I took the GRE and started pivoting my career
+              toward it. From late 2019 to the spring of 2021 I earned a master&apos;s in computer science at Georgia
+              Tech while working full time at Big Health, taking extra classes every term to finish in a year and a half
+              with a 4.0. That handed me the tools.
+            </p>
+            <p className="u-text-lg">
+              Leading technical teams taught me the hardest part was never the model. Put together, that is why I
+              usually end up as the translator in the room - between the people building the technology and the people
+              who have to live with it.
             </p>
           </div>
         </div>
