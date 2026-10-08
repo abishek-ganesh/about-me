@@ -57,12 +57,12 @@ const About = () => {
           <div className="list list--none u-mb-0">
             <div className="list-item u-mb-2">
               <h4 className="u-text-primary u-mb-1">Building at Appa Health</h4>
-              <p>VP of Technology &amp; AI, leading the platform that connects students with mentors who change
-                 their trajectory. The technology is only interesting because of what it is for.</p>
+              <p>VP of Technology &amp; AI, leading the platform that fosters human connection between certified,
+                 credentialed mentors and teenagers. The technology is only interesting because of what it is for.</p>
             </div>
             <div className="list-item u-mb-2">
               <h4 className="u-text-primary u-mb-1">Consulting Across Sectors</h4>
-              <p>Fortune 500 enterprises, healthcare startups, nonprofits, and local government. Classical ML,
+              <p>Fortune 500 enterprises, healthcare startups, and nonprofits. Classical ML,
                  deep learning, RAG, multi-agent orchestration - whichever one the problem actually needs,
                  including the times the answer is that it needs none of them.</p>
             </div>
