@@ -4,7 +4,7 @@
   "homepage": "https://abishekganesh.com",
   "license": "MIT",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "repository": {
     "type": "git",
