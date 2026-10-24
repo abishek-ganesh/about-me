@@ -9,11 +9,7 @@ import SignpostSection from '../components/home/SignpostSection';
 
 const Index = () => {
   return (
-    <Main
-      description="Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"
-      structuredDataType="home"
-      sidebarSections={homepageSections}
-    >
+    <Main sidebarSections={homepageSections}>
       <article className="post page homepage" id="index">
         {/* Hero Section */}
         <section id="hero" className="homepage-hero">

@@ -11,12 +11,12 @@ const StructuredData = ({ type, customData }) => {
     alternateName: 'Abishek',
     url: 'https://abishekganesh.com',
     image: 'https://abishekganesh.com/images/august-2025/website-01.JPG',
-    jobTitle: 'State-of-the-Art AI Implementation Specialist',
+    jobTitle: 'VP of Technology & AI',
     worksFor: {
       '@type': 'Organization',
-      name: 'AI Consulting Practice',
+      name: 'Appa Health',
     },
-    description: 'State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment',
+    description: 'VP of Technology & AI at Appa Health and lead AI instructor. Years of AI in production, and a conviction that technology should help people.',
     email: 'abishek.ganesh30@gmail.com',
     sameAs: [
       'https://www.linkedin.com/in/abishek-ganesh',
@@ -54,57 +54,14 @@ const StructuredData = ({ type, customData }) => {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Abishek Ganesh - AI Implementation Specialist',
+    name: 'Abishek Ganesh',
     alternateName: 'Abishek Ganesh Portfolio',
     url: 'https://abishekganesh.com',
-    description: 'Portfolio website of Abishek Ganesh, State-of-the-Art AI Implementation Specialist',
+    description: 'Personal site of Abishek Ganesh: VP of Technology & AI at Appa Health, AI instructor, and everything else he cares about.',
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://abishekganesh.com/?search={search_term_string}',
       'query-input': 'required name=search_term_string',
-    },
-  };
-
-  // Service schema for consulting
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'AI Implementation Consulting',
-    provider: personSchema,
-    serviceType: 'Technology Consulting',
-    areaServed: {
-      '@type': 'Country',
-      name: 'United States',
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'AI Consulting Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'RAG System Implementation',
-            description: 'Advanced retrieval-augmented generation systems with hybrid search and reranking',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'AI Agent Development',
-            description: 'Autonomous agents and multi-agent orchestration systems',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'AI Strategy Consulting',
-            description: 'Strategic guidance on implementing cutting-edge AI technologies',
-          },
-        },
-      ],
     },
   };
 
@@ -141,11 +98,7 @@ const StructuredData = ({ type, customData }) => {
 
   // Select schemas based on type
   let schemas = [personSchema, websiteSchema];
-  
-  if (type === 'home') {
-    schemas.push(serviceSchema);
-  }
-  
+
   if (type === 'breadcrumb') {
     schemas.push(getBreadcrumbSchema());
   }
@@ -155,14 +108,13 @@ const StructuredData = ({ type, customData }) => {
     schemas.push(customData);
   }
 
+  // Inline children, not dangerouslySetInnerHTML: react-helmet-async drops script tags without src or text
   return (
     <Helmet>
       {schemas.map((schema, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
       ))}
     </Helmet>
   );

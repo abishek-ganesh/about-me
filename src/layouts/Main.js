@@ -14,10 +14,10 @@ import DarkModeToggle from '../components/Template/DarkModeToggle';
 import CursorGlow from '../components/common/CursorGlow';
 
 const Main = (props) => {
-  const pageTitle = props.title ? `${props.title} | Abishek Ganesh` : 'Abishek Ganesh - AI Implementation Specialist';
+  const pageTitle = props.title ? `${props.title} | Abishek Ganesh` : 'Abishek Ganesh - VP of Technology & AI';
   const siteUrl = 'https://abishekganesh.com';
   const currentUrl = typeof window !== 'undefined' ? window.location.href : siteUrl;
-  const imageUrl = props.image || `${siteUrl}/images/og-image.jpg`;
+  const imageUrl = props.image || `${siteUrl}/images/august-2025/website-01.JPG`;
   
   return (
     <HelmetProvider>
@@ -30,7 +30,7 @@ const Main = (props) => {
         {/* Primary Meta Tags */}
         <meta name="title" content={pageTitle} />
         <meta name="description" content={props.description} />
-        <meta name="keywords" content="AI Implementation, RAG Systems, AI Agents, Machine Learning, Deep Learning, LLM, LangChain, AI Consulting, Abishek Ganesh" />
+        <meta name="keywords" content="Abishek Ganesh, AI, Machine Learning, Deep Learning, LLM, RAG, AI Agents, AI Education, Appa Health" />
         <meta name="author" content="Abishek Ganesh" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={currentUrl} />
@@ -101,7 +101,7 @@ Main.defaultProps = {
   children: null,
   fullPage: false,
   title: null,
-  description: "State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment",
+  description: "VP of Technology & AI at Appa Health and lead AI instructor. Years of AI in production, and a conviction that technology should help people.",
   image: null,
   structuredDataType: 'default',
   structuredData: null,
