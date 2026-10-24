@@ -27,7 +27,7 @@ export const signposts = [
     to: '/about',
   },
   {
-    quote: 'I Build Cool AI Products',
+    quote: 'I build AI that works for people, not instead of them.',
     cta: 'See the full resume',
     to: '/resume',
   },

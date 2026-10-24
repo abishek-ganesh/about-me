@@ -65,7 +65,7 @@ const Resume = () => (
   >
     <article className="post page" id="resume">
       <div className="page-title">
-        <h1>I Build Cool AI Products</h1>
+        <h1>I Build AI That Works for People, Not Instead of Them</h1>
       </div>
 
       <section id="experience" className="section-content">
