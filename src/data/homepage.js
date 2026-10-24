@@ -27,7 +27,7 @@ export const signposts = [
     to: '/about',
   },
   {
-    quote: 'A 4.0 in computer science at Georgia Tech handed me the tools.',
+    quote: 'I Build Cool AI Products',
     cta: 'See the full resume',
     to: '/resume',
   },

@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Main from '../layouts/Main';
 import Quote from '../components/common/Quote';
 
-import { degrees, positions, courses } from '../data/resume';
+import { degrees, positions, volunteering, courses } from '../data/resume';
 
 const resumeSections = [
   { id: 'experience', label: 'Experience' },
+  { id: 'volunteering', label: 'Volunteering' },
   { id: 'education', label: 'Education' },
   { id: 'courses', label: 'Coursework' },
 ];
@@ -17,10 +19,48 @@ const coursesBySchool = SCHOOL_ORDER
   .map((school) => ({ school, list: courses.filter((c) => c.university === school) }))
   .filter((g) => g.list.length > 0);
 
+// One resume entry: company (linked when known), role, dates, and bullet points
+const ResumeEntry = ({ job }) => (
+  <div className="experience-item">
+    <div className="u-mb-2">
+      <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
+        <div>
+          <h3 className="u-inline u-font-semibold">
+            {job.link ? (
+              <a href={job.link} target="_blank" rel="noopener noreferrer">
+                {job.company}
+              </a>
+            ) : (
+              job.company
+            )}
+          </h3>
+          <span className="u-text-primary u-font-medium"> - {job.position}</span>
+        </div>
+        <span className="tag tag--small tag--neutral">{job.daterange}</span>
+      </div>
+    </div>
+    <ul className="list list--chevron">
+      {job.points.map((point, index) => (
+        <li key={index} className="list-item">{point}</li>
+      ))}
+    </ul>
+  </div>
+);
+
+ResumeEntry.propTypes = {
+  job: PropTypes.shape({
+    company: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    daterange: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
+
 const Resume = () => (
   <Main
     title="Resume"
-    description="Abishek Ganesh - State-of-the-Art AI Implementation Specialist | RAG Systems, AI Agents, and Cutting-Edge Model Deployment"
+    description="Resume of Abishek Ganesh: VP of Technology & AI at Appa Health, years of production AI across Fortune 500s, healthcare startups, and nonprofits, and a Georgia Tech M.S. in computer science."
     sidebarSections={resumeSections}
   >
     <article className="post page" id="resume">
@@ -34,30 +74,18 @@ const Resume = () => (
         </div>
         <div className="experience-timeline">
           {positions.map((job) => (
-            <div key={`${job.company}-${job.position}`} className="experience-item">
-              <div className="u-mb-2">
-                <div className="u-flex u-justify-between u-flex-wrap u-gap-2">
-                  <div>
-                    <h3 className="u-inline u-font-semibold">
-                      {job.link ? (
-                        <a href={job.link} target="_blank" rel="noopener noreferrer">
-                          {job.company}
-                        </a>
-                      ) : (
-                        job.company
-                      )}
-                    </h3>
-                    <span className="u-text-primary u-font-medium"> - {job.position}</span>
-                  </div>
-                  <span className="tag tag--small tag--neutral">{job.daterange}</span>
-                </div>
-              </div>
-              <ul className="list list--chevron">
-                {job.points.map((point, index) => (
-                  <li key={index} className="list-item">{point}</li>
-                ))}
-              </ul>
-            </div>
+            <ResumeEntry key={`${job.company}-${job.position}`} job={job} />
+          ))}
+        </div>
+      </section>
+
+      <section id="volunteering" className="section-content u-mt-4">
+        <div className="section-header">
+          <h2 className="with-accent">Volunteering</h2>
+        </div>
+        <div className="experience-timeline">
+          {volunteering.map((job) => (
+            <ResumeEntry key={`${job.company}-${job.position}`} job={job} />
           ))}
         </div>
       </section>

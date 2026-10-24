@@ -186,14 +186,6 @@ const testimonials = [
   },
 ];
 
-// Social proof statistics
-export const socialProof = {
-  clientsServed: '15+',
-  projectsCompleted: '25+',
-  studentsTeaching: 'Dozens',
-  yearsExperience: '8+',
-};
-
 // Company logos (when available)
 export const clientLogos = [];
 

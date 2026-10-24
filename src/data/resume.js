@@ -35,22 +35,11 @@ export const positions = [
   {
     company: 'Appa Health',
     position: 'VP of Technology & AI',
-    link: '',
+    link: 'https://www.appahealth.com',
     daterange: '2024 - Present',
     points: [
       'Lead technology and AI for a mentorship platform serving hundreds of students',
       'Build and scale the product systems supporting dozens of mentors',
-    ],
-  },
-  {
-    company: 'AI Consulting Practice',
-    position: 'AI Implementation Specialist',
-    link: '',
-    daterange: '2024 - Present',
-    points: [
-      'Implement RAG systems, AI agents, and multi-agent orchestration in production',
-      'Deploy current foundation models to production for client teams',
-      'Reduced system MTTR through AI-assisted architecture and debugging',
     ],
   },
   {
@@ -140,6 +129,30 @@ export const positions = [
 ];
 
 // Skills data organized by category
+// Volunteering, most recent first. Same shape as positions so the page renders both alike
+export const volunteering = [
+  {
+    company: 'Plant Powered Metro New York',
+    position: 'Technology Volunteer',
+    link: 'https://plantpoweredmetrony.org/',
+    daterange: '2026 - Present',
+    points: [
+      'Run the website and technology for a 501(c)(3) nonprofit that guides communities to lifelong health through whole food, plant-based nutrition',
+      'Build the systems that help it scale plant-based nutrition as a way to overcome common diseases like heart disease',
+    ],
+  },
+  {
+    company: "Citizens' Climate Lobby",
+    position: 'Volunteer, Social Media Lead',
+    link: 'https://citizensclimatelobby.org/',
+    daterange: '2018 - 2022',
+    points: [
+      "Built out the local chapter's social media from the ground up",
+      "Helped prepare and run the chapter's lobbying meetings",
+    ],
+  },
+];
+
 export const skillCategories = {
   'LLM & NLP': [
     { name: 'RAG Systems', level: 5 },

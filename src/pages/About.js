@@ -98,6 +98,11 @@ const About = () => {
               usually end up as the translator in the room - between the people building the technology and the people
               who have to live with it.
             </p>
+            <p className="u-text-lg">
+              From 2018 to 2022 I volunteered with my local Citizens&apos; Climate Lobby chapter, building out its
+              social media and helping with its lobbying meetings. It was the same translation job in a different room:
+              taking something complicated and making it land with people who had every reason to tune it out.
+            </p>
           </div>
         </div>
       </section>
