@@ -136,7 +136,6 @@ so renaming a path silently drops it from mobile nav with no error. Update both.
 - **src/pages/** - Page components (Index, About, Resume, Teaching, Vegan, Postscript)
 - **src/components/** - Reusable components organized by feature:
   - Template/ - Layout components (Navigation, SideBar, MobileNav, Analytics)
-  - Resume/ - Resume-specific components (Education, Experience, Skills)
   - Stats/ - Statistics display components (PersonalStats, used by Postscript)
   - Testimonials/ - Student testimonial components
   - Contact/ - Contact information components (ContactIcons)
@@ -152,6 +151,19 @@ so renaming a path silently drops it from mobile nav with no error. Update both.
 - SCSS files in src/static/css/
 - Main entry point: main.scss
 - Organized into base/, components/, layout/, pages/, and libs/
+- `libs/_tokens.scss` is the single source for colors, type, spacing, radius,
+  shadow, and motion. Colors are CSS custom properties: a fixed palette
+  (`--primary-N`, `--neutral-N`, with `-rgb` channels for `rgba()`) and semantic
+  tokens (`--text-primary`, `--bg-card`, `--border-primary`, ...) whose dark values
+  live in `:root.dark-mode`. Use a semantic token for anything that should follow
+  the theme. Do not reintroduce Sass color variables: they are fixed at build time
+  and can't switch with dark mode.
+- `libs/_helpers.scss` holds `breakpoint(name)` (xlarge 1680, large 1280, medium
+  980, small 736, xsmall 480). An unknown name is a compile error. The old skel
+  library silently matched every width for unknown names, which is why the
+  bottom tab bar block in `_navigation-system.scss` is a plain `@media screen`.
+- Keyframe names are global. Before adding `@keyframes`, grep for the name:
+  component stylesheets imported from JS load after main.css and win.
 
 ### Key Dependencies
 - React 17 with React Router 5

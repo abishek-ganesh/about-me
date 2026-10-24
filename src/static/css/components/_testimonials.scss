@@ -1,114 +1,4 @@
 // Testimonials Component Styles
-@import '../libs/vars-modern';
-
-.testimonials-section {
-  padding: 4rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  
-  .testimonials-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    
-    h2 {
-      font-size: 2.5rem;
-      color: $color-neutral-900;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    
-    .section-subtitle {
-      font-size: 1.125rem;
-      color: $color-neutral-600;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-  }
-  
-  .testimonials-filter {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    
-    .filter-button {
-      padding: 0.5rem 1.5rem;
-      border: 2px solid $color-neutral-300;
-      background: white;
-      border-radius: 9999px;
-      font-weight: 500;
-      color: $color-neutral-700;
-      cursor: pointer;
-      transition: all $transition-base ease;
-      
-      &:hover {
-        border-color: $color-primary-light;
-        color: $color-primary;
-      }
-      
-      &.active {
-        background: $color-primary;
-        color: white;
-        border-color: $color-primary;
-      }
-    }
-  }
-  
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .placeholder-notice {
-    margin: 2rem auto 0;
-    max-width: 600px;
-    padding: 3rem 2rem;
-    background: #f8fafc;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 1rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-
-    &::before {
-      display: none;
-    }
-
-    i {
-      font-size: 3rem;
-      color: $color-primary;
-      margin-bottom: 1rem;
-      opacity: 0.6;
-      display: block;
-    }
-
-    p {
-      margin: 0;
-      font-size: 1.25rem;
-      color: $color-neutral-900;
-      font-weight: 600;
-
-      &.placeholder-subtitle {
-        font-size: 1rem;
-        color: $color-neutral-600;
-        font-weight: normal;
-        margin-top: 0.75rem;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.6;
-      }
-    }
-  }
-}
 
 // Quote card used in the Student Voices grid. The quote flexes so the
 // attribution pins to the bottom and every card in a row shares one baseline.
@@ -126,7 +16,7 @@
   .testimonial-quote-icon {
     display: block;
     font-size: 1.25rem;
-    color: $color-primary;
+    color: var(--primary-500);
     opacity: 0.4;
     margin-bottom: 1rem;
   }
@@ -136,7 +26,7 @@
     font-size: 1.0625rem;
     font-style: italic;
     line-height: 1.7;
-    color: $color-neutral-700;
+    color: var(--neutral-700);
     margin: 0 0 1.5rem;
   }
 
@@ -146,7 +36,7 @@
     justify-content: center;
     gap: 0.75rem;
     padding-top: 1.25rem;
-    border-top: 1px solid $color-neutral-100;
+    border-top: 1px solid var(--neutral-100);
 
     .author-image {
       width: 2.5rem;
@@ -158,7 +48,7 @@
     .author-name {
       font-size: 0.9375rem;
       font-weight: 600;
-      color: $color-neutral-900;
+      color: var(--neutral-900);
     }
   }
 
@@ -169,141 +59,8 @@
     margin-top: 0.75rem;
 
     i {
-      color: $color-warning;
+      color: var(--warning);
       font-size: 0.875rem;
-    }
-  }
-}
-
-.testimonial-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 1rem;
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-  transition: all $transition-base ease;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    display: none;
-  }
-
-  &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateY(-4px);
-    border-color: rgba(0, 0, 0, 0.12);
-  }
-  
-  .testimonial-content {
-    flex: 1;
-    margin-bottom: 2rem;
-    position: relative;
-    
-    .quote-icon {
-      font-size: 2rem;
-      color: $color-primary-light;
-      opacity: 0.3;
-      position: absolute;
-      top: -0.5rem;
-      left: -0.5rem;
-    }
-    
-    .testimonial-text {
-      font-size: 1.125rem;
-      line-height: 1.7;
-      color: $color-neutral-700;
-      font-style: italic;
-      margin: 0;
-      padding-left: 1.5rem;
-    }
-  }
-  
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid $color-neutral-100;
-    
-    .author-image {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: $color-neutral-200;
-    }
-    
-    .author-info {
-      flex: 1;
-      
-      .author-name {
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: $color-neutral-900;
-        margin: 0;
-      }
-      
-      .author-details {
-        font-size: 0.875rem;
-        color: $color-neutral-600;
-        margin: 0;
-      }
-    }
-  }
-  
-  .testimonial-rating {
-    margin-top: 1rem;
-    
-    i {
-      color: $color-warning;
-      margin-right: 0.125rem;
-      font-size: 0.875rem;
-    }
-  }
-}
-
-// Social Proof Stats
-.social-proof-section {
-  background: #f8fafc;
-  padding: 3rem 0;
-  margin: 4rem 0;
-  
-  .social-proof-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    
-    h3 {
-      font-size: 2rem;
-      color: $color-neutral-900;
-      margin-bottom: 3rem;
-      font-weight: 600;
-    }
-    
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      
-      .stat-item {
-        .stat-number {
-          font-size: 3rem;
-          font-weight: 700;
-          color: $color-primary;
-          margin-bottom: 0.5rem;
-          display: block;
-        }
-        
-        .stat-label {
-          font-size: 1rem;
-          color: $color-neutral-600;
-          font-weight: 500;
-        }
-      }
     }
   }
 }

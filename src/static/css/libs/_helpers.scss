@@ -1,0 +1,39 @@
+// Small Sass helpers that replace the retired skel library. Breakpoint names and
+// queries are unchanged, so every existing @include breakpoint(...) behaves the same.
+
+$breakpoints: (
+	xlarge: '(max-width: 1680px)',
+	large: '(max-width: 1280px)',
+	medium: '(max-width: 980px)',
+	small: '(max-width: 736px)',
+	xsmall: '(max-width: 480px)'
+);
+
+// Wraps @content in a screen media query for a named breakpoint
+@mixin breakpoint($name) {
+	@media screen and #{map-get($breakpoints, $name)} {
+		@content;
+	}
+}
+
+// Autoprefixer adds any vendor prefixes the browserslist needs at build time
+@mixin vendor($property, $value) {
+	#{$property}: #{$value};
+}
+
+// Reads a nested key path from a map: val($map, a, b) == map-get(map-get($map, a), b)
+@function val($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+// Replaces every occurrence of $search in $string
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+	@return $string;
+}

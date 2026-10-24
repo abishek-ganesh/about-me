@@ -1,5 +1,4 @@
 // Container mixins for consistent layout
-@import '../libs/vars-modern';
 
 // Main page container - applied to all page root elements
 @mixin page-container {
@@ -36,10 +35,10 @@
 // Content container - for boxed content areas
 @mixin content-container {
   background: white;
-  border: 1px solid $color-neutral-200;
+  border: 1px solid var(--neutral-200);
   border-radius: 1rem;
   padding: 3rem;
-  box-shadow: $shadow-md;
+  box-shadow: shadow(md);
   
   @media (max-width: 768px) {
     padding: 2rem;
@@ -54,7 +53,7 @@
 // Inner content container - for nested content areas
 @mixin inner-container {
   padding: 2rem;
-  background: $color-neutral-50;
+  background: var(--neutral-50);
   border-radius: 0.75rem;
   
   @media (max-width: 768px) {

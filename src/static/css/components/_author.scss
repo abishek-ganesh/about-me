@@ -21,7 +21,7 @@
 
 		.name {
 			@include vendor('transition', 'border-bottom-color #{_duration(transition)} ease');
-			border-bottom: dotted 1px _palette(border-alt);
+			border-bottom: dotted 1px var(--border-tertiary);
 			display: block;
 			margin: 0 1.5em 0 0;
 		}

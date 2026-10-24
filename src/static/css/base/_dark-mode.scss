@@ -1,104 +1,5 @@
-// Dark Mode CSS Custom Properties
-// Following the plan from website-improvement-plan.md
-
-:root {
-  // Light mode colors (default)
-  --bg-primary: #{map-get(map-get($colors, background), primary)};
-  --bg-secondary: #{map-get(map-get($colors, background), secondary)};
-  --bg-tertiary: #{map-get(map-get($colors, background), tertiary)};
-  --bg-card: #{color(neutral, 50)};
-
-  --text-primary: #{color(neutral, 900)};
-  --text-secondary: #{color(neutral, 700)};
-  --text-tertiary: #{color(neutral, 500)};
-  --text-light: #{color(neutral, 400)};
-  --text-date: #{color(neutral, 900)};  // Dark text for dates in light mode
-
-  --border-primary: #{rgba(color(neutral, 400), 0.3)};
-  --border-secondary: #{rgba(color(neutral, 400), 0.075)};
-  --border-tertiary: #{rgba(color(neutral, 400), 0.65)};
-
-  --accent-primary: #{color(primary, 600)};
-  --accent-hover: #{color(primary, 700)};
-  --accent-light: #{color(primary, 100)};
-
-  --link-color: #{color(primary, 600)};
-  --link-hover: #{color(primary, 700)};
-
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.16);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19);
-
-  --code-bg: #{color(neutral, 100)};
-  --code-text: #{color(neutral, 900)};
-
-  // Sidebar specific
-  --sidebar-bg: #{color(neutral, 100)};
-  --sidebar-text: #{color(neutral, 700)};
-  --sidebar-border: #{rgba(color(neutral, 400), 0.2)};
-
-  // Navigation
-  --nav-bg: #{map-get(map-get($colors, background), primary)};
-  --nav-bg-rgb: 255, 255, 255; // RGB values for rgba() usage
-  --bg-primary-rgb: 255, 255, 255; // RGB values for rgba() usage
-  --nav-text: #{color(neutral, 700)};
-  --nav-hover: #{color(primary, 600)};
-
-  // Cursor glow effect (more visible blue in light mode)
-  --glow-color: rgba(59, 130, 246, 0.15);
-
-  // Transition for smooth theme switching
-  --transition-speed: 0.3s;
-  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-// Dark mode colors (from the plan)
-:root.dark-mode {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --bg-tertiary: #1c2128;
-  --bg-card: #1c2128;
-
-  --text-primary: #c9d1d9;
-  --text-secondary: #8b949e;
-  --text-tertiary: #6e7681;
-  --text-light: #484f58;
-  --text-date: #0d1117;  // Dark text for dates in light bubbles
-
-  --border-primary: #30363d;
-  --border-secondary: rgba(48, 54, 61, 0.5);
-  --border-tertiary: #484f58;
-
-  --accent-primary: #58a6ff;
-  --accent-hover: #79c0ff;
-  --accent-light: rgba(88, 166, 255, 0.15);  // Slightly more opaque for date backgrounds
-
-  --link-color: #58a6ff;
-  --link-hover: #79c0ff;
-
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
-
-  --code-bg: #1c2128;
-  --code-text: #e6edf3;
-
-  // Sidebar specific
-  --sidebar-bg: #161b22;
-  --sidebar-text: #c9d1d9;
-  --sidebar-border: #30363d;
-
-  // Navigation
-  --nav-bg: #161b22;
-  --nav-bg-rgb: 22, 27, 34; // RGB values for rgba() usage in dark mode
-  --bg-primary-rgb: 13, 17, 23; // RGB values for rgba() usage in dark mode
-  --nav-text: #c9d1d9;
-  --nav-hover: #58a6ff;
-
-  // Cursor glow effect (accent blue in dark mode)
-  --glow-color: rgba(88, 166, 255, 0.07);
-}
-
+// Dark mode overrides that tokens alone can't express. The token values for both
+// themes live in libs/_tokens.scss.
 // Card headings in dark mode - use light text on dark surfaces
 :root.dark-mode {
   .card, .card.card--elevated, .card.card--gradient, .box, .panel {
@@ -136,10 +37,7 @@ body,
 .mini-posts article,
 .posts article,
 .post,
-.stats-table,
-.resume-header,
 .resume-section,
-.resume-block,
 .skills-col,
 .contact-icons,
 .image.main img,
@@ -228,23 +126,6 @@ code, pre {
   
   > * {
     border-top-color: var(--sidebar-border);
-  }
-  
-  #sidebar-photo img {
-    border-color: var(--border-primary);
-  }
-  
-  // Buttons in sidebar
-  .actions .button {
-    background-color: transparent;
-    color: var(--text-primary) !important;  // Force text color to match main text
-    border: 2px solid var(--border-primary);
-    
-    &:hover {
-      background-color: var(--accent-primary);
-      color: var(--bg-primary) !important;
-      border-color: var(--accent-primary);
-    }
   }
   
   #footer {
@@ -377,26 +258,6 @@ table {
 }
 
 // Stats page specific
-.stats-table {
-  background-color: var(--bg-card);
-  
-  th, td {
-    color: var(--text-primary) !important;
-  }
-  
-  td:first-child {
-    color: var(--text-secondary);
-  }
-  
-  a {
-    color: var(--link-color);
-    
-    &:hover {
-      color: var(--link-hover);
-    }
-  }
-}
-
 .stats {
   h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary) !important;
@@ -404,19 +265,6 @@ table {
   
   p, li, span, label {
     color: var(--text-primary);
-  }
-}
-
-// Resume page specific
-.resume-header {
-  background-color: var(--bg-secondary);
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary) !important;
-  }
-  
-  p {
-    color: var(--text-secondary);
   }
 }
 
@@ -435,34 +283,6 @@ table {
   }
 }
 
-.resume-section {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary) !important;
-  }
-  
-  p, li, span {
-    color: var(--text-primary);
-  }
-}
-
-.resume-block {
-  background-color: var(--bg-card);
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary) !important;
-  }
-  
-  p, li, span {
-    color: var(--text-primary);
-  }
-  
-  .daterange {
-    color: var(--text-primary) !important;  // Use primary text color for maximum visibility
-    opacity: 1 !important;
-    font-weight: 500 !important;
-  }
-}
-
 // Skills section
 .skills {
   h2, h3, h4 {
@@ -473,58 +293,15 @@ table {
     .skillz__category__label {
       color: var(--text-primary) !important;
     }
-    
-    .skillz__category__item {
-      color: var(--text-secondary);
-    }
-  }
-  
-  .skill-button {
-    color: var(--text-primary) !important;
-    border-color: var(--border-primary);
-    
-    &:hover {
-      background-color: var(--accent-primary);
-      color: var(--bg-primary) !important;
-    }
   }
 }
 
 // Experience and Education sections
 .experience, .education {
-  .item-header {
-    h3, h4, h5 {
-      color: var(--text-primary) !important;
-    }
-    
-    .company, .school, .degree {
-      color: var(--text-primary) !important;
-    }
-    
-    .daterange {
-      color: white !important;  // White text on blue background
-      opacity: 1 !important;
-      font-weight: 600 !important;
-      padding: 0.25em 0.75em !important;
-      border-radius: 12px !important;
-      background-color: var(--accent-primary) !important;  // Blue background
-      display: inline-block !important;
-    }
-  }
-  
   .description {
     p, li {
       color: var(--text-primary);
     }
-  }
-  
-  // Date badges/pills - solid blue background with white text
-  .date-badge, .date-pill, .badge {
-    background-color: var(--accent-primary) !important;  // Solid blue background
-    color: white !important;  // White text for contrast
-    border: none !important;
-    opacity: 1 !important;
-    font-weight: 600 !important;
   }
 }
 
@@ -536,19 +313,6 @@ table {
   
   p, li, span {
     color: var(--text-primary);
-  }
-  
-  .project-card {
-    background-color: var(--bg-card);
-    border-color: var(--border-primary);
-    
-    .project-title {
-      color: var(--text-primary) !important;
-    }
-    
-    .project-description {
-      color: var(--text-secondary);
-    }
   }
 }
 
@@ -575,14 +339,6 @@ table {
   
   .contact-item {
     color: var(--text-primary);
-    
-    a {
-      color: var(--link-color);
-      
-      &:hover {
-        color: var(--link-hover);
-      }
-    }
   }
 }
 
@@ -615,19 +371,6 @@ article, .post {
   
   .meta {
     color: var(--text-tertiary);
-  }
-}
-
-// Mini posts
-.mini-posts {
-  article {
-    h3, h4 {
-      color: var(--text-primary) !important;
-    }
-    
-    time {
-      color: var(--text-tertiary);
-    }
   }
 }
 
@@ -706,28 +449,6 @@ article, .post {
       color: var(--text-secondary) !important;
     }
   }
-
-  // Glass cards in dark mode
-  .glass-card {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-primary) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
-    color: var(--text-primary) !important;
-
-    &::before {
-      display: none !important;
-    }
-
-    &.hover-effect:hover {
-      background: var(--bg-tertiary) !important;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-      border-color: rgba(88, 166, 255, 0.2) !important;
-    }
-
-    h3, p, span, div {
-      color: var(--text-primary) !important;
-    }
-  }
 }
 
 // Any div with white/light background
@@ -744,15 +465,6 @@ div[style*="background: #ffffff"] {
 section {
   &.alt, &.special, &.wrapper {
     background-color: var(--bg-secondary);
-  }
-}
-
-// Any element with explicit white/light backgrounds
-.bg-white, .bg-light, .white-bg, .light-bg {
-  background-color: var(--bg-card) !important;
-  
-  * {
-    color: var(--text-primary);
   }
 }
 
@@ -786,151 +498,6 @@ span[class*="date"]:not(.daterange), div[class*="date"]:not(.daterange), p[class
   
   * {
     color: #000 !important;
-  }
-}
-
-// CTA Section - needs dark background in dark mode
-.section-cta {
-  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)) !important;
-  
-  h2 {
-    color: var(--text-primary) !important;
-  }
-  
-  p {
-    color: var(--text-secondary) !important;
-  }
-}
-
-// Testimonials Section - needs dark backgrounds in dark mode
-.testimonials-section {
-  background-color: var(--bg-primary) !important;
-  
-  .testimonials-header {
-    h2 {
-      color: var(--text-primary) !important;
-    }
-    
-    p {
-      color: var(--text-secondary) !important;
-    }
-  }
-  
-  .testimonials-filter {
-    .filter-button {
-      background-color: var(--bg-card) !important;
-      border-color: var(--border-primary) !important;
-      color: var(--text-primary) !important;
-      
-      &:hover, &.active {
-        background-color: var(--accent-primary) !important;
-        border-color: var(--accent-primary) !important;
-        color: white !important;
-      }
-    }
-  }
-  
-  // Placeholder notice for "Real Testimonials Coming Soon"
-  .placeholder-notice {
-    background: var(--bg-card) !important;
-    border-color: var(--border-primary) !important;
-    
-    i {
-      color: var(--accent-primary) !important;
-    }
-    
-    p {
-      color: var(--text-primary) !important;
-      
-      &.placeholder-subtitle {
-        color: var(--text-secondary) !important;
-      }
-    }
-  }
-}
-
-// Tags and badges - ensure proper theming
-.tag {
-  &--primary, &--secondary, &--success, &--warning, &--info {
-    // In dark mode, adapt backgrounds
-    background-color: var(--bg-card) !important;
-    border: 1px solid var(--border-primary) !important;
-    color: var(--text-primary) !important;
-  }
-}
-
-// Skill bars and buttons
-.skillbar, .skill-bar {
-  background-color: var(--bg-card) !important;
-  
-  .skillbar-title, .skill-progress {
-    span {
-      color: white !important; // Progress bars keep white text
-    }
-  }
-}
-
-.skillbutton {
-  background-color: var(--bg-card) !important;
-  border-color: var(--border-primary) !important;
-  color: var(--text-primary) !important;
-  
-  &.skillbutton-active {
-    background-color: var(--accent-primary) !important;
-    border-color: var(--accent-primary) !important;
-    color: white !important;
-  }
-}
-
-// Social proof section with gradient background
-.social-proof-section {
-  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)) !important;
-  
-  .social-proof-container {
-    h3 {
-      color: var(--text-primary) !important;
-    }
-    
-    .stats-grid {
-      .stat-item {
-        .stat-value {
-          color: var(--accent-primary) !important;
-        }
-        
-        .stat-label {
-          color: var(--text-secondary) !important;
-        }
-      }
-    }
-  }
-}
-
-.testimonial-card {
-  background-color: var(--bg-card) !important;
-  border-color: var(--border-primary) !important;
-  
-  .testimonial-content {
-    .testimonial-text {
-      color: var(--text-primary) !important;
-    }
-  }
-  
-  .testimonial-author {
-    border-top-color: var(--border-primary) !important;
-    
-    .author-info {
-      .author-name {
-        color: var(--text-primary) !important;
-      }
-      
-      .author-title {
-        color: var(--text-secondary) !important;
-      }
-    }
-  }
-  
-  .testimonial-rating i {
-    color: var(--accent-primary) !important;
   }
 }
 
