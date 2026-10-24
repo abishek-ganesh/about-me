@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -12,8 +12,11 @@ import ScrollToTop from '../components/Template/ScrollToTop';
 import StructuredData from '../components/Template/StructuredData';
 import DarkModeToggle from '../components/Template/DarkModeToggle';
 import CursorGlow from '../components/common/CursorGlow';
+import { useRevealGroup } from '../hooks/useReveal';
 
 const Main = (props) => {
+  const mainRef = useRef(null);
+  useRevealGroup(mainRef);
   const pageTitle = props.title ? `${props.title} | Abishek Ganesh` : 'Abishek Ganesh - VP of Technology & AI';
   const siteUrl = 'https://abishekganesh.com';
   const currentUrl = typeof window !== 'undefined' ? window.location.href : siteUrl;
@@ -66,7 +69,7 @@ const Main = (props) => {
       <div id="wrapper">
         <CursorGlow />
         <Navigation />
-        <div id="main">
+        <div id="main" ref={mainRef}>
           {props.children}
         </div>
         {props.fullPage ? null : <SideBar sections={props.sidebarSections} />}

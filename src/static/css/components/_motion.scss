@@ -1,0 +1,152 @@
+// Site motion: page entrances, scroll reveals, the homepage headline, reading
+// progress, and card hover. Timing comes from the --motion-* tokens. Every moving
+// part is switched off under prefers-reduced-motion at the bottom of this file.
+
+// ---------------------------------------------------------------------------
+// Page transition: each route mounts a fresh #main, so this replays per page.
+// Once it ends #main has no transform at all, so it never becomes a containing
+// block for position: fixed descendants.
+// ---------------------------------------------------------------------------
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+// backwards, not both: holding the last frame would leave an identity transform behind
+#main {
+  animation: pageEnter var(--motion-page) var(--motion-ease) backwards;
+}
+
+// ---------------------------------------------------------------------------
+// Scroll reveal (hooks/useReveal.js adds these classes; without JS nothing hides).
+// !important because cards carry their own transitions at higher specificity;
+// the classes are removed as soon as the entrance ends, handing styles back.
+// ---------------------------------------------------------------------------
+
+// Hiding is instant (transition: none); only the reveal itself animates
+.reveal {
+  opacity: 0 !important;
+  transform: translateY(var(--motion-distance)) !important;
+  transition: none !important;
+
+  &.is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+    transition:
+      opacity var(--motion-reveal) var(--motion-ease),
+      transform var(--motion-reveal) var(--motion-ease) !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Homepage headline: words rise in one after another, then the line below fades up
+// ---------------------------------------------------------------------------
+
+@keyframes heroWord {
+  from { opacity: 0; transform: translateY(0.45em); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes heroLine {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.hero-word {
+  display: inline-block;
+}
+
+.hero-tagline.hero-intro--play .hero-word {
+  animation: heroWord 650ms var(--motion-ease) both;
+  animation-delay: calc(150ms + var(--i) * 140ms);
+}
+
+.hero-description.hero-intro--play {
+  animation: heroLine 700ms var(--motion-ease) both;
+  animation-delay: calc(350ms + var(--hero-words) * 140ms);
+}
+
+// ---------------------------------------------------------------------------
+// Reading progress (hooks/useReadingProgress.js sets --progress, 0 to 1)
+// ---------------------------------------------------------------------------
+
+.sidebar-nav {
+  position: relative;
+}
+
+// Overlays the TOC's top rule and fills it left to right
+.reading-progress {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-primary);
+  transform: scaleX(var(--progress, 0));
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+// Same fill along the bottom edge of the phone "On this page" pill
+.section-menu__toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.reading-progress--pill {
+  top: auto;
+  bottom: 0;
+  height: 3px;
+  opacity: 0.85;
+}
+
+// ---------------------------------------------------------------------------
+// Homepage signpost cards: lift on hover, arrow slides right
+// ---------------------------------------------------------------------------
+
+.teaser-card {
+  transition:
+    transform var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease);
+}
+
+@media (hover: hover) {
+  .teaser-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .teaser-card:hover .link-with-arrow {
+    color: var(--accent-primary);
+
+    .arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Reduced motion: everything lands in its final state immediately
+// ---------------------------------------------------------------------------
+
+@media (prefers-reduced-motion: reduce) {
+  #main,
+  .hero-word,
+  .hero-description.hero-intro--play {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .teaser-card,
+  .teaser-card:hover {
+    transform: none;
+    transition: none;
+  }
+}

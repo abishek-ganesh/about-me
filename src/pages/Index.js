@@ -6,6 +6,7 @@ import { homepageSections, aboutContent } from '../data/homepage';
 // Section components
 import AboutSection from '../components/home/AboutSection';
 import SignpostSection from '../components/home/SignpostSection';
+import HeroIntro from '../components/home/HeroIntro';
 
 const Index = () => {
   return (
@@ -13,11 +14,10 @@ const Index = () => {
       <article className="post page homepage" id="index">
         {/* Hero Section */}
         <section id="hero" className="homepage-hero">
-          <h1 className="hero-tagline">{aboutContent.intro}</h1>
-          <p className="hero-description">
+          <HeroIntro headline={aboutContent.intro}>
             So I build AI that does, as VP of Technology &amp; AI at Appa Health, and I teach
             anyone willing to learn how to build it too.
-          </p>
+          </HeroIntro>
         </section>
 
         {/* About Section */}

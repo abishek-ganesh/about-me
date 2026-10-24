@@ -164,6 +164,13 @@ so renaming a path silently drops it from mobile nav with no error. Update both.
   bottom tab bar block in `_navigation-system.scss` is a plain `@media screen`.
 - Keyframe names are global. Before adding `@keyframes`, grep for the name:
   component stylesheets imported from JS load after main.css and win.
+- Motion lives in `components/_motion.scss` with timing from the `--motion-*`
+  tokens: page enter on `#main`, scroll reveal (`hooks/useReveal.js`, called once
+  in `Main.js`), the homepage headline (`components/home/HeroIntro.js`, once per
+  session), reading progress on pages at least 3 screens tall
+  (`hooks/useReadingProgress.js`), and signpost card hover. All of it is off under
+  `prefers-reduced-motion`. New card types join the reveal by adding their class
+  to `ITEM_SELECTOR` in `useReveal.js`.
 
 ### Key Dependencies
 - React 17 with React Router 5

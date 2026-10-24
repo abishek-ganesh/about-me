@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useReveal } from '../../hooks/useReveal';
 
 const AnimatedPhoto = ({
   src,
@@ -18,9 +19,7 @@ const AnimatedPhoto = ({
   height
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const imgRef = useRef(null);
-  const containerRef = useRef(null);
+  const [containerRef, isVisible] = useReveal({ threshold: 0.1, rootMargin: '50px', disabled: !lazyLoad });
 
   // Size classes mapping
   const sizeClasses = {
@@ -59,38 +58,6 @@ const AnimatedPhoto = ({
     blur: 'hover--blur',
     grayscale: 'hover--grayscale'
   };
-
-  // Intersection Observer for entrance animations
-  useEffect(() => {
-    if (!lazyLoad || !containerRef.current) {
-      setIsVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
-    );
-
-    const element = containerRef.current;
-    observer.observe(element);
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, [lazyLoad]);
 
   // Handle image load
   const handleImageLoad = () => {
@@ -133,7 +100,6 @@ const AnimatedPhoto = ({
         
         {/* Main image */}
         <img
-          ref={imgRef}
           src={isVisible || !lazyLoad ? src : ''}
           alt={alt}
           onLoad={handleImageLoad}

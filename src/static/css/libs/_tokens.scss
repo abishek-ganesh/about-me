@@ -285,6 +285,20 @@ $transitions: (
 }
 
 // ---------------------------------------------------------------------------
+// Motion (runtime). Everything animated reads these, and all of it switches off
+// under prefers-reduced-motion in components/_motion.scss.
+// ---------------------------------------------------------------------------
+
+:root {
+  --motion-fast: 200ms;
+  --motion-page: 450ms;
+  --motion-reveal: 700ms;
+  --motion-stagger: 90ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-distance: 24px;
+}
+
+// ---------------------------------------------------------------------------
 // Semantic tokens (light in :root, dark in :root.dark-mode)
 // ---------------------------------------------------------------------------
 

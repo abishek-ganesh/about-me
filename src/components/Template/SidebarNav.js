@@ -1,6 +1,7 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import useActiveSection from '../../hooks/useActiveSection';
+import useReadingProgress from '../../hooks/useReadingProgress';
 import scrollToSection from '../../utils/scrollToSection';
 
 /**
@@ -12,6 +13,8 @@ import scrollToSection from '../../utils/scrollToSection';
 const SidebarNav = ({ sections }) => {
   const sectionIds = sections.map((s) => s.id);
   const activeSection = useActiveSection(sectionIds);
+  const navRef = useRef(null);
+  const showProgress = useReadingProgress(navRef);
 
   const handleClick = useCallback((e, sectionId) => {
     e.preventDefault();
@@ -21,7 +24,9 @@ const SidebarNav = ({ sections }) => {
   if (!sections.length) return null;
 
   return (
-    <nav className="sidebar-nav" aria-label="Table of contents">
+    <nav ref={navRef} className="sidebar-nav" aria-label="Table of contents">
+      {/* Fills along the top rule as you read; only on pages about three screens or longer */}
+      {showProgress && <span className="reading-progress" aria-hidden="true" />}
       <ul className="sidebar-nav__list">
         {sections.map((section) => (
           <li

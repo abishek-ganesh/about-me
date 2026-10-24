@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListUl, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import useActiveSection from '../../hooks/useActiveSection';
 import useScrollDirection from '../../hooks/useScrollDirection';
+import useReadingProgress from '../../hooks/useReadingProgress';
 import scrollToSection from '../../utils/scrollToSection';
 
 /**
@@ -14,6 +15,8 @@ import scrollToSection from '../../utils/scrollToSection';
 const SectionMenu = ({ sections }) => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
+  const toggleRef = useRef(null);
+  const showProgress = useReadingProgress(toggleRef);
   const activeSection = useActiveSection(sections.map((s) => s.id));
   const { visible } = useScrollDirection();
   const active = sections.find((s) => s.id === activeSection) || sections[0];
@@ -66,6 +69,7 @@ const SectionMenu = ({ sections }) => {
         </nav>
       )}
       <button
+        ref={toggleRef}
         type="button"
         className="section-menu__toggle"
         aria-expanded={open}
@@ -76,6 +80,7 @@ const SectionMenu = ({ sections }) => {
         <FontAwesomeIcon icon={faListUl} />
         <span className="section-menu__label">{active.label}</span>
         <FontAwesomeIcon icon={open ? faChevronDown : faChevronUp} className="section-menu__chevron" />
+        {showProgress && <span className="reading-progress reading-progress--pill" aria-hidden="true" />}
       </button>
     </div>
   );
