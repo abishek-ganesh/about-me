@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/survey",
+      "destination": "https://aiengineer-survey.abishekganesh.com/",
+      "permanent": false
+    },
+    {
+      "source": "/survey/:path*",
+      "destination": "https://aiengineer-survey.abishekganesh.com/:path*",
+      "permanent": false
+    }
+  ]
+}
