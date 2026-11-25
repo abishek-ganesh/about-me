@@ -11,9 +11,12 @@
 // merged. Course-level ratings (overall experience, org support) are NOT
 // combined, because an earlier cohort was co-taught for its first half.
 // Quotes live in testimonials.js and follow each student's sharing permission.
+// The one named course is the current one (nowTeaching); past cohorts stay
+// unnamed and undated.
 
 export const teachingSections = [
   { id: 'overview', label: 'Overview' },
+  { id: 'now', label: 'Now Teaching' },
   { id: 'voices', label: 'Student Voices' },
   { id: 'outcomes', label: 'Where They Landed' },
   { id: 'craft', label: 'Inside a Lesson' },
@@ -44,10 +47,78 @@ export const teachingStats = [
   },
   {
     value: '6 Months',
+    // About.js filters on this label; keep it stable
     label: 'Python to Agentic AI',
-    note: 'Three hours a day, three days a week',
+    note: 'My first cohorts, three hours a day, three days a week',
   },
 ];
+
+// The current course. Public facts only, taken from the program's own
+// marketing: no fee, enrollment, schedule changes, or Fullstack curriculum.
+// Copy uses "I'm leading" so it reads correctly before and during the cohort.
+export const nowTeaching = {
+  title: 'Applied AI Engineer Bootcamp',
+  partners: 'Columbia Engineering Executive Education × Fullstack Academy',
+  intro:
+    'I was asked to lead the first cohort of a new program from Columbia Engineering Executive Education and Fullstack Academy. It runs 20 weeks, December 2026 through April 2027, live online, for working professionals who want to build AI-powered applications and actually ship them. My earlier cohorts went deep on classical machine learning before reaching generative AI. This one is application-first: from the first week, everything points at a working product.',
+  stagesHeading: 'The path',
+  stages: [
+    {
+      title: 'Foundations',
+      body:
+        'Python taught through AI. Dictionaries are JSON and tool schemas, functions are tools, loops are the agent loop, and the first LLM call happens from their own code in week three.',
+    },
+    {
+      title: 'Generative AI',
+      body:
+        'How LLMs actually work, prompting and structured output, then retrieval-augmented generation end to end: chunking, embeddings, hybrid search, reranking, and evals from the start. Then multimodal.',
+    },
+    {
+      title: 'Agent Engineering',
+      body:
+        'Tool calling, the agent loop built from scratch before any framework, then memory, human-in-the-loop, multi-agent systems, and MCP: how to use it, build it, and secure it.',
+    },
+    {
+      title: 'Production & Deployment',
+      body:
+        'The part most courses skip. Evals, tracing, cost and latency, deployment, model customization, guardrails, prompt injection, privacy, and governance, applied to a real team project.',
+    },
+    {
+      title: 'Capstone',
+      body:
+        'Win the Contract. Teams act as AI consulting firms competing for the same client, and demo day guests sit as the client panel.',
+    },
+  ],
+  gradedHeading: 'Graded on what AI can’t fake',
+  gradedIntro:
+    'Anyone can ask an AI to build an app now. The result is usually shallow. What separates an engineer is judgment: system-wide decisions the model cannot make on its own. So AI is encouraged everywhere as a boost, and the grade sits on three things it cannot produce for you.',
+  graded: [
+    {
+      title: 'A project you built',
+      body:
+        'One personal project that grows through three checkpoints into a deployed RAG app with agents and MCP. Students write their own eval set and have to show a measured before-and-after. It doubles as their portfolio piece.',
+    },
+    {
+      title: 'A team you shipped with',
+      body:
+        'Every capstone teammate owns one production concern: evals, deployment, guardrails, or observability. That concern becomes their story in the interview room.',
+    },
+    {
+      title: 'You, on camera',
+      body:
+        'Interview reps are one-take, unedited video answers to real AI engineering interview questions. Prep as much as you like, but no edits. It is the one place in the course where AI is off the table.',
+    },
+  ],
+  referenceApp: {
+    heading: 'The app I build alongside them',
+    body:
+      'I do not teach anything I have not shipped myself, so I built a reference app for the course: an assistant for a fictional family clinic, with synthetic data. It started as RAG over a patient handbook and grows with the curriculum. A booking agent can find open times and propose one, but only code books the appointment, and only after a person presses Confirm. An MCP server exposes its tools to any client, and an answer eval runs on every push. Three models, one job each: embeddings find the passages, a judgment model makes yes-or-no calls with calibrated probabilities, and a generative model writes the answer. Code owns every threshold.',
+    links: [
+      { label: 'Try it live', href: 'https://clinic-assistant-mocha.vercel.app' },
+      { label: 'Read the code', href: 'https://github.com/abishek-ganesh/clinic-assistant' },
+    ],
+  },
+};
 
 // Short pull quote for the homepage teaser - the full wall lives on /teaching
 export const teaserQuote = {

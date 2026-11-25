@@ -28,4 +28,33 @@
     margin: 3rem 0 1.5rem;
     text-align: center;
   }
+
+  // Five learning-path stages: wraps 3 + 2 at desktop, one column on phones
+  .now-stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .now-stage-number {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+  }
+
+  .now-graded-intro {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+
+  .now-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }

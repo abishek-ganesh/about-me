@@ -48,6 +48,7 @@ export const positions = [
     link: '',
     daterange: 'March 2025 - Present',
     points: [
+      'Leading the first Applied AI Engineer Bootcamp cohort from Columbia Engineering Executive Education and Fullstack Academy',
       'Teaching 20+ students the absolute latest in AI - including RAG systems and AI agents',
       'Philosophy: teach what\'s actually being used in production today and prepare for tomorrow',
       'Covering Python fundamentals through state-of-the-art generative AI implementations',

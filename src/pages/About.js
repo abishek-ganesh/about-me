@@ -114,8 +114,9 @@ const About = () => {
         <div className="card card--elevated">
           <div className="card-body">
             <p className="u-text-lg u-mb-3">
-              I lead an intensive AI bootcamp: six months, three hours a day, Python fundamentals through agentic
-              systems. My philosophy is simple. Teach what is actually used in production, and make sure nobody is ever
+              I teach AI engineering. My first cohorts ran six months, three hours a day, Python fundamentals through
+              agentic systems, and now I&apos;m leading the first Applied AI Engineer Bootcamp from Columbia Engineering
+              and Fullstack Academy. My philosophy is simple. Teach what is actually used in production, and make sure nobody is ever
               embarrassed to ask a basic question. My students put it better than I can.
             </p>
             <div className="grid grid--3 u-text-center u-mb-3">
