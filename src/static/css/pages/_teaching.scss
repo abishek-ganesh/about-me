@@ -29,32 +29,94 @@
     text-align: center;
   }
 
-  // Five learning-path stages: wraps 3 + 2 at desktop, one column on phones
-  .now-stages {
+  // Course path: five numbered steps on one row joined by a line; a vertical
+  // list on phones. Captions are kept to a few words so the row never cramps.
+  $step-size: 2.5rem;
+  $step-half: 1.25rem;
+
+  .path-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint(small) {
+      grid-template-columns: 1fr;
+      max-width: 22rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  .now-stage-number {
-    display: block;
-    margin-bottom: 0.25rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--text-secondary);
-  }
-
-  .now-graded-intro {
-    max-width: 680px;
-    margin: 0 auto;
+  .path-step {
+    position: relative;
+    margin: 0;
+    padding: 0 0.5rem;
     text-align: center;
+
+    // Connector to the next step, running circle edge to circle edge
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: $step-half;
+      left: calc(50% + #{$step-half} + 0.5rem);
+      right: calc(-50% + #{$step-half} + 0.5rem);
+      height: 2px;
+      background: var(--border-primary);
+    }
+
+    @include breakpoint(small) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 0 1.5rem;
+      text-align: left;
+
+      &:not(:last-child)::after {
+        top: calc(#{$step-size} + 0.25rem);
+        bottom: 0.25rem;
+        left: $step-half - 0.0625rem;
+        right: auto;
+        width: 2px;
+        height: auto;
+      }
+    }
+  }
+
+  .path-step-number {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: $step-size;
+    height: $step-size;
+    margin: 0 auto 0.75rem;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    font-weight: 700;
+
+    @include breakpoint(small) {
+      margin: 0;
+    }
+  }
+
+  .path-step-title {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  // Not "caption": a global [class*=caption] rule forces black !important
+  .path-step-note {
+    font-size: 0.875rem;
+    line-height: 1.4;
     color: var(--text-secondary);
   }
 
-  .now-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  // Light mode forces `.card--gradient *` to body text with !important,
+  // which turns this button's label dark on blue
+  .card--gradient .btn--primary {
+    color: white !important;
   }
 }

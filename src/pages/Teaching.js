@@ -2,6 +2,7 @@ import React from 'react';
 
 import Main from '../layouts/Main';
 import TestimonialCard from '../components/Testimonials/TestimonialCard';
+import scrollToSection from '../utils/scrollToSection';
 import testimonials from '../data/testimonials';
 import {
   teachingSections,
@@ -34,14 +35,45 @@ const Teaching = () => (
 
       <section id="overview" className="section-content">
         <div className="card card--gradient">
-          <div className="card-body">
-            <p className="u-text-lg u-mb-0">
-              I teach AI engineering to people who have never done it before. My first cohorts spent
-              six months going from their first Python script to neural networks, RAG pipelines, and
-              agentic systems, and understanding the math underneath all of it. Now I&apos;m leading
-              the first Applied AI Engineer Bootcamp from Columbia Engineering and Fullstack Academy.
-              Below is what my past students said at the end, unedited.
-            </p>
+          <div className="card-body u-text-center">
+            <p className="u-text-lg u-mb-3">{nowTeaching.intro}</p>
+            <a
+              href="#voices"
+              className="btn btn--primary"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('voices');
+              }}
+            >
+              {nowTeaching.studentsCta}
+            </a>
+          </div>
+        </div>
+
+        <ol className="path-steps u-mt-4">
+          {nowTeaching.stages.map((stage, i) => (
+            <li key={stage.title} className="path-step">
+              <span className="path-step-number">{i + 1}</span>
+              <div>
+                <div className="path-step-title">{stage.title}</div>
+                <div className="path-step-note">{stage.note}</div>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <div className="card card--elevated u-mt-4">
+          <div className="card-body u-text-center">
+            <h3 className="u-mb-1">{nowTeaching.referenceApp.heading}</h3>
+            <p className="u-mb-3">{nowTeaching.referenceApp.body}</p>
+            <a
+              href={nowTeaching.referenceApp.link.href}
+              className="btn btn--secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {nowTeaching.referenceApp.link.label}
+            </a>
           </div>
         </div>
 
@@ -62,65 +94,6 @@ const Teaching = () => (
               <span className="u-text-muted u-text-base">{startingPoint.sublabel}</span>
             </h3>
             <p className="u-mb-0">{startingPoint.body}</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="now" className="section-content u-mt-4">
-        <div className="section-header">
-          <h2>Now Teaching: {nowTeaching.title}</h2>
-          <p className="section-description">{nowTeaching.partners}</p>
-        </div>
-
-        <div className="card card--elevated">
-          <div className="card-body">
-            <p className="u-text-lg u-mb-0">{nowTeaching.intro}</p>
-          </div>
-        </div>
-
-        <h3 className="capstone-subheading">{nowTeaching.stagesHeading}</h3>
-        <div className="now-stages">
-          {nowTeaching.stages.map((stage, i) => (
-            <div key={stage.title} className="card card--elevated">
-              <div className="card-body">
-                <span className="now-stage-number">{String(i + 1).padStart(2, '0')}</span>
-                <h4 className="u-text-primary u-mb-1">{stage.title}</h4>
-                <p className="u-mb-0">{stage.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="capstone-subheading">{nowTeaching.gradedHeading}</h3>
-        <p className="now-graded-intro">{nowTeaching.gradedIntro}</p>
-        <div className="grid grid--3 grid--gap-lg u-mt-3">
-          {nowTeaching.graded.map((item) => (
-            <div key={item.title} className="card card--elevated">
-              <div className="card-body">
-                <h4 className="u-text-primary u-mb-1">{item.title}</h4>
-                <p className="u-mb-0">{item.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="card card--gradient u-mt-4">
-          <div className="card-body">
-            <h3 className="u-mb-2">{nowTeaching.referenceApp.heading}</h3>
-            <p className="u-mb-3">{nowTeaching.referenceApp.body}</p>
-            <div className="now-links">
-              {nowTeaching.referenceApp.links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="btn btn--secondary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </section>
