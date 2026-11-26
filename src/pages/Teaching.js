@@ -101,10 +101,7 @@ const Teaching = () => (
       <section id="voices" className="section-content u-mt-4">
         <div className="section-header">
           <h2>Student Voices</h2>
-          <p className="section-description">
-            From the end-of-course survey. Shared with each student&apos;s permission, first names
-            only.
-          </p>
+          <p className="section-description">Shared with each student&apos;s permission.</p>
         </div>
         <div className="grid grid--2 grid--gap-lg">
           {teachingTestimonials.map((testimonial) => (

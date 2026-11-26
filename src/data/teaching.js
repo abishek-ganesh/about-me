@@ -238,7 +238,7 @@ export const beyond = {
     {
       title: 'A career map, not a job board',
       body:
-        'I keep a researched guide to where graduates actually land, built on current market data rather than vibes. Entry-level roles are tiered by how reachable they really are, each with genuine salary bands and the reason it is accessible, from data annotation and junior analyst work up through AI research assistant, security and risk analyst, governance and compliance, and MLOps. Then it branches by who you already are: the spreadsheet person, the creative who wants to build products, the person with deep domain expertise in healthcare or finance, and the one who wants to go straight down into engineering.',
+        'I keep a researched guide to where graduates actually land, tiered by how reachable each role really is.',
     },
     {
       title: 'The honest market picture',
