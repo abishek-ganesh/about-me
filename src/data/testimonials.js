@@ -180,14 +180,6 @@ const testimonials = [
     text: 'Abishek is extremely knowledgeable. His honest, well rounded approach encourages all students they will understand the practices, but it takes time and focus.',
     projectType: 'teaching',
   },
-  {
-    id: 16,
-    name: 'Chris',
-    role: 'Graduate',
-    company: 'AI Bootcamp',
-    text: 'A teacher affects eternity; he can never tell where his influence stops.',
-    projectType: 'teaching',
-  },
 ];
 
 // Company logos (when available)

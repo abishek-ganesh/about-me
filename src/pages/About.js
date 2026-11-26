@@ -27,7 +27,7 @@ const About = () => {
     <article className="post page" id="about">
       <div className="page-title">
         <h1>The Long Way Around</h1>
-        <span className="page-subtitle">Mathematics, business and marketing classes, a master&apos;s in CS, and years of production AI - plus teaching and a running list of countries</span>
+        <span className="page-subtitle">Mathematics, business classes, a master&apos;s in CS, and years of production AI</span>
       </div>
 
       <section id="overview" className="about-hero u-mb-4">
@@ -35,15 +35,10 @@ const About = () => {
           <div className="about-hero-text card card--gradient">
             <p className="intro-text">
             I started in mathematics and finished with a master&apos;s in computer science. In between, after moving to
-            California, I kept taking classes while working full-time: marketing, business administration, project
-            management, and a pile of certifications along the way. None of that was a detour. I wanted to hold onto the
-            learner&apos;s mindset and pick up the skills I did not have yet, and it turned out to be good preparation
-            for a field that reinvents itself every eighteen months. I&apos;ve been deploying AI in production for years
-            now, across every major paradigm
-            shift: classical machine learning, deep learning, the transformer revolution, and today&apos;s large language
-            models and agentic systems. I don&apos;t specialize in one paradigm. I deploy whatever the problem actually
-            calls for. What the mathematics left me with is the thing I keep coming back to - underneath the hype it is
-            all just math, and anything built out of math can be explained to anyone willing to sit with it.
+            California, I kept taking classes while working full-time: marketing, business administration, and project
+            management. None of that was a detour. I&apos;ve been deploying AI in production for years, across every
+            major paradigm shift. Underneath the hype it is all just math, and anything built out of math can be
+            explained to anyone willing to sit with it.
           </p>
           </div>
         </div>
@@ -58,18 +53,17 @@ const About = () => {
             <div className="list-item u-mb-2">
               <h4 className="u-text-primary u-mb-1">Building at Appa Health</h4>
               <p>VP of Technology &amp; AI, leading the platform that fosters human connection between certified,
-                 credentialed mentors and teenagers. The technology is only interesting because of what it is for.</p>
+                 credentialed mentors and teenagers.</p>
             </div>
             <div className="list-item u-mb-2">
               <h4 className="u-text-primary u-mb-1">Consulting Across Sectors</h4>
-              <p>Fortune 500 enterprises, healthcare startups, and nonprofits. Classical ML,
-                 deep learning, RAG, multi-agent orchestration - whichever one the problem actually needs,
-                 including the times the answer is that it needs none of them.</p>
+              <p>Fortune 500 enterprises, healthcare startups, and nonprofits. Whichever approach the problem
+                 actually needs, including the times it needs no AI at all.</p>
             </div>
             <div className="list-item u-mb-2">
               <h4 className="u-text-primary u-mb-1">Teaching</h4>
               <p>Six months taking a cohort from Python fundamentals to agentic systems. Making complex ideas
-                 accessible is most of the job, and it is the part I care about most.</p>
+                 accessible is the part I care about most.</p>
             </div>
           </div>
         </div>
@@ -82,26 +76,23 @@ const About = () => {
         <div className="card card--gradient">
           <div className="card-body">
             <p className="u-text-lg">
-              Mathematics is the language of the universe. Studying it at Ohio State taught me to sit with a problem
-              until it gives in. The marketing and business classes taught me that an elegant solution nobody
-              understands is worth nothing.
+              Studying mathematics at Ohio State taught me to sit with a problem until it gives in. The marketing and
+              business classes taught me that an elegant solution nobody understands is worth nothing.
             </p>
             <p className="u-text-lg">
               In 2018 I became convinced that AI was going to reshape society, and I wanted to be close enough to the
-              front to help shape it into something good for people. So I took the GRE and started pivoting my career
-              toward it. From late 2019 to the spring of 2021 I earned a master&apos;s in computer science at Georgia
-              Tech while working full time at Big Health, taking extra classes every term to finish in a year and a half
-              with a 4.0. That handed me the tools.
+              front to help shape it into something good for people. From late 2019 to the spring of 2021 I earned a
+              master&apos;s in computer science at Georgia Tech while working full time at Big Health, finishing in a
+              year and a half with a 4.0.
             </p>
             <p className="u-text-lg">
-              Leading technical teams taught me the hardest part was never the model. Put together, that is why I
-              usually end up as the translator in the room - between the people building the technology and the people
-              who have to live with it.
+              Leading technical teams taught me the hardest part was never the model. That is why I usually end up as
+              the translator in the room, between the people building the technology and the people who have to live
+              with it.
             </p>
             <p className="u-text-lg">
               From 2018 to 2022 I volunteered with my local Citizens&apos; Climate Lobby chapter, building out its
-              social media and helping with its lobbying meetings. It was the same translation job in a different room:
-              taking something complicated and making it land with people who had every reason to tune it out.
+              social media and helping with its lobbying meetings. Same translation job, different room.
             </p>
           </div>
         </div>
@@ -114,10 +105,10 @@ const About = () => {
         <div className="card card--elevated">
           <div className="card-body">
             <p className="u-text-lg u-mb-3">
-              I teach AI engineering. My first cohorts ran six months, three hours a day, Python fundamentals through
-              agentic systems, and now I&apos;m leading the first Applied AI Engineer Bootcamp from Columbia Engineering
-              and Fullstack Academy. My philosophy is simple. Teach what is actually used in production, and make sure nobody is ever
-              embarrassed to ask a basic question. My students put it better than I can.
+              I teach AI engineering. My first cohorts ran six months, Python fundamentals through agentic systems,
+              and now I&apos;m leading the first Applied AI Engineer Bootcamp from Columbia Engineering and Fullstack
+              Academy. I teach what is actually used in production, and make sure nobody is ever embarrassed to ask a
+              basic question. My students put it better than I can.
             </p>
             <div className="grid grid--3 u-text-center u-mb-3">
               {aboutTeachingStats.map((stat) => (
@@ -141,10 +132,9 @@ const About = () => {
         <div className="card card--gradient">
           <div className="card-body">
             <p className="u-text-lg">
-              This is not an abstract commitment. Organizing community events for over a thousand attendees and
-              volunteering to improve public systems both taught me the same lesson: the solution that helps somebody
-              beats the solution with the better architecture diagram. That is how I choose what to build. Cutting-edge
-              when cutting-edge is the honest answer, and boring and reliable when it is not.
+              Organizing community events for over a thousand attendees and volunteering to improve public systems
+              taught me the same lesson: the solution that helps somebody beats the solution with the better
+              architecture diagram. Cutting-edge when that is the honest answer, boring and reliable when it is not.
             </p>
           </div>
         </div>

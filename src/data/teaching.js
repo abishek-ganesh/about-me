@@ -86,7 +86,7 @@ export const startingPoint = {
   headline: '75%',
   sublabel: 'arrive as self-described beginners',
   body:
-    'Almost nobody walks in with an AI background. Most have never written a line of code, and their experience with AI does not go much past using ChatGPT. They arrive as delivery drivers, forklift operators, analysts, product designers, electrical engineers, and career software engineers who have never touched Python. Six months later they are building state-of-the-art machine learning and AI models and shipping them inside real applications that anyone in the world can use. That is the whole point. These skills are big enough to upskill someone in the role they already have, move them into a new one, or let them go build their own thing.',
+    'Almost nobody walks in with an AI background. They arrive as delivery drivers, forklift operators, analysts, product designers, and software engineers who have never touched Python. Six months later they are shipping AI inside real applications that anyone in the world can use.',
 };
 
 // Career changes students described in their own words
@@ -146,27 +146,27 @@ export const transformationStories = [
 // not surfaced - they are inside-baseball for a public page.
 export const craft = {
   intro:
-    'I build every lesson from scratch. No vendor slides, no reading off someone else’s deck. The rule I hold myself to is that nothing gets hand-waved: if I put a symbol on a screen, I can derive it, and so can the room by the end of the hour.',
+    'I build every lesson from scratch, and nothing gets hand-waved. If I put a symbol on a screen, I can derive it, and so can the room by the end of the hour.',
   pillars: [
     {
       title: 'An analogy before the notation',
       body:
-        'Gradient descent is a hiker coming down a mountain in thick fog. You cannot see the path, so you feel which way the ground slopes, take one small step, and repeat. Gradient is the direction, learning rate is your step size, and a local minimum is the valley you can get stuck in. Backpropagation is the blame game on a group project that turned in the wrong answer: which teammate contributed most to the mistake, and how much should each one change? I keep a running library of these so the same mental model can be called back weeks later.',
+        'Gradient descent is a hiker coming down a mountain in thick fog: feel which way the ground slopes, take one small step, repeat. Backpropagation is the blame game on a group project that turned in the wrong answer.',
     },
     {
       title: 'The math, all the way down',
       body:
-        'The backpropagation session goes forward pass, loss, chain rule, weight update, then the full optimization landscape: learning rate, batch size, epochs, depth, width, dropout, early stopping, and when to reach for which optimizer. Students see why the update rule looks the way it does, not just that it exists.',
+        'The backpropagation session goes forward pass, loss, chain rule, weight update. Students see why the update rule looks the way it does, not just that it exists.',
     },
     {
       title: 'A transformer computed by hand',
       body:
-        'To show how next-token prediction actually works, I built a decoder-only transformer and ran it entirely by hand in NumPy: "the tall crane flew ___" all the way to the prediction "south". Token embeddings, positional encoding, two layers of masked multi-head attention, causal masking, residuals and layer norm, the feed-forward network, unembedding, and softmax, every matrix printed with real numbers. The whole model is 416 parameters, shown next to GPT-3\'s 175 billion so the scale lands. It ends on temperature, top-k, and top-p, so the creativity dials stop being magic.',
+        'I built a decoder-only transformer and ran it entirely by hand in NumPy, from "the tall crane flew ___" to the prediction "south", every matrix printed with real numbers. It has 416 parameters, shown next to GPT-3\'s 175 billion so the scale lands.',
     },
     {
       title: 'Rooms that talk back',
       body:
-        'Nearly every deck has structured breakout prompts written into it, and they are open questions rather than recall drills: walk through a forward pass in your own words, or what would happen without activation functions. Everyone comes back owing the room one insight. Three hours is a long time to be lectured at, so I try not to.',
+        'Nearly every deck has breakout prompts written into it, and they are open questions rather than recall drills. Three hours is a long time to be lectured at, so I try not to.',
     },
   ],
 };
@@ -174,18 +174,18 @@ export const craft = {
 // The final group capstone - how it is actually structured
 export const capstone = {
   intro:
-    'I do not end the course with a quiz. I end it with seven weeks of real client work. Teams of four stop being students and become AI consulting firms, each hired to solve a defined business problem against a real dataset and a hard deadline. Building AI is almost never a solo sport, so the last thing I teach is how to deliver it alongside other people.',
+    'I do not end the course with a quiz. I end it with seven weeks of real client work: teams of four become AI consulting firms, each hired to solve a business problem against a real dataset and a hard deadline.',
   briefsNote: 'Two examples from a recent cohort',
   briefs: [
     {
       title: 'Healthcare Analytics Platform',
       body:
-        'A hospital hires the team to build a clinical decision support tool: assess patient readmission risk from clinical data, classify retinal scans as healthy or diseased, and analyze patient feedback with NLP.',
+        'A hospital hires the team to assess patient readmission risk, classify retinal scans, and analyze patient feedback with NLP.',
     },
     {
       title: 'Smart City / Transportation Platform',
       body:
-        'A city government hires the team to build an urban operations dashboard: predict traffic accident severity from real accident data, detect potholes from road imagery, and classify citizen complaints with NLP.',
+        'A city government hires the team to predict traffic accident severity, detect potholes from road imagery, and classify citizen complaints with NLP.',
     },
   ],
   requirementsHeading: 'What every team has to deliver',
@@ -193,26 +193,26 @@ export const capstone = {
     {
       title: 'A deployed product, not a notebook',
       body:
-        'Five working models integrated into a web application that is hosted and publicly reachable. If the world cannot open it and use it, it does not count.',
+        'Five working models in a hosted, publicly reachable web application. If the world cannot open it and use it, it does not count.',
     },
     {
       title: 'Graded on data they have never seen',
       body:
-        'I hold back a private test set and run their models against it. Robust validation and no data leakage stop being lecture topics and start being the grade.',
+        'I hold back a private test set and run their models against it. Data leakage stops being a lecture topic and starts being the grade.',
     },
     {
       title: 'Weekly agile sprint reviews',
       body:
-        'Every team walks me through progress each week. Blockers surface early, contribution stays honest, and course corrections happen while they still matter.',
+        'Every team walks me through progress each week, so blockers surface while they can still be fixed.',
     },
     {
       title: 'A 45 to 60 minute executive presentation',
       body:
-        'A live demo, a business case, and open Q&A where they defend technical and strategic decisions. Half the grade lives outside the model code.',
+        'A live demo, a business case, and open Q&A. Half the grade lives outside the model code.',
     },
   ],
   closing:
-    'The teams compete. The one that delivers the strongest overall solution, technical work and presentation and business impact together, wins the client contract. That is how the real world works, and it is a far better final exam than anything I could write.',
+    'The teams compete, and the strongest overall solution wins the client contract. That is how the real world works.',
 };
 
 // Self-reported readiness at graduation
@@ -233,7 +233,7 @@ export const readiness = {
 // and the final unit, which closes on responsible AI rather than on a model.
 export const beyond = {
   intro:
-    'Knowing how to build a model is half of it. The other half is knowing what it is worth, where it can take you, and when you should refuse to ship it. I teach all three, and I try to be straight with people about each.',
+    'Knowing how to build a model is half of it. The other half is knowing what it is worth, where it can take you, and when you should refuse to ship it.',
   cards: [
     {
       title: 'A career map, not a job board',
@@ -273,26 +273,26 @@ export const teachingPrinciples = [
   {
     title: 'No question is too basic',
     body:
-      'Every single student rated the classroom a perfect 10 for feeling safe to ask basic questions. That is the number I am proudest of, because nobody learns anything they are embarrassed to ask about.',
+      'Every single student rated the classroom a perfect 10 for feeling safe to ask basic questions. That is the number I am proudest of.',
   },
   {
     title: 'Make the abstract tangible',
     body:
-      'Backpropagation and gradient descent are just math, and math becomes obvious with the right analogy. Making abstract concepts tangible through analogies is the other question that came back a unanimous 10 out of 10.',
+      'Making abstract concepts tangible through analogies is the other question that came back a unanimous 10 out of 10.',
   },
   {
     title: 'Build to the moment it clicks',
     body:
-      'Half of all students named neural networks and deep learning as the week everything fell into place. The curriculum is sequenced to get them to that moment and then keep going well past it.',
+      'Half of all students named neural networks and deep learning as the week everything fell into place. The curriculum is sequenced to get them there.',
   },
   {
     title: 'Push, do not spoon-feed',
     body:
-      'I would rather walk a student through their own reasoning than hand them the answer. It is harder in week two and it is the whole game by month six.',
+      'I would rather walk a student through their own reasoning than hand them the answer.',
   },
   {
     title: 'Meet people where they are',
     body:
-      'One room held a teacher, a salesperson, someone recently retired, and so many other backgrounds. Same material, different on-ramps for each of them.',
+      'One room held a teacher, a salesperson, and someone recently retired. Same material, different on-ramps for each.',
   },
 ];
