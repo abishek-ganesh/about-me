@@ -243,27 +243,27 @@ export const beyond = {
     {
       title: 'The honest market picture',
       body:
-        'The same guide carries the bad news, on purpose. A third of roles advertised as entry level still ask for prior experience. The entry-level market overall has contracted. Applications per opening are climbing. Some bootcamp placement statistics are inflated by quietly excluding people. I would rather my students walk out with an accurate map than a flattering one, because the accurate one is the one that works.',
+        'The same guide carries the bad news: a third of "entry-level" roles still ask for experience, and some bootcamp placement stats are inflated.',
     },
     {
       title: 'A trajectory, not a finish line',
       body:
-        'The last session lays out a realistic 24-month arc: polish the capstone and get projects public, land the first AI or AI-adjacent role, ship something visible and pick a vertical, become the person your team asks, then move into senior or specialist work. Paired with the habits that actually compound, which are building in public, networking as a builder rather than a job seeker, and treating continuous learning as the job itself.',
+        'The last session lays out a realistic 24-month arc, from polishing the capstone to senior or specialist work.',
     },
     {
       title: 'Ethics is not the last lecture',
       body:
-        'Bias and fairness show up where they naturally live: bias in language models during NLP, representation and consent when we hit generative image and video models, confidence bias in RAG, privacy and bias amplification when we run open-source models locally. By the final unit it is guardrails, hallucination mitigation, transparency, the EU AI Act risk pyramid, and the global regulatory picture. It is threaded through rather than bolted on at the end.',
+        'Bias, consent, and privacy come up where they naturally live in the course, not in one lecture bolted on at the end.',
     },
     {
       title: 'When not to build it',
       body:
-        'There is a slide I care about more than most, and it is a list of times the right answer is to not ship the AI. Life-or-death calls with no human in the loop. Legal judgments like sentencing, parole, and custody. Systems where errors compound with no rollback. Datasets too small or too biased to trust. Anything you cannot explain to the person it affects. And the plain case of a deterministic system that already works, because you should not AI-ify a calculator. The line I leave them with is that "we could build it" is not "we should build it".',
+        'One slide lists the times the right answer is to not ship the AI. "We could build it" is not "we should build it".',
     },
     {
       title: 'Why it matters at all',
       body:
-        'We ground it in things that have actually happened: loans denied by biased credit scoring, resumes filtered out by hiring models trained on skewed data, misdiagnoses from a hallucinating chatbot, false arrests from facial recognition. All real, all preventable. Most people will only ever use AI and wonder how it works, or be afraid of it. My students build it, and that puts them in a very small group who get to shape what it becomes. I want them to feel the weight of that, not just the opportunity.',
+        'Biased credit scoring, skewed hiring models, false arrests from facial recognition: all real, all preventable. My students build AI, so they get to shape what it becomes.',
     },
   ],
 };
