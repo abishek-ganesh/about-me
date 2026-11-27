@@ -40,31 +40,49 @@
 }
 
 // ---------------------------------------------------------------------------
-// Homepage headline: words rise in one after another, then the line below fades up
+// Homepage headline: typed out character by character, then the line below it
+// (components/home/HeroIntro.js). Quick on purpose: about three seconds in all.
 // ---------------------------------------------------------------------------
 
-@keyframes heroWord {
-  from { opacity: 0; transform: translateY(0.45em); filter: blur(4px); }
-  to { opacity: 1; transform: none; filter: none; }
+$hero-type-headline: 38ms; // per character
+$hero-type-line: 8ms;
+
+@keyframes heroType {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes heroLine {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: none; }
+// The caret is a box-shadow on the newest character, so it never shifts layout
+@keyframes heroCaret {
+  from { box-shadow: 0.08em 0 0 currentColor; }
+  to { box-shadow: none; }
 }
 
-.hero-word {
-  display: inline-block;
+.hero-intro--play .hero-char {
+  animation:
+    heroType 1ms linear both,
+    heroCaret var(--type-step) steps(1, end);
+  animation-delay: var(--type-at);
 }
 
-.hero-tagline.hero-intro--play .hero-word {
-  animation: heroWord 650ms var(--motion-ease) both;
-  animation-delay: calc(150ms + var(--i) * 140ms);
+.hero-tagline.hero-intro--play .hero-char {
+  --type-step: #{$hero-type-headline};
+  --type-at: calc(150ms + var(--i) * #{$hero-type-headline});
 }
 
-.hero-description.hero-intro--play {
-  animation: heroLine 700ms var(--motion-ease) both;
-  animation-delay: calc(350ms + var(--hero-words) * 140ms);
+.hero-description.hero-intro--play .hero-char {
+  --type-step: #{$hero-type-line};
+  --type-at: calc(350ms + var(--hero-chars) * #{$hero-type-headline} + var(--i) * #{$hero-type-line});
+}
+
+// Plain text for screen readers; the typed characters are aria-hidden
+.hero-sr-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 // ---------------------------------------------------------------------------
@@ -133,8 +151,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   #main,
-  .hero-word,
-  .hero-description.hero-intro--play {
+  .hero-char {
     animation: none !important;
   }
 

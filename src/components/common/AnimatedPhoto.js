@@ -70,7 +70,8 @@ const AnimatedPhoto = ({
     sizeClasses[size],
     shapeClasses[shape],
     isLoaded ? 'is-loaded' : '',
-    isVisible ? animationClasses[animation] : '',
+    // Entrance waits for the image, otherwise it plays while the photo is still blank
+    isVisible && isLoaded ? animationClasses[animation] : '',
     hoverClasses[hoverEffect],
     className
   ].filter(Boolean).join(' ');

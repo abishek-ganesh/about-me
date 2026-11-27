@@ -16,37 +16,46 @@ const shouldPlay = () => {
   return true;
 };
 
+// One span per character; CSS types them in by index. Inline spans add no line
+// break opportunities, so words still wrap whole.
+const toChars = (text) => [...text].map((ch, i) => (
+  // eslint-disable-next-line react/no-array-index-key
+  <span key={i} className="hero-char" style={{ '--i': i }}>{ch}</span>
+));
+
 /**
- * HeroIntro - the homepage headline, revealed word by word on the first visit of a
- * session, followed by the line beneath it. Words always render as spans so the
- * markup is identical whether or not it animates.
+ * HeroIntro - the homepage headline, typed out character by character on the first
+ * visit of a session, then the line beneath it. Characters always render as spans so
+ * the markup is identical whether or not it animates. Screen readers get the plain
+ * text, not the spans.
  */
 const HeroIntro = ({ headline, children }) => {
   const [play, setPlay] = useState(false);
-  const words = headline.split(' ');
+  const line = typeof children === 'string' ? children : null;
 
-  // Before paint, so the headline never flashes in fully and then re-animates
+  // Before paint, so the text never flashes in fully and then re-types
   useLayoutEffect(() => {
     setPlay(shouldPlay());
   }, []);
 
   // Siblings, not a wrapper: the hero is a centered flex column and a wrapper would
-  // change how each line centers. Both carry the word count for the delay math.
-  const timing = { '--hero-words': words.length };
+  // change how each line centers. Both carry the headline length for the delay math.
+  const timing = { '--hero-chars': headline.length };
   const playClass = play ? ' hero-intro--play' : '';
 
   return (
     <>
       <h1 className={`hero-tagline${playClass}`} style={timing} aria-label={headline}>
-        {words.map((word, i) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <React.Fragment key={i}>
-            <span className="hero-word" aria-hidden="true" style={{ '--i': i }}>{word}</span>
-            {i < words.length - 1 ? ' ' : null}
-          </React.Fragment>
-        ))}
+        <span aria-hidden="true">{toChars(headline)}</span>
       </h1>
-      <p className={`hero-description${playClass}`} style={timing}>{children}</p>
+      <p className={`hero-description${playClass}`} style={timing}>
+        {line ? (
+          <>
+            <span className="hero-sr-text">{line}</span>
+            <span aria-hidden="true">{toChars(line)}</span>
+          </>
+        ) : children}
+      </p>
     </>
   );
 };
