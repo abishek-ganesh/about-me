@@ -42,16 +42,11 @@ const Postscript = () => {
             height={300}
           />
           <div className="postscript-intro-text card card--gradient">
-            <p className="u-text-lg">
-              You have reached the end of the site, so here is the part that does not belong on any of the
-              other pages: a few numbers I actually keep track of. The age below is live, counting up while
-              you read it, to more decimal places than anyone asked for. The travel numbers link to real
-              maps, and the countries one is the number I most want to change.
-            </p>
             <p className="u-text-lg u-mb-0">
-              If any of this was useful, or you have something you want built, or you want to tell me I am
-              wrong about a Ye album, my email is in the sidebar. I read everything that comes from an
-              actual person.
+              you have reached the end of the site, so here is the part that does not belong on any of the
+              other pages: a few numbers I actually keep track of..the age below is live, counting up while
+              you read it, to more decimal places than anyone asked for. the travel numbers link to real
+              maps, and the countries one is the number I most want to change.
             </p>
           </div>
         </div>

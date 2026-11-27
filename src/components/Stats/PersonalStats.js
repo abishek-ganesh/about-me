@@ -23,7 +23,7 @@ const PersonalStats = () => {
             </div>
           </div>
           <div className="u-text-center u-relative">
-            <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Hometowns</div>
+            <div className="u-text-sm u-text-muted u-text-uppercase u-mb-1 u-font-semibold">Places I Call Home</div>
             {hometowns.value.map((city) => (
               <div key={city} className="u-font-bold u-text-primary">{city}</div>
             ))}

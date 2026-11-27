@@ -15,8 +15,8 @@ const Index = () => {
         {/* Hero Section */}
         <section id="hero" className="homepage-hero">
           <HeroIntro headline={aboutContent.intro}>
-            So I build AI that does, as VP of Technology &amp; AI at Appa Health, and I teach
-            anyone willing to learn how to build it too.
+            so I build AI that does, ethically..and my passion is teaching it to people with little
+            to no technical background, so they can build the next generation of ethical AI products.
           </HeroIntro>
         </section>
 

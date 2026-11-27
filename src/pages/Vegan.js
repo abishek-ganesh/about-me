@@ -34,19 +34,18 @@ const Vegan = () => (
         <div className="card card--gradient">
           <div className="card-body">
             <p className="u-text-lg">
-              When people see everything I juggle - the consulting, the teaching, the projects,
-              this website - the question is always the same: how do you have the energy? And in
-              my head I always go back to a version of me that could not do this much. The
-              difference between him and me is not discipline, genetics, or NZT. It is that I
+              when people see everything I juggle - the consulting, the teaching, the projects,
+              this website - the question is always the same: how do you have the energy? and in
+              my head I always go back to a version of me that could not do this much..the
+              difference between him and me is not discipline, genetics, or NZT. it is that I
               switched to a whole-food plant-based vegan diet.
             </p>
             <p className="u-text-lg u-mb-0">
-              I want to be honest about the part people skip: it was not an overnight
-              transformation. It took six to nine months of eating this way before the energy
-              became something I could rely on - a habit, not an experiment. But that is exactly
-              what makes it different from everything else I tried. This energy is not borrowed
-              from caffeine or any other drug that collects its debt in the afternoon. It is just
-              there, every day, because of what is on my plate.
+              it was tough to start off with. but once you learn the habits and find alternatives
+              that make sense for you, it becomes part of your regular practice - a habit, not an
+              experiment..and eventually the habit becomes a lifestyle. that is where I am today: it
+              is not just about the way I feel, it is the way I think about the world and my place
+              in it.
             </p>
           </div>
         </div>
@@ -65,7 +64,7 @@ const Vegan = () => (
           ))}
         </div>
         <p className="u-text-sm u-text-muted u-text-center u-mt-2">
-          Pisa, Italy. My sister keeps the tower up; I supply the Bruce Lee energy.
+          Pisa, Italy..my sister keeps the tower up; I supply the Bruce Lee energy.
         </p>
 
         <div className="journey-timeline">
@@ -141,8 +140,8 @@ const Vegan = () => (
         <div className="card card--elevated u-mb-3">
           <div className="card-body">
             <p className="u-text-lg u-mb-0">
-              I try not to preach about this. I know the topic makes people uncomfortable, and
-              nobody has ever been argued into compassion over dinner. So this page is the one
+              i try not to preach about this..i know the topic makes people uncomfortable, and
+              nobody has ever been argued into compassion over dinner. so this page is the one
               place on this site where I say what I actually believe, plainly, and you are free
               to take it or leave it.
             </p>
@@ -151,24 +150,24 @@ const Vegan = () => (
         <div className="card card--gradient">
           <div className="card-body">
             <p className="u-text-lg">
-              My dream is a vegan world. People laugh when I say that out loud. But we do not
+              my dream is a vegan world..people laugh when I say that out loud. but we do not
               have to look far back in history to find a world where slavery and public
               executions were omnipresent - normal, legal, and defended by respectable people,
-              as they had been for thousands of years across the world. Then, in what amounts to
-              a blink of history, whole societies decided those practices were barbaric. That is
+              as they had been for thousands of years across the world. then, in what amounts to
+              a blink of history, whole societies decided those practices were barbaric..that is
               how moral progress works: it looks impossible right up until it happens.
             </p>
             <p className="u-text-lg">
-              I believe the butchering of animals can join that list. Why can&apos;t we live in a
+              i believe the butchering of animals can join that list. why can&apos;t we live in a
               world where that thought is unthinkable?
             </p>
             <p className="u-text-xl u-text-primary u-font-bold u-text-center u-my-2">
-              If we can&apos;t hurt a chicken, how can we hurt a human?
+              if we can&apos;t hurt a chicken, how can we hurt a human?
             </p>
             <p className="u-text-lg u-mb-0">
-              A world with that much practiced compassion is a world I find it hard to imagine
-              waging wars - and one with much more love in it. That is the dream. You do not
-              have to share it. But now you know where the energy comes from, and what I hope it
+              a world with that much practiced compassion is a world I find it hard to imagine
+              waging wars - and one with much more love in it. that is the dream..you do not
+              have to share it. but now you know where the energy comes from, and what I hope it
               is for.
             </p>
           </div>

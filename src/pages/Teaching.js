@@ -77,7 +77,7 @@ const Teaching = () => (
           </div>
         </div>
 
-        <div className="grid grid--4 grid--gap-lg u-mt-4">
+        <div className="grid grid--3 grid--gap-lg u-mt-4">
           {teachingStats.map((stat) => (
             <div key={stat.label} className="card card--compact u-text-center">
               <span className="metric-value">{stat.value}</span>
@@ -101,7 +101,7 @@ const Teaching = () => (
       <section id="voices" className="section-content u-mt-4">
         <div className="section-header">
           <h2>Student Voices</h2>
-          <p className="section-description">Shared with each student&apos;s permission.</p>
+          <p className="section-description">shared with each student&apos;s permission.</p>
         </div>
         <div className="grid grid--2 grid--gap-lg">
           {teachingTestimonials.map((testimonial) => (

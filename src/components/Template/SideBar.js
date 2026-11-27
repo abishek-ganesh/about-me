@@ -7,9 +7,11 @@ import SidebarNav from './SidebarNav';
 import Quote from '../common/Quote';
 import { getSidebarPhoto } from '../../data/photos';
 
-var today = new Date();
+const now = new Date();
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-today = today.toLocaleDateString(undefined, options);
+// Weekday is shown lowercase ("thursday, November 26, 2026")
+const weekday = now.toLocaleDateString(undefined, { weekday: 'long' });
+const today = now.toLocaleDateString(undefined, options).replace(weekday, weekday.toLowerCase());
 
 const SideBar = ({ sections = [] }) => {
   const sidebarPhoto = getSidebarPhoto();
@@ -41,7 +43,7 @@ const SideBar = ({ sections = [] }) => {
         </section>
 
         <section className="blurb">
-          <p>Hi, I&apos;m Abishek. I hope that {today} is the happiest day of your life</p>
+          <p>hi, I&apos;m Abishek..I hope that {today} is the happiest day of your life</p>
           <Quote id="sidebar" variant="inline" />
         </section>
 

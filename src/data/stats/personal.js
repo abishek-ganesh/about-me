@@ -44,11 +44,11 @@ const data = [
     value: 'Santa Clara, CA',
     link: 'https://www.google.com/maps/d/u/1/edit?mid=1SAtwd_RebHmvpqgEZssUgpcLELCX2wyL&usp=sharing',
   },
-  // Three places that count as home, in the order they became one
+  // Places that count as home. Dublin is the original hometown
   {
     key: 'hometowns',
-    label: 'Hometowns',
-    value: ['Santa Clara, CA', 'UES, Manhattan', 'Lago Vista, TX'],
+    label: 'Places I call home',
+    value: ['Dublin, OH', 'Santa Clara, CA', 'New York, NY', 'Lago Vista, TX', 'Seattle, WA'],
   },
 ];
 

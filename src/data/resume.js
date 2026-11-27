@@ -38,8 +38,8 @@ export const positions = [
     link: 'https://www.appahealth.com',
     daterange: '2024 - Present',
     points: [
-      'Lead technology and AI for a mentorship platform serving hundreds of students',
-      'Build and scale the product systems supporting dozens of mentors',
+      'lead technology and AI for a mentorship platform serving hundreds of students',
+      'build and scale the product systems supporting dozens of mentors',
     ],
   },
   {
@@ -48,11 +48,11 @@ export const positions = [
     link: '',
     daterange: 'March 2025 - Present',
     points: [
-      'Leading the first Applied AI Engineer Bootcamp cohort from Columbia Engineering Executive Education and Fullstack Academy',
-      'Teaching 20+ students the absolute latest in AI - including RAG systems and AI agents',
-      'Philosophy: teach what\'s actually being used in production today and prepare for tomorrow',
-      'Covering Python fundamentals through state-of-the-art generative AI implementations',
-      'Creating next generation of AI engineers who understand cutting-edge technologies',
+      'leading the first Applied AI Engineer Bootcamp cohort from Columbia Engineering Executive Education and Fullstack Academy',
+      'teaching 20+ students the absolute latest in AI - including RAG systems and AI agents',
+      "philosophy: teach what's actually being used in production today and prepare for tomorrow",
+      'covering Python fundamentals through state-of-the-art generative AI implementations',
+      'creating next generation of AI engineers who understand cutting-edge technologies',
     ],
   },
   {
@@ -61,10 +61,10 @@ export const positions = [
     link: 'https://www.limbik.com/',
     daterange: '2023 - 2024',
     points: [
-      'Led team implementing cutting-edge AI for mental health applications',
-      'Built production RAG system for clinical knowledge retrieval',
-      'Deployed state-of-the-art NLP models for patient interaction analysis',
-      'Built and operated real-time ML systems serving healthcare providers',
+      'led team implementing cutting-edge AI for mental health applications',
+      'built production RAG system for clinical knowledge retrieval',
+      'deployed state-of-the-art NLP models for patient interaction analysis',
+      'built and operated real-time ML systems serving healthcare providers',
     ],
   },
   {
@@ -73,10 +73,10 @@ export const positions = [
     link: 'https://aws.amazon.com/chime/chime-sdk/',
     daterange: '2022 - 2023',
     points: [
-      'Worked on AWS Chime SDK development',
-      'Built scalable communication infrastructure',
-      'Implemented real-time video/audio processing features',
-      'Collaborated with cross-functional teams on cloud services',
+      'worked on AWS Chime SDK development',
+      'built scalable communication infrastructure',
+      'implemented real-time video/audio processing features',
+      'collaborated with cross-functional teams on cloud services',
     ],
   },
   {
@@ -85,10 +85,10 @@ export const positions = [
     link: 'https://www.mpathic.ai/',
     daterange: '2022',
     points: [
-      'Implemented advanced RAG systems for medical data analysis - first in healthcare',
-      'Built multi-modal AI processing clinical text and medical imaging',
-      'Optimized latency on production inference systems',
-      'Pioneered use of transformer models for clinical decision support',
+      'implemented advanced RAG systems for medical data analysis - first in healthcare',
+      'built multi-modal AI processing clinical text and medical imaging',
+      'optimized latency on production inference systems',
+      'pioneered use of transformer models for clinical decision support',
     ],
   },
   {
@@ -97,10 +97,10 @@ export const positions = [
     link: 'https://bighealth.com',
     daterange: '2017 - 2021',
     points: [
-      'Led data science initiatives for digital therapeutics platform',
-      'Built predictive models for user engagement and outcomes',
-      'Managed commercial operations and analytics infrastructure',
-      'Scaled data operations from startup to series B funding',
+      'led data science initiatives for digital therapeutics platform',
+      'built predictive models for user engagement and outcomes',
+      'managed commercial operations and analytics infrastructure',
+      'scaled data operations from startup to series B funding',
     ],
   },
   {
@@ -109,10 +109,10 @@ export const positions = [
     link: '',
     daterange: '2016 - 2017',
     points: [
-      'First sales ops hire; built the department from scratch',
-      'Led a team of 15 that grew bookings from $1.3M to $3M in 7 months',
-      'Rolled out and administered the CRM, designing the workflows every team ran on',
-      'Owned quotas, forecasts, and comp plans',
+      'first sales ops hire; built the department from scratch',
+      'led a team of 15 that grew bookings from $1.3M to $3M in 7 months',
+      'rolled out and administered the CRM, designing the workflows every team ran on',
+      'owned quotas, forecasts, and comp plans',
     ],
   },
   {
@@ -121,10 +121,21 @@ export const positions = [
     link: '',
     daterange: '2014 - 2016',
     points: [
-      'First job out of school: bookings reporting and analytics for a global sales org',
-      'Ran sales letters, quota attainment, and SPIFF payouts',
-      'Supported 1,200 Aruba and 1,000 HPE reps through the HPE acquisition',
-      'Kept data flowing across CRM, BI, and database systems',
+      'first job out of school: bookings reporting and analytics for a global sales org',
+      'ran sales letters, quota attainment, and SPIFF payouts',
+      'supported 1,200 Aruba and 1,000 HPE reps through the HPE acquisition',
+      'kept data flowing across CRM, BI, and database systems',
+    ],
+  },
+  {
+    company: 'AMC Dublin Village 18',
+    position: 'Projectionist',
+    link: 'https://www.amctheatres.com/movie-theatres/columbus/amc-dublin-village-18',
+    daterange: '2010 - 2013',
+    points: [
+      'my first job: ran an 18-plex in Dublin, Ohio, starting the movies before everything became digital and automated',
+      'also worked box office, concessions, and usher shifts part time while I was in college',
+      'supplied my obsession for buying Jordans',
     ],
   },
 ];
@@ -138,8 +149,8 @@ export const volunteering = [
     link: 'https://plantpoweredmetrony.org/',
     daterange: '2026 - Present',
     points: [
-      'Run the website and technology for a 501(c)(3) nonprofit that guides communities to lifelong health through whole food, plant-based nutrition',
-      'Build the systems that help it scale plant-based nutrition as a way to overcome common diseases like heart disease',
+      'run the website and technology for a 501(c)(3) nonprofit that guides communities to lifelong health through whole food, plant-based nutrition',
+      'build the systems that help it scale plant-based nutrition as a way to overcome common diseases like heart disease',
     ],
   },
   {
@@ -148,8 +159,8 @@ export const volunteering = [
     link: 'https://citizensclimatelobby.org/',
     daterange: '2018 - 2022',
     points: [
-      "Built out the local chapter's social media from the ground up",
-      "Helped prepare and run the chapter's lobbying meetings",
+      "built out the local chapter's social media from the ground up",
+      "helped prepare and run the chapter's lobbying meetings",
     ],
   },
 ];

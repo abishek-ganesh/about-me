@@ -132,7 +132,7 @@ const Resume = () => (
         <div className="section-header">
           <h2 className="with-accent">Coursework</h2>
           <p className="section-description">
-            Every course links through to its catalog page.
+            every course links through to its catalog page.
           </p>
         </div>
         {coursesBySchool.map((group) => (
